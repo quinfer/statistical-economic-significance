@@ -7,6 +7,7 @@ Begin with a question, then follow its evidence. The [learning map](learning-map
 | Resource | Use it for | What it does not establish |
 |---|---|---|
 | [Curriculum](../CURRICULUM.md) and [exercises](../exercises/01-magnitude-evidence-action.md) | A proposed sequence of reading, calculation and critique | Validated teaching effectiveness or completed learner work |
+| [Simulation labs and worked solutions](../simulations/README.md) | Seeded experiments with analytic benchmarks and Monte Carlo uncertainty | Empirical evidence, primary-source replication or justification of the assumed prior/loss/margin |
 | [Concept notes](../wiki/index.md) | Distinctions and routes into competing arguments | A substitute for the underlying sources |
 | [Paper notes](../wiki/papers/index.md) | Source claims, locators, limitations and research connections | Full-text reading when a note records a narrower depth |
 | [Source registry](../sources/registry.json) and [catalogue](../sources/literature-map.md) | Verified identities, versions, access and reading records for the core corpus | Equal evidential support from every listed work |

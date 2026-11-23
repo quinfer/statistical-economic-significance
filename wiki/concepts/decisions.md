@@ -14,6 +14,8 @@
 
 The [checked normal-prior example](../evidence/mathematical-checks.md) demonstrates action without rejection under explicit assumptions. It does not establish the underlying population effect or override other legitimate objectives. [Synthesis](../../synthesis/critical-synthesis.md).
 
+**Illustration:** the [decision simulation lab](../../simulations/labs/03-decisions.md) now evaluates several rules under matched prior predictive, mismatched and fixed-state distributions. Its paired utility/regret comparisons expose the evaluation criterion and cases where a ranking reverses. It does not implement the robust Bayes or minimax-regret methods discussed above. See the [simulation evidence boundary](../evidence/simulation-labs.md).
+
 ## Documentary examples that sharpen the distinction
 
 The [Woodbury–Spiegelman audit](../evidence/aer-darby-woodbury.md) distinguishes an estimated trial benefit–cost ratio from break-even, subgroup evidence and a policy with different take-up. The [Matrixx primary-opinion check](../evidence/matrixx-2011-lecture-audit.md) distinguishes contextual materiality and adequate pleading from a merits finding of causation. Neither example establishes that uncertainty can be discarded; both identify a decision or evidential question that a zero-null threshold alone cannot answer.

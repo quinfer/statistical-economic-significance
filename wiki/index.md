@@ -14,6 +14,8 @@ This is a local, interconnected Markdown knowledge base: source records feed pap
 
 [Final Darby](evidence/darby-final-followup.md) · [Final Bernheim–Wantz](evidence/bernheim-wantz-final-followup.md) · [Final JSE version check](evidence/jse-2004-version-check.md) · [Expanded-matrix search](evidence/expanded-matrix-followup.md) · [Latest source review](../reviews/2026-10-24-final-source-review.md).
 
+**Learning extension, 23 November 2026:** [Simulation labs](../simulations/README.md) · [Simulation evidence boundary](evidence/simulation-labs.md) · [Implementation review](../reviews/2026-11-23-simulation-review.md). Synthetic experiments do not change the source-reading status above or reopen the slide gate.
+
 ## Concepts
 
 - [Economic significance: magnitude, evidence and action](concepts/economic-significance.md)

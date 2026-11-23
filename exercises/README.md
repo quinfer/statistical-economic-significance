@@ -25,3 +25,7 @@ For each submission:
 The self-checks establish arithmetic and the intended distinctions. They do not impose a single preference ordering or resolve the historical debate. A well-supported disagreement with the [working synthesis](../synthesis/critical-synthesis.md) is an acceptable outcome.
 
 These are learning materials, not slides. The [slide gate remains closed](../reviews/review-gate.md), and completing the exercises does not alter it.
+
+## Simulation extensions
+
+After the deterministic exercises, use the [power lab](../simulations/labs/01-power.md), [selection lab](../simulations/labs/02-selection.md) and [decision lab](../simulations/labs/03-decisions.md). Each has a separate worked solution, a fixed-seed reference run and explicit Monte Carlo error. Their synthetic experiments extend the learning tasks; they do not validate the historical coding or upgrade any source's reading depth.

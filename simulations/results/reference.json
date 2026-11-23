@@ -1,0 +1,3126 @@
+{
+  "schema_version": 1,
+  "label": "ILLUSTRATIONS: simulated normal-model data, not empirical findings or literature replications",
+  "seed": 20261123,
+  "replications_per_scenario": 50000,
+  "random_streams": "random.Random with SHA256-derived integer seeds by scenario label; explicit normal draws",
+  "environment": {
+    "python": "3.13.2",
+    "implementation": "CPython"
+  },
+  "source_sha256": {
+    "simulations/common.py": "bac339125519f239b9b6009089f3da8360fdf0ff6949c06de90c8c55dc49fa3a",
+    "simulations/run_labs.py": "baaf0df49015ad8a3e4d6d25e1ffdb1a88bfac090826d022cd82bda45ab5cb2d",
+    "implementations/normal_model.py": "5c2f77cc9cd94876991f4862abaaa73eb8d5b5e84b99fd46bd704804fa34ee9a",
+    "simulations/power.py": "79f94815021d04d6123d5da731b3da511bb7b75820149b57647d054b55fa8fe9",
+    "simulations/selection.py": "0f78aa6d4723cd2b9a6a2e37ef954f0cfb2a6e9bd747e03b084d38573d7b763e",
+    "simulations/decisions.py": "a7903c65f877d3088ee3a75469fa0d39d3f47e28a92fec9aba7576c48a2a6235"
+  },
+  "monte_carlo": {
+    "mean_mcse": "Sample SD of independent replication-level values divided by sqrt(n)",
+    "rate_mcse": "sqrt(p_hat*(1-p_hat)/n); Wilson 95% intervals also reported, including boundaries",
+    "conditional_metrics": "n is the selected count, not the total number simulated; no selected values means null, not zero",
+    "paired_metrics": "Subtract policies or discovery/holdout estimates within a replication before computing MCSE",
+    "scope": "These errors quantify simulation noise under the chosen DGP, not empirical, identification or model uncertainty"
+  },
+  "labs": [
+    {
+      "lab": "power",
+      "design": {
+        "label": "ILLUSTRATION: synthetic normal effect measurements; no empirical data",
+        "estimand": "Fixed hypothetical mean one-year policy effect in an eligible target population",
+        "units": "pounds per person per year",
+        "dgp": "Yi iid N(theta, 1000^2); draw Xbar directly from N(theta, 1000^2/n)",
+        "estimator": "Unbiased sample mean Xbar; no fitted nuisance parameters",
+        "uncertainty_model": "Known-SE normal inference; report sigma/sqrt(n) except explicit ratio-0.5 stress case",
+        "identification": "Effect measurements assumed unbiased for the target; confounding, spillovers and transport problems absent by design",
+        "alpha": 0.05,
+        "equivalence_margin": 100.0,
+        "margin_basis": "Fixed teaching assumption before simulation, not an estimated welfare threshold",
+        "decision_criterion": "No adoption decision or utility loss; compare zero-null, equivalence and positive-above-margin classifications",
+        "error_events": "False zero rejection under theta=0; false equivalence under |theta|>=100; interval noncoverage",
+        "seed": 20261123,
+        "replications_per_scenario": 50000,
+        "monte_carlo": "Independent repeated studies within each scenario. Rates have binomial MCSE and Wilson intervals; mean has sample-SD/sqrt(R) MCSE. These are not the study's sampling SE or confidence interval.",
+        "limitations": "No real policy calibration, estimated variances, clustering, serial dependence, selective reporting or causal identification test. SE stress changes only reported uncertainty; it does not generate dependent raw data."
+      },
+      "scenarios": [
+        {
+          "id": "null_n100",
+          "parameters": {
+            "effect": 0.0,
+            "sample_size": 100,
+            "sigma": 1000.0,
+            "true_se": 100.0,
+            "reported_se": 100.0,
+            "reported_se_ratio": 1.0,
+            "margin": 100.0,
+            "alpha": 0.05,
+            "units": "pounds per person per year"
+          },
+          "derived_seed": 18310929093491590552,
+          "metrics": {
+            "zero_rejection": {
+              "estimate": 0.04934,
+              "mcse": 0.0009685614528774103,
+              "n": 50000,
+              "successes": 2467,
+              "wilson95": [
+                0.04747603284359415,
+                0.05127320950985822
+              ]
+            },
+            "coverage95": {
+              "estimate": 0.95066,
+              "mcse": 0.0009685614528774109,
+              "n": 50000,
+              "successes": 47533,
+              "wilson95": [
+                0.9487267904901416,
+                0.9525239671564057
+              ]
+            },
+            "equivalence": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 0,
+              "wilson95": [
+                0.0,
+                7.682327414500046e-05
+              ]
+            },
+            "both_reject": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 0,
+              "wilson95": [
+                0.0,
+                7.682327414500046e-05
+              ]
+            },
+            "neither_reject": {
+              "estimate": 0.95066,
+              "mcse": 0.0009685614528774109,
+              "n": 50000,
+              "successes": 47533,
+              "wilson95": [
+                0.9487267904901416,
+                0.9525239671564057
+              ]
+            },
+            "positive_beyond_margin": {
+              "estimate": 0.0039,
+              "mcse": 0.00027873966348548245,
+              "n": 50000,
+              "successes": 195,
+              "wilson95": [
+                0.0033904854987184276,
+                0.00448573855388824
+              ]
+            },
+            "estimate_mean": {
+              "estimate": 0.10159804874048448,
+              "mcse": 0.44507686753685155,
+              "n": 50000
+            }
+          },
+          "benchmarks": {
+            "estimate_mean": 0.0,
+            "zero_rejection": 0.05000000000000007,
+            "coverage95": 0.95,
+            "equivalence": 0.0,
+            "both_reject": 0.0,
+            "neither_reject": 0.95,
+            "positive_beyond_margin": 0.0040863130600332495
+          }
+        },
+        {
+          "id": "null_n2500",
+          "parameters": {
+            "effect": 0.0,
+            "sample_size": 2500,
+            "sigma": 1000.0,
+            "true_se": 20.0,
+            "reported_se": 20.0,
+            "reported_se_ratio": 1.0,
+            "margin": 100.0,
+            "alpha": 0.05,
+            "units": "pounds per person per year"
+          },
+          "derived_seed": 10295260146044363801,
+          "metrics": {
+            "zero_rejection": {
+              "estimate": 0.04798,
+              "mcse": 0.0009558024858724735,
+              "n": 50000,
+              "successes": 2399,
+              "wilson95": [
+                0.0461411373315288,
+                0.04988831398122924
+              ]
+            },
+            "coverage95": {
+              "estimate": 0.95202,
+              "mcse": 0.0009558024858724737,
+              "n": 50000,
+              "successes": 47601,
+              "wilson95": [
+                0.9501116860187707,
+                0.9538588626684711
+              ]
+            },
+            "equivalence": {
+              "estimate": 0.99916,
+              "mcse": 0.0001295603643094563,
+              "n": 50000,
+              "successes": 49958,
+              "wilson95": [
+                0.9988648497708958,
+                0.9993784560180599
+              ]
+            },
+            "both_reject": {
+              "estimate": 0.04714,
+              "mcse": 0.0009478166531560838,
+              "n": 50000,
+              "successes": 2357,
+              "wilson95": [
+                0.04531684928796471,
+                0.049032731087893903
+              ]
+            },
+            "neither_reject": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 0,
+              "wilson95": [
+                0.0,
+                7.682327414500046e-05
+              ]
+            },
+            "positive_beyond_margin": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 0,
+              "wilson95": [
+                0.0,
+                7.682327414500046e-05
+              ]
+            },
+            "estimate_mean": {
+              "estimate": 0.008510187850002373,
+              "mcse": 0.08917130141636896,
+              "n": 50000
+            }
+          },
+          "benchmarks": {
+            "estimate_mean": 0.0,
+            "zero_rejection": 0.05000000000000007,
+            "coverage95": 0.95,
+            "equivalence": 0.9992067699909475,
+            "both_reject": 0.04920676999094751,
+            "neither_reject": 0.0,
+            "positive_beyond_margin": 1.5175927589530027e-11
+          }
+        },
+        {
+          "id": "null_n100000",
+          "parameters": {
+            "effect": 0.0,
+            "sample_size": 100000,
+            "sigma": 1000.0,
+            "true_se": 3.162277660168379,
+            "reported_se": 3.162277660168379,
+            "reported_se_ratio": 1.0,
+            "margin": 100.0,
+            "alpha": 0.05,
+            "units": "pounds per person per year"
+          },
+          "derived_seed": 1740356453592281531,
+          "metrics": {
+            "zero_rejection": {
+              "estimate": 0.04894,
+              "mcse": 0.0009648303104691519,
+              "n": 50000,
+              "successes": 2447,
+              "wilson95": [
+                0.047083374413356804,
+                0.05086592939871487
+              ]
+            },
+            "coverage95": {
+              "estimate": 0.95106,
+              "mcse": 0.0009648303104691517,
+              "n": 50000,
+              "successes": 47553,
+              "wilson95": [
+                0.9491340706012851,
+                0.9529166255866431
+              ]
+            },
+            "equivalence": {
+              "estimate": 1.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 50000,
+              "wilson95": [
+                0.9999231767258548,
+                1.0
+              ]
+            },
+            "both_reject": {
+              "estimate": 0.04894,
+              "mcse": 0.0009648303104691519,
+              "n": 50000,
+              "successes": 2447,
+              "wilson95": [
+                0.047083374413356804,
+                0.05086592939871487
+              ]
+            },
+            "neither_reject": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 0,
+              "wilson95": [
+                0.0,
+                7.682327414500046e-05
+              ]
+            },
+            "positive_beyond_margin": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 0,
+              "wilson95": [
+                0.0,
+                7.682327414500046e-05
+              ]
+            },
+            "estimate_mean": {
+              "estimate": -0.0017176239446571318,
+              "mcse": 0.01408866615290238,
+              "n": 50000
+            }
+          },
+          "benchmarks": {
+            "estimate_mean": 0.0,
+            "zero_rejection": 0.05000000000000007,
+            "coverage95": 0.95,
+            "equivalence": 1.0,
+            "both_reject": 0.05000000000000006,
+            "neither_reject": 1.3877787807814457e-17,
+            "positive_beyond_margin": 5.675406349534127e-243
+          }
+        },
+        {
+          "id": "small_n100",
+          "parameters": {
+            "effect": 20.0,
+            "sample_size": 100,
+            "sigma": 1000.0,
+            "true_se": 100.0,
+            "reported_se": 100.0,
+            "reported_se_ratio": 1.0,
+            "margin": 100.0,
+            "alpha": 0.05,
+            "units": "pounds per person per year"
+          },
+          "derived_seed": 10537739707590186358,
+          "metrics": {
+            "zero_rejection": {
+              "estimate": 0.057,
+              "mcse": 0.00103683171247797,
+              "n": 50000,
+              "successes": 2850,
+              "wilson95": [
+                0.05500167298983863,
+                0.05906639243105384
+              ]
+            },
+            "coverage95": {
+              "estimate": 0.94792,
+              "mcse": 0.0009936566167444367,
+              "n": 50000,
+              "successes": 47396,
+              "wilson95": [
+                0.9459378289595969,
+                0.9498333496784931
+              ]
+            },
+            "equivalence": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 0,
+              "wilson95": [
+                0.0,
+                7.682327414500046e-05
+              ]
+            },
+            "both_reject": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 0,
+              "wilson95": [
+                0.0,
+                7.682327414500046e-05
+              ]
+            },
+            "neither_reject": {
+              "estimate": 0.943,
+              "mcse": 0.0010368317124779705,
+              "n": 50000,
+              "successes": 47150,
+              "wilson95": [
+                0.9409336075689462,
+                0.9449983270101613
+              ]
+            },
+            "positive_beyond_margin": {
+              "estimate": 0.00764,
+              "mcse": 0.0003894003184384933,
+              "n": 50000,
+              "successes": 382,
+              "wilson95": [
+                0.00691370666718541,
+                0.008441942747330655
+              ]
+            },
+            "estimate_mean": {
+              "estimate": 20.190272474645443,
+              "mcse": 0.45080141051943246,
+              "n": 50000
+            }
+          },
+          "benchmarks": {
+            "estimate_mean": 20.0,
+            "zero_rejection": 0.054594685527275484,
+            "coverage95": 0.95,
+            "equivalence": 0.0,
+            "both_reject": 0.0,
+            "neither_reject": 0.9454053144727245,
+            "positive_beyond_margin": 0.007245547029280597
+          }
+        },
+        {
+          "id": "small_n2500",
+          "parameters": {
+            "effect": 20.0,
+            "sample_size": 2500,
+            "sigma": 1000.0,
+            "true_se": 20.0,
+            "reported_se": 20.0,
+            "reported_se_ratio": 1.0,
+            "margin": 100.0,
+            "alpha": 0.05,
+            "units": "pounds per person per year"
+          },
+          "derived_seed": 11176249367673014772,
+          "metrics": {
+            "zero_rejection": {
+              "estimate": 0.1672,
+              "mcse": 0.0016687969319243128,
+              "n": 50000,
+              "successes": 8360,
+              "wilson95": [
+                0.16395481061354036,
+                0.1704963229577305
+              ]
+            },
+            "coverage95": {
+              "estimate": 0.95058,
+              "mcse": 0.0009693055617296336,
+              "n": 50000,
+              "successes": 47529,
+              "wilson95": [
+                0.9486453386197546,
+                0.9524454313185167
+              ]
+            },
+            "equivalence": {
+              "estimate": 0.9901,
+              "mcse": 0.0004427638196600987,
+              "n": 50000,
+              "successes": 49505,
+              "wilson95": [
+                0.9891937646806598,
+                0.9909309331460231
+              ]
+            },
+            "both_reject": {
+              "estimate": 0.1573,
+              "mcse": 0.0016282303891034585,
+              "n": 50000,
+              "successes": 7865,
+              "wilson95": [
+                0.15413506839940508,
+                0.16051758627269389
+              ]
+            },
+            "neither_reject": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 0,
+              "wilson95": [
+                0.0,
+                7.682327414500046e-05
+              ]
+            },
+            "positive_beyond_margin": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 0,
+              "wilson95": [
+                0.0,
+                7.682327414500046e-05
+              ]
+            },
+            "estimate_mean": {
+              "estimate": 19.966387681928975,
+              "mcse": 0.08931232424739796,
+              "n": 50000
+            }
+          },
+          "benchmarks": {
+            "estimate_mean": 20.0,
+            "zero_rejection": 0.1700750457530876,
+            "coverage95": 0.95,
+            "equivalence": 0.990735645724995,
+            "both_reject": 0.16081069147808255,
+            "neither_reject": 0.0,
+            "positive_beyond_margin": 8.266092053563768e-09
+          }
+        },
+        {
+          "id": "small_n100000",
+          "parameters": {
+            "effect": 20.0,
+            "sample_size": 100000,
+            "sigma": 1000.0,
+            "true_se": 3.162277660168379,
+            "reported_se": 3.162277660168379,
+            "reported_se_ratio": 1.0,
+            "margin": 100.0,
+            "alpha": 0.05,
+            "units": "pounds per person per year"
+          },
+          "derived_seed": 6312370178412820072,
+          "metrics": {
+            "zero_rejection": {
+              "estimate": 1.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 50000,
+              "wilson95": [
+                0.9999231767258548,
+                1.0
+              ]
+            },
+            "coverage95": {
+              "estimate": 0.94996,
+              "mcse": 0.0009750487003221939,
+              "n": 50000,
+              "successes": 47498,
+              "wilson95": [
+                0.948014133056843,
+                0.9518367321422885
+              ]
+            },
+            "equivalence": {
+              "estimate": 1.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 50000,
+              "wilson95": [
+                0.9999231767258548,
+                1.0
+              ]
+            },
+            "both_reject": {
+              "estimate": 1.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 50000,
+              "wilson95": [
+                0.9999231767258548,
+                1.0
+              ]
+            },
+            "neither_reject": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 0,
+              "wilson95": [
+                0.0,
+                7.682327414500046e-05
+              ]
+            },
+            "positive_beyond_margin": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 0,
+              "wilson95": [
+                0.0,
+                7.682327414500046e-05
+              ]
+            },
+            "estimate_mean": {
+              "estimate": 19.998183129663545,
+              "mcse": 0.014127641813923151,
+              "n": 50000
+            }
+          },
+          "benchmarks": {
+            "estimate_mean": 20.0,
+            "zero_rejection": 0.9999936319685956,
+            "coverage95": 0.95,
+            "equivalence": 1.0,
+            "both_reject": 0.9999936319685956,
+            "neither_reject": 0.0,
+            "positive_beyond_margin": 3.4381531514846666e-160
+          }
+        },
+        {
+          "id": "meaningful_n100",
+          "parameters": {
+            "effect": 200.0,
+            "sample_size": 100,
+            "sigma": 1000.0,
+            "true_se": 100.0,
+            "reported_se": 100.0,
+            "reported_se_ratio": 1.0,
+            "margin": 100.0,
+            "alpha": 0.05,
+            "units": "pounds per person per year"
+          },
+          "derived_seed": 14445770654948747928,
+          "metrics": {
+            "zero_rejection": {
+              "estimate": 0.51676,
+              "mcse": 0.0022348114121777704,
+              "n": 50000,
+              "successes": 25838,
+              "wilson95": [
+                0.5123787306245288,
+                0.5211386942593218
+              ]
+            },
+            "coverage95": {
+              "estimate": 0.94976,
+              "mcse": 0.0009768924444379734,
+              "n": 50000,
+              "successes": 47488,
+              "wilson95": [
+                0.9478105357554604,
+                0.9516403601729807
+              ]
+            },
+            "equivalence": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 0,
+              "wilson95": [
+                0.0,
+                7.682327414500046e-05
+              ]
+            },
+            "both_reject": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 0,
+              "wilson95": [
+                0.0,
+                7.682327414500046e-05
+              ]
+            },
+            "neither_reject": {
+              "estimate": 0.48324,
+              "mcse": 0.0022348114121777704,
+              "n": 50000,
+              "successes": 24162,
+              "wilson95": [
+                0.47886130574067803,
+                0.4876212693754712
+              ]
+            },
+            "positive_beyond_margin": {
+              "estimate": 0.26008,
+              "mcse": 0.0019618276866228595,
+              "n": 50000,
+              "successes": 13004,
+              "wilson95": [
+                0.2562534233533959,
+                0.26394343952646976
+              ]
+            },
+            "estimate_mean": {
+              "estimate": 200.48450140108577,
+              "mcse": 0.4473617647668308,
+              "n": 50000
+            }
+          },
+          "benchmarks": {
+            "estimate_mean": 200.0,
+            "zero_rejection": 0.5160052739761749,
+            "coverage95": 0.95,
+            "equivalence": 0.0,
+            "both_reject": 0.0,
+            "neither_reject": 0.4839947260238251,
+            "positive_beyond_margin": 0.2595110228414442
+          }
+        },
+        {
+          "id": "meaningful_n2500",
+          "parameters": {
+            "effect": 200.0,
+            "sample_size": 2500,
+            "sigma": 1000.0,
+            "true_se": 20.0,
+            "reported_se": 20.0,
+            "reported_se_ratio": 1.0,
+            "margin": 100.0,
+            "alpha": 0.05,
+            "units": "pounds per person per year"
+          },
+          "derived_seed": 10962046624240084091,
+          "metrics": {
+            "zero_rejection": {
+              "estimate": 1.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 50000,
+              "wilson95": [
+                0.9999231767258548,
+                1.0
+              ]
+            },
+            "coverage95": {
+              "estimate": 0.95202,
+              "mcse": 0.0009558024858724737,
+              "n": 50000,
+              "successes": 47601,
+              "wilson95": [
+                0.9501116860187707,
+                0.9538588626684711
+              ]
+            },
+            "equivalence": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 0,
+              "wilson95": [
+                0.0,
+                7.682327414500046e-05
+              ]
+            },
+            "both_reject": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 0,
+              "wilson95": [
+                0.0,
+                7.682327414500046e-05
+              ]
+            },
+            "neither_reject": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 0,
+              "wilson95": [
+                0.0,
+                7.682327414500046e-05
+              ]
+            },
+            "positive_beyond_margin": {
+              "estimate": 0.99974,
+              "mcse": 7.210165046655145e-05,
+              "n": 50000,
+              "successes": 49987,
+              "wilson95": [
+                0.9995551748100325,
+                0.999848041863925
+              ]
+            },
+            "estimate_mean": {
+              "estimate": 199.89061570174206,
+              "mcse": 0.08885063638423575,
+              "n": 50000
+            }
+          },
+          "benchmarks": {
+            "estimate_mean": 200.0,
+            "zero_rejection": 0.9999999999999996,
+            "coverage95": 0.95,
+            "equivalence": 1.5175927589530027e-11,
+            "both_reject": 1.517547852917537e-11,
+            "neither_reject": 0.0,
+            "positive_beyond_margin": 0.9996033849954737
+          }
+        },
+        {
+          "id": "meaningful_n100000",
+          "parameters": {
+            "effect": 200.0,
+            "sample_size": 100000,
+            "sigma": 1000.0,
+            "true_se": 3.162277660168379,
+            "reported_se": 3.162277660168379,
+            "reported_se_ratio": 1.0,
+            "margin": 100.0,
+            "alpha": 0.05,
+            "units": "pounds per person per year"
+          },
+          "derived_seed": 1178898323086654494,
+          "metrics": {
+            "zero_rejection": {
+              "estimate": 1.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 50000,
+              "wilson95": [
+                0.9999231767258548,
+                1.0
+              ]
+            },
+            "coverage95": {
+              "estimate": 0.95214,
+              "mcse": 0.0009546666475791434,
+              "n": 50000,
+              "successes": 47607,
+              "wilson95": [
+                0.9502339023626756,
+                0.9539766278869806
+              ]
+            },
+            "equivalence": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 0,
+              "wilson95": [
+                0.0,
+                7.682327414500046e-05
+              ]
+            },
+            "both_reject": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 0,
+              "wilson95": [
+                0.0,
+                7.682327414500046e-05
+              ]
+            },
+            "neither_reject": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 0,
+              "wilson95": [
+                0.0,
+                7.682327414500046e-05
+              ]
+            },
+            "positive_beyond_margin": {
+              "estimate": 1.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 50000,
+              "wilson95": [
+                0.9999231767258548,
+                1.0
+              ]
+            },
+            "estimate_mean": {
+              "estimate": 199.99586312748906,
+              "mcse": 0.014062562844759768,
+              "n": 50000
+            }
+          },
+          "benchmarks": {
+            "estimate_mean": 200.0,
+            "zero_rejection": 1.0,
+            "coverage95": 0.95,
+            "equivalence": 5.675406349534127e-243,
+            "both_reject": 5.675406349534127e-243,
+            "neither_reject": 0.0,
+            "positive_beyond_margin": 1.0
+          }
+        },
+        {
+          "id": "equivalence_boundary_n2500",
+          "parameters": {
+            "effect": 100.0,
+            "sample_size": 2500,
+            "sigma": 1000.0,
+            "true_se": 20.0,
+            "reported_se": 20.0,
+            "reported_se_ratio": 1.0,
+            "margin": 100.0,
+            "alpha": 0.05,
+            "units": "pounds per person per year"
+          },
+          "derived_seed": 3104418070361059133,
+          "metrics": {
+            "zero_rejection": {
+              "estimate": 0.99876,
+              "mcse": 0.00015738248949613288,
+              "n": 50000,
+              "successes": 49938,
+              "wilson95": [
+                0.9984108607141434,
+                0.9990325065334315
+              ]
+            },
+            "coverage95": {
+              "estimate": 0.9492,
+              "mcse": 0.0009820321786988444,
+              "n": 50000,
+              "successes": 47460,
+              "wilson95": [
+                0.9472405078724774,
+                0.9510904740980307
+              ]
+            },
+            "equivalence": {
+              "estimate": 0.04976,
+              "mcse": 0.0009724602038129889,
+              "n": 50000,
+              "successes": 2488,
+              "wilson95": [
+                0.04788836131110563,
+                0.05170081651079646
+              ]
+            },
+            "both_reject": {
+              "estimate": 0.04852,
+              "mcse": 0.0009608934342579306,
+              "n": 50000,
+              "successes": 2426,
+              "wilson95": [
+                0.046671120623957896,
+                0.05043824771966407
+              ]
+            },
+            "neither_reject": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 0,
+              "wilson95": [
+                0.0,
+                7.682327414500046e-05
+              ]
+            },
+            "positive_beyond_margin": {
+              "estimate": 0.05188,
+              "mcse": 0.0009918514566203953,
+              "n": 50000,
+              "successes": 2594,
+              "wilson95": [
+                0.04997020277392086,
+                0.05385864931729885
+              ]
+            },
+            "estimate_mean": {
+              "estimate": 99.95233096703727,
+              "mcse": 0.08992024316995141,
+              "n": 50000
+            }
+          },
+          "benchmarks": {
+            "estimate_mean": 100.0,
+            "zero_rejection": 0.9988172507035044,
+            "coverage95": 0.95,
+            "equivalence": 0.05000000000000003,
+            "both_reject": 0.04881725070350447,
+            "neither_reject": 8.326672684688674e-17,
+            "positive_beyond_margin": 0.050000000000000065
+          }
+        },
+        {
+          "id": "understated_se_null_n2500",
+          "parameters": {
+            "effect": 0.0,
+            "sample_size": 2500,
+            "sigma": 1000.0,
+            "true_se": 20.0,
+            "reported_se": 10.0,
+            "reported_se_ratio": 0.5,
+            "margin": 100.0,
+            "alpha": 0.05,
+            "units": "pounds per person per year"
+          },
+          "derived_seed": 15972176078751255382,
+          "metrics": {
+            "zero_rejection": {
+              "estimate": 0.32868,
+              "mcse": 0.00210071158229777,
+              "n": 50000,
+              "successes": 16434,
+              "wilson95": [
+                0.3245759794396516,
+                0.3328103432870014
+              ]
+            },
+            "coverage95": {
+              "estimate": 0.67132,
+              "mcse": 0.00210071158229777,
+              "n": 50000,
+              "successes": 33566,
+              "wilson95": [
+                0.6671896567129987,
+                0.6754240205603483
+              ]
+            },
+            "equivalence": {
+              "estimate": 0.99994,
+              "mcse": 3.4639976905289354e-05,
+              "n": 50000,
+              "successes": 49997,
+              "wilson95": [
+                0.9998235915642609,
+                0.999979594380387
+              ]
+            },
+            "both_reject": {
+              "estimate": 0.32862,
+              "mcse": 0.002100613698898491,
+              "n": 50000,
+              "successes": 16431,
+              "wilson95": [
+                0.3245161758738977,
+                0.33275015607154823
+              ]
+            },
+            "neither_reject": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 0,
+              "wilson95": [
+                0.0,
+                7.682327414500046e-05
+              ]
+            },
+            "positive_beyond_margin": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 0,
+              "wilson95": [
+                0.0,
+                7.682327414500046e-05
+              ]
+            },
+            "estimate_mean": {
+              "estimate": 0.03132550645985296,
+              "mcse": 0.08992446223071178,
+              "n": 50000
+            }
+          },
+          "benchmarks": {
+            "estimate_mean": 0.0,
+            "zero_rejection": 0.3270950076911408,
+            "coverage95": 0.6729049923088593,
+            "equivalence": 0.9999705364125084,
+            "both_reject": 0.3270655441036492,
+            "neither_reject": 0.0,
+            "positive_beyond_margin": 2.899960024982867e-09
+          }
+        }
+      ]
+    },
+    {
+      "lab": "selection",
+      "seed": 20261123,
+      "replications": 50000,
+      "design": {
+        "label": "ILLUSTRATION: synthetic normal estimates, not observed market returns",
+        "estimand": "Population monthly gross factor-model alpha of a stipulated hypothetical candidate",
+        "population": "Hypothetical repeated studies of fixed candidates in one unchanged trading regime",
+        "units": "basis points per month; no annualisation or trading costs",
+        "dgp": "Discovery X and independent holdout Y are N(theta, 10^2); fixed theta within each single-candidate scenario. Search has 20 independent theta=0 candidates per repetition.",
+        "estimator": "Normal estimate of alpha with known standard error 10 bp",
+        "selection": "Two-sided zero-null test at alpha=.05, retaining abs(X/10)>z_.975",
+        "error_criterion": "Rejection, conditional sign error, conditional absolute exaggeration and estimation bias; no welfare loss or investment recommendation is specified",
+        "assumptions": "Correct normal model; known SE; unchanged effect across discovery and holdout; independent studies and candidates; no factor misspecification, dependence, costs, market adaptation or optional stopping",
+        "monte_carlo": "Rate MCSE=sqrt(p_hat*(1-p_hat)/denominator); mean MCSE=sample SD/sqrt(denominator); conditional denominators are selected-study counts. Wilson95 accompanies rates; not a confidence interval for an economic effect.",
+        "undefined": "Type S and Type M are undefined at theta=0; every conditional metric is unavailable when no study is selected. JSON null is not zero. Small selected counts make asymptotic MCSE unreliable.",
+        "pairing": "Discovery and holdout differences are summarised within study; their MCSE uses paired differences rather than adding independent group standard errors",
+        "source_limit": "Conceptual motivation uses existing selected-section Gelman\u2013Carlin notes. Finance notes have abstract/selected-section coverage. No new source reading or replication of their empirical findings is claimed."
+      },
+      "scenarios": [
+        {
+          "id": "single_null",
+          "derived_seed": 4826860285458675641,
+          "parameters": {
+            "true_effect": 0.0,
+            "known_se": 10.0,
+            "alpha": 0.05,
+            "replications": 50000,
+            "units": "basis points per month"
+          },
+          "selected_count": 2489,
+          "metrics": {
+            "rejection_rate": {
+              "estimate": 0.04978,
+              "mcse": 0.0009726453783368324,
+              "n": 50000,
+              "successes": 2489,
+              "wilson95": [
+                0.04790799694079663,
+                0.05172117780817449
+              ]
+            },
+            "unconditional_bias": {
+              "estimate": 0.05452763940488253,
+              "mcse": 0.04486736548566456,
+              "n": 50000
+            },
+            "selected_bias": {
+              "estimate": 0.5867207605316722,
+              "mcse": 0.47365779865105795,
+              "n": 2489
+            },
+            "selected_absolute_mean": {
+              "estimate": 23.39454213964135,
+              "mcse": 0.06717393067454384,
+              "n": 2489
+            },
+            "selected_holdout_bias": {
+              "estimate": 0.07781064790516808,
+              "mcse": 0.20325098281096746,
+              "n": 2489
+            },
+            "selected_discovery_minus_holdout": {
+              "estimate": 0.5089101126265041,
+              "mcse": 0.5114893424057164,
+              "n": 2489
+            },
+            "selected_type_s": {
+              "estimate": null,
+              "mcse": null,
+              "n": 0,
+              "successes": 0,
+              "wilson95": null
+            },
+            "selected_type_m": {
+              "estimate": null,
+              "mcse": null,
+              "n": 0
+            }
+          },
+          "benchmarks": {
+            "rejection_rate": 0.05000000000000007,
+            "unconditional_bias": 0.0,
+            "selected_holdout_bias": 0.0,
+            "selected_bias": 0.0,
+            "selected_absolute_mean": 23.37802792201413,
+            "selected_type_s": null,
+            "selected_type_m": null,
+            "selected_discovery_minus_holdout": 0.0
+          }
+        },
+        {
+          "id": "single_weak_positive",
+          "derived_seed": 4331273051370576521,
+          "parameters": {
+            "true_effect": 1.0,
+            "known_se": 10.0,
+            "alpha": 0.05,
+            "replications": 50000,
+            "units": "basis points per month"
+          },
+          "selected_count": 2597,
+          "metrics": {
+            "rejection_rate": {
+              "estimate": 0.05194,
+              "mcse": 0.0009923934340774327,
+              "n": 50000,
+              "successes": 2597,
+              "wilson95": [
+                0.05002913619704124,
+                0.05391970667538557
+              ]
+            },
+            "unconditional_bias": {
+              "estimate": 0.09512451719211969,
+              "mcse": 0.04487356210009732,
+              "n": 50000
+            },
+            "selected_bias": {
+              "estimate": 4.526406966001678,
+              "mcse": 0.4500626722429919,
+              "n": 2597
+            },
+            "selected_absolute_mean": {
+              "estimate": 23.33885593696509,
+              "mcse": 0.06706313037959577,
+              "n": 2597
+            },
+            "selected_holdout_bias": {
+              "estimate": 0.2707117719756714,
+              "mcse": 0.19783087460625248,
+              "n": 2597
+            },
+            "selected_discovery_minus_holdout": {
+              "estimate": 4.255695194026007,
+              "mcse": 0.4882918594174987,
+              "n": 2597
+            },
+            "selected_type_s": {
+              "estimate": 0.38582980361956104,
+              "mcse": 0.009552263192457545,
+              "n": 2597,
+              "successes": 1002,
+              "wilson95": [
+                0.36728941333231024,
+                0.4047074540704091
+              ]
+            },
+            "selected_type_m": {
+              "estimate": 23.33885593696509,
+              "mcse": 0.06706313037959577,
+              "n": 2597
+            }
+          },
+          "benchmarks": {
+            "rejection_rate": 0.05114630281081067,
+            "unconditional_bias": 0.0,
+            "selected_holdout_bias": 0.0,
+            "selected_bias": 4.485565876425111,
+            "selected_absolute_mean": 23.407886592839684,
+            "selected_type_s": 0.38518897582466294,
+            "selected_type_m": 23.407886592839684,
+            "selected_discovery_minus_holdout": 4.485565876425111
+          }
+        },
+        {
+          "id": "single_strong_positive",
+          "derived_seed": 16083122633950818294,
+          "parameters": {
+            "true_effect": 30.0,
+            "known_se": 10.0,
+            "alpha": 0.05,
+            "replications": 50000,
+            "units": "basis points per month"
+          },
+          "selected_count": 42442,
+          "metrics": {
+            "rejection_rate": {
+              "estimate": 0.84884,
+              "mcse": 0.0016019404133737307,
+              "n": 50000,
+              "successes": 42442,
+              "wilson95": [
+                0.8456734616858017,
+                0.851952940252293
+              ]
+            },
+            "unconditional_bias": {
+              "estimate": -0.07909927449258625,
+              "mcse": 0.04483944240993848,
+              "n": 50000
+            },
+            "selected_bias": {
+              "estimate": 2.6891792542916058,
+              "mcse": 0.03886900761011354,
+              "n": 42442
+            },
+            "selected_absolute_mean": {
+              "estimate": 32.68917925429161,
+              "mcse": 0.03886900761011354,
+              "n": 42442
+            },
+            "selected_holdout_bias": {
+              "estimate": -0.022461984662194227,
+              "mcse": 0.04824872032506183,
+              "n": 42442
+            },
+            "selected_discovery_minus_holdout": {
+              "estimate": 2.7116412389538,
+              "mcse": 0.06209078106296711,
+              "n": 42442
+            },
+            "selected_type_s": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 42442,
+              "successes": 0,
+              "wilson95": [
+                0.0,
+                9.050259551152866e-05
+              ]
+            },
+            "selected_type_m": {
+              "estimate": 1.089639308476387,
+              "mcse": 0.0012956335870037846,
+              "n": 42442
+            }
+          },
+          "benchmarks": {
+            "rejection_rate": 0.8508387683270563,
+            "unconditional_bias": 0.0,
+            "selected_holdout_bias": 0.0,
+            "selected_bias": 2.730088210745747,
+            "selected_absolute_mean": 32.73010600874968,
+            "selected_type_s": 4.1433379003228404e-07,
+            "selected_type_m": 1.0910035336249893,
+            "selected_discovery_minus_holdout": 2.730088210745747
+          }
+        },
+        {
+          "id": "single_weak_negative",
+          "derived_seed": 17713973333053309097,
+          "parameters": {
+            "true_effect": -1.0,
+            "known_se": 10.0,
+            "alpha": 0.05,
+            "replications": 50000,
+            "units": "basis points per month"
+          },
+          "selected_count": 2633,
+          "metrics": {
+            "rejection_rate": {
+              "estimate": 0.05266,
+              "mcse": 0.0009988686039715132,
+              "n": 50000,
+              "successes": 2633,
+              "wilson95": [
+                0.05073639321764923,
+                0.054652339029262816
+              ]
+            },
+            "unconditional_bias": {
+              "estimate": 0.008060427264980588,
+              "mcse": 0.0446987757884302,
+              "n": 50000
+            },
+            "selected_bias": {
+              "estimate": -4.207546380978199,
+              "mcse": 0.45076902088328774,
+              "n": 2633
+            },
+            "selected_absolute_mean": {
+              "estimate": 23.454250163760076,
+              "mcse": 0.06701376083797404,
+              "n": 2633
+            },
+            "selected_holdout_bias": {
+              "estimate": -0.10941229422591571,
+              "mcse": 0.19703408800709823,
+              "n": 2633
+            },
+            "selected_discovery_minus_holdout": {
+              "estimate": -4.0981340867522835,
+              "mcse": 0.4905753272665346,
+              "n": 2633
+            },
+            "selected_type_s": {
+              "estimate": 0.3923281428028864,
+              "mcse": 0.009515549294571043,
+              "n": 2633,
+              "successes": 1033,
+              "wilson95": [
+                0.37384779963885434,
+                0.4111222075251006
+              ]
+            },
+            "selected_type_m": {
+              "estimate": 23.454250163760076,
+              "mcse": 0.06701376083797404,
+              "n": 2633
+            }
+          },
+          "benchmarks": {
+            "rejection_rate": 0.05114630281081067,
+            "unconditional_bias": 0.0,
+            "selected_holdout_bias": 0.0,
+            "selected_bias": -4.485565876425111,
+            "selected_absolute_mean": 23.407886592839684,
+            "selected_type_s": 0.38518897582466294,
+            "selected_type_m": 23.407886592839684,
+            "selected_discovery_minus_holdout": -4.485565876425111
+          }
+        },
+        {
+          "id": "twenty_independent_null_candidates",
+          "derived_seed": 6101546078680289361,
+          "selected_count": 32059,
+          "parameters": {
+            "true_effect": 0.0,
+            "known_se": 10.0,
+            "alpha": 0.05,
+            "candidates": 20,
+            "replications": 50000,
+            "units": "basis points per month",
+            "search": "Select maximum absolute discovery z; publish if unadjusted p < alpha"
+          },
+          "metrics": {
+            "family_rejection_rate": {
+              "estimate": 0.64118,
+              "mcse": 0.002145079054953453,
+              "n": 50000,
+              "successes": 32059,
+              "wilson95": [
+                0.6369650239044621,
+                0.6453732842758503
+              ]
+            },
+            "bonferroni_family_rejection_rate": {
+              "estimate": 0.04904,
+              "mcse": 0.0009657647581062379,
+              "n": 50000,
+              "successes": 2452,
+              "wilson95": [
+                0.047181535765396236,
+                0.05096775268202062
+              ]
+            },
+            "winner_signed_mean": {
+              "estimate": -0.06022026447763891,
+              "mcse": 0.09913645133008721,
+              "n": 50000
+            },
+            "winner_absolute_mean": {
+              "estimate": 21.66095990042866,
+              "mcse": 0.02107076540118323,
+              "n": 50000
+            },
+            "selected_winner_signed_mean": {
+              "estimate": -0.06614882208121972,
+              "mcse": 0.13707400308901888,
+              "n": 32059
+            },
+            "selected_winner_absolute_mean": {
+              "estimate": 24.260369025568064,
+              "mcse": 0.020737000273765238,
+              "n": 32059
+            },
+            "selected_holdout_signed_mean": {
+              "estimate": -0.02922447205890234,
+              "mcse": 0.05600656880910586,
+              "n": 32059
+            },
+            "selected_holdout_absolute_mean": {
+              "estimate": 7.99928408792187,
+              "mcse": 0.033774814953844275,
+              "n": 32059
+            },
+            "selected_discovery_minus_holdout_absolute": {
+              "estimate": 16.261084937646196,
+              "mcse": 0.039658280003196746,
+              "n": 32059
+            }
+          },
+          "benchmarks": {
+            "family_rejection_rate": 0.6415140775914581,
+            "bonferroni_family_rejection_rate": 0.04883012474683324,
+            "winner_signed_mean": 0.0,
+            "selected_winner_signed_mean": 0.0,
+            "selected_holdout_signed_mean": 0.0,
+            "selected_holdout_absolute_mean": 7.978845608028654
+          }
+        }
+      ]
+    },
+    {
+      "lab": "decisions",
+      "design": {
+        "label": "Illustration: synthetic policy evaluation, not evidence about a real programme",
+        "replications": 50000,
+        "seed": 20261123,
+        "random_streams": "Stable SHA-256 derivation from base seed and named scenario; each derived seed is reported",
+        "estimand": "Unknown average gross benefit theta in one fixed eligible population over one year",
+        "units": "pounds per eligible person over one year; adoption probabilities are unitless",
+        "dgp": "Theta is normal with scenario mean/SD, or fixed when SD=0; estimate|theta ~ N(theta,500^2)",
+        "estimator": "Unbiased normal estimate with known SE=500; identification is assumed valid",
+        "actions": "Adopt once or choose status quo; all policies face identical simulated states and estimates",
+        "utility": "adopt*(theta-cost), linear risk-neutral per-person payoff; status quo payoff zero",
+        "loss": "Oracle regret=max(theta-cost,0)-utility; oracle knows theta but policies do not",
+        "priors": "Baseline N(0,1000^2), skeptical N(0,100^2); both proper and fixed before outcomes",
+        "cost_confidence_rule": "Adopt iff the one-sided 95% lower confidence bound exceeds known cost; false adoption probability <=.05 for theta<=cost under the model",
+        "evaluation": "Matched prior predictive, mismatched prior predictive and fixed-state sampling performance are distinguished",
+        "paired_comparisons": "Other policy minus baseline Bayes on each shared replication; report sample SD of differences / sqrt(R)",
+        "mc_error": "Mean MCSE is sample SD/sqrt(R); rate MCSE is sqrt(p_hat*(1-p_hat)/R), with Wilson 95% interval",
+        "limitations": "No individual outcome noise, welfare weights, risk aversion, uncertain costs, partial identification, delay, learning or realistic programme data"
+      },
+      "scenarios": [
+        {
+          "id": "matched_prior_cost100",
+          "derived_seed": 2850615676944286264,
+          "parameters": {
+            "evaluation": "matched_prior_predictive",
+            "theta_mean": 0.0,
+            "theta_sd": 1000.0,
+            "se": 500.0,
+            "cost": 100.0,
+            "alpha": 0.05,
+            "policy_prior_mean": 0.0,
+            "policy_prior_sd": 1000.0,
+            "skeptical_prior_sd": 100.0,
+            "policy_cutoffs": {
+              "bayes": 125.0,
+              "skeptical_bayes": 2600.0,
+              "positive_significance": 979.9819922700269,
+              "cost_confidence": 922.4268134757361,
+              "plugin": 100.0
+            }
+          },
+          "metrics": {
+            "oracle_utility": {
+              "estimate": 345.1118845438214,
+              "mcse": 2.439217712187801,
+              "n": 50000
+            },
+            "bayes_adoption_without_zero_rejection": {
+              "estimate": 0.26192,
+              "mcse": 0.0019663057422486464,
+              "n": 50000,
+              "successes": 13096,
+              "wilson95": [
+                0.25808450628203305,
+                0.2657920738881837
+              ]
+            },
+            "bayes_adoption": {
+              "estimate": 0.45064,
+              "mcse": 0.0022251453453651067,
+              "n": 50000,
+              "successes": 22532,
+              "wilson95": [
+                0.44628275313515736,
+                0.45500483085846605
+              ]
+            },
+            "bayes_utility": {
+              "estimate": 303.4031930268954,
+              "mcse": 2.546672190370361,
+              "n": 50000
+            },
+            "bayes_regret": {
+              "estimate": 41.70869151692603,
+              "mcse": 0.6064616333036587,
+              "n": 50000
+            },
+            "skeptical_bayes_adoption": {
+              "estimate": 0.01018,
+              "mcse": 0.00044891797914541136,
+              "n": 50000,
+              "successes": 509,
+              "wilson95": [
+                0.009336995977236232,
+                0.011098263175047177
+              ]
+            },
+            "skeptical_bayes_utility": {
+              "estimate": 22.86107014168042,
+              "mcse": 1.0345374300657562,
+              "n": 50000
+            },
+            "skeptical_bayes_regret": {
+              "estimate": 322.25081440214103,
+              "mcse": 2.2746870522800977,
+              "n": 50000
+            },
+            "skeptical_bayes_minus_bayes_utility": {
+              "estimate": -280.542122885215,
+              "mcse": 2.381557559215154,
+              "n": 50000
+            },
+            "skeptical_bayes_minus_bayes_regret": {
+              "estimate": 280.542122885215,
+              "mcse": 2.381557559215154,
+              "n": 50000
+            },
+            "positive_significance_adoption": {
+              "estimate": 0.18872,
+              "mcse": 0.0017498843481784732,
+              "n": 50000,
+              "successes": 9436,
+              "wilson95": [
+                0.18531425162212523,
+                0.19217357547542646
+              ]
+            },
+            "positive_significance_utility": {
+              "estimate": 219.92510719302084,
+              "mcse": 2.356382830098878,
+              "n": 50000
+            },
+            "positive_significance_regret": {
+              "estimate": 125.1867773508006,
+              "mcse": 1.2275289452332956,
+              "n": 50000
+            },
+            "positive_significance_minus_bayes_utility": {
+              "estimate": -83.47808583387457,
+              "mcse": 1.2912671953037547,
+              "n": 50000
+            },
+            "positive_significance_minus_bayes_regret": {
+              "estimate": 83.47808583387457,
+              "mcse": 1.2912671953037547,
+              "n": 50000
+            },
+            "cost_confidence_adoption": {
+              "estimate": 0.20378,
+              "mcse": 0.001801408957455247,
+              "n": 50000,
+              "successes": 10189,
+              "wilson95": [
+                0.20027212219547477,
+                0.20733339098505962
+              ]
+            },
+            "cost_confidence_utility": {
+              "estimate": 230.11573310700783,
+              "mcse": 2.378811437115909,
+              "n": 50000
+            },
+            "cost_confidence_regret": {
+              "estimate": 114.99615143681362,
+              "mcse": 1.1664974107466013,
+              "n": 50000
+            },
+            "cost_confidence_minus_bayes_utility": {
+              "estimate": -73.28745991988761,
+              "mcse": 1.2253133421622502,
+              "n": 50000
+            },
+            "cost_confidence_minus_bayes_regret": {
+              "estimate": 73.28745991988761,
+              "mcse": 1.2253133421622502,
+              "n": 50000
+            },
+            "plugin_adoption": {
+              "estimate": 0.45954,
+              "mcse": 0.0022287350152048135,
+              "n": 50000,
+              "successes": 22977,
+              "wilson95": [
+                0.455175034597369,
+                0.4639111819419747
+              ]
+            },
+            "plugin_utility": {
+              "estimate": 303.1038530803215,
+              "mcse": 2.554560141423093,
+              "n": 50000
+            },
+            "plugin_regret": {
+              "estimate": 42.00803146349993,
+              "mcse": 0.6104294471257021,
+              "n": 50000
+            },
+            "plugin_minus_bayes_utility": {
+              "estimate": -0.2993399465739058,
+              "mcse": 0.19132530010469453,
+              "n": 50000
+            },
+            "plugin_minus_bayes_regret": {
+              "estimate": 0.2993399465739058,
+              "mcse": 0.19132530010469453,
+              "n": 50000
+            },
+            "always_adoption": {
+              "estimate": 1.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 50000,
+              "wilson95": [
+                0.9999231767258548,
+                1.0
+              ]
+            },
+            "always_utility": {
+              "estimate": -110.2083645367844,
+              "mcse": 4.453698878419319,
+              "n": 50000
+            },
+            "always_regret": {
+              "estimate": 455.3202490806059,
+              "mcse": 2.7568220420038694,
+              "n": 50000
+            },
+            "always_minus_bayes_utility": {
+              "estimate": -413.6115575636798,
+              "mcse": 2.886200161121906,
+              "n": 50000
+            },
+            "always_minus_bayes_regret": {
+              "estimate": 413.6115575636798,
+              "mcse": 2.886200161121906,
+              "n": 50000
+            },
+            "never_adoption": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 0,
+              "wilson95": [
+                0.0,
+                7.682327414500046e-05
+              ]
+            },
+            "never_utility": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000
+            },
+            "never_regret": {
+              "estimate": 345.1118845438214,
+              "mcse": 2.439217712187801,
+              "n": 50000
+            },
+            "never_minus_bayes_utility": {
+              "estimate": -303.4031930268954,
+              "mcse": 2.546672190370361,
+              "n": 50000
+            },
+            "never_minus_bayes_regret": {
+              "estimate": 303.4031930268954,
+              "mcse": 2.546672190370361,
+              "n": 50000
+            }
+          },
+          "benchmarks": {
+            "oracle_utility": 350.9353312047147,
+            "bayes_adoption_without_zero_rejection": 0.2651166322262851,
+            "bayes_adoption": 0.455489646255317,
+            "bayes_utility": 309.05265819807903,
+            "bayes_regret": 41.882673006635684,
+            "skeptical_bayes_adoption": 0.01002233431131373,
+            "skeptical_bayes_utility": 22.882630980758876,
+            "skeptical_bayes_regret": 328.05270022395587,
+            "skeptical_bayes_minus_bayes_utility": -286.1700272173201,
+            "skeptical_bayes_minus_bayes_regret": 286.1700272173202,
+            "positive_significance_adoption": 0.19037301402903187,
+            "positive_significance_utility": 223.97184643390642,
+            "positive_significance_regret": 126.9634847708083,
+            "positive_significance_minus_bayes_utility": -85.08081176417261,
+            "positive_significance_minus_bayes_regret": 85.08081176417261,
+            "cost_confidence_adoption": 0.20467341226636485,
+            "cost_confidence_utility": 233.42148511436446,
+            "cost_confidence_regret": 117.51384609035026,
+            "cost_confidence_minus_bayes_utility": -75.63117308371457,
+            "cost_confidence_minus_bayes_regret": 75.63117308371457,
+            "plugin_adoption": 0.4643650372824013,
+            "plugin_utility": 308.96387100564937,
+            "plugin_regret": 41.97146019906535,
+            "plugin_minus_bayes_utility": -0.08878719242966326,
+            "plugin_minus_bayes_regret": 0.08878719242966326,
+            "always_adoption": 1.0,
+            "always_utility": -100.0,
+            "always_regret": 450.9353312047147,
+            "always_minus_bayes_utility": -409.05265819807903,
+            "always_minus_bayes_regret": 409.05265819807903,
+            "never_adoption": 0.0,
+            "never_utility": 0.0,
+            "never_regret": 350.9353312047147,
+            "never_minus_bayes_utility": -309.05265819807903,
+            "never_minus_bayes_regret": 309.05265819807903
+          }
+        },
+        {
+          "id": "matched_prior_cost500",
+          "derived_seed": 7894018033220693020,
+          "parameters": {
+            "evaluation": "matched_prior_predictive",
+            "theta_mean": 0.0,
+            "theta_sd": 1000.0,
+            "se": 500.0,
+            "cost": 500.0,
+            "alpha": 0.05,
+            "policy_prior_mean": 0.0,
+            "policy_prior_sd": 1000.0,
+            "skeptical_prior_sd": 100.0,
+            "policy_cutoffs": {
+              "bayes": 625.0,
+              "skeptical_bayes": 13000.0,
+              "positive_significance": 979.9819922700269,
+              "cost_confidence": 1322.4268134757363,
+              "plugin": 500.0
+            }
+          },
+          "metrics": {
+            "oracle_utility": {
+              "estimate": 196.9954199705896,
+              "mcse": 1.8445363480447747,
+              "n": 50000
+            },
+            "bayes_adoption_without_zero_rejection": {
+              "estimate": 0.09706,
+              "mcse": 0.0013239286717946703,
+              "n": 50000,
+              "successes": 4853,
+              "wilson95": [
+                0.09449601769007343,
+                0.09968589265009453
+              ]
+            },
+            "bayes_adoption": {
+              "estimate": 0.28626,
+              "mcse": 0.0020214609192363824,
+              "n": 50000,
+              "successes": 14313,
+              "wilson95": [
+                0.2823145477708368,
+                0.2902382926423946
+              ]
+            },
+            "bayes_utility": {
+              "estimate": 159.89651063104148,
+              "mcse": 1.901169817568946,
+              "n": 50000
+            },
+            "bayes_regret": {
+              "estimate": 37.098909339548165,
+              "mcse": 0.5743939595569508,
+              "n": 50000
+            },
+            "skeptical_bayes_adoption": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 0,
+              "wilson95": [
+                0.0,
+                7.682327414500046e-05
+              ]
+            },
+            "skeptical_bayes_utility": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000
+            },
+            "skeptical_bayes_regret": {
+              "estimate": 196.9954199705896,
+              "mcse": 1.8445363480447747,
+              "n": 50000
+            },
+            "skeptical_bayes_minus_bayes_utility": {
+              "estimate": -159.89651063104148,
+              "mcse": 1.901169817568946,
+              "n": 50000
+            },
+            "skeptical_bayes_minus_bayes_regret": {
+              "estimate": 159.89651063104148,
+              "mcse": 1.901169817568946,
+              "n": 50000
+            },
+            "positive_significance_adoption": {
+              "estimate": 0.1892,
+              "mcse": 0.001751589906342235,
+              "n": 50000,
+              "successes": 9460,
+              "wilson95": [
+                0.185790872380629,
+                0.19265688096657954
+              ]
+            },
+            "positive_significance_utility": {
+              "estimate": 147.149769410382,
+              "mcse": 1.8043783474019124,
+              "n": 50000
+            },
+            "positive_significance_regret": {
+              "estimate": 49.845650560207616,
+              "mcse": 0.7101655137885112,
+              "n": 50000
+            },
+            "positive_significance_minus_bayes_utility": {
+              "estimate": -12.746741220659453,
+              "mcse": 0.6585545964386497,
+              "n": 50000
+            },
+            "positive_significance_minus_bayes_regret": {
+              "estimate": 12.746741220659453,
+              "mcse": 0.6585545964386497,
+              "n": 50000
+            },
+            "cost_confidence_adoption": {
+              "estimate": 0.11782,
+              "mcse": 0.001441793657913642,
+              "n": 50000,
+              "successes": 5891,
+              "wilson95": [
+                0.11502345269789833,
+                0.12067526793992712
+              ]
+            },
+            "cost_confidence_utility": {
+              "estimate": 117.15600542949848,
+              "mcse": 1.69099055226239,
+              "n": 50000
+            },
+            "cost_confidence_regret": {
+              "estimate": 79.83941454109116,
+              "mcse": 0.9629323658082898,
+              "n": 50000
+            },
+            "cost_confidence_minus_bayes_utility": {
+              "estimate": -42.740505201542994,
+              "mcse": 0.9773913789767851,
+              "n": 50000
+            },
+            "cost_confidence_minus_bayes_regret": {
+              "estimate": 42.740505201542994,
+              "mcse": 0.9773913789767851,
+              "n": 50000
+            },
+            "plugin_adoption": {
+              "estimate": 0.32636,
+              "mcse": 0.0020968984257707856,
+              "n": 50000,
+              "successes": 16318,
+              "wilson95": [
+                0.32226363041912603,
+                0.33048304876751894
+              ]
+            },
+            "plugin_utility": {
+              "estimate": 157.2955495961818,
+              "mcse": 1.9502407890568652,
+              "n": 50000
+            },
+            "plugin_regret": {
+              "estimate": 39.69987037440786,
+              "mcse": 0.6028978319627769,
+              "n": 50000
+            },
+            "plugin_minus_bayes_utility": {
+              "estimate": -2.600961034859693,
+              "mcse": 0.4151586968873725,
+              "n": 50000
+            },
+            "plugin_minus_bayes_regret": {
+              "estimate": 2.600961034859693,
+              "mcse": 0.4151586968873725,
+              "n": 50000
+            },
+            "always_adoption": {
+              "estimate": 1.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 50000,
+              "wilson95": [
+                0.9999231767258548,
+                1.0
+              ]
+            },
+            "always_utility": {
+              "estimate": -504.4453927134247,
+              "mcse": 4.484303816265761,
+              "n": 50000
+            },
+            "always_regret": {
+              "estimate": 701.4408126840143,
+              "mcse": 3.34355061744793,
+              "n": 50000
+            },
+            "always_minus_bayes_utility": {
+              "estimate": -664.3419033444661,
+              "mcse": 3.4993443629412244,
+              "n": 50000
+            },
+            "always_minus_bayes_regret": {
+              "estimate": 664.3419033444661,
+              "mcse": 3.4993443629412244,
+              "n": 50000
+            },
+            "never_adoption": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 0,
+              "wilson95": [
+                0.0,
+                7.682327414500046e-05
+              ]
+            },
+            "never_utility": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000
+            },
+            "never_regret": {
+              "estimate": 196.9954199705896,
+              "mcse": 1.8445363480447747,
+              "n": 50000
+            },
+            "never_minus_bayes_utility": {
+              "estimate": -159.89651063104148,
+              "mcse": 1.901169817568946,
+              "n": 50000
+            },
+            "never_minus_bayes_regret": {
+              "estimate": 159.89651063104148,
+              "mcse": 1.901169817568946,
+              "n": 50000
+            }
+          },
+          "benchmarks": {
+            "oracle_utility": 197.79655740130605,
+            "bayes_adoption_without_zero_rejection": 0.09770204698625759,
+            "bayes_adoption": 0.28807506101528946,
+            "bayes_utility": 161.1709147099069,
+            "bayes_regret": 36.62564269139915,
+            "skeptical_bayes_adoption": 1.4926563883799263e-31,
+            "skeptical_bayes_utility": 1.4890479051141918e-27,
+            "skeptical_bayes_regret": 197.79655740130605,
+            "skeptical_bayes_minus_bayes_utility": -161.1709147099069,
+            "skeptical_bayes_minus_bayes_regret": 161.1709147099069,
+            "positive_significance_adoption": 0.19037301402903187,
+            "positive_significance_utility": 147.82264082229366,
+            "positive_significance_regret": 49.97391657901238,
+            "positive_significance_minus_bayes_utility": -13.348273887613232,
+            "positive_significance_minus_bayes_regret": 13.348273887613232,
+            "cost_confidence_adoption": 0.11844133631191871,
+            "cost_confidence_utility": 118.05746966243834,
+            "cost_confidence_regret": 79.73908773886771,
+            "cost_confidence_minus_bayes_utility": -43.11344504746856,
+            "cost_confidence_minus_bayes_regret": 43.11344504746856,
+            "plugin_adoption": 0.3273604230092886,
+            "plugin_utility": 159.18824023842816,
+            "plugin_regret": 38.60831716287788,
+            "plugin_minus_bayes_utility": -1.982674471478731,
+            "plugin_minus_bayes_regret": 1.982674471478731,
+            "always_adoption": 1.0,
+            "always_utility": -500.0,
+            "always_regret": 697.796557401306,
+            "always_minus_bayes_utility": -661.1709147099069,
+            "always_minus_bayes_regret": 661.1709147099068,
+            "never_adoption": 0.0,
+            "never_utility": 0.0,
+            "never_regret": 197.79655740130605,
+            "never_minus_bayes_utility": -161.1709147099069,
+            "never_minus_bayes_regret": 161.1709147099069
+          }
+        },
+        {
+          "id": "mismatched_prior_negative",
+          "derived_seed": 16531211227284977757,
+          "parameters": {
+            "evaluation": "mismatched_prior_predictive",
+            "theta_mean": -250.0,
+            "theta_sd": 100.0,
+            "se": 500.0,
+            "cost": 100.0,
+            "alpha": 0.05,
+            "policy_prior_mean": 0.0,
+            "policy_prior_sd": 1000.0,
+            "skeptical_prior_sd": 100.0,
+            "policy_cutoffs": {
+              "bayes": 125.0,
+              "skeptical_bayes": 2600.0,
+              "positive_significance": 979.9819922700269,
+              "cost_confidence": 922.4268134757361,
+              "plugin": 100.0
+            }
+          },
+          "metrics": {
+            "oracle_utility": {
+              "estimate": 0.003972667964614181,
+              "mcse": 0.0017607108310884701,
+              "n": 50000
+            },
+            "bayes_adoption_without_zero_rejection": {
+              "estimate": 0.22232,
+              "mcse": 0.0018595365960367653,
+              "n": 50000,
+              "successes": 11116,
+              "wilson95": [
+                0.21869678509761759,
+                0.22598587947591153
+              ]
+            },
+            "bayes_adoption": {
+              "estimate": 0.23034,
+              "mcse": 0.001882994872005763,
+              "n": 50000,
+              "successes": 11517,
+              "wilson95": [
+                0.22667019765271793,
+                0.2340512346754939
+              ]
+            },
+            "bayes_utility": {
+              "estimate": -74.70472218794244,
+              "mcse": 0.6466657961683969,
+              "n": 50000
+            },
+            "bayes_regret": {
+              "estimate": 74.70869485590704,
+              "mcse": 0.6466548776284915,
+              "n": 50000
+            },
+            "skeptical_bayes_adoption": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 0,
+              "wilson95": [
+                0.0,
+                7.682327414500046e-05
+              ]
+            },
+            "skeptical_bayes_utility": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000
+            },
+            "skeptical_bayes_regret": {
+              "estimate": 0.003972667964614181,
+              "mcse": 0.0017607108310884701,
+              "n": 50000
+            },
+            "skeptical_bayes_minus_bayes_utility": {
+              "estimate": 74.70472218794244,
+              "mcse": 0.6466657961683969,
+              "n": 50000
+            },
+            "skeptical_bayes_minus_bayes_regret": {
+              "estimate": -74.70472218794244,
+              "mcse": 0.6466657961683969,
+              "n": 50000
+            },
+            "positive_significance_adoption": {
+              "estimate": 0.00802,
+              "mcse": 0.00039889045112662195,
+              "n": 50000,
+              "successes": 401,
+              "wilson95": [
+                0.007275101541120082,
+                0.008840489487707631
+              ]
+            },
+            "positive_significance_utility": {
+              "estimate": -2.340923802849524,
+              "mcse": 0.12300865254146569,
+              "n": 50000
+            },
+            "positive_significance_regret": {
+              "estimate": 2.344896470814138,
+              "mcse": 0.12301974112612114,
+              "n": 50000
+            },
+            "positive_significance_minus_bayes_utility": {
+              "estimate": 72.36379838509292,
+              "mcse": 0.6401730893902298,
+              "n": 50000
+            },
+            "positive_significance_minus_bayes_regret": {
+              "estimate": -72.36379838509292,
+              "mcse": 0.6401730893902298,
+              "n": 50000
+            },
+            "cost_confidence_adoption": {
+              "estimate": 0.0112,
+              "mcse": 0.0004706285159231217,
+              "n": 50000,
+              "successes": 560,
+              "wilson95": [
+                0.010314407645353385,
+                0.01216069478745077
+              ]
+            },
+            "cost_confidence_utility": {
+              "estimate": -3.3218016249253415,
+              "mcse": 0.14702630761951155,
+              "n": 50000
+            },
+            "cost_confidence_regret": {
+              "estimate": 3.325774292889956,
+              "mcse": 0.14703505489407825,
+              "n": 50000
+            },
+            "cost_confidence_minus_bayes_utility": {
+              "estimate": 71.3829205630171,
+              "mcse": 0.6372165272200028,
+              "n": 50000
+            },
+            "cost_confidence_minus_bayes_regret": {
+              "estimate": -71.3829205630171,
+              "mcse": 0.6372165272200028,
+              "n": 50000
+            },
+            "plugin_adoption": {
+              "estimate": 0.24598,
+              "mcse": 0.0019260002056074657,
+              "n": 50000,
+              "successes": 12299,
+              "wilson95": [
+                0.2422247181704313,
+                0.24977431112576529
+              ]
+            },
+            "plugin_utility": {
+              "estimate": -79.9140975409329,
+              "mcse": 0.6632169770082229,
+              "n": 50000
+            },
+            "plugin_regret": {
+              "estimate": 79.91807020889752,
+              "mcse": 0.6632057068491184,
+              "n": 50000
+            },
+            "plugin_minus_bayes_utility": {
+              "estimate": -5.209375352990469,
+              "mcse": 0.19299485883492165,
+              "n": 50000
+            },
+            "plugin_minus_bayes_regret": {
+              "estimate": 5.209375352990469,
+              "mcse": 0.19299485883492165,
+              "n": 50000
+            },
+            "always_adoption": {
+              "estimate": 1.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 50000,
+              "wilson95": [
+                0.9999231767258548,
+                1.0
+              ]
+            },
+            "always_utility": {
+              "estimate": -350.42473881082515,
+              "mcse": 0.4479574198634305,
+              "n": 50000
+            },
+            "always_regret": {
+              "estimate": 350.42871147878975,
+              "mcse": 0.447891798672068,
+              "n": 50000
+            },
+            "always_minus_bayes_utility": {
+              "estimate": -275.72001662288267,
+              "mcse": 0.7787227787952852,
+              "n": 50000
+            },
+            "always_minus_bayes_regret": {
+              "estimate": 275.72001662288267,
+              "mcse": 0.7787227787952852,
+              "n": 50000
+            },
+            "never_adoption": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 0,
+              "wilson95": [
+                0.0,
+                7.682327414500046e-05
+              ]
+            },
+            "never_utility": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000
+            },
+            "never_regret": {
+              "estimate": 0.003972667964614181,
+              "mcse": 0.0017607108310884701,
+              "n": 50000
+            },
+            "never_minus_bayes_utility": {
+              "estimate": 74.70472218794244,
+              "mcse": 0.6466657961683969,
+              "n": 50000
+            },
+            "never_minus_bayes_regret": {
+              "estimate": -74.70472218794244,
+              "mcse": 0.6466657961683969,
+              "n": 50000
+            }
+          },
+          "benchmarks": {
+            "oracle_utility": 0.005848091842142258,
+            "bayes_adoption_without_zero_rejection": 0.2231087126560663,
+            "bayes_adoption": 0.2310371520794358,
+            "bayes_utility": -74.89298075631919,
+            "bayes_regret": 74.89882884816133,
+            "skeptical_bayes_adoption": 1.1398692432472417e-08,
+            "skeptical_bayes_utility": -2.702300751802031e-06,
+            "skeptical_bayes_regret": 0.005850794142894061,
+            "skeptical_bayes_minus_bayes_utility": 74.89297805401844,
+            "skeptical_bayes_minus_bayes_regret": -74.89297805401844,
+            "positive_significance_adoption": 0.00792843942336948,
+            "positive_significance_utility": -2.348458741843842,
+            "positive_significance_regret": 2.354306833685984,
+            "positive_significance_minus_bayes_utility": 72.54452201447535,
+            "positive_significance_minus_bayes_regret": -72.54452201447535,
+            "cost_confidence_adoption": 0.01074343985304033,
+            "cost_confidence_utility": -3.20379325653988,
+            "cost_confidence_regret": 3.2096413483820223,
+            "cost_confidence_minus_bayes_utility": 71.68918749977931,
+            "cost_confidence_minus_bayes_regret": -71.68918749977931,
+            "plugin_adoption": 0.2462284118864402,
+            "plugin_utility": -79.99816289417791,
+            "plugin_regret": 80.00401098602005,
+            "plugin_minus_bayes_utility": -5.105182137858719,
+            "plugin_minus_bayes_regret": 5.105182137858719,
+            "always_adoption": 1.0,
+            "always_utility": -350.0,
+            "always_regret": 350.00584809184215,
+            "always_minus_bayes_utility": -275.10701924368084,
+            "always_minus_bayes_regret": 275.10701924368084,
+            "never_adoption": 0.0,
+            "never_utility": 0.0,
+            "never_regret": 0.005848091842142258,
+            "never_minus_bayes_utility": 74.89298075631919,
+            "never_minus_bayes_regret": -74.89298075631919
+          }
+        },
+        {
+          "id": "fixed_zero",
+          "derived_seed": 7204598680875119766,
+          "parameters": {
+            "evaluation": "fixed_state",
+            "theta_mean": 0.0,
+            "theta_sd": 0.0,
+            "se": 500.0,
+            "cost": 100.0,
+            "alpha": 0.05,
+            "policy_prior_mean": 0.0,
+            "policy_prior_sd": 1000.0,
+            "skeptical_prior_sd": 100.0,
+            "policy_cutoffs": {
+              "bayes": 125.0,
+              "skeptical_bayes": 2600.0,
+              "positive_significance": 979.9819922700269,
+              "cost_confidence": 922.4268134757361,
+              "plugin": 100.0
+            }
+          },
+          "metrics": {
+            "oracle_utility": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000
+            },
+            "bayes_adoption_without_zero_rejection": {
+              "estimate": 0.37508,
+              "mcse": 0.0021651558539744894,
+              "n": 50000,
+              "successes": 18754,
+              "wilson95": [
+                0.37084612142479323,
+                0.37933307210201916
+              ]
+            },
+            "bayes_adoption": {
+              "estimate": 0.40058,
+              "mcse": 0.002191418096119497,
+              "n": 50000,
+              "successes": 20029,
+              "wilson95": [
+                0.3962926954202697,
+                0.40488258011956124
+              ]
+            },
+            "bayes_utility": {
+              "estimate": -40.058,
+              "mcse": 0.21914400106291762,
+              "n": 50000
+            },
+            "bayes_regret": {
+              "estimate": 40.058,
+              "mcse": 0.21914400106291762,
+              "n": 50000
+            },
+            "skeptical_bayes_adoption": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 0,
+              "wilson95": [
+                0.0,
+                7.682327414500046e-05
+              ]
+            },
+            "skeptical_bayes_utility": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000
+            },
+            "skeptical_bayes_regret": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000
+            },
+            "skeptical_bayes_minus_bayes_utility": {
+              "estimate": 40.058,
+              "mcse": 0.21914400106291762,
+              "n": 50000
+            },
+            "skeptical_bayes_minus_bayes_regret": {
+              "estimate": -40.058,
+              "mcse": 0.21914400106291762,
+              "n": 50000
+            },
+            "positive_significance_adoption": {
+              "estimate": 0.0255,
+              "mcse": 0.0007049787230831864,
+              "n": 50000,
+              "successes": 1275,
+              "wilson95": [
+                0.024154292033555298,
+                0.026918613253608302
+              ]
+            },
+            "positive_significance_utility": {
+              "estimate": -2.55,
+              "mcse": 0.07049857729761658,
+              "n": 50000
+            },
+            "positive_significance_regret": {
+              "estimate": 2.55,
+              "mcse": 0.07049857729761658,
+              "n": 50000
+            },
+            "positive_significance_minus_bayes_utility": {
+              "estimate": 37.508,
+              "mcse": 0.2165177505857808,
+              "n": 50000
+            },
+            "positive_significance_minus_bayes_regret": {
+              "estimate": -37.508,
+              "mcse": 0.2165177505857808,
+              "n": 50000
+            },
+            "cost_confidence_adoption": {
+              "estimate": 0.0327,
+              "mcse": 0.0007953704797136992,
+              "n": 50000,
+              "successes": 1635,
+              "wilson95": [
+                0.03117664858014785,
+                0.03429515045186806
+              ]
+            },
+            "cost_confidence_utility": {
+              "estimate": -3.27,
+              "mcse": 0.07953784335378039,
+              "n": 50000
+            },
+            "cost_confidence_regret": {
+              "estimate": 3.27,
+              "mcse": 0.07953784335378039,
+              "n": 50000
+            },
+            "cost_confidence_minus_bayes_utility": {
+              "estimate": 36.788,
+              "mcse": 0.21566128840342746,
+              "n": 50000
+            },
+            "cost_confidence_minus_bayes_regret": {
+              "estimate": -36.788,
+              "mcse": 0.21566128840342746,
+              "n": 50000
+            },
+            "plugin_adoption": {
+              "estimate": 0.41974,
+              "mcse": 0.002207071962578475,
+              "n": 50000,
+              "successes": 20987,
+              "wilson95": [
+                0.4154205460471205,
+                0.4240717856248452
+              ]
+            },
+            "plugin_utility": {
+              "estimate": -41.974,
+              "mcse": 0.22070940336291667,
+              "n": 50000
+            },
+            "plugin_regret": {
+              "estimate": 41.974,
+              "mcse": 0.22070940336291667,
+              "n": 50000
+            },
+            "plugin_minus_bayes_utility": {
+              "estimate": -1.916,
+              "mcse": 0.061307862897682724,
+              "n": 50000
+            },
+            "plugin_minus_bayes_regret": {
+              "estimate": 1.916,
+              "mcse": 0.061307862897682724,
+              "n": 50000
+            },
+            "always_adoption": {
+              "estimate": 1.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 50000,
+              "wilson95": [
+                0.9999231767258548,
+                1.0
+              ]
+            },
+            "always_utility": {
+              "estimate": -100.0,
+              "mcse": 0.0,
+              "n": 50000
+            },
+            "always_regret": {
+              "estimate": 100.0,
+              "mcse": 0.0,
+              "n": 50000
+            },
+            "always_minus_bayes_utility": {
+              "estimate": -59.942,
+              "mcse": 0.21914400106291762,
+              "n": 50000
+            },
+            "always_minus_bayes_regret": {
+              "estimate": 59.942,
+              "mcse": 0.21914400106291762,
+              "n": 50000
+            },
+            "never_adoption": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 0,
+              "wilson95": [
+                0.0,
+                7.682327414500046e-05
+              ]
+            },
+            "never_utility": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000
+            },
+            "never_regret": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000
+            },
+            "never_minus_bayes_utility": {
+              "estimate": 40.058,
+              "mcse": 0.21914400106291762,
+              "n": 50000
+            },
+            "never_minus_bayes_regret": {
+              "estimate": -40.058,
+              "mcse": 0.21914400106291762,
+              "n": 50000
+            }
+          },
+          "benchmarks": {
+            "oracle_utility": 0.0,
+            "bayes_adoption_without_zero_rejection": 0.3762936743170763,
+            "bayes_adoption": 0.4012936743170763,
+            "bayes_utility": -40.12936743170763,
+            "bayes_regret": 40.12936743170763,
+            "skeptical_bayes_adoption": 9.964426316933494e-08,
+            "skeptical_bayes_utility": -9.964426316933495e-06,
+            "skeptical_bayes_regret": 9.964426316933495e-06,
+            "skeptical_bayes_minus_bayes_utility": 40.12935746728131,
+            "skeptical_bayes_minus_bayes_regret": -40.12935746728131,
+            "positive_significance_adoption": 0.025000000000000036,
+            "positive_significance_utility": -2.5000000000000036,
+            "positive_significance_regret": 2.5000000000000036,
+            "positive_significance_minus_bayes_utility": 37.62936743170762,
+            "positive_significance_minus_bayes_regret": -37.62936743170762,
+            "cost_confidence_adoption": 0.03252941699086173,
+            "cost_confidence_utility": -3.2529416990861733,
+            "cost_confidence_regret": 3.2529416990861733,
+            "cost_confidence_minus_bayes_utility": 36.876425732621456,
+            "cost_confidence_minus_bayes_regret": -36.876425732621456,
+            "plugin_adoption": 0.42074029056089696,
+            "plugin_utility": -42.07402905608969,
+            "plugin_regret": 42.07402905608969,
+            "plugin_minus_bayes_utility": -1.9446616243820642,
+            "plugin_minus_bayes_regret": 1.9446616243820642,
+            "always_adoption": 1.0,
+            "always_utility": -100.0,
+            "always_regret": 100.0,
+            "always_minus_bayes_utility": -59.87063256829237,
+            "always_minus_bayes_regret": 59.87063256829237,
+            "never_adoption": 0.0,
+            "never_utility": 0.0,
+            "never_regret": 0.0,
+            "never_minus_bayes_utility": 40.12936743170763,
+            "never_minus_bayes_regret": -40.12936743170763
+          }
+        },
+        {
+          "id": "fixed_moderate_benefit",
+          "derived_seed": 1034123117975583213,
+          "parameters": {
+            "evaluation": "fixed_state",
+            "theta_mean": 400.0,
+            "theta_sd": 0.0,
+            "se": 500.0,
+            "cost": 100.0,
+            "alpha": 0.05,
+            "policy_prior_mean": 0.0,
+            "policy_prior_sd": 1000.0,
+            "skeptical_prior_sd": 100.0,
+            "policy_cutoffs": {
+              "bayes": 125.0,
+              "skeptical_bayes": 2600.0,
+              "positive_significance": 979.9819922700269,
+              "cost_confidence": 922.4268134757361,
+              "plugin": 100.0
+            }
+          },
+          "metrics": {
+            "oracle_utility": {
+              "estimate": 300.0,
+              "mcse": 0.0,
+              "n": 50000
+            },
+            "bayes_adoption_without_zero_rejection": {
+              "estimate": 0.58442,
+              "mcse": 0.0022039658055423637,
+              "n": 50000,
+              "successes": 29221,
+              "wilson95": [
+                0.5800939820382015,
+                0.588733047120192
+              ]
+            },
+            "bayes_adoption": {
+              "estimate": 0.7074,
+              "mcse": 0.0020346264522019763,
+              "n": 50000,
+              "successes": 35370,
+              "wilson95": [
+                0.7033963936339255,
+                0.7113717400719591
+              ]
+            },
+            "bayes_utility": {
+              "estimate": 212.22,
+              "mcse": 0.6103940396315092,
+              "n": 50000
+            },
+            "bayes_regret": {
+              "estimate": 87.78,
+              "mcse": 0.6103940396315092,
+              "n": 50000
+            },
+            "skeptical_bayes_adoption": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 0,
+              "wilson95": [
+                0.0,
+                7.682327414500046e-05
+              ]
+            },
+            "skeptical_bayes_utility": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000
+            },
+            "skeptical_bayes_regret": {
+              "estimate": 300.0,
+              "mcse": 0.0,
+              "n": 50000
+            },
+            "skeptical_bayes_minus_bayes_utility": {
+              "estimate": -212.22,
+              "mcse": 0.6103940396315092,
+              "n": 50000
+            },
+            "skeptical_bayes_minus_bayes_regret": {
+              "estimate": 212.22,
+              "mcse": 0.6103940396315092,
+              "n": 50000
+            },
+            "positive_significance_adoption": {
+              "estimate": 0.12298,
+              "mcse": 0.001468713175538369,
+              "n": 50000,
+              "successes": 6149,
+              "wilson95": [
+                0.12013030384270976,
+                0.12588762397892653
+              ]
+            },
+            "positive_significance_utility": {
+              "estimate": 36.894,
+              "mcse": 0.4406183588671305,
+              "n": 50000
+            },
+            "positive_significance_regret": {
+              "estimate": 263.106,
+              "mcse": 0.4406183588671305,
+              "n": 50000
+            },
+            "positive_significance_minus_bayes_utility": {
+              "estimate": -175.326,
+              "mcse": 0.6611963536593058,
+              "n": 50000
+            },
+            "positive_significance_minus_bayes_regret": {
+              "estimate": 175.326,
+              "mcse": 0.6611963536593058,
+              "n": 50000
+            },
+            "cost_confidence_adoption": {
+              "estimate": 0.14884,
+              "mcse": 0.0015917704256581727,
+              "n": 50000,
+              "successes": 7442,
+              "wilson95": [
+                0.14574716775489033,
+                0.15198678676700716
+              ]
+            },
+            "cost_confidence_utility": {
+              "estimate": 44.652,
+              "mcse": 0.47753590308035965,
+              "n": 50000
+            },
+            "cost_confidence_regret": {
+              "estimate": 255.348,
+              "mcse": 0.4775359030803596,
+              "n": 50000
+            },
+            "cost_confidence_minus_bayes_utility": {
+              "estimate": -167.568,
+              "mcse": 0.6662103153236858,
+              "n": 50000
+            },
+            "cost_confidence_minus_bayes_regret": {
+              "estimate": 167.568,
+              "mcse": 0.6662103153236858,
+              "n": 50000
+            },
+            "plugin_adoption": {
+              "estimate": 0.7254,
+              "mcse": 0.0019959701400572103,
+              "n": 50000,
+              "successes": 36270,
+              "wilson95": [
+                0.7214707663911799,
+                0.7292946016768356
+              ]
+            },
+            "plugin_utility": {
+              "estimate": 217.62,
+              "mcse": 0.5987970300174034,
+              "n": 50000
+            },
+            "plugin_regret": {
+              "estimate": 82.38,
+              "mcse": 0.5987970300174034,
+              "n": 50000
+            },
+            "plugin_minus_bayes_utility": {
+              "estimate": 5.4,
+              "mcse": 0.1783744273956527,
+              "n": 50000
+            },
+            "plugin_minus_bayes_regret": {
+              "estimate": -5.4,
+              "mcse": 0.1783744273956527,
+              "n": 50000
+            },
+            "always_adoption": {
+              "estimate": 1.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 50000,
+              "wilson95": [
+                0.9999231767258548,
+                1.0
+              ]
+            },
+            "always_utility": {
+              "estimate": 300.0,
+              "mcse": 0.0,
+              "n": 50000
+            },
+            "always_regret": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000
+            },
+            "always_minus_bayes_utility": {
+              "estimate": 87.78,
+              "mcse": 0.6103940396315092,
+              "n": 50000
+            },
+            "always_minus_bayes_regret": {
+              "estimate": -87.78,
+              "mcse": 0.6103940396315092,
+              "n": 50000
+            },
+            "never_adoption": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 0,
+              "wilson95": [
+                0.0,
+                7.682327414500046e-05
+              ]
+            },
+            "never_utility": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000
+            },
+            "never_regret": {
+              "estimate": 300.0,
+              "mcse": 0.0,
+              "n": 50000
+            },
+            "never_minus_bayes_utility": {
+              "estimate": -212.22,
+              "mcse": 0.6103940396315092,
+              "n": 50000
+            },
+            "never_minus_bayes_regret": {
+              "estimate": 212.22,
+              "mcse": 0.6103940396315092,
+              "n": 50000
+            }
+          },
+          "benchmarks": {
+            "oracle_utility": 300.0,
+            "bayes_adoption_without_zero_rejection": 0.5858085782899765,
+            "bayes_adoption": 0.7088403132116536,
+            "bayes_utility": 212.6520939634961,
+            "bayes_regret": 87.3479060365039,
+            "skeptical_bayes_adoption": 5.412543907703856e-06,
+            "skeptical_bayes_utility": 0.0016237631723111567,
+            "skeptical_bayes_regret": 299.9983762368277,
+            "skeptical_bayes_minus_bayes_utility": -212.65047020032378,
+            "skeptical_bayes_minus_bayes_regret": 212.6504702003238,
+            "positive_significance_adoption": 0.12303173492167713,
+            "positive_significance_utility": 36.90952047650314,
+            "positive_significance_regret": 263.09047952349687,
+            "positive_significance_minus_bayes_utility": -175.74257348699297,
+            "positive_significance_minus_bayes_regret": 175.74257348699297,
+            "cost_confidence_adoption": 0.14804531259466275,
+            "cost_confidence_utility": 44.41359377839883,
+            "cost_confidence_regret": 255.58640622160118,
+            "cost_confidence_minus_bayes_utility": -168.23850018509728,
+            "cost_confidence_minus_bayes_regret": 168.23850018509728,
+            "plugin_adoption": 0.7257468822499263,
+            "plugin_utility": 217.7240646749779,
+            "plugin_regret": 82.27593532502209,
+            "plugin_minus_bayes_utility": 5.071970711481811,
+            "plugin_minus_bayes_regret": -5.071970711481811,
+            "always_adoption": 1.0,
+            "always_utility": 300.0,
+            "always_regret": 0.0,
+            "always_minus_bayes_utility": 87.3479060365039,
+            "always_minus_bayes_regret": -87.3479060365039,
+            "never_adoption": 0.0,
+            "never_utility": 0.0,
+            "never_regret": 300.0,
+            "never_minus_bayes_utility": -212.6520939634961,
+            "never_minus_bayes_regret": 212.6520939634961
+          }
+        },
+        {
+          "id": "fixed_large_benefit",
+          "derived_seed": 16129769607638190032,
+          "parameters": {
+            "evaluation": "fixed_state",
+            "theta_mean": 1200.0,
+            "theta_sd": 0.0,
+            "se": 500.0,
+            "cost": 100.0,
+            "alpha": 0.05,
+            "policy_prior_mean": 0.0,
+            "policy_prior_sd": 1000.0,
+            "skeptical_prior_sd": 100.0,
+            "policy_cutoffs": {
+              "bayes": 125.0,
+              "skeptical_bayes": 2600.0,
+              "positive_significance": 979.9819922700269,
+              "cost_confidence": 922.4268134757361,
+              "plugin": 100.0
+            }
+          },
+          "metrics": {
+            "oracle_utility": {
+              "estimate": 1100.0,
+              "mcse": 0.0,
+              "n": 50000
+            },
+            "bayes_adoption_without_zero_rejection": {
+              "estimate": 0.31252,
+              "mcse": 0.0020729266730880763,
+              "n": 50000,
+              "successes": 15626,
+              "wilson95": [
+                0.30847167173987317,
+                0.31659713391500016
+              ]
+            },
+            "bayes_adoption": {
+              "estimate": 0.98384,
+              "mcse": 0.0005638945717064486,
+              "n": 50000,
+              "successes": 49192,
+              "wilson95": [
+                0.982697034334227,
+                0.9849086253198485
+              ]
+            },
+            "bayes_utility": {
+              "estimate": 1082.224,
+              "mcse": 0.6202902318104272,
+              "n": 50000
+            },
+            "bayes_regret": {
+              "estimate": 17.776,
+              "mcse": 0.6202902318104272,
+              "n": 50000
+            },
+            "skeptical_bayes_adoption": {
+              "estimate": 0.00284,
+              "mcse": 0.00023798884007448753,
+              "n": 50000,
+              "successes": 142,
+              "wilson95": [
+                0.002410200710012739,
+                0.003346186207935117
+              ]
+            },
+            "skeptical_bayes_utility": {
+              "estimate": 3.124,
+              "mcse": 0.26179034199844586,
+              "n": 50000
+            },
+            "skeptical_bayes_regret": {
+              "estimate": 1096.876,
+              "mcse": 0.26179034199844586,
+              "n": 50000
+            },
+            "skeptical_bayes_minus_bayes_utility": {
+              "estimate": -1079.1,
+              "mcse": 0.6716195511272949,
+              "n": 50000
+            },
+            "skeptical_bayes_minus_bayes_regret": {
+              "estimate": 1079.1,
+              "mcse": 0.6716195511272949,
+              "n": 50000
+            },
+            "positive_significance_adoption": {
+              "estimate": 0.67132,
+              "mcse": 0.00210071158229777,
+              "n": 50000,
+              "successes": 33566,
+              "wilson95": [
+                0.6671896567129987,
+                0.6754240205603483
+              ]
+            },
+            "positive_significance_utility": {
+              "estimate": 738.452,
+              "mcse": 2.3108058487015755,
+              "n": 50000
+            },
+            "positive_significance_regret": {
+              "estimate": 361.548,
+              "mcse": 2.3108058487015755,
+              "n": 50000
+            },
+            "positive_significance_minus_bayes_utility": {
+              "estimate": -343.772,
+              "mcse": 2.2802421429323263,
+              "n": 50000
+            },
+            "positive_significance_minus_bayes_regret": {
+              "estimate": 343.772,
+              "mcse": 2.2802421429323263,
+              "n": 50000
+            },
+            "cost_confidence_adoption": {
+              "estimate": 0.71172,
+              "mcse": 0.002025707982903755,
+              "n": 50000,
+              "successes": 35586,
+              "wilson95": [
+                0.7077335394786635,
+                0.7156739304741326
+              ]
+            },
+            "cost_confidence_utility": {
+              "estimate": 782.892,
+              "mcse": 2.22830106431619,
+              "n": 50000
+            },
+            "cost_confidence_regret": {
+              "estimate": 317.108,
+              "mcse": 2.2283010643161902,
+              "n": 50000
+            },
+            "cost_confidence_minus_bayes_utility": {
+              "estimate": -299.332,
+              "mcse": 2.189385060618363,
+              "n": 50000
+            },
+            "cost_confidence_minus_bayes_regret": {
+              "estimate": 299.332,
+              "mcse": 2.189385060618363,
+              "n": 50000
+            },
+            "plugin_adoption": {
+              "estimate": 0.98576,
+              "mcse": 0.0005298532325087775,
+              "n": 50000,
+              "successes": 49288,
+              "wilson95": [
+                0.9846835586602576,
+                0.986761805992445
+              ]
+            },
+            "plugin_utility": {
+              "estimate": 1084.336,
+              "mcse": 0.5828443842326394,
+              "n": 50000
+            },
+            "plugin_regret": {
+              "estimate": 15.664,
+              "mcse": 0.5828443842326394,
+              "n": 50000
+            },
+            "plugin_minus_bayes_utility": {
+              "estimate": 2.112,
+              "mcse": 0.21535021856114445,
+              "n": 50000
+            },
+            "plugin_minus_bayes_regret": {
+              "estimate": -2.112,
+              "mcse": 0.21535021856114445,
+              "n": 50000
+            },
+            "always_adoption": {
+              "estimate": 1.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 50000,
+              "wilson95": [
+                0.9999231767258548,
+                1.0
+              ]
+            },
+            "always_utility": {
+              "estimate": 1100.0,
+              "mcse": 0.0,
+              "n": 50000
+            },
+            "always_regret": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000
+            },
+            "always_minus_bayes_utility": {
+              "estimate": 17.776,
+              "mcse": 0.6202902318104272,
+              "n": 50000
+            },
+            "always_minus_bayes_regret": {
+              "estimate": -17.776,
+              "mcse": 0.6202902318104272,
+              "n": 50000
+            },
+            "never_adoption": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000,
+              "successes": 0,
+              "wilson95": [
+                0.0,
+                7.682327414500046e-05
+              ]
+            },
+            "never_utility": {
+              "estimate": 0.0,
+              "mcse": 0.0,
+              "n": 50000
+            },
+            "never_regret": {
+              "estimate": 1100.0,
+              "mcse": 0.0,
+              "n": 50000
+            },
+            "never_minus_bayes_utility": {
+              "estimate": -1082.224,
+              "mcse": 0.6202902318104272,
+              "n": 50000
+            },
+            "never_minus_bayes_regret": {
+              "estimate": 1082.224,
+              "mcse": 0.6202902318104272,
+              "n": 50000
+            }
+          },
+          "benchmarks": {
+            "oracle_utility": 1100.0,
+            "bayes_adoption_without_zero_rejection": 0.31417790391849343,
+            "bayes_adoption": 0.9842223926089095,
+            "bayes_utility": 1082.6446318698004,
+            "bayes_regret": 17.355368130199622,
+            "skeptical_bayes_adoption": 0.0025551303304279377,
+            "skeptical_bayes_utility": 2.8106433634707315,
+            "skeptical_bayes_regret": 1097.1893566365293,
+            "skeptical_bayes_minus_bayes_utility": -1079.8339885063297,
+            "skeptical_bayes_minus_bayes_regret": 1079.8339885063297,
+            "positive_significance_adoption": 0.6700444886904161,
+            "positive_significance_utility": 737.0489375594577,
+            "positive_significance_regret": 362.9510624405423,
+            "positive_significance_minus_bayes_utility": -345.59569431034265,
+            "positive_significance_minus_bayes_regret": 345.59569431034265,
+            "cost_confidence_adoption": 0.7106027270017956,
+            "cost_confidence_utility": 781.6629997019752,
+            "cost_confidence_regret": 318.3370002980248,
+            "cost_confidence_minus_bayes_utility": -300.9816321678252,
+            "cost_confidence_minus_bayes_regret": 300.9816321678252,
+            "plugin_adoption": 0.9860965524865014,
+            "plugin_utility": 1084.7062077351516,
+            "plugin_regret": 15.293792264848435,
+            "plugin_minus_bayes_utility": 2.0615758653511875,
+            "plugin_minus_bayes_regret": -2.0615758653511875,
+            "always_adoption": 1.0,
+            "always_utility": 1100.0,
+            "always_regret": 0.0,
+            "always_minus_bayes_utility": 17.355368130199622,
+            "always_minus_bayes_regret": -17.355368130199622,
+            "never_adoption": 0.0,
+            "never_utility": 0.0,
+            "never_regret": 1100.0,
+            "never_minus_bayes_utility": -1082.6446318698004,
+            "never_minus_bayes_regret": 1082.6446318698004
+          }
+        }
+      ]
+    }
+  ]
+}

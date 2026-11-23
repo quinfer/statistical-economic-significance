@@ -10,6 +10,7 @@ commands = [
     [sys.executable, "scripts/check_arguments.py", "--check"],
     [sys.executable, "sources/aer-audit/coding-audit.py"],
     [sys.executable, "-m", "unittest", "discover", "-s", "tests", "-v"],
+    [sys.executable, "simulations/run_labs.py", "--check-reference"],
 ]
 for command in commands:
     subprocess.run(command, cwd=ROOT, check=True)

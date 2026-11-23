@@ -23,4 +23,4 @@ For `tost_p`, use `p < .05` to match strict containment of the 90% interval in t
 
 [normal_model.py](normal_model.py) contains small, inspectable functions; [worked_examples.py](worked_examples.py) sets their units and assumptions. The [tests](../tests/test_normal_model.py) check known values, symmetry, equivariance to unit changes, interval/TOST agreement and invalid inputs. The older [synthesis calculations](../scripts/check_arguments.py) provide a separately implemented cross-check on the shared examples.
 
-Start with the [exercises](../exercises/README.md). Future Monte Carlo work has a separate [design backlog](../simulations/README.md). The [slide gate](../reviews/review-gate.md) is closed.
+Start with the [exercises](../exercises/README.md), then extend these calculations through the [three Monte Carlo labs](../simulations/README.md). Those labs have seeds, replication counts, MCSEs and separate worked solutions; the calculations in this directory remain deterministic. The [slide gate](../reviews/review-gate.md) is closed.

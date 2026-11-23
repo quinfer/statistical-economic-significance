@@ -1,0 +1,68 @@
+# Lab 3 — Decisions under uncertainty
+
+**Illustration.** Evaluate decision rules in synthetic repeated policy problems. This is an exercise in conditional reasoning, not evidence for adopting a real programme. Start after [exercise 06](../../exercises/06-decision-memo.md); basic normal distributions, expectation and Monte Carlo standard errors are assumed.
+
+## Question and design
+
+A hypothetical programme has unknown average gross benefit θ in **pounds per eligible person over one year**, in a fixed target population. The estimate satisfies `Y | θ ∼ N(θ, 500²)`. It is unbiased, its sampling standard error is known, and identification and transport to this population are assumed valid. Each replication represents a new decision problem, not an additional observation on one programme.
+
+Choose once between adoption and a status quo. Per-person utility is `U(a,θ)=a(θ−c)` for `a∈{0,1}`, with known cost c and status quo payoff zero. Utility is linear and risk-neutral. Individual outcome variation, distributional weights, uncertain costs, capacity, delay and future learning are excluded. The random θ in prior-predictive scenarios represents variation across hypothetical programme means; it is **not** a distribution of individual treatment effects.
+
+Compare seven pre-specified rules on the **same θ and Y in each replication**:
+
+| Rule | Adopt when |
+|---|---|
+| `bayes` | Posterior mean exceeds cost under the proper prior `θ∼N(0,1000²)` |
+| `skeptical_bayes` | Posterior mean exceeds cost under the proper prior `θ∼N(0,100²)` |
+| `positive_significance` | Y is positive and the two-sided known-SE test of θ=0 has p<.05 |
+| `cost_confidence` | The one-sided 95% lower confidence bound `Y−Φ⁻¹(.95)×500` exceeds cost |
+| `plugin` | Y exceeds cost |
+| `always` | Every time |
+| `never` | Never |
+
+The positive-significance comparator deliberately uses a cost-blind zero-null gate; it is not a claim that all inferential practice recommends this rule. The cost-confidence rule instead limits the probability of false adoption to .05 for every `θ≤c` under the stated sampling model. It uses a calibrated evidential criterion about net benefit, rather than maximising posterior expected utility. Neither rule represents every frequentist method. The evaluation charges every rule the same cost. The always/never rules are useful benchmarks, not recommended policies. Each Bayes rule is optimal for its own stated posterior expected-utility problem; evaluation need not use its prior as the data-generating distribution.
+
+The scenarios are fixed in advance:
+
+| Scenario | Evaluation distribution of θ | Cost |
+|---|---|---:|
+| `matched_prior_cost100` | N(0,1000²), matching the baseline prior | £100 |
+| `matched_prior_cost500` | N(0,1000²), matching the baseline prior | £500 |
+| `mismatched_prior_negative` | N(−250,100²), matching neither assumed prior | £100 |
+| `fixed_zero` | θ=0 in every replication | £100 |
+| `fixed_moderate_benefit` | θ=400 in every replication | £100 |
+| `fixed_large_benefit` | θ=1200 in every replication | £100 |
+
+The evaluator knows the simulated θ; the decision rules receive only Y, known SE, cost and their own fixed prior. An oracle knowing θ earns `max(θ−c,0)`. **Oracle regret** is this payoff minus the rule's payoff and is non-negative in every replication. Averaging over a stipulated prior distribution and evaluating at a fixed θ are different performance questions; neither supplies minimax regret over all possible states.
+
+## Reproduce
+
+From the repository root, with Python 3.10 or later and no third-party packages:
+
+```sh
+python3 simulations/run_labs.py --lab decisions --replications 50000 --seed 20261123 --output-dir scratch/decisions
+```
+
+The [implementation](../decisions.py) records scenario parameters and independently derived seeds. The committed [reference results](../results/reference.json) and [summary](../results/summary.md) use the declared reference run. Repeating a seed on the recorded environment reproduces the draws; small platform-level floating-point differences may occur.
+
+For a mean utility, regret or **paired difference**, MCSE is the replication-level sample standard deviation divided by √R. For an adoption rate it is `sqrt(p̂(1−p̂)/R)`; the report also gives a Wilson 95% Monte Carlo interval. These describe simulation error in estimating a fixed model performance measure. They are not confidence intervals for an actual programme's θ. A zero observed MCSE after no rare adoptions is not proof of zero underlying risk; inspect the count, Wilson interval and analytic benchmark.
+
+## Tasks
+
+1. Derive each finite adoption cutoff. At Y=£400, compare the baseline and tight-prior actions at costs £100 and £500. Prove the cost-confidence rule's false-adoption bound for θ≤c. Keep the action claim separate from a claim about θ.
+2. Predict which rule maximises average utility in the matched-prior scenarios and why. Run the lab, compare Monte Carlo estimates with exact benchmarks, and explain any apparent reversal between closely performing rules in terms of paired MCSE.
+3. For each rule, verify `mean utility + mean regret = mean oracle payoff`. Interpret the `other_minus_bayes_utility` and `other_minus_bayes_regret` metrics. Explain why adding separate MCSEs as if the policies were independent is inappropriate.
+4. Find a case where adoption occurs without zero-null rejection. Is the adoption frequency evidence that the effect is economically important? Explain the difference between an ex ante rule evaluation and a posterior action for observed data.
+5. Evaluate the mismatch and three fixed-state scenarios. Identify which conclusions about baseline Bayes performance survive. Explain why prior-average optimality need not imply pointwise dominance and why an oracle benchmark does not give a feasible rule knowledge of θ.
+6. Repeat with seed 20261124 and with 10,000 versus 50,000 replications. Does increasing R fix a disputed prior, wrong loss function or failed identification assumption? Explain any rare-event zeros without treating them as certainty.
+7. Propose one extension with uncertain costs or asymmetric losses. State the revised utility and what additional assumptions the simulation would need before changing code. Do not tune a prior or scenario solely to obtain a favoured ranking.
+
+**Submit:** a 700-word decision-method memo, exact commands, result tables including MCSEs and denominators, and one strong objection to your preferred rule. Explain what empirical evidence and stakeholder judgement would be needed to apply it. The [worked solution](../solutions/03-decisions.md) supplies derivations and interpretation checks.
+
+## Evidence boundaries
+
+**Source trail:** the [Manski 2019 note](../../wiki/papers/manski-2019-treatment-choice.md) records selected indexed section 3 passages on consequences and regret; full text was not read. [Manski 2021](../../wiki/papers/manski-2021-econometrics-decisions.md) and [Kandel–Stambaugh](../../wiki/papers/kandel-stambaugh-1996-asset-allocation.md) remain abstract-level readings. [Wald](../../wiki/papers/wald-1950-decision-functions.md) is metadata-only and cannot support a detailed attributed claim here. These normal-model calculations are original project illustrations, not replications or transcriptions of those papers.
+
+**Project interpretation:** the [decision concept](../../wiki/concepts/decisions.md), [C002](../../wiki/claims/C002-action-without-rejection.md) and [C010](../../wiki/claims/C010-uncertainty-and-choice.md) distinguish action, evidence and competing objectives. This lab does not model the source papers' complete methods, robust Bayes, partial identification or empirical investment performance. Book access and disputed AER coding limitations remain as recorded in [STATUS](../../STATUS.md). The [slide gate](../../reviews/review-gate.md) stays closed.
+
+[Simulation index](../README.md) · [Worked solution](../solutions/03-decisions.md)

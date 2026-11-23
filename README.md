@@ -34,7 +34,7 @@ Start with the [quick start](QUICKSTART.md), follow the [six-module curriculum](
 | 5. Finance and identification | What survives costs and assumptions? | Alpha interpretation and robustness plan |
 | 6. Decisions under uncertainty | Which action follows under which losses? | Adversarial decision memo |
 
-The [curriculum](CURRICULUM.md) supplies prerequisites, readings, tasks and readiness checks. There is no requirement to accept the project's tentative conclusion.
+The [curriculum](CURRICULUM.md) supplies prerequisites, readings, tasks and readiness checks. Extend modules 2–3 and 6 with the [three simulation labs](simulations/README.md), each with exercises, worked solutions and a reproducible reference run. There is no requirement to accept the project's tentative conclusion.
 
 ## Run the examples
 
@@ -42,10 +42,11 @@ Python 3.10 or later; no third-party packages are needed. From the repository ro
 
 ```sh
 python3 implementations/worked_examples.py
+python3 simulations/run_labs.py --lab all --replications 50000 --seed 20261123
 python3 scripts/check_all.py
 ```
 
-These use **synthetic inputs and deterministic normal-model calculations**. They are not evidence about actual policies or markets. Their assumptions and limits are in [implementations](implementations/README.md). No Monte Carlo experiment is claimed.
+The [worked examples](implementations/README.md) use **synthetic inputs and deterministic normal-model calculations**. The [simulation labs](simulations/README.md) add random replications with fixed seeds, analytic benchmarks and reported Monte Carlo error. Neither is evidence about actual policies or markets. Every lab states its assumptions, target and limitations.
 
 ## Follow a claim to its evidence
 

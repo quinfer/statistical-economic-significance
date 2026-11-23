@@ -1,0 +1,100 @@
+# Worked solutions — power and precision
+
+**Illustration.** All quantities below follow from the declared normal sampling model, not from observed policy effects. Use the exact values in the `benchmarks` fields and the realised values in `metrics` in [reference.json](../results/reference.json); the [summary](../results/summary.md) records the reference run. Simulation values vary with seed and replication count.
+
+## 1. Start from the estimand and sampling distribution
+
+Write `s = sigma/√n` for the true sampling SE and `r` for the reported SE. With sigma = £1,000, sample sizes 100, 2,500 and 100,000 give s = £100, £20 and approximately £3.1623 per person per year. The main grid has r = s. A sample size does not change theta or the prespecified margin; it changes the distribution of the estimator.
+
+Let `c = z(.975)*r` and let Φ denote the standard normal CDF. Zero-null rejection occurs in the two tails. Therefore
+
+`P(reject zero | theta) = Φ((−c−theta)/s) + Φ((theta−c)/s)`.
+
+At theta = 0 and r = s, this is .05 for every n. That is the test's size at the null, rather than evidence that 5% of null hypotheses are true. At a fixed nonzero theta, shrinking s increases this rejection probability. The reference run estimates these probabilities; it does not estimate the plausibility of theta itself.
+
+## 2. Monte Carlo uncertainty is a separate layer
+
+Each repeated study contributes an indicator, so at a fixed design the event count is binomial `(R,p)`. Its rate has variance `p(1−p)/R`, estimated by plugging in the realised rate. For example, a probability near .05 at R = 50,000 has MCSE about .000975, or 0.0975 percentage points. This calculation is about numerical precision of the simulated rate. It says nothing about how precisely a particular study estimates theta.
+
+An individual 95% Wilson interval is not a simultaneous guarantee for a table of many probabilities. Some targets can fall outside their intervals even when the generator is correct. Metrics within a scenario are also dependent, so the chance of at least one miss should not be computed as if every reported interval were independent. Automated tests use more conservative tolerances against exact probabilities; statistical checks still supplement, rather than replace, code inspection.
+
+When zero or R events occur, the plug-in MCSE is zero but the Wilson interval has positive width. Here exact normal probabilities can resolve whether the event is impossible or simply rare. At n = 100, equivalence is structurally impossible with the stipulated margin and SE; a nearly zero false-equivalence probability for a large effect is a different case.
+
+## 3. Zero, negligibility and a positive meaningful effect
+
+Let `q = z(.95)*r` and delta = £100. The equivalence rejection region is
+
+`−delta + q < Xbar < delta − q`.
+
+It is empty if `q ≥ delta`. Otherwise its probability is
+
+`Φ((delta−q−theta)/s) − Φ((−delta+q−theta)/s)`.
+
+This is TOST at alpha = .05 because each one-sided test uses z(.95), yielding a 90% two-sided interval. A 95% interval is still used for the separate coverage metric. At n = 100, q is approximately £164.49, so no estimate can have its 90% interval wholly inside ±£100. Equivalence failure in that design cannot distinguish theta = £0 from theta = £200.
+
+For `small_n100000`, a true £20 effect is both highly detectable against zero and safely inside the chosen ±£100 region. That is no contradiction: the null hypotheses differ. For `meaningful_n100`, a true £200 effect has substantial sampling uncertainty. Its point estimate and zero-test outcome alone cannot certify a positive effect beyond £100.
+
+The latter claim has its own one-sided test:
+
+`P(support theta > delta | theta) = Φ((theta−delta−q)/s)`.
+
+This probability is less than the zero-rejection probability in the positive-effect examples. A defensible single-study statement reports the estimate, interval, benchmark and relevant test. “The coefficient was significant, so the programme is worthwhile” ignores both the benchmark and costs; “it was non-significant, so it is negligible” ignores the relevant alternatives.
+
+## 4. Reconstruct the four cells
+
+Let Z be the zero-test rejection rate, E the equivalence rate and B their joint rate. Then:
+
+| Outcome | Probability |
+|---|---|
+| Both reject | B |
+| Only zero rejects | Z − B |
+| Only equivalence rejects | E − B |
+| Neither rejects | 1 − Z − E + B |
+
+All four sum to one. The code also records the last quantity directly as `neither_reject`; this gives an arithmetic cross-check. “Only equivalence” is compatible with a precisely estimated negligible effect; “neither” can mean that both relevant distinctions remain unresolved. Neither classification is a posterior probability about theta.
+
+At theta = delta, the equivalence null is true. For correct SE and this continuous TOST construction, the false-equivalence probability cannot exceed alpha. The boundary scenario checks that particular operating property; it does not show that a £100 margin is substantively justified.
+
+## 5. Understate the SE
+
+Under theta = 0, define `k = r/s`. The zero-rejection probability becomes
+
+`2*Φ(−z(.975)*k)`.
+
+The 95% interval coverage becomes
+
+`2*Φ(z(.975)*k) − 1`.
+
+At k = 1 these are .05 and .95. At k = .5 they are approximately .327 and .673. More replications reveal these miscalibrated operating characteristics more precisely; they do not repair them. This stress case does not identify the reason for a bad SE in an actual study. Dependence, misspecification, estimated variance and selection require their own models and diagnostics.
+
+## 6. Change a design, not a conclusion by decree
+
+Increasing R from 50,000 to 200,000 approximately halves MCSE without changing the exact benchmark. Increasing n affects s and therefore the probabilities themselves. A tighter margin changes the scientific claim: with delta = £50, r = £20, and theta = £20, insert those quantities into the equivalence formula rather than recycling the £100-margin conclusion.
+
+An adequate memo would justify a real margin using units, opportunity costs, population, distributional consequences and horizon, then assess sensitivity. It would distinguish these normative and measurement choices from power. It would also allow the conclusion that the desired precision is infeasible, or that more data are less valuable than better identification. Choosing a margin to fit the observed interval cannot retrospectively create a prespecified claim.
+
+## Reference-run check
+
+**Computed illustration:** 50,000 replications per scenario, base seed 20261123. Zero-rejection rates and MCSEs below are proportions, not percentages. The full report also contains coverage, equivalence, meaningful-effect and joint classifications.
+
+| Scenario | Zero rejection | MCSE | Exact benchmark |
+|---|---:|---:|---:|
+| `null_n100` | 0.04934 | 0.000968561 | 0.05 |
+| `null_n2500` | 0.04798 | 0.000955802 | 0.05 |
+| `null_n100000` | 0.04894 | 0.00096483 | 0.05 |
+| `small_n100` | 0.057 | 0.00103683 | 0.0545947 |
+| `small_n2500` | 0.1672 | 0.0016688 | 0.170075 |
+| `small_n100000` | 1 | 0 | 0.999994 |
+| `meaningful_n100` | 0.51676 | 0.00223481 | 0.516005 |
+| `meaningful_n2500` | 1 | 0 | 1 |
+| `meaningful_n100000` | 1 | 0 | 1 |
+| `equivalence_boundary_n2500` | 0.99876 | 0.000157382 | 0.998817 |
+| `understated_se_null_n2500` | 0.32868 | 0.00210071 | 0.327095 |
+
+In this run, **2 of the 11** zero-rejection Wilson intervals miss their benchmark: `null_n2500`, `small_n100`. They are retained in the report. This is compatible with finite Monte Carlo variation; these intervals are not simultaneous coverage guarantees. A displayed rate of 1 and MCSE of 0 must still be read beside its Wilson interval and exact benchmark.
+
+## Source boundary
+
+These are project derivations checked against their implementation. The [lab's evidence links](../labs/01-power.md#evidence-links-and-limits) retain selected-section and abstract-only source limits. The exercise supplies no additional evidence about real policy effects, disputed AER codes or unread book chapters, and does not authorise slides.
+
+[Lab questions](../labs/01-power.md) · [Lab index](../README.md)

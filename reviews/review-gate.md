@@ -32,3 +32,7 @@ The [book/AER review](2026-10-24-book-aer-review.md) records direct-reading cove
 ## Final-source follow-up
 
 The [final-source review](2026-10-24-final-source-review.md) records the subsequent user-supplied Darby/Bernheim–Wantz readings, final JSE version checks and unsuccessful expanded-matrix search. It resolves the two final-paper access gaps while retaining methodological, replication and coding gaps. Recorded agent checks do not override the user's continued instruction: **slide generation remains closed.**
+
+## Simulation labs — 23 November 2026
+
+The user authorised reproducible simulation labs, exercises and worked solutions while explicitly retaining the slide hold. The [simulation review](2026-11-23-simulation-review.md) concerns their mathematical and computational implementation. It does not upgrade any source's reading depth or clear the research gaps. **Status remains NOT PASSED; no slide source or deck is authorised.**

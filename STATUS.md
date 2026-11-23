@@ -10,10 +10,10 @@
 | AER audit | Supplied final Darby/Bernheim–Wantz readings; original 137-paper matrix arithmetic | Expanded 187-paper matrix unrecovered; independent full recoding not performed |
 | Synthesis | Conditional argument, counterarguments and mathematical checks | Human scholarly review and unresolved empirical/coding questions |
 | Learning | Six modules, two entry routes, annotated readings and guided exercises | Classroom piloting and learner feedback |
-| Computation | Deterministic normal-model examples and tests | Monte Carlo, realistic dependence, selection and empirical applications |
+| Computation | Deterministic examples plus three seeded simulation labs, exercises, worked solutions, reference outputs and tests | Realistic dependence, endogenous selection, richer losses and empirical applications |
 | Slides | Design brief only | **Closed by user instruction; gate NOT PASSED** |
 
-The [source review](reviews/2026-10-24-final-source-review.md) and [learning review](reviews/2026-11-23-learning-review.md) have different scopes. Agent reviews support revision; they do not constitute independent replication or human approval. Automated checks establish structure and numerical consistency, not citation truth.
+The [source review](reviews/2026-10-24-final-source-review.md), [learning review](reviews/2026-11-23-learning-review.md) and [simulation review](reviews/2026-11-23-simulation-review.md) have different scopes. Agent reviews support revision; they do not constitute independent replication or human approval. Automated checks establish structure and numerical consistency, not citation truth. Adding simulations on 23 November 2026 did not extend source reading or the literature search.
 
 ## Keep these gaps visible
 

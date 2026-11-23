@@ -15,7 +15,7 @@ Intended outcomes are to distinguish magnitude, evidence and action; interpret u
 | Multiple searches and out-of-sample checks | Synthetic factor research | How do false discoveries, missed discoveries and shrinkage interact? |
 | Adversarial seminar | Matched passages in the 2008 exchange and later reform proposals | Which disagreement concerns evidence, which concerns aims, and what would settle each? |
 
-All proposed data are synthetic unless a later exercise explicitly obtains and documents real data. The learning exercises now contain labelled synthetic calibrations and hand-checkable calculations, not empirical findings. Each exercise exposes assumptions and includes a case that challenges its apparent lesson. Monte Carlo experiments and slide development remain deferred.
+All proposed data are synthetic unless a later exercise explicitly obtains and documents real data. The learning exercises contain labelled synthetic calibrations and hand-checkable calculations, not empirical findings. The [three simulation labs](../simulations/README.md), authorised on 23 November 2026, now add random experiments, MCSEs and worked solutions. They include challenges to their apparent lessons. Slide development remains deferred under the user's continuing hold.
 
 The eventual deck should have progressive explanation, visible units, readable plots, references near claims, speaker notes identifying controversies, and discussion prompts that admit more than one defensible answer. Quarto reveal.js is the requested delivery format; use a reproducible rendering environment once authoring begins.
 

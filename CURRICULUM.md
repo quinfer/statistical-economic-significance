@@ -49,6 +49,8 @@ Read [power and selection](wiki/concepts/power-selection.md), the [Gelman–Carl
 
 **Before moving on:** you can say which alternative a power number refers to and which population of results a conditional error measure describes. If you add a simulation, declare the data-generating process, seed, number of repetitions and Monte Carlo error. Do not call a deterministic calculation a simulation.
 
+**Simulation labs:** complete [Lab 1: power](simulations/labs/01-power.md) and [Lab 2: selection](simulations/labs/02-selection.md). Compare simulated rates with exact normal benchmarks, then vary study sample size separately from simulation replications. Explain why independent holdout estimates and selected discovery estimates target different conditional distributions. Submit the lab tables and critiques before reading the worked solutions.
+
 ## Module 4: Read the disagreement and audit its evidence
 
 **Question:** which propositions do the participants in the 2008 exchange actually dispute, and what would settle a coding disagreement?
@@ -84,6 +86,8 @@ Read [decisions under uncertainty](wiki/concepts/decisions.md), [C002: action wi
 **Deliverable:** a decision memo with a concise recommendation conditional on stated assumptions, the evidential claim kept separate, sensitivity analysis, the strongest objection, an evidence trail and a condition that would change your conclusion. Include a short appendix assessing whether the repository's synthesis should be retained, narrowed or revised.
 
 **Before completing the pathway:** you can defend a rational action without presenting it as proof of an effect. You can also identify settings in which a meaningful-effect certification entails rejecting zero under a compatible procedure. You recognise that a loss function, prior or uncertainty set needs justification; choosing one does not make disagreement disappear.
+
+**Simulation lab:** complete [Lab 3: decisions](simulations/labs/03-decisions.md). Evaluate the same rules under matched and mismatched priors and fixed states. Report paired utility differences with MCSEs, and distinguish average optimality under an assumed distribution from state-by-state performance. Use the resulting counterexample to qualify the capstone memo.
 
 ## Review your work
 

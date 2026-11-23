@@ -62,3 +62,13 @@ Do not add a policy or trading recommendation to this deliberately incomplete ex
 Keep your answers in your own notes. A useful first deliverable is one page containing the three-sentence interpretation, the checked calculation and one evidence trail.
 
 Continue with the [curriculum](CURRICULUM.md), or use the [learning map](resources/learning-map.md) to find a particular concept or disagreement.
+
+## Extend a calculation into a simulation
+
+The [simulation labs](simulations/README.md) add power, selection bias and decision-rule comparisons, with separate worked solutions. Begin with:
+
+```sh
+python3 simulations/run_labs.py --lab power --replications 50000 --seed 20261123 --output-dir scratch/power
+```
+
+Open `scratch/power/summary.md` and compare each Monte Carlo estimate with its analytic benchmark and MCSE. Changing the number of replications improves simulation precision; it does not change the sample size of a simulated study. Use [Lab 1](simulations/labs/01-power.md) to make that distinction explicit.
