@@ -15,6 +15,7 @@ The parent implementation agent integrated the learning structure. Three separat
 | Legacy training text implied no numerical teaching material existed | Distinguished available Markdown/analytical exercises from deferred Monte Carlo work and slides |
 | Very small p-values can print as zero | Added a floating-point underflow caveat to the standalone example output; exercises already explain the distinction |
 | Python prerequisite wording varied | Standardised learner setup to Python 3.10 or later, using only the standard library |
+| GitHub's Linux runner produced last-bit floating-point differences from the original macOS numerical snapshot | Added a read-only snapshot comparison with relative tolerance 1e-12 and absolute tolerance 1e-15, retaining exact structure/text/boolean checks; regression tests accept rounding variation and reject meaningful changes |
 | Nine personal machine-path occurrences appeared in four tracked files and historical versions | Replaced current locations with portable document references; earlier research history remains local and is excluded from the public snapshot. An initial broad scan also matched three public URLs containing `/home/`; these were false positives and the source URLs were preserved |
 | All 35 core items have different reading depths | Annotated guide preserves 21 selected-section, 9 abstract-only, 3 full-text and 2 metadata-only records; none upgraded |
 

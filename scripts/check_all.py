@@ -7,7 +7,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 commands = [
     [sys.executable, "scripts/check_integrity.py"],
-    [sys.executable, "scripts/check_arguments.py"],
+    [sys.executable, "scripts/check_arguments.py", "--check"],
     [sys.executable, "sources/aer-audit/coding-audit.py"],
     [sys.executable, "-m", "unittest", "discover", "-s", "tests", "-v"],
 ]

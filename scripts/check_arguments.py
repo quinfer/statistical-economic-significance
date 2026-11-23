@@ -7,8 +7,10 @@ source-criticism and the synthesis; it is not a training deck.
 """
 import json
 import math
+import argparse
 from pathlib import Path
 from statistics import NormalDist
+from numeric_snapshot import assert_equivalent
 
 N = NormalDist()
 ALPHA = .05
@@ -64,5 +66,12 @@ output = dict(label='Synthetic deterministic illustrations; no empirical observa
     power_by_noncentrality={str(d):power(d) for d in [1,.1,.01,0]},
     cases=cases,decision=decision,equivalence_counterexample=equivalence_counterexample)
 target=Path(__file__).resolve().parents[1]/'synthesis/analytical-checks.json'
-target.write_text(json.dumps(output,indent=2)+'\n')
-print(f'PASS: analytical boundary checks; wrote {target.relative_to(target.parents[1])}')
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--check', action='store_true',
+                    help='Verify the recorded output with floating-point tolerances; do not rewrite it')
+if parser.parse_args().check:
+    assert_equivalent(output, json.loads(target.read_text()))
+    print('PASS: analytical boundary checks and recorded output (rtol=1e-12, atol=1e-15).')
+else:
+    target.write_text(json.dumps(output,indent=2)+'\n')
+    print(f'PASS: analytical boundary checks; wrote {target.relative_to(target.parents[1])}')
