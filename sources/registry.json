@@ -1,0 +1,1587 @@
+{
+  "schema_version": 1,
+  "scope": "35 selected works; initial corpus plus targeted 2024–2026 update. Three 2008 exchange articles fully read; other reading depths remain source-specific.",
+  "verification_date": "2026-10-24",
+  "sources": [
+    {
+      "id": "mccloskey-ziliak-1996",
+      "authors": [
+        "Deirdre N. McCloskey",
+        "Stephen T. Ziliak"
+      ],
+      "year": 1996,
+      "title": "The Standard Error of Regressions",
+      "type": "article",
+      "venue": "Journal of Economic Literature",
+      "volume": "34",
+      "issue": "1",
+      "pages": "97–114",
+      "doi": "",
+      "theme": "debate",
+      "reading_depth": "selected_sections_read",
+      "version": "Published Journal of Economic Literature 34(1), 97–114; institutional copy of JSTOR scan with cover page. Selected printed pages read using OCR and visual checks.",
+      "urls": [
+        {
+          "url": "https://econpapers.repec.org/article/aeajeclit/v_3a34_3ay_3a1996_3ai_3a1_3ap_3a97-114.htm",
+          "role": "Previously consulted bibliographic record and abstract",
+          "consulted": true,
+          "locator": "Metadata and abstract; retained from first verification"
+        },
+        {
+          "url": "https://www.bauer.uh.edu/jhess/documents/McCloskey%20and%20ziliak.pdf",
+          "role": "Institution-hosted published scan, now downloaded and partially read",
+          "consulted": true,
+          "locator": "Combined selected reading pp. 101–111; visual checks pp. 101,104,105,107–108. Image-only scan downloaded; OCR supported reading. Full article not read."
+        },
+        {
+          "url": "https://www.jstor.org/stable/2729411",
+          "role": "Previously consulted stable journal archive identifier",
+          "consulted": true,
+          "locator": "Earlier opening yielded no usable article text; not used as evidence of complete reading"
+        }
+      ],
+      "source_claim": "The authors describe a 19-item survey of 182 AER papers, permitting yes/no/not-applicable answers. Table 1 reports 80.2% discussing coefficient sizes but 29.7% considering more than statistical significance decisive. Their broader diagnosis of confusion therefore concerns argumentative criteria as well as the presence of magnitudes. These are the authors' classifications, not independently verified prevalence.",
+      "project_relevance": "Our interpretation: this is the foundational empirical audit whose article selection, coding and interpretation should be examined alongside the subsequent methodological objections.",
+      "limitations": "Selected printed sections only. The scan lacks extractable text; OCR errors were resolved visually for the instrument opening and Table 1. No 1980s article-level item matrix was retrieved: the author-hosted supplementary reproduction contains 281 author–paper totals with coauthors repeated. Coding arithmetic/provenance was audited separately, but the complete 182-paper classification was not replicated. Source quotations and cited underlying empirical results were not all independently checked.",
+      "metadata_notes": "Publication venue is Journal of Economic Literature; American Economic Review is the surveyed journal. DOI not verified; do not convert the JSTOR identifier into an assumed DOI.",
+      "next_reading": "Read the remaining original sections; obtain the 1980s item-level codes and passage justifications; reconcile inconsistent totals and printed denominators/percentages; complete original-case and inclusion-rule audits. See wiki/evidence/aer-coding-audit.md.",
+      "verifier": "debate_sources; inference_sources; decision_finance_sources",
+      "verified_on": "2026-10-24",
+      "bibliographic_status": "verified_identity",
+      "critical_review": "bounded coding/case review; full survey classification not replicated",
+      "authors_abbreviated": false,
+      "reading_coverage": "Combined agent coverage: printed pp. 101–111. debate_sources read pp. 101–106 and 109–111; inference_sources read pp. 104,107–108 and checked them visually; decision_finance_sources checked pp. 103–104. Additional visual checks pp. 101,105. pp. 97–100 and 112–114 remain unread; no full_text_read claim."
+    },
+    {
+      "id": "ziliak-mccloskey-2004",
+      "authors": [
+        "Stephen T. Ziliak",
+        "Deirdre N. McCloskey"
+      ],
+      "year": 2004,
+      "title": "Size matters: the standard error of regressions in the American Economic Review",
+      "type": "article",
+      "venue": "The Journal of Socio-Economics",
+      "volume": "33",
+      "issue": "5",
+      "pages": "527–546",
+      "doi": "10.1016/j.socec.2004.09.024",
+      "theme": "debate",
+      "reading_depth": "selected_sections_read",
+      "version": "Published Journal of Socio-Economics 33(5), 527–546, author-hosted image-only scan; selected sections read visually. Separately paginated Econ Journal Watch 1(2), 331–358 sections also read, without assuming complete version identity.",
+      "urls": [
+        {
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S1053535704000836",
+          "role": "Publisher metadata, abstract and section excerpts for final JSE publication",
+          "consulted": true,
+          "locator": "Full abstract retrieved through indexed publisher result; first verification direct opening returned 403. Final JSE pages subsequently read from the separately logged author-hosted scan."
+        },
+        {
+          "url": "https://www.uky.edu/AS/PoliSci/Peffley/pdf/Size%20Matters%20Journal%20of%20Socio-Economics%20Ziliak%20and%20McCloskey.pdf",
+          "role": "Attempted institutional link to final JSE article",
+          "consulted": true,
+          "locator": "Earlier indexed first-page metadata/abstract;24 October 2026 curl --fail --location followed redirect endingHTTP 404. No final PDF obtained."
+        },
+        {
+          "url": "https://www.deirdremccloskey.com/docs/size.pdf",
+          "role": "Author-hosted published EJW alternative version",
+          "consulted": true,
+          "locator": "EJW printed pp. 331–344,348–350 across debate_sources and decision_finance_sources; visual Table 1 check p. 336. Version-specific claims use EJW pagination."
+        },
+        {
+          "url": "https://econjwatch.org/file_download/56/2004-08-ziliakmccloskey-econ_practice.pdf?mimetype=pdf",
+          "role": "Journal-hosted EJW alternative publication",
+          "consulted": true,
+          "locator": "decision_finance_sources read pp. 340–342 and 348–349; same publication/version as author-hosted size.pdf."
+        },
+        {
+          "url": "https://www.deirdremccloskey.com/docs/pdf/Article_190.pdf",
+          "role": "Author-hosted final JSE scan, retrieved through author articles index",
+          "consulted": true,
+          "locator": "Final JSE printed pp. 527–535 and 540–542 visually read by root; independent visual checks of Tables 1, 3 and 5 (pp. 529, 532, 542) by decision_finance_sources; both root and that agent also read final pp. 534–535 to check the Bernheim–Wantz quotation context. JSE pp. 536–539 and 543–546 remain unread."
+        }
+      ],
+      "source_claim": "The authors report a survey of 137 papers and about 82% adverse classifications on the decisive-significance item. Final JSE Table 5, p. 542, reports 112 adverse Q16 classifications. The paper acknowledges improvements while asserting deterioration on its principal criteria; pp. 532–533 exclude significance-screened simulations from a positive Q17 code. These are the authors’ classifications, not an independently verified misuse rate.",
+      "project_relevance": "Our interpretation: the follow-up permits examination of whether evidence supports a deterioration claim and whether the audit operationalises economic significance consistently.",
+      "limitations": "Selected final JSE pages only (527–535, 540–542); selected EJW sections separately recorded. The original 137-row matrix was checked arithmetically, not independently recoded. The Q14/Q15 mismatch is now directly verified in both publications, whereas the 1980s Q7 error is absent from the final JSE table. No complete version comparison, original coding rationales or expanded 187-paper matrix was obtained. Cited historical and practical-harm claims remain unverified.",
+      "metadata_notes": "Author-hosted size.pdf is the Econ Journal Watch version, 1(2), 331–358, August 2004. Its anticipatory note gives different issue/date details for the Socio-Economics article; final publisher metadata controls here. Do not count versions as independent evidence.",
+      "next_reading": "Read remaining JSE and EJW pages; obtain original coding rationales, an omission crosswalk and the 2008 book's expanded 187-paper matrix before extending the arithmetic audit to revised estimates. Do not reconstruct article codes from aggregate percentages.",
+      "verifier": "root; debate_sources; inference_sources; decision_finance_sources",
+      "verified_on": "2026-10-24",
+      "bibliographic_status": "verified_identity",
+      "critical_review": "bounded coding/case review; full survey classification not replicated",
+      "authors_abbreviated": false,
+      "reading_coverage": "Final JSE printed pp. 527–535 and 540–542 visually read by root; independent visual checks of Tables 1, 3 and 5 (pp. 529, 532, 542) by decision_finance_sources; both root and that agent also read final pp. 534–535 to check the Bernheim–Wantz quotation context. JSE pp. 536–539 and 543–546 remain unread. Combined EJW coverage: pp. 331–344 and 348–350; visual check p. 336. No complete-version identity or full-text reading claimed.",
+      "audit_findings": "Project audit: the supplied matrix reproduces 112/137 adverse Q16 codes and Table 5. Final JSE Tables 1 and 3 retain Q14/Q15 percentages reversed relative to the matrix headers. Final Table 1 gives 47.3% for 1980s Q7, unlike EJW’s 13.2%; this matches the 1996 original. The source does not itself acknowledge these project comparisons or establish a correction history."
+    },
+    {
+      "id": "ziliak-mccloskey-2008-cult",
+      "authors": [
+        "Stephen T. Ziliak",
+        "Deirdre N. McCloskey"
+      ],
+      "year": 2008,
+      "title": "The Cult of Statistical Significance: How the Standard Error Costs Us Jobs, Justice, and Lives",
+      "type": "book",
+      "venue": "University of Michigan Press",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "doi": "10.3998/mpub.186351",
+      "theme": "debate",
+      "reading_depth": "selected_sections_read",
+      "version": "2008 published book, paperback ISBN9780472050079, authorised image-only Google Books preview; separately identified author prepublication preface, copyright 2006/project 2007",
+      "urls": [
+        {
+          "url": "https://press.umich.edu/Books/T/The-Cult-of-Statistical-Significance",
+          "role": "Publisher metadata and description",
+          "consulted": true,
+          "locator": "Bibliographic details and Description"
+        },
+        {
+          "url": "https://www.jstor.org/stable/10.3998/mpub.186351",
+          "role": "Book archive metadata and author order",
+          "consulted": true,
+          "locator": "Metadata, contents and opening excerpts; session indicated no institutional access. No complete chapter reading from JSTOR."
+        },
+        {
+          "url": "https://blogs.roosevelt.edu/sziliak/cult-of-statistical-significance/",
+          "role": "Author institutional page corroborating author order",
+          "consulted": true,
+          "locator": "Title and byline retrieved through search"
+        },
+        {
+          "url": "https://press.umich.edu/pdf/9780472070077-toc.pdf",
+          "role": "Publisher's annotated contents",
+          "consulted": true,
+          "locator": "All six annotated-contents pages ix–xiv; chapter bodies not supplied."
+        },
+        {
+          "url": "https://books.google.co.uk/books?id=JWLIRr_ROgAC",
+          "role": "Publisher-authorised limited preview, image-only",
+          "consulted": true,
+          "locator": "Printed pp. 57–61 and 74–85 visually read; editionISBN9780472050079. Explicit publisher-permission notice; no full-book access."
+        },
+        {
+          "url": "https://www.deirdremccloskey.com/articles/stats/preface_ziliak.php",
+          "role": "Author prepublication preface and annotatedcontents",
+          "consulted": true,
+          "locator": "Entire posted preface/contents; header 2007/copyright 2006; not assumed identical to 2008 book."
+        },
+        {
+          "url": "https://www.fulcrum.org/concern/monographs/cr56n193q",
+          "role": "Publisher platform reached through DOI",
+          "consulted": true,
+          "locator": "Landing page required authentication to read; no book body obtained."
+        },
+        {
+          "url": "https://openlibrary.org/books/OL10341945M/The_Cult_of_Statistical_Significance",
+          "role": "Library metadata/access check",
+          "consulted": true,
+          "locator": "Metadata and borrow/previewlinks only; no loan completed."
+        }
+      ],
+      "source_claim": "Published p. 60 advocates balancing formal error reasoning with substantive judgement, priors and power. Chapters 6–7 report the AER surveys; p. 80 acknowledges 50 omitted 1990s articles and expands that survey to 187. Table 7.1 reports 20.9% positive on Q16, alongside 78.1% discussing sizes. These are author-coded results, not independently established prevalence.",
+      "project_relevance": "Direct reading distinguishes reporting magnitudes, interpreting them, screening inputs and choosing actions. It supports a qualified contextualist position and reveals unresolved numerical/construct tensions; the two survey versions must be kept separate.",
+      "limitations": "Only printed pp. 57–61 and 74–85 directly read, plus publisher contents ix–xiv and the separate author prepublication preface/contents. No full-book access or reading, no endnote/source audit, no expanded 187-paper coding matrix, and no verification of historical or practical-harm claims. JSTOR/Fulcrum access was unavailable in this session. The supplied 2012 lecture is not the book.",
+      "metadata_notes": "JSTOR and Ziliak's institutional page give Ziliak–McCloskey author order; the current publisher page reverses it and uses display names. Print ISBNs: paperback 9780472050079; hardcover 9780472070077. Publisher lists 352 pages and February 2008 print publication; ebook February 2010. Authorised Google Books record reports 321 pages, differing from current publisher 352; retain both without changing checked printed locators.",
+      "next_reading": "Obtain complete lawful book access; read remaining chapters/endnotes; retrieve expanded 187-paper codes and original coding rationales; trace historical, medical and economic-harm assertions to primary evidence.",
+      "verifier": "root; independent agents reviewed interpretation, not the preview itself",
+      "verified_on": "2026-10-24",
+      "bibliographic_status": "verified_identity",
+      "critical_review": "bounded book/AER interpretation review; full-book review incomplete",
+      "authors_abbreviated": false,
+      "reading_coverage": "Published chapters 4(pp. 57–61),6(pp. 74–78), and chapter 7pp.79–85 read visually including displayed tables/footnotes. Chapter 7pp.86–88 and all other book-body pages remain unread. Complete author-hosted prepublication preface/annotatedcontents read as a separate version."
+    },
+    {
+      "id": "hoover-siegler-2008-sound",
+      "authors": [
+        "Kevin D. Hoover",
+        "Mark V. Siegler"
+      ],
+      "year": 2008,
+      "title": "Sound and fury: McCloskey and significance testing in economics",
+      "type": "article",
+      "venue": "Journal of Economic Methodology",
+      "volume": "15",
+      "issue": "1",
+      "pages": "1–37",
+      "doi": "10.1080/13501780801913298",
+      "theme": "debate",
+      "reading_depth": "full_text_read",
+      "version": "Published journal article, 38-page author-hosted PDF comprising publisher cover and printed pp. 1–37; complete article read",
+      "urls": [
+        {
+          "url": "https://scholars.duke.edu/publication/745869",
+          "role": "Institutional metadata and abstract",
+          "consulted": true,
+          "locator": "Abstract and bibliographic record checked during the initial verification pass"
+        },
+        {
+          "url": "https://public.econ.duke.edu/~kdh9/Source%20Materials/Research/%24Sound%20and%20Fury%20Published%20Version.pdf",
+          "role": "Author-hosted published full text",
+          "consulted": true,
+          "locator": "Complete main text and acknowledgements pp. 1–31; all 25 endnotes pp. 31–34; references pp. 34–37; all three tables. Visual checks of printed pp. 3, 13, 14, 17, 25, 26, 27, 29, 31, 33 and 34 resolve equations, tables, locators and technical formulations. Public PDF downloaded to temporary storage for research; no full text committed."
+        },
+        {
+          "url": "https://public.econ.duke.edu/~kdh9/research.html",
+          "role": "Author bibliography and links to survey materials",
+          "consulted": true,
+          "locator": "2008 Sound and Fury entry consulted during initial verification; linked coding sheets, omission list and earlier draft not audited"
+        }
+      ],
+      "source_claim": "The authors separate substantive importance from precision, defend model-based inference and specification testing, and question a universal loss-function requirement. They allow loss-sensitive responses to weak signals (p. 15), acknowledge that omitted papers need not change survey conclusions (n. 3), and disclose a corpus mismatch in their interval-use comparison (n. 21).",
+      "project_relevance": "Our interpretation: this strengthens the inference-versus-decision distinction while exposing technical and empirical claims that require scrutiny; useful uncertainty assessment does not establish a universal significance prerequisite.",
+      "limitations": "At the exchange-only reading milestone: Complete article read, but cited works, original AER cases, survey coding and omissions, historical accounts, medical trial evidence and model-selection simulations remain unaudited. pypdf emitted malformed-object warnings and garbled some mathematical symbols; relevant formulas and tables were checked visually, and all pages returned text. Not every page received visual inspection. Our independent mathematical checks flag the fixed-size power limit on p. 14, the standardised statistic description on p. 17, and the precision/zero-null distinction on p. 25. These local concerns do not adjudicate the broader exchange. The slide gate remains closed. Follow-up: the 2026-10-24 book/AER audit now checks selected original case sections and earlier coding materials. A subsequent final-source pass directly reads the user-supplied Darby article and selected Bernheim–Wantz empirical/concluding sections, while the expanded 187-paper matrix remains unrecovered. Original data, identification and coding validity are not thereby verified; see the linked follow-up notes.",
+      "metadata_notes": "Published citation and pagination unchanged. The earlier McCloskey Paper.pdf is a draft and was not used for the complete reading. Printed n. 23 on p. 34 apparently assigns papers dated 1983 and 1985 to discussion of the 1990s survey; this internal inconsistency is visually confirmed but not independently resolved. Temporary PDF SHA-256: f894f0f842c1db64621bb9635b6b500a7e1f2b3b6eff33b97705a1297a63aba8.",
+      "next_reading": "Integrate complete readings of the reply and rejoinder; audit the five original AER cases and survey mappings; check the original model-selection results and historical sources. Reconcile concessions and technical concerns before any substantive review decision.",
+      "verifier": "debate_sources",
+      "verified_on": "2026-10-24",
+      "bibliographic_status": "verified_identity",
+      "critical_review": "pending",
+      "authors_abbreviated": false
+    },
+    {
+      "id": "mccloskey-ziliak-2008-reply",
+      "authors": [
+        "Deirdre N. McCloskey",
+        "Stephen T. Ziliak"
+      ],
+      "year": 2008,
+      "title": "Signifying nothing: reply to Hoover and Siegler",
+      "type": "article",
+      "venue": "Journal of Economic Methodology",
+      "volume": "15",
+      "issue": "1",
+      "pages": "39–55",
+      "doi": "10.1080/13501780801913413",
+      "theme": "debate",
+      "reading_depth": "full_text_read",
+      "version": "Published journal reply; author/institution-hosted publisher PDF, including download cover",
+      "urls": [
+        {
+          "url": "https://bpb-us-e1.wpmucdn.com/blogs.roosevelt.edu/dist/b/153/files/2019/04/Signifying-nothing-reply-to-Hoover-and-Siegler-2a8q87a.pdf",
+          "role": "Author/institution-hosted published PDF; controlling text",
+          "consulted": true,
+          "locator": "Complete cover and printed pp. 39–55 read sequentially, including notes 1–7 and full references; printed pp. 43,50,52 also visually checked against local renders"
+        },
+        {
+          "url": "https://www.deirdremccloskey.com/articles/stats/sig.php",
+          "role": "Author HTML version; metadata and selected opening passages",
+          "consulted": true,
+          "locator": "Header, abstract and opening argument; pagination and some wording differ from published PDF; HTML not the controlling text"
+        },
+        {
+          "url": "https://www.tandfonline.com/doi/abs/10.1080/13501780801913413",
+          "role": "Publisher landing page consulted in initial verification, not revisited in close-reading pass",
+          "consulted": true,
+          "locator": "Initial registry records search retrieval with direct opening returning 403; close reading uses the published PDF instead"
+        }
+      ],
+      "source_claim": "The reply demands substantive judgement for significance, specification and decisions; permits considered p levels with power; rejects intervals as a complete remedy and loss as exclusively monetary. Its stronger sampling, historical and survey claims remain disputed.",
+      "project_relevance": "Distinguishes defensible contextual criticism from categorical claims needing challenge, with explicit concessions and a page-level trail for comparison against both Hoover–Siegler papers.",
+      "limitations": "At the exchange-only reading milestone: The complete published reply has been read, not merely downloaded. This establishes attribution, not accuracy: original historical sources, survey data and coding, practical-harm allegations, application papers and opponents' quotations have not been independently verified in this pass. Full-text status applies only to this article, not the book or the full exchange. Follow-up: the 2026-10-24 book/AER audit now checks selected original case sections and earlier coding materials. A subsequent final-source pass directly reads the user-supplied Darby article and selected Bernheim–Wantz empirical/concluding sections, while the expanded 187-paper matrix remains unrecovered. Original data, identification and coding validity are not thereby verified; see the linked follow-up notes.",
+      "metadata_notes": "Published PDF cover and article establish 15(1):39–55 and online publication on 20 March 2008. Author HTML gives 39–57 and differs in wording; published PDF controls. The 18-page file consists of one cover and 17 printed article pages. Temporary-copy SHA-256: 8ecdd0c2cbee257412483caba2b4e204f6340333959a152d05f5fd43d00d8614.",
+      "next_reading": "Construct the matched proposition matrix across the original Hoover–Siegler article, this reply and the rejoinder; independently audit contested survey coding, historical assertions and cited applications before resolving those disputes.",
+      "verifier": "inference_sources",
+      "verified_on": "2026-10-24",
+      "bibliographic_status": "verified_identity",
+      "critical_review": "source_close_reading_complete; matched_exchange_review_and_independent_claim_checks_pending",
+      "authors_abbreviated": false,
+      "reading_coverage": {
+        "read_on": "2026-10-24",
+        "document_pages": 18,
+        "printed_pages": "39–55",
+        "coverage": "Complete abstract, body, notes 1–7 and reference list; all extracted pages read without output truncation",
+        "visual_spot_checks": [
+          "43",
+          "50",
+          "52"
+        ],
+        "method": "pypdf extraction by page; sequential complete reading; printed header/footer checks; pdfplumber render checks for consequential passages",
+        "evidence_note": "wiki/evidence/2008-reply-reading.md"
+      }
+    },
+    {
+      "id": "hoover-siegler-2008-rejoinder",
+      "authors": [
+        "Kevin D. Hoover",
+        "Mark V. Siegler"
+      ],
+      "year": 2008,
+      "title": "The rhetoric of ‘Signifying nothing’: a rejoinder to Ziliak and McCloskey",
+      "type": "article",
+      "venue": "Journal of Economic Methodology",
+      "volume": "15",
+      "issue": "1",
+      "pages": "57–68",
+      "doi": "10.1080/13501780801913546",
+      "theme": "debate",
+      "reading_depth": "full_text_read",
+      "version": "Published journal rejoinder; complete printed pp. 57–68 including notes and references",
+      "urls": [
+        {
+          "url": "https://public.econ.duke.edu/~kdh9/Source%20Materials/Research/Hoover-Siegler%20Rejoinder%20Published%20Version.pdf",
+          "role": "Author-hosted published PDF",
+          "consulted": true,
+          "locator": "Complete printed pp. 57–68 read sequentially, including notes and references; visual verification of printed pp. 58 and 65. Full text kept only in temporary storage."
+        },
+        {
+          "url": "https://scholars.csus.edu/esploro/outputs/journalArticle/The-rhetoric-of-Signifying-nothing-a/99257847153201671",
+          "role": "Institutional bibliographic record",
+          "consulted": true,
+          "locator": "Title, authors, publication details and DOI"
+        }
+      ],
+      "source_claim": "The rejoinder defends uncertainty assessment while accepting the distinction between importance and precision. It questions whose losses should govern scientific evidence (p. 59), argues for model-based counterfactual inference (pp. 60–61), and restates survey objections (pp. 65–66). It expressly says the 2008 book was unavailable when these responses were written (p. 65).",
+      "project_relevance": "Our interpretation: neither the noisy-estimate objection nor contextual loss arguments justify making conventional rejection a universal prerequisite for knowledge or action. The book and exchange require separate evidence trails.",
+      "limitations": "At the exchange-only reading milestone: All printed pp. 57–68 read, including notes and bibliography; printed pp. 58 and 65 visually checked. Original AER articles, coding, historical accounts, medical claims and referenced works remain unaudited. The p. 58 formulation of a p-value as a Type I error probability is technically misleading; see the evidence note and ASA comparison. A complete reading is not a validation of the claims. Follow-up: the 2026-10-24 book/AER audit now checks selected original case sections and earlier coding materials. A subsequent final-source pass directly reads the user-supplied Darby article and selected Bernheim–Wantz empirical/concluding sections, while the expanded 187-paper matrix remains unrecovered. Original data, identification and coding validity are not thereby verified; see the linked follow-up notes.",
+      "metadata_notes": "Citation and pagination unchanged; temporary published PDF SHA-256: 3ce3ca922258e927359eb6aabd3a09bddf11694a50f793c87279d08caad758c5. No full text committed.",
+      "next_reading": "Audit disputed AER coding and cases; read the book separately before attributing the reply or rejoinder as an assessment of its full argument.",
+      "verifier": "root",
+      "verified_on": "2026-10-24",
+      "bibliographic_status": "verified_identity",
+      "critical_review": "source_close_reading_complete; underlying empirical and historical claims unaudited",
+      "authors_abbreviated": false
+    },
+    {
+      "id": "wasserstein-lazar-2016",
+      "authors": [
+        "Ronald L. Wasserstein",
+        "Nicole A. Lazar"
+      ],
+      "year": 2016,
+      "title": "The ASA Statement on p-Values: Context, Process, and Purpose",
+      "type": "editorial",
+      "venue": "The American Statistician",
+      "volume": "70",
+      "issue": "2",
+      "pages": "129–133",
+      "doi": "10.1080/00031305.2016.1154108",
+      "theme": "inference",
+      "reading_depth": "selected_sections_read",
+      "version": "Published article containing the official ASA statement and contextual editorial",
+      "urls": [
+        {
+          "url": "https://www.tandfonline.com/doi/full/10.1080/00031305.2016.1154108",
+          "role": "publisher article",
+          "consulted": true,
+          "locator": "Publisher search-indexed article passages: contextual introduction, statement introduction, principle 6, sections 4–5; direct page request returned 403"
+        },
+        {
+          "url": "https://www.tandfonline.com/doi/abs/10.1080/00031305.2016.1154108",
+          "role": "publisher metadata",
+          "consulted": true,
+          "locator": "Title, authors, journal, volume, issue, pages and DOI"
+        }
+      ],
+      "source_claim": "The ASA statement regards p-values as potentially useful but insufficient on their own. It urges contextual scientific reasoning and discusses estimation, Bayesian inference, decision theory and other alternatives, each requiring assumptions. Its contextual introduction records the statement's formal ASA approval and acknowledges disagreements and topics deliberately omitted, including power.",
+      "project_relevance": "Provides an institutional baseline for separating significance, substantive importance and wider scientific reasoning without presenting all statistical reform proposals as ASA policy.",
+      "limitations": "Selected publisher-indexed passages inspected; direct full-page and PDF requests were blocked. This is not a complete article review or an audit of the supplemental commentaries.",
+      "metadata_notes": "Publisher title uses 'The ASA Statement'; some internal headings and citations use 'The ASA’s Statement'. Accepted author version posted 7 March 2016; publisher lists publication online 9 June 2016.",
+      "next_reading": "Retrieve and read the complete statement and all six principles in a stable accessible copy, then compare selected dissenting supplemental commentaries.",
+      "verifier": "inference_sources",
+      "verified_on": "2026-10-24",
+      "bibliographic_status": "verified_identity",
+      "critical_review": "pending",
+      "authors_abbreviated": false
+    },
+    {
+      "id": "gelman-carlin-2014",
+      "authors": [
+        "Andrew Gelman",
+        "John Carlin"
+      ],
+      "year": 2014,
+      "title": "Beyond Power Calculations: Assessing Type S (Sign) and Type M (Magnitude) Errors",
+      "type": "article",
+      "venue": "Perspectives on Psychological Science",
+      "volume": "9",
+      "issue": "6",
+      "pages": "641–651",
+      "doi": "10.1177/1745691614551642",
+      "theme": "power",
+      "reading_depth": "selected_sections_read",
+      "version": "Published article",
+      "urls": [
+        {
+          "url": "https://journals.sagepub.com/doi/10.1177/1745691614551642",
+          "role": "publisher article",
+          "consulted": true,
+          "locator": "Abstract; Conventional Design or Power Calculations and the Effect-Size Assumption; Our Recommended Approach to Design Analysis; Discussion"
+        }
+      ],
+      "source_claim": "The authors recommend design analyses of wrong-sign and magnitude-exaggeration risks, particularly for statistically significant estimates in noisy studies. Their Type S and expected Type M quantities are conditional on statistical significance. Prospective and retrospective calculations should use externally justified plausible effect sizes; retrospective design analysis differs from observed power obtained by reusing the current study's estimate.",
+      "project_relevance": "Shows why reporting estimated magnitude does not resolve uncertainty: selected noisy estimates may exaggerate effects or have the wrong sign.",
+      "limitations": "Substantial publisher-indexed text inspected, but not a complete article review, replication of calculations or independent verification of the cited empirical examples.",
+      "metadata_notes": "Publisher identifies first online publication as 17 November 2014 and issue publication as November 2014.",
+      "next_reading": "Audit the design-analysis equations and software, then reproduce Type S and Type M calculations under stated distributional assumptions.",
+      "verifier": "inference_sources",
+      "verified_on": "2026-10-24",
+      "bibliographic_status": "verified_identity",
+      "critical_review": "pending",
+      "authors_abbreviated": false
+    },
+    {
+      "id": "greenland-et-al-2016",
+      "authors": [
+        "Sander Greenland",
+        "Stephen J. Senn",
+        "Kenneth J. Rothman",
+        "John B. Carlin",
+        "Charles Poole",
+        "Steven N. Goodman",
+        "Douglas G. Altman"
+      ],
+      "year": 2016,
+      "title": "Statistical tests, P values, confidence intervals, and power: a guide to misinterpretations",
+      "type": "article",
+      "venue": "European Journal of Epidemiology",
+      "volume": "31",
+      "issue": "",
+      "pages": "337–350",
+      "doi": "10.1007/s10654-016-0149-3",
+      "theme": "inference",
+      "reading_depth": "selected_sections_read",
+      "version": "Published open-access essay",
+      "urls": [
+        {
+          "url": "https://link.springer.com/article/10.1007/s10654-016-0149-3",
+          "role": "publisher full text",
+          "consulted": true,
+          "locator": "Abstract; Statistical models, hypotheses, and tests; Moving from tests to estimates; misconceptions 7–8 and 19–25"
+        }
+      ],
+      "source_claim": "Inference depends on assumptions about data generation, analysis and selection. Confidence intervals help assess substantively important magnitudes but share assumptions and interpretation risks with tests. Their coverage concerns repeated use of a procedure, rather than a posterior probability for a realised interval. The authors distinguish prospective power from power calculated using observed effects and warn against treating interval boundaries as sharp truth boundaries.",
+      "project_relevance": "Supplies a technical check on both significance testing and its proposed replacements, with direct teaching material on intervals, power and model assumptions.",
+      "limitations": "Selected sections of accessible full text inspected; not a complete review or independent audit of every mathematical illustration.",
+      "metadata_notes": "Publisher categorises the piece as an essay and lists publication on 21 May 2016. Issue number not independently checked in this pass.",
+      "next_reading": "Read all 25 misconceptions and concluding recommendations, recording formal conditions and potential disagreements over compatibility interpretations.",
+      "verifier": "inference_sources",
+      "verified_on": "2026-10-24",
+      "bibliographic_status": "verified_identity",
+      "critical_review": "pending",
+      "authors_abbreviated": false
+    },
+    {
+      "id": "gelman-stern-2006",
+      "authors": [
+        "Andrew Gelman",
+        "Hal Stern"
+      ],
+      "year": 2006,
+      "title": "The Difference Between ‘Significant’ and ‘Not Significant’ Is Not Itself Statistically Significant",
+      "type": "article",
+      "venue": "The American Statistician",
+      "volume": "60",
+      "issue": "4",
+      "pages": "328–331",
+      "doi": "10.1198/000313006X152649",
+      "theme": "inference",
+      "reading_depth": "selected_sections_read",
+      "version": "Author-hosted copy of published article",
+      "urls": [
+        {
+          "url": "https://stat.columbia.edu/~gelman/research/published/signif4.pdf",
+          "role": "author-hosted published PDF",
+          "consulted": true,
+          "locator": "Abstract and introduction, p.328; section 2, pp.328–329; portions of applied examples"
+        }
+      ],
+      "source_claim": "Comparing two significance classifications does not directly test the difference between their estimates. The authors demonstrate that substantially different p-values can coexist with a poorly determined difference. They distinguish this error from the separate problems of arbitrary thresholds and confusing statistical significance with practical importance, and explicitly focus their objection on comparing significance levels.",
+      "project_relevance": "Supports training on comparing effects across groups, models and studies, including the error of interpreting significance in only one group as evidence of heterogeneity.",
+      "limitations": "Selected sections inspected. The title should be interpreted as 'not necessarily significant', not as claiming that a difference between such estimates can never be statistically significant.",
+      "metadata_notes": "Metadata and DOI appear in the published PDF; November 2006 issue. Typographic capitalisation and quotation marks normalised.",
+      "next_reading": "Read the complete applied examples, audit covariance assumptions and construct an economics example using a direct interaction or coefficient-difference test.",
+      "verifier": "inference_sources",
+      "verified_on": "2026-10-24",
+      "bibliographic_status": "verified_identity",
+      "critical_review": "pending",
+      "authors_abbreviated": false
+    },
+    {
+      "id": "cohen-1994",
+      "authors": [
+        "Jacob Cohen"
+      ],
+      "year": 1994,
+      "title": "The Earth Is Round (p < .05)",
+      "type": "article",
+      "venue": "American Psychologist",
+      "volume": "49",
+      "issue": "12",
+      "pages": "997–1003",
+      "doi": "10.1037/0003-066X.49.12.997",
+      "theme": "inference",
+      "reading_depth": "abstract_read",
+      "version": "Institutionally hosted copy of published article",
+      "urls": [
+        {
+          "url": "https://pnb.mcmaster.ca/bennett/humbehv3st3/readings/cohen_94.pdf",
+          "role": "institutionally hosted published PDF",
+          "consulted": true,
+          "locator": "Search-indexed abstract and first-page metadata, p.997; direct PDF retrieval returned no extracted text"
+        },
+        {
+          "url": "https://explore.metascienceobservatory.org/papers/W2030360178",
+          "role": "secondary DOI metadata corroboration",
+          "consulted": true,
+          "locator": "Title, author, year, DOI and journal"
+        }
+      ],
+      "source_claim": "Cohen critiques mechanical dichotomous null-hypothesis significance testing and mistaken interpretations of rejection, replication and hypothesis probabilities. He recommends graphical exploration, improved measurement, effect estimation with confidence intervals and replication.",
+      "project_relevance": "Provides a foundational critique preceding the economics debate and an opportunity to examine which objections concern misuse, logic or the objectives of scientific inquiry.",
+      "limitations": "Conservatively classified as abstract-level review because extraction failed. Some indexed article passages were visible, but detailed philosophical arguments have not been critically audited. APA landing page was blocked.",
+      "metadata_notes": "Title, author, volume, issue and pages checked against the article's first-page text. DOI corroborated in scholarly metadata and published reference lists rather than an accessible APA record.",
+      "next_reading": "Obtain an accessible text or visually inspect the PDF; distinguish Cohen's probability-interpretation criticisms from contested claims about the logic of hypothesis testing.",
+      "verifier": "inference_sources",
+      "verified_on": "2026-10-24",
+      "bibliographic_status": "verified_identity",
+      "critical_review": "pending",
+      "authors_abbreviated": false
+    },
+    {
+      "id": "wasserstein-schirm-lazar-2019",
+      "authors": [
+        "Ronald L. Wasserstein",
+        "Allen L. Schirm",
+        "Nicole A. Lazar"
+      ],
+      "year": 2019,
+      "title": "Moving to a World Beyond ‘p < 0.05’",
+      "type": "editorial",
+      "venue": "The American Statistician",
+      "volume": "73",
+      "issue": "sup1",
+      "pages": "1–19",
+      "doi": "10.1080/00031305.2019.1583913",
+      "theme": "inference",
+      "reading_depth": "selected_sections_read",
+      "version": "Institutionally hosted copy of published editorial, including explicit ASA-status notice",
+      "urls": [
+        {
+          "url": "https://open.maricopa.edu/app/uploads/sites/339/2022/08/Moving-to-a-World-Beyond-p-0.05.pdf",
+          "role": "institutionally hosted published PDF",
+          "consulted": true,
+          "locator": "Status notice on article p.1; section 2 and sections 3.1–3.2, pp.2–4"
+        },
+        {
+          "url": "https://pure.psu.edu/en/publications/moving-to-a-world-beyond-p-lt-005/",
+          "role": "author-institution metadata",
+          "consulted": true,
+          "locator": "Authors, title, journal, volume, issue, pages and DOI"
+        }
+      ],
+      "source_claim": "The editors advocate ending categorical significance labels while retaining appropriately interpreted continuous p-values. They recommend uncertainty measures alongside estimates and attention to substantive context, and warn against recreating dichotomies with confidence intervals or Bayes factors. The article explicitly represents the editors' individual scientific views, not an endorsed ASA position.",
+      "project_relevance": "Offers a strong anti-dichotomisation position while distinguishing abandonment of significance labels from abandoning inference, and separates editorial advocacy from the official 2016 statement.",
+      "limitations": "Selected sections pp.1–4 inspected; the complete editorial and the special issue's individual contributions have not been reviewed. Its reform expectations are proposals, not independently established outcomes.",
+      "metadata_notes": "The explicit notice on p.1 says the editors acted as individuals and the article is not an endorsed ASA position. Published online 20 March 2019 according to PDF cover.",
+      "next_reading": "Read remaining sections, especially contributor recommendations, and compare explicit opposing positions in the same special issue.",
+      "verifier": "inference_sources",
+      "verified_on": "2026-10-24",
+      "bibliographic_status": "verified_identity",
+      "critical_review": "pending",
+      "authors_abbreviated": false
+    },
+    {
+      "id": "benjamin-et-al-2018",
+      "authors": [
+        "Daniel J. Benjamin",
+        "others"
+      ],
+      "authors_abbreviated": true,
+      "year": 2018,
+      "title": "Redefine statistical significance",
+      "type": "commentary",
+      "venue": "Nature Human Behaviour",
+      "volume": "2",
+      "issue": "1",
+      "pages": "6–10",
+      "doi": "10.1038/s41562-017-0189-z",
+      "theme": "inference",
+      "reading_depth": "abstract_read",
+      "version": "Published Comment; author-hosted abstract and published PDF",
+      "urls": [
+        {
+          "url": "https://www.nature.com/articles/s41562-017-0189-z",
+          "role": "publisher metadata",
+          "consulted": true,
+          "locator": "Search-indexed title, authors, article type, DOI, volume, pages and online/issue dates; direct page request failed"
+        },
+        {
+          "url": "https://imai.fas.harvard.edu/research/redefine/",
+          "role": "author-hosted abstract",
+          "consulted": true,
+          "locator": "Abstract and citation"
+        },
+        {
+          "url": "https://imai.fas.harvard.edu/research/files/significance.pdf",
+          "role": "author-hosted published PDF",
+          "consulted": true,
+          "locator": "Retrieved; title and author information inspected; detailed arguments not audited"
+        }
+      ],
+      "source_claim": "The authors propose changing the default significance threshold from .05 to .005 for claims of new discoveries in fields using .05. They argue that prevailing standards of statistical evidence are too weak and that the change would improve reproducibility. This is a reform proposal rather than proof of universal benefits across research settings.",
+      "project_relevance": "Represents a strong alternative to abolishing threshold categories and motivates examination of discovery standards, error trade-offs, costs and selection incentives.",
+      "limitations": "Abstract-level substantive review. Detailed Bayes-factor arguments, numerical calculations, assumptions and scope restrictions require full-text audit. The 72-author list is deliberately abbreviated and flagged.",
+      "metadata_notes": "Published online 1 September 2017; issue date January 2018. Use 2018 for the final journal citation. Publisher labels the article 'Comment'.",
+      "next_reading": "Read and audit the full argument, supplementary methods and replies; import the complete author list from verified publisher metadata.",
+      "verifier": "inference_sources",
+      "verified_on": "2026-10-24",
+      "bibliographic_status": "verified_identity",
+      "critical_review": "pending"
+    },
+    {
+      "id": "amrhein-greenland-mcshane-2019",
+      "authors": [
+        "Valentin Amrhein",
+        "Sander Greenland",
+        "Blake McShane"
+      ],
+      "year": 2019,
+      "title": "Scientists rise up against statistical significance",
+      "type": "commentary",
+      "venue": "Nature",
+      "volume": "567",
+      "issue": "7748",
+      "pages": "305–307",
+      "doi": "10.1038/d41586-019-00857-9",
+      "theme": "inference",
+      "reading_depth": "selected_sections_read",
+      "version": "Published Comment; publisher PDF",
+      "urls": [
+        {
+          "url": "https://www.nature.com/articles/d41586-019-00857-9",
+          "role": "publisher metadata and limited HTML",
+          "consulted": true,
+          "locator": "Title, authors, date, journal, volume, pages and DOI; article body access-limited"
+        },
+        {
+          "url": "https://www.nature.com/magazine-assets/d41586-019-00857-9/d41586-019-00857-9.pdf",
+          "role": "publisher PDF",
+          "consulted": true,
+          "locator": "pp.305–307; particularly p.306 before Quit Categorizing and p.307 interval interpretation"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30894741/",
+          "role": "bibliographic corroboration",
+          "consulted": true,
+          "locator": "Issue 7748, pages, authors and DOI"
+        }
+      ],
+      "source_claim": "The authors call for ending conventional categorical significance claims, not banning p-values, and explicitly allow specialised decision applications. They recommend discussing the practical implications of point estimates and interval limits while retaining statistical-assumption caveats. Failure to cross a significance threshold does not establish absence of an effect, and different significance classifications alone do not establish conflict between studies.",
+      "project_relevance": "Supplies a prominent anti-dichotomisation argument with explicit limits and links practical interpretation to uncertainty rather than to point estimates alone.",
+      "limitations": "Selected substantive passages inspected; empirical examples and the supplementary survey or signatory material have not been independently audited. The article is a methodological Comment, not a new empirical study.",
+      "metadata_notes": "Publisher's online bibliographic title is Scientists rise up against statistical significance; PDF display heading is Retire statistical significance. Online date 20 March 2019; print issue 21 March 2019.",
+      "next_reading": "Read the complete comment, examine supporting studies and replies, and assess implications of retaining specialised decision thresholds.",
+      "verifier": "inference_sources",
+      "verified_on": "2026-10-24",
+      "bibliographic_status": "verified_identity",
+      "critical_review": "pending",
+      "authors_abbreviated": false
+    },
+    {
+      "id": "imbens-2021",
+      "authors": [
+        "Guido W. Imbens"
+      ],
+      "year": 2021,
+      "title": "Statistical Significance, p-Values, and the Reporting of Uncertainty",
+      "type": "article",
+      "venue": "Journal of Economic Perspectives",
+      "volume": "35",
+      "issue": "3",
+      "pages": "157–174",
+      "doi": "10.1257/jep.35.3.157",
+      "theme": "inference",
+      "reading_depth": "abstract_read",
+      "version": "Published journal article; publisher and author-institution abstract",
+      "urls": [
+        {
+          "url": "https://www.aeaweb.org/articles?id=10.1257/jep.35.3.157",
+          "role": "publisher metadata and abstract",
+          "consulted": true,
+          "locator": "Abstract and citation; linked full-text retrieval failed"
+        },
+        {
+          "url": "https://www.gsb.stanford.edu/faculty-research/publications/statistical-significance-p-values-reporting-uncertainty",
+          "role": "author-institution abstract and metadata",
+          "consulted": true,
+          "locator": "Abstract and publication details"
+        }
+      ],
+      "source_claim": "Imbens distinguishes decisions under uncertainty, for which estimates and uncertainty intervals are often more informative, from questions where testing a null hypothesis is a natural goal and p-values appropriate. He opposes general bans and links excessive emphasis on significance to p-hacking and publication bias, discussing pre-analysis plans and replication among possible responses.",
+      "project_relevance": "Provides an economics-specific bridge between inference and decisions and challenges both routine significance reporting and blanket abolition.",
+      "limitations": "Abstract-level review only. Full-text links failed, so particular examples, arguments and formal decision assumptions must not be attributed without further reading.",
+      "metadata_notes": "Publisher citation: Journal of Economic Perspectives 35(3), Summer 2021, pp.157–174.",
+      "next_reading": "Retrieve full text and examine which null-testing applications and decision problems justify the author's differentiated recommendations.",
+      "verifier": "inference_sources",
+      "verified_on": "2026-10-24",
+      "bibliographic_status": "verified_identity",
+      "critical_review": "pending",
+      "authors_abbreviated": false
+    },
+    {
+      "id": "wald-1950-decision-functions",
+      "authors": [
+        "Abraham Wald"
+      ],
+      "year": 1950,
+      "title": "Statistical Decision Functions",
+      "type": "book",
+      "venue": "John Wiley & Sons",
+      "volume": "",
+      "issue": "",
+      "pages": "ix + 179",
+      "doi": "",
+      "theme": "decision",
+      "reading_depth": "metadata_only",
+      "version": "1950 first edition",
+      "urls": [
+        {
+          "url": "https://onlinebooks.library.upenn.edu/webbin/book/lookupid?key=ha000469182",
+          "role": "institutional catalogue",
+          "consulted": true,
+          "locator": "Title, author and publication note"
+        },
+        {
+          "url": "https://www.nature.com/articles/1671044b0",
+          "role": "contemporary review confirming book metadata",
+          "consulted": true,
+          "locator": "Bibliographic description of reviewed book"
+        }
+      ],
+      "source_claim": "No substantive claim is recorded: the book has not been read. Its existence and publication metadata have been independently checked.",
+      "project_relevance": "Foundational acquisition priority for distinguishing inference, decisions, loss and risk.",
+      "limitations": "Book content not retrieved or read. The contemporary review's DOI is not the book's DOI.",
+      "metadata_notes": "New York: John Wiley & Sons; London: Chapman & Hall; 1950. Nature review published in 1951. Do not assign review DOI 10.1038/1671044b0 to this book.",
+      "next_reading": "Obtain the 1950 edition or a clearly identified reprint; read definitions of decision functions, risk and optimality, recording edition-specific page locators.",
+      "verifier": "decision_finance_sources",
+      "verified_on": "2026-10-24",
+      "bibliographic_status": "verified_identity",
+      "critical_review": "pending",
+      "authors_abbreviated": false
+    },
+    {
+      "id": "manski-2019-treatment-choice",
+      "authors": [
+        "Charles F. Manski"
+      ],
+      "year": 2019,
+      "title": "Treatment Choice With Trial Data: Statistical Decision Theory Should Supplant Hypothesis Testing",
+      "type": "article",
+      "venue": "The American Statistician",
+      "volume": "73",
+      "issue": "sup1",
+      "pages": "296–304",
+      "doi": "10.1080/00031305.2018.1513377",
+      "theme": "decision",
+      "reading_depth": "selected_sections_read",
+      "version": "Published journal article; indexed publisher extracts consulted",
+      "urls": [
+        {
+          "url": "https://www.tandfonline.com/doi/full/10.1080/00031305.2018.1513377",
+          "role": "publisher article",
+          "consulted": true,
+          "locator": "Indexed abstract and selected section 3 passages; direct open returned 403"
+        },
+        {
+          "url": "https://www.tandfonline.com/doi/pdf/10.1080/00031305.2018.1513377",
+          "role": "publisher PDF",
+          "consulted": true,
+          "locator": "Indexed first-page extract; direct PDF open returned 403"
+        },
+        {
+          "url": "https://bpb-us-e1.wpmucdn.com/sites.northwestern.edu/dist/f/83/files/2018/06/Manski_interactions-2bpe7u9.pdf",
+          "role": "author manuscript alternative",
+          "consulted": false,
+          "locator": "Located in search; direct retrieval timed out"
+        }
+      ],
+      "source_claim": "The article develops treatment choice using statistical decision theory and maximum regret as an alternative to conventional hypothesis testing. Selected section 3 passages explain how regret combines error probabilities with the welfare losses caused by incorrect choices.",
+      "project_relevance": "Shows why a decision criterion should account for consequences as well as uncertainty.",
+      "limitations": "Selected indexed publisher passages were read, not the complete paper. Direct publisher retrieval was blocked. The main exposition concerns classical medical trials; economics applicability should not be described as an empirical economics finding.",
+      "metadata_notes": "Issue year 2019; DOI contains 2018. Publisher uses supplement label S1 or sup1.",
+      "next_reading": "Retrieve full article; audit section 2's testing critique, section 3's regret assumptions and the conditions supporting empirical-success rules.",
+      "verifier": "decision_finance_sources",
+      "verified_on": "2026-10-24",
+      "bibliographic_status": "verified_identity",
+      "critical_review": "pending",
+      "authors_abbreviated": false
+    },
+    {
+      "id": "manski-2021-econometrics-decisions",
+      "authors": [
+        "Charles F. Manski"
+      ],
+      "year": 2021,
+      "title": "Econometrics for Decision Making: Building Foundations Sketched by Haavelmo and Wald",
+      "type": "article",
+      "venue": "Econometrica",
+      "volume": "89",
+      "issue": "6",
+      "pages": "2827–2853",
+      "doi": "10.3982/ECTA17985",
+      "theme": "decision",
+      "reading_depth": "abstract_read",
+      "version": "Published journal article superseding a 2019 draft",
+      "urls": [
+        {
+          "url": "https://onlinelibrary.wiley.com/doi/abs/10.3982/ECTA17985",
+          "role": "publisher metadata and abstract",
+          "consulted": true,
+          "locator": "Abstract and author footnote identifying superseded draft"
+        },
+        {
+          "url": "https://economics.yale.edu/sites/default/files/econometrica_-_2021_-_manski_-_econometrics_for_decision_making_building_foundations_sketched_by_haavelmo_and_wald.pdf",
+          "role": "institution-hosted published PDF",
+          "consulted": true,
+          "locator": "Indexed first-page abstract and supersession footnote"
+        }
+      ],
+      "source_claim": "The article proposes evaluating model-based decision rules across the feasible state space rather than solely within the chosen model space. It examines as-if optimisation in prediction and treatment choice and acknowledges substantial practical and computational challenges.",
+      "project_relevance": "Separates predictive or policy performance from fitting and estimating a selected model.",
+      "limitations": "Publisher abstract and first-page material only; the methods and examples have not been fully audited.",
+      "metadata_notes": "The publisher explicitly states that this supersedes the paper circulated in 2019 as 'Statistical Inference for Statistical Decisions'. Do not cite that draft title as a 2021 publication or count the two as independent final works.",
+      "next_reading": "Read the formal state-space/model-space distinction, risk criteria and applications; compare with the superseded draft only when a historical distinction matters.",
+      "verifier": "decision_finance_sources",
+      "verified_on": "2026-10-24",
+      "bibliographic_status": "verified_identity",
+      "critical_review": "pending",
+      "authors_abbreviated": false
+    },
+    {
+      "id": "deaton-cartwright-2018-rcts",
+      "authors": [
+        "Angus Deaton",
+        "Nancy Cartwright"
+      ],
+      "year": 2018,
+      "title": "Understanding and misunderstanding randomized controlled trials",
+      "type": "article",
+      "venue": "Social Science & Medicine",
+      "volume": "210",
+      "issue": "",
+      "pages": "2–21",
+      "doi": "10.1016/j.socscimed.2017.12.005",
+      "theme": "identification",
+      "reading_depth": "selected_sections_read",
+      "version": "Published journal article",
+      "urls": [
+        {
+          "url": "https://doi.org/10.1016/j.socscimed.2017.12.005",
+          "role": "publisher article",
+          "consulted": true,
+          "locator": "Indexed abstract and selected sections 1–3; direct DOI redirect failed"
+        },
+        {
+          "url": "https://durham-repository.worktribe.com/output/1341825/understanding-and-misunderstanding-randomized-controlled-trials",
+          "role": "institutional repository metadata and abstract",
+          "consulted": true,
+          "locator": "Indexed title, authors and abstract; direct open returned 403"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29331519/",
+          "role": "bibliographic metadata corroboration",
+          "consulted": true,
+          "locator": "Publication record"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6019115/",
+          "role": "full-text repository alternative",
+          "consulted": true,
+          "locator": "Indexed selected passages; direct open returned browser-check page"
+        }
+      ],
+      "source_claim": "The authors argue that randomisation does not automatically guarantee precise estimates or justify extrapolation. They distinguish unbiasedness, precision and inference, and discuss the additional knowledge required to apply trial results elsewhere. They expressly disavow a general argument against randomised trials.",
+      "project_relevance": "Connects economic relevance to estimand choice, causal identification, heterogeneity and applicability beyond the study setting.",
+      "limitations": "Selected indexed full-text passages were read; no complete audit of proofs, simulations or commentaries. The authors' criticism should be presented alongside substantive counterarguments.",
+      "metadata_notes": "Journal issue year is 2018; the article appeared online in December 2017, explaining some databases' 2017 dating.",
+      "next_reading": "Read the complete paper and relevant responses, especially Imbens and Gelman; inspect the precise assumptions behind inference and extrapolation claims.",
+      "verifier": "decision_finance_sources",
+      "verified_on": "2026-10-24",
+      "bibliographic_status": "verified_identity",
+      "critical_review": "pending",
+      "authors_abbreviated": false
+    },
+    {
+      "id": "harvey-liu-zhu-2016-cross-section",
+      "authors": [
+        "Campbell R. Harvey",
+        "Yan Liu",
+        "Heqing Zhu"
+      ],
+      "year": 2016,
+      "title": "… and the Cross-Section of Expected Returns",
+      "type": "article",
+      "venue": "The Review of Financial Studies",
+      "volume": "29",
+      "issue": "1",
+      "pages": "5–68",
+      "doi": "10.1093/rfs/hhv059",
+      "theme": "finance",
+      "reading_depth": "abstract_read",
+      "version": "Published journal article",
+      "urls": [
+        {
+          "url": "https://academic.oup.com/rfs/article/29/1/5/1843824",
+          "role": "publisher metadata and abstract",
+          "consulted": true,
+          "locator": "Article information and Abstract"
+        }
+      ],
+      "source_claim": "The authors argue that extensive factor searching makes conventional significance criteria inadequate. They introduce a multiple-testing framework and advocate a higher evidential hurdle for new factors, drawing a pessimistic conclusion about the reliability of claimed findings.",
+      "project_relevance": "Tests whether a substantively large estimated effect can still be misleading after extensive searching and selection.",
+      "limitations": "Abstract only. The pessimistic conclusion is the authors' argument under their framework, not an independently established fact or universal rule for all finance research.",
+      "metadata_notes": "Published online October 2015; journal issue year 2016. Preserve the leading ellipsis in the article title.",
+      "next_reading": "Inspect the search universe, dependence assumptions, publication-selection assumptions and sensitivity of recommended cutoffs; compare directly with Jensen, Kelly and Pedersen.",
+      "verifier": "decision_finance_sources",
+      "verified_on": "2026-10-24",
+      "bibliographic_status": "verified_identity",
+      "critical_review": "pending",
+      "authors_abbreviated": false
+    },
+    {
+      "id": "mclean-pontiff-2016-predictability",
+      "authors": [
+        "R. David McLean",
+        "Jeffrey Pontiff"
+      ],
+      "year": 2016,
+      "title": "Does Academic Research Destroy Stock Return Predictability?",
+      "type": "article",
+      "venue": "The Journal of Finance",
+      "volume": "71",
+      "issue": "1",
+      "pages": "5–32",
+      "doi": "10.1111/jofi.12365",
+      "theme": "finance",
+      "reading_depth": "abstract_read",
+      "version": "Published journal article",
+      "urls": [
+        {
+          "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/jofi.12365",
+          "role": "publisher metadata and abstract",
+          "consulted": true,
+          "locator": "Article information and Abstract; full-text URL redirected to abstract"
+        }
+      ],
+      "source_claim": "The authors compare return predictability outside original study samples and after publication. They report declining performance and interpret their evidence as consistent with both data-mining effects and investors learning about mispricing from academic publications.",
+      "project_relevance": "Introduces out-of-sample economic performance and market adaptation as distinct explanations relevant to replication.",
+      "limitations": "Abstract only; numerical findings are intentionally omitted at the starter stage. Performance decay does not by itself establish that the original predictive relation was wholly spurious.",
+      "metadata_notes": "Published online October 2015; journal issue year 2016.",
+      "next_reading": "Audit predictor selection, portfolio construction, timing definitions, risk adjustment and identification of publication-informed trading.",
+      "verifier": "decision_finance_sources",
+      "verified_on": "2026-10-24",
+      "bibliographic_status": "verified_identity",
+      "critical_review": "pending",
+      "authors_abbreviated": false
+    },
+    {
+      "id": "harvey-liu-2020-false-missed",
+      "authors": [
+        "Campbell R. Harvey",
+        "Yan Liu"
+      ],
+      "year": 2020,
+      "title": "False (and Missed) Discoveries in Financial Economics",
+      "type": "article",
+      "venue": "The Journal of Finance",
+      "volume": "75",
+      "issue": "5",
+      "pages": "2503–2553",
+      "doi": "10.1111/jofi.12951",
+      "theme": "finance",
+      "reading_depth": "selected_sections_read",
+      "version": "Final published journal PDF",
+      "urls": [
+        {
+          "url": "https://people.duke.edu/~charvey/Research/Published_Papers/P143_False_and_missed.pdf",
+          "role": "author-hosted final published PDF",
+          "consulted": true,
+          "locator": "Abstract and opening discussion, pp. 2503–2505"
+        },
+        {
+          "url": "https://onlinelibrary.wiley.com/doi/10.1111/jofi.12951",
+          "role": "publisher metadata corroboration",
+          "consulted": true,
+          "locator": "Indexed citation metadata; direct full-text open returned 403"
+        }
+      ],
+      "source_claim": "The article proposes a double-bootstrap approach to calibrating false and missed discoveries while allowing different costs for the two kinds of error. Its opening discussion argues that attention to test power can change conclusions about manager selection.",
+      "project_relevance": "Provides a finance-specific bridge between multiple testing, power and the economic costs of decision errors.",
+      "limitations": "Opening sections only, not a full methodological review. Their definition of manager skill as positive alpha is explicitly distinguished from alternative equilibrium definitions.",
+      "metadata_notes": "Use the final October 2020 PDF with volume, issue and pagination; an earlier online-first PDF lacks final issue metadata.",
+      "next_reading": "Audit bootstrap construction, the assumed fraction and distribution of skilled managers, dependence handling and robustness of decision-cost calibration.",
+      "verifier": "decision_finance_sources",
+      "verified_on": "2026-10-24",
+      "bibliographic_status": "verified_identity",
+      "critical_review": "pending",
+      "authors_abbreviated": false
+    },
+    {
+      "id": "jensen-kelly-pedersen-2023-replication",
+      "authors": [
+        "Theis Ingerslev Jensen",
+        "Bryan Kelly",
+        "Lasse Heje Pedersen"
+      ],
+      "year": 2023,
+      "title": "Is There a Replication Crisis in Finance?",
+      "type": "article",
+      "venue": "The Journal of Finance",
+      "volume": "78",
+      "issue": "5",
+      "pages": "2465–2518",
+      "doi": "10.1111/jofi.13249",
+      "theme": "finance",
+      "reading_depth": "selected_sections_read",
+      "version": "Published open-access journal article",
+      "urls": [
+        {
+          "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/jofi.13249",
+          "role": "publisher full text",
+          "consulted": true,
+          "locator": "Abstract, introduction, selected Bayesian-model and replication discussion"
+        }
+      ],
+      "source_claim": "The authors develop a hierarchical Bayesian model and international factor evidence that lead them to a substantially more favourable assessment of factor replication than earlier critiques. Their discussion attributes differences to sample construction, risk adjustment, the definition of replication and treatment of multiple testing.",
+      "project_relevance": "Supplies a recent substantive counterposition to pessimistic finance-replication claims and blanket threshold tightening.",
+      "limitations": "Selected sections only; supplements and complete empirical implementation not reviewed. Conclusions remain dependent on their model, priors, benchmarks and factor construction.",
+      "metadata_notes": "Publisher confirms issue 78(5), pages 2465–2518, and first online publication in May 2023.",
+      "next_reading": "Audit hierarchical assumptions, prior sensitivity, risk benchmarks, factor construction and out-of-sample design; compare each disputed choice with the earlier studies.",
+      "verifier": "decision_finance_sources",
+      "verified_on": "2026-10-24",
+      "bibliographic_status": "verified_identity",
+      "critical_review": "pending",
+      "authors_abbreviated": false
+    },
+    {
+      "id": "mcshane-etal-2019-abandon",
+      "authors": [
+        "Blakeley B. McShane",
+        "David Gal",
+        "Andrew Gelman",
+        "Christian Robert",
+        "Jennifer L. Tackett"
+      ],
+      "year": 2019,
+      "title": "Abandon Statistical Significance",
+      "type": "article",
+      "venue": "The American Statistician",
+      "volume": "73",
+      "issue": "sup1",
+      "pages": "235–245",
+      "doi": "10.1080/00031305.2018.1527253",
+      "theme": "inference",
+      "reading_depth": "selected_sections_read",
+      "version": "Final published journal PDF",
+      "urls": [
+        {
+          "url": "https://stat.columbia.edu/~gelman/research/published/abandon.pdf",
+          "role": "author-hosted final published PDF",
+          "consulted": true,
+          "locator": "Abstract and opening sections, pp. 235–236"
+        },
+        {
+          "url": "https://www.kellogg.northwestern.edu/academics-research/research/detail/2019/abandon-statistical-significance/",
+          "role": "institutional publication metadata",
+          "consulted": true,
+          "locator": "Title, author list and publication citation"
+        },
+        {
+          "url": "https://www.tandfonline.com/doi/full/10.1080/00031305.2018.1527253",
+          "role": "publisher article alternative",
+          "consulted": false,
+          "locator": "Direct open returned 403; final PDF used"
+        }
+      ],
+      "source_claim": "The authors propose removing statistical significance from its threshold screening role and considering continuously interpreted statistical information alongside design, prior evidence, mechanisms and costs and benefits. They explicitly do not advocate banning p-values.",
+      "project_relevance": "Distinguishes abandoning dichotomous evidential gates from abandoning statistical evidence or uncertainty assessment.",
+      "limitations": "Abstract and opening sections only; detailed recommendations and responses to objections still require reading.",
+      "metadata_notes": "Issue year 2019; DOI contains 2018. Published author name is Blakeley B. McShane, although institutional pages may abbreviate it as Blake.",
+      "next_reading": "Read the implementation and decision-making recommendations and compare with arguments for calibrated or stricter evidential thresholds.",
+      "verifier": "decision_finance_sources",
+      "verified_on": "2026-10-24",
+      "bibliographic_status": "verified_identity",
+      "critical_review": "pending",
+      "authors_abbreviated": false
+    },
+    {
+      "id": "kandel-stambaugh-1996-asset-allocation",
+      "authors": [
+        "Shmuel Kandel",
+        "Robert F. Stambaugh"
+      ],
+      "year": 1996,
+      "title": "On the Predictability of Stock Returns: An Asset-Allocation Perspective",
+      "type": "article",
+      "venue": "The Journal of Finance",
+      "volume": "51",
+      "issue": "2",
+      "pages": "385–424",
+      "doi": "10.1111/j.1540-6261.1996.tb02689.x",
+      "theme": "decision",
+      "reading_depth": "abstract_read",
+      "version": "Published journal article",
+      "urls": [
+        {
+          "url": "https://onlinelibrary.wiley.com/doi/10.1111/j.1540-6261.1996.tb02689.x",
+          "role": "publisher metadata and abstract",
+          "consulted": true,
+          "locator": "Article information and Abstract"
+        }
+      ],
+      "source_claim": "The paper considers a risk-averse Bayesian investor allocating between stocks and cash and updating beliefs about a predictive regression. Its abstract states that current predictor values can materially affect portfolio choice even when conventional statistical measures describe the regression relation as weak and prior beliefs weigh against predictability.",
+      "project_relevance": "Directly distinguishes decision relevance from conventional statistical evidence while retaining updating and uncertainty.",
+      "limitations": "Abstract only. The result does not establish economic magnitudes independently of statistical reasoning or justify ignoring estimation uncertainty.",
+      "metadata_notes": "Publisher verifies June 1996, volume 51(2), pages 385–424.",
+      "next_reading": "Examine utility, priors, estimation risk, predictive distributions, constraints and sensitivity; distinguish a model-implied portfolio choice from realised investment performance.",
+      "verifier": "decision_finance_sources",
+      "verified_on": "2026-10-24",
+      "bibliographic_status": "verified_identity",
+      "critical_review": "pending",
+      "authors_abbreviated": false
+    },
+    {
+      "id": "neyman-1937-estimation",
+      "authors": [
+        "J. Neyman"
+      ],
+      "year": 1937,
+      "title": "Outline of a Theory of Statistical Estimation Based on the Classical Theory of Probability",
+      "type": "article",
+      "venue": "Philosophical Transactions of the Royal Society of London. Series A, Mathematical and Physical Sciences",
+      "volume": "236",
+      "issue": "767",
+      "pages": "333–380",
+      "doi": "10.1098/rsta.1937.0005",
+      "theme": "intervals",
+      "reading_depth": "metadata_only",
+      "version": "Published 1937 article; indexed first-page and archive-cover material only",
+      "urls": [
+        {
+          "url": "https://wwwusers.ts.infn.it/~milotti/Didattica/StatisticaAvanzata/Neyman_1937.pdf",
+          "role": "Institution-hosted published scan",
+          "consulted": true,
+          "locator": "Indexed archive cover, contents and first page; direct PDF request timed out"
+        },
+        {
+          "url": "https://oamonitor.ireland.openaire.eu/national/search/publication?pid=10.1098%2Frsta.1937.0005",
+          "role": "Bibliographic DOI corroboration",
+          "consulted": true,
+          "locator": "Metadata; no substantive theoretical claim based on this record"
+        },
+        {
+          "url": "https://royalsocietypublishing.org/doi/10.1098/rsta.1937.0005",
+          "role": "Publisher record attempted",
+          "consulted": false,
+          "locator": "403 on direct request"
+        }
+      ],
+      "source_claim": "No substantive theoretical claim is attributed at this stage. Bibliographic identity was checked against the indexed published scan and an authoritative bibliographic record; the contents list confirms a section on confidence intervals.",
+      "project_relevance": "Foundational reading priority for checking the meaning and construction of confidence procedures rather than relying only on later interpretations.",
+      "limitations": "Metadata-only record; no complete theoretical section read. Direct publisher and PDF retrieval failed.",
+      "metadata_notes": "Use original article pagination, not the pagination of later collected works. Author retained as printed J. Neyman.",
+      "next_reading": "Retrieve readable original text and inspect section II, especially statement and solution of the confidence-interval problem, before attributing detailed claims.",
+      "verifier": "root",
+      "verified_on": "2026-10-24",
+      "bibliographic_status": "verified_identity",
+      "critical_review": "pending",
+      "authors_abbreviated": false
+    },
+    {
+      "id": "schuirmann-1987-tost",
+      "authors": [
+        "Donald J. Schuirmann"
+      ],
+      "year": 1987,
+      "title": "A comparison of the Two One-Sided Tests Procedure and the Power Approach for assessing the equivalence of average bioavailability",
+      "type": "article",
+      "venue": "Journal of Pharmacokinetics and Biopharmaceutics",
+      "volume": "15",
+      "issue": "6",
+      "pages": "657–680",
+      "doi": "10.1007/BF01068419",
+      "theme": "equivalence",
+      "reading_depth": "abstract_read",
+      "version": "Published article; publisher abstract",
+      "urls": [
+        {
+          "url": "https://link.springer.com/article/10.1007/BF01068419",
+          "role": "Publisher",
+          "consulted": true,
+          "locator": "Metadata and abstract"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/3450848/",
+          "role": "Authoritative abstract record",
+          "consulted": true,
+          "locator": "Metadata, issue number and abstract"
+        }
+      ],
+      "source_claim": "Schuirmann compares a power-based approach with two one-sided tests for bioequivalence. The abstract relates TOST to a 1−2α confidence interval and reports favourable error properties relative to the power approach under the studied conditions.",
+      "project_relevance": "A formal route for testing practical equivalence, contingent on a defensible margin and statistical model.",
+      "limitations": "Abstract only; proofs, assumptions and examples not audited. Bioavailability criteria do not automatically transfer to economics.",
+      "metadata_notes": "Use the journal name at publication; the current website also displays the successor journal title.",
+      "next_reading": "Read test definitions and conditions behind the interval equivalence; reproduce a simple analytic example.",
+      "verifier": "root",
+      "verified_on": "2026-10-24",
+      "bibliographic_status": "verified_identity",
+      "critical_review": "pending",
+      "authors_abbreviated": false
+    },
+    {
+      "id": "lakens-2017-equivalence",
+      "authors": [
+        "Daniël Lakens"
+      ],
+      "year": 2017,
+      "title": "Equivalence Tests: A Practical Primer for t Tests, Correlations, and Meta-Analyses",
+      "type": "article",
+      "venue": "Social Psychological and Personality Science",
+      "volume": "8",
+      "issue": "4",
+      "pages": "355–362",
+      "doi": "10.1177/1948550617697177",
+      "theme": "equivalence",
+      "reading_depth": "selected_sections_read",
+      "version": "Published open-access article in PMC",
+      "urls": [
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5502906/",
+          "role": "Repository copy of primary article",
+          "consulted": true,
+          "locator": "Abstract, introduction and Testing for Equivalence; Figure 1 discussion"
+        }
+      ],
+      "source_claim": "Lakens distinguishes non-rejection of a zero null from evidence of equivalence within chosen bounds. The introduction and Figure 1 discuss four combinations of difference and equivalence test outcomes, including an effect that is statistically different from zero yet practically equivalent.",
+      "project_relevance": "Makes the difference between a zero threshold and a practical margin teachable without abandoning uncertainty assessment.",
+      "limitations": "Selected sections only; formulas and software not yet independently checked. Domain-specific margin justification remains necessary.",
+      "metadata_notes": "Published 2017; repository identifier PMC5502906 is not a separate publication.",
+      "next_reading": "Read margin-setting discussion and inspect formulas; distinguish raw economic units from standardised psychological effect sizes.",
+      "verifier": "root",
+      "verified_on": "2026-10-24",
+      "bibliographic_status": "verified_identity",
+      "critical_review": "pending",
+      "authors_abbreviated": false
+    },
+    {
+      "id": "lakens-scheel-isager-2018",
+      "authors": [
+        "Daniël Lakens",
+        "Anne M. Scheel",
+        "Peder M. Isager"
+      ],
+      "year": 2018,
+      "title": "Equivalence Testing for Psychological Research: A Tutorial",
+      "type": "article",
+      "venue": "Advances in Methods and Practices in Psychological Science",
+      "volume": "1",
+      "issue": "2",
+      "pages": "259–269",
+      "doi": "10.1177/2515245918770963",
+      "theme": "equivalence",
+      "reading_depth": "selected_sections_read",
+      "version": "Published article; publisher-indexed substantive sections",
+      "urls": [
+        {
+          "url": "https://journals.sagepub.com/doi/10.1177/2515245918770963",
+          "role": "Publisher text via search retrieval",
+          "consulted": true,
+          "locator": "Discussion; Subjective justification of a smallest effect size of interest; metadata. Direct request timed out."
+        }
+      ],
+      "source_claim": "The authors emphasise justifying and prespecifying equivalence bounds. Their discussion warns that choosing bounds after seeing results compromises error-rate claims; generic effect-size benchmarks provide weak substantive justification.",
+      "project_relevance": "Requires the project to defend economic margins rather than convert an arbitrary conventional effect size into a policy threshold.",
+      "limitations": "Selected publisher-indexed sections read, not complete paper. Direct page opening timed out; examples and code not checked.",
+      "metadata_notes": "Publisher records issue and first online publication in June 2018.",
+      "next_reading": "Read objective and subjective margin justifications together and assess relevance to costs, welfare and distributional effects.",
+      "verifier": "root",
+      "verified_on": "2026-10-24",
+      "bibliographic_status": "verified_identity",
+      "critical_review": "pending",
+      "authors_abbreviated": false
+    },
+    {
+      "id": "morey-et-al-2016-intervals",
+      "authors": [
+        "Richard D. Morey",
+        "Rink Hoekstra",
+        "Jeffrey N. Rouder",
+        "Michael D. Lee",
+        "Eric-Jan Wagenmakers"
+      ],
+      "year": 2016,
+      "title": "The fallacy of placing confidence in confidence intervals",
+      "type": "article",
+      "venue": "Psychonomic Bulletin & Review",
+      "volume": "23",
+      "issue": "1",
+      "pages": "103–123",
+      "doi": "10.3758/s13423-015-0947-8",
+      "theme": "intervals",
+      "reading_depth": "selected_sections_read",
+      "version": "Published open-access article",
+      "urls": [
+        {
+          "url": "https://link.springer.com/article/10.3758/s13423-015-0947-8",
+          "role": "Publisher full text",
+          "consulted": true,
+          "locator": "Metadata, abstract and introductory discussion before The folk theory of confidence intervals"
+        },
+        {
+          "url": "https://research.rug.nl/nl/publications/the-fallacy-of-placing-confidence-in-confidence-intervals-2/",
+          "role": "Author institutional record",
+          "consulted": true,
+          "locator": "Bibliographic metadata"
+        }
+      ],
+      "source_claim": "The authors argue that frequentist coverage alone does not justify common interpretations of a realised interval as a probability statement about its parameter or a ranking of plausible values. They challenge broad interval advocacy and propose other foundations for interval estimation.",
+      "project_relevance": "A strong objection to treating confidence intervals as a complete methodological solution; its examples and philosophical conclusions require separate evaluation.",
+      "limitations": "Abstract and introduction inspected, not all counterexamples or proposed alternatives. Record the authors' argument without treating it as settled consensus.",
+      "metadata_notes": "Online October 2015; journal issue February 2016. Cite the issue year consistently.",
+      "next_reading": "Audit the examples and distinguish a criticism of some interval interpretations from a universal rejection of useful confidence procedures.",
+      "verifier": "root",
+      "verified_on": "2026-10-24",
+      "bibliographic_status": "verified_identity",
+      "critical_review": "pending",
+      "authors_abbreviated": false
+    },
+    {
+      "id": "hoenig-heisey-2001-power",
+      "authors": [
+        "John M. Hoenig",
+        "Dennis M. Heisey"
+      ],
+      "year": 2001,
+      "title": "The Abuse of Power: The Pervasive Fallacy of Power Calculations for Data Analysis",
+      "type": "article",
+      "venue": "The American Statistician",
+      "volume": "55",
+      "issue": "1",
+      "pages": "19–24",
+      "doi": "10.1198/000313001300339897",
+      "theme": "power",
+      "reading_depth": "abstract_read",
+      "version": "Published article; publisher abstract and institutional scan metadata",
+      "urls": [
+        {
+          "url": "https://doi.org/10.1198/000313001300339897",
+          "role": "Publisher search-indexed abstract",
+          "consulted": true,
+          "locator": "Abstract and citation metadata; direct request returned 403"
+        },
+        {
+          "url": "https://edwebcontent.ed.ac.uk/sites/default/files/atoms/files/the_abuse_of_power.pdf",
+          "role": "Institution-hosted published paper",
+          "consulted": true,
+          "locator": "Indexed citation cover confirms both authors, 2001 issue year, pages and DOI"
+        }
+      ],
+      "source_claim": "The abstract distinguishes useful prospective power calculations from flawed post-experiment power calculations used to interpret a non-significant result. It announces a critique of the latter practice rather than a rejection of design-stage power analysis.",
+      "project_relevance": "Helps distinguish observed power from design analysis using externally justified effect sizes.",
+      "limitations": "Abstract and bibliographic cover only; detailed arguments and variants not read.",
+      "metadata_notes": "Publisher website's 2012 online date is not the 2001 journal issue year.",
+      "next_reading": "Read the exact definition of observed power and compare with Gelman–Carlin retrospective design analysis.",
+      "verifier": "root",
+      "verified_on": "2026-10-24",
+      "bibliographic_status": "verified_identity",
+      "critical_review": "pending",
+      "authors_abbreviated": false
+    },
+    {
+      "id": "lakens-2022-sample-size",
+      "authors": [
+        "Daniël Lakens"
+      ],
+      "year": 2022,
+      "title": "Sample Size Justification",
+      "type": "article",
+      "venue": "Collabra: Psychology",
+      "volume": "8",
+      "issue": "1",
+      "pages": "",
+      "article_number": "33267",
+      "doi": "10.1525/collabra.33267",
+      "theme": "power",
+      "reading_depth": "selected_sections_read",
+      "version": "Published open-access review article",
+      "urls": [
+        {
+          "url": "https://online.ucpress.edu/collabra/article/8/1/33267/120491/Sample-Size-Justification",
+          "role": "Publisher full text",
+          "consulted": true,
+          "locator": "Abstract; Six Approaches to Justify Sample Sizes; Six Ways to Evaluate Which Effect Sizes are Interesting; The Value of Information"
+        }
+      ],
+      "source_claim": "Lakens presents several sample-size justifications, including power, precision and resource constraints, and links design choices to inferential goals and informative effect sizes. The discussion distinguishes the smallest interesting effect from the smallest statistically detectable one.",
+      "project_relevance": "Connects substantive thresholds to research design while keeping feasibility and scientific aims visible.",
+      "limitations": "Selected sections read; no claim of checking all examples, formulas or supporting references.",
+      "metadata_notes": "33267 is an article identifier, not a page range.",
+      "next_reading": "Examine planning under resource constraints and value-of-information assumptions for the planned policy exercises.",
+      "verifier": "root",
+      "verified_on": "2026-10-24",
+      "bibliographic_status": "verified_identity",
+      "critical_review": "pending",
+      "authors_abbreviated": false
+    },
+    {
+      "id": "menkveld-etal-2024-nonstandard-errors",
+      "authors": [
+        "Albert J. Menkveld",
+        "Anna Dreber",
+        "Felix Holzmeister",
+        "Juergen Huber",
+        "Magnus Johannesson",
+        "Michael Kirchler",
+        "Sebastian Neusüß",
+        "Michael Razen",
+        "Utz Weitzel",
+        "others"
+      ],
+      "authors_abbreviated": true,
+      "year": 2024,
+      "title": "Nonstandard Errors",
+      "type": "article",
+      "venue": "The Journal of Finance",
+      "volume": "79",
+      "issue": "3",
+      "pages": "2339–2390",
+      "doi": "10.1111/jofi.13337",
+      "theme": "finance",
+      "reading_depth": "selected_sections_read",
+      "version": "Published open-access journal article; first online 17 April 2024",
+      "urls": [
+        {
+          "url": "https://onlinelibrary.wiley.com/doi/10.1111/jofi.13337",
+          "role": "Publisher final article, metadata and full byline",
+          "consulted": true,
+          "locator": "Abstract; introduction including Contribution to the Literature; sections I.A, I.C (selected), II.D and III. Section locators used; printed-page claims not inferred from HTML."
+        },
+        {
+          "url": "https://openaccess.city.ac.uk/id/eprint/30511/",
+          "role": "Institutional metadata corroboration",
+          "consulted": true,
+          "locator": "Search-retrieved citation and abstract; not used as complete author-list source."
+        }
+      ],
+      "source_claim": "The authors distinguish sampling uncertainty from variation across analysts choosing analysis paths on the same data. Their experiment finds substantial dispersion and reports that peer feedback reduces it. They caution that dispersion among published results may be smaller, while publication selection can introduce bias.",
+      "project_relevance": "Challenges whether economic magnitudes and conventional uncertainty intervals remain stable across defensible analytical choices.",
+      "limitations": "Selected sections only; complete methods, supplements and code not audited. Dispersion does not identify bias or show all analysis paths equally defensible. Do not treat it as an automatic additive correction to a standard error.",
+      "metadata_notes": "First online 17 April 2024; issue year 2024. Author list deliberately abbreviated after the first nine authors; consult publisher byline/Appendix A for the complete list.",
+      "next_reading": "Audit estimands, path comparability, multiplicity assumptions, preregistration changes and feedback mechanisms; import complete publisher author metadata.",
+      "verifier": "decision_finance_sources",
+      "verified_on": "2026-10-24",
+      "bibliographic_status": "verified_identity",
+      "critical_review": "pending"
+    },
+    {
+      "year": 2025,
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "reading_depth": "selected_sections_read",
+      "verified_on": "2026-10-24",
+      "bibliographic_status": "verified_identity",
+      "critical_review": "pending",
+      "authors_abbreviated": false,
+      "id": "fitzgerald-2025-equivalence",
+      "authors": [
+        "Jack Fitzgerald"
+      ],
+      "title": "The Need for Equivalence Testing in Economics",
+      "type": "working_paper",
+      "venue": "MetaArXiv",
+      "doi": "10.31222/osf.io/d7sqr_v2",
+      "theme": "equivalence",
+      "version": "Author-hosted working paper dated 8 December 2025; author links a version-2 MetaArXiv DOI, but deposited PDF identity was not confirmed",
+      "urls": [
+        {
+          "url": "https://jack-fitzgerald.github.io/papers/",
+          "role": "Author bibliography and versioned repository link",
+          "consulted": true,
+          "locator": "Job Market Paper entry, abstract and Draft link; distinguished from separately listed peer-reviewed articles"
+        },
+        {
+          "url": "https://jack-fitzgerald.github.io/files/The_Need_for_Equivalence_Testing_in_Economics.pdf",
+          "role": "Author-hosted dated working paper",
+          "consulted": true,
+          "locator": "Selected printed pp. 1–5, 7, 20–23, 34–37, 42–43; visual checks pp. 22, 34, 36 by inference_sources. No complete reading or replication."
+        },
+        {
+          "url": "https://doi.org/10.31222/osf.io/d7sqr_v2",
+          "role": "Author-linked version-2 identifier",
+          "consulted": false,
+          "locator": "Identifier corroborated by author page and CV; resolution failed/403. Exact match of author-hosted file to repository deposit not established."
+        },
+        {
+          "url": "https://jack-fitzgerald.github.io/files/jack_fitzgerald_cv.pdf",
+          "role": "Author CV metadata corroboration",
+          "consulted": true,
+          "locator": "April 2026 CV entry, title and versioned DOI"
+        }
+      ],
+      "source_claim": "The working paper reassesses null claims using equivalence tests and proposes meaningful-margin testing. It distinguishes failure to establish equivalence from evidence of a large effect (p. 22), and generic audit margins from appropriate study-specific margins (p. 34).",
+      "project_relevance": "Connects contemporary economics practice to the 2008 debate while exposing a crucial gap between detecting inadequate evidence for negligibility and measuring false conclusions about true effects. Our assessment: the broader interpretation in terms of Type II errors needs qualification; it is not an observed truth rate.",
+      "limitations": "Working paper, not verified as peer-reviewed publication. Selected sections only; derivations, appendices, code, data and article selection not independently audited. Reanalysis requires available data and conformable estimates. General margins, aggregation and survey judgement cannot by themselves establish welfare thresholds or true Type II error rates.",
+      "metadata_notes": "The 2024 I4R draft is an earlier version of this contribution, not a second core item. The 2025 author-hosted PDF has 47 pages and SHA-256 c75e550f525127ab31828563a6e089f8c8b9852f8374a7544aba061b050fca8b. Some formula extraction is garbled; no unverified formula transcription adopted.",
+      "bibliography_note": "Working paper; author-hosted text dated 8 December 2025; author-linked version-2 DOI, deposit identity not independently matched",
+      "next_reading": "Read full derivations and replication materials; audit corpus selection and weighting; compare economic and statistical margins; examine the subsequent three-sided-testing tutorial separately.",
+      "verifier": "root; inference_sources independent selected-section critique"
+    },
+    {
+      "year": 2026,
+      "volume": "",
+      "issue": "",
+      "pages": "1–37",
+      "reading_depth": "selected_sections_read",
+      "verified_on": "2026-10-24",
+      "bibliographic_status": "verified_identity",
+      "critical_review": "pending",
+      "authors_abbreviated": false,
+      "id": "aradillas-fernandez-etal-2026-robust-bayes",
+      "authors": [
+        "Andrés Aradillas Fernández",
+        "José Luis Montiel Olea",
+        "Chen Qiu",
+        "Jörg Stoye",
+        "Serdil Tinda"
+      ],
+      "title": "Robust Bayes Treatment Choice with Partial Identification",
+      "type": "article",
+      "venue": "Econometric Theory",
+      "doi": "10.1017/S0266466626100486",
+      "theme": "decision",
+      "version": "Published FirstView article, 23 July 2026; final publisher HTML controls, not 2024/2025 arXiv versions",
+      "urls": [
+        {
+          "url": "https://www.cambridge.org/core/journals/econometric-theory/article/robust-bayes-treatment-choice-with-partialidentification/4125FE898E298193C00B107953D36ECC",
+          "role": "Publisher metadata and open full HTML",
+          "consulted": true,
+          "locator": "Abstract, introduction, selected framework sections 2.1–2.3, section 3 Assumption 1 and section 4 conclusion; proofs and appendices not read. Cite section locators, not inferred PDF pages."
+        },
+        {
+          "url": "https://arxiv.org/abs/2408.11621",
+          "role": "Earlier draft/version record",
+          "consulted": true,
+          "locator": "Metadata: submitted 21 August 2024, revised 19 December 2025; not counted as a separate contribution"
+        }
+      ],
+      "source_claim": "Under their partial-identification framework and specified prior class, ex ante and ex post robust Bayes rules can differ, and randomisation can be optimal under both criteria. The conclusion acknowledges a restrictive prior and leaves the comparative merits of the criteria open.",
+      "project_relevance": "A counterweight to treating decision theory as a unique automatic replacement for testing: the choice of criterion and information assumptions remains consequential.",
+      "limitations": "Selected sections only; no proof verification or application replication. Normal signal with known covariance, linear mappings, convex symmetric parameter set and a particular two-point reduced-form prior limit generality. Results do not show that every decision requires randomisation or that one criterion is universally superior.",
+      "metadata_notes": "FirstView pp. 1–37; no volume or issue supplied because none was verified. Publisher display joins PARTIALIDENTIFICATION; normalised spacing in title. Five authors and DOI checked against final publisher metadata.",
+      "bibliography_note": "FirstView; published online 23 July 2026",
+      "next_reading": "Read complete proofs, applications and extensions to general priors; compare the final Armstrong–Kitagawa–Tetenov 2026 paper and Manski before generalising the decision-theoretic conclusion.",
+      "verifier": "root",
+      "bibtex_authors": [
+        "Aradillas Fernández, Andrés",
+        "Montiel Olea, José Luis",
+        "Qiu, Chen",
+        "Stoye, Jörg",
+        "Tinda, Serdil"
+      ]
+    }
+  ]
+}

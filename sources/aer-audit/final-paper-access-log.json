@@ -1,0 +1,699 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-24",
+  "scope": "Targeted final-paper retrieval followed by user-supplied Darby and Bernheim–Wantz PDFs; independent source identity and bounded reading checks. Proposed changes below are original handoff history; supporting-registry.json is current authoritative metadata.",
+  "darby": {
+    "audit": "darby-final-followup",
+    "access_date": "2026-10-24",
+    "verifier": "inference_sources",
+    "outcome": "Initial web retrieval failed; the user subsequently supplied the final published JSTOR scan. Identity and continuous printed pp. 301–322 verified; complete text read with selected visual checks. Final record can now be upgraded to full_text_read. No empirical replication or slide-gate approval.",
+    "queries": [
+      "\"The U.S. Productivity Slowdown\" \"1984\" pdf Darby",
+      "\"Michael Darby\" \"301-322\" pdf",
+      "\"Statistical Myopia\" Darby filetype:pdf",
+      "\"The U.S. Productivity Slowdown: A Case of Statistical Myopia\" Darby 1984 full text",
+      "Darby \"1804009\"",
+      "Darby productivity slowdown site:anderson.ucla.edu",
+      "\"statistical myopia\" \"Darby\" -site:scribd.com -site:researchgate.net -site:ideas.repec.org -site:nber.org -site:cambridge.org -site:econpapers.repec.org",
+      "\"Michael Darby\" publications UCLA 1984 productivity",
+      "\"The U.S. Productivity Slowdown\" site:researchgate.net/publication",
+      "\"The U.S. Productivity Slowdown\" \"Darby\" site:archive.org",
+      "\"statistical myopia\" filetype:pdf site:ucla.edu",
+      "\"Darby\" \"1984\" \"Productivity Slowdown\" \"pdf\" -site:researchgate.net -site:nber.org -site:ideas.repec.org -site:scribd.com -site:cambridge.org -site:fraser.stlouisfed.org",
+      "\"american-economic-review\" \"1984-06\" \"74\" archive",
+      "\"The U.S. Productivity Slowdown\" \"Darby\" \"download\"",
+      "\"The U.S. Productivity Slowdown\" site:escholarship.org",
+      "\"Statistical Myopia\" site:archive.org/details",
+      "\"Darby\" \"The Economics of Productivity\" \"myopia\"",
+      "\"The U.S. Productivity Slowdown\" \"Edward\" Wolff",
+      "\"The U.S. Productivity Slowdown\" \"pdf\" \"301\"",
+      "\"The Economics of Productivity\" Wolff 1997 volume II Darby",
+      "\"The U.S. Productivity Slowdown\" site:aeaweb.org",
+      "\"The U.S. Productivity Slowdown\" site:books.google.com",
+      "\"1804009\" Darby JSTOR PDF -site:steamdb.info -site:arctop.com",
+      "\"The Economics of Productivity\" \"Wolff\" \"preview\"",
+      "\"9781858984209\" \"Darby\"",
+      "\"1858984203\" site:books.google.com",
+      "\"The Economics of Productivity\" site:elgaronline.com"
+    ],
+    "api_queries": [
+      "https://api.openalex.org/works?search=The%20U.S.%20Productivity%20Slowdown%3A%20A%20Case%20of%20Statistical%20Myopia&per-page=5",
+      "https://archive.org/advancedsearch.php?q=title%3A%22American%20Economic%20Review%22%20AND%20year%3A1984&output=json&rows=50"
+    ],
+    "attempts": [
+      {
+        "url": "https://www.jstor.org/stable/1804009",
+        "method": "web",
+        "outcome": "No usable article text; only tag-manager link."
+      },
+      {
+        "url": "https://www.jstor.org/stable/pdf/1804009.pdf",
+        "method": "web",
+        "outcome": "Reported inaccessible; earlier terminal challenge-HTML outcome retained separately."
+      },
+      {
+        "url": "https://www.jstor.org/stable/i304558",
+        "method": "web",
+        "outcome": "Issue contents corroborates final identity, pp301–322."
+      },
+      {
+        "url": "https://www.anderson.ucla.edu/faculty-and-research/global-economics-and-management/faculty/darby",
+        "method": "web",
+        "outcome": "Inaccessible; current strategy faculty page found through search."
+      },
+      {
+        "url": "https://www.anderson.ucla.edu/faculty-and-research/strategy/faculty/darby",
+        "method": "web",
+        "outcome": "Retrieved; CV linked; no final-paper file found in selected publication list."
+      },
+      {
+        "url": "https://nhlrc.ucla.edu/apc/person/414",
+        "method": "web",
+        "outcome": "Search result found institutional profile; opener cache miss."
+      },
+      {
+        "url": "https://econpapers.repec.org/paper/clauclawp/266.htm",
+        "method": "web",
+        "outcome": "Search returned working-paper metadata; opener cache miss."
+      },
+      {
+        "url": "https://ideas.repec.org/a/aea/aecrev/v74y1984i3p301-22.html",
+        "method": "web",
+        "outcome": "Retrieved; final-article metadata, JSTOR route, and explicit borrowed-abstract warning."
+      },
+      {
+        "url": "https://www.anderson.ucla.edu/sites/default/files/documents/areas/fac/strategy/MICHAEL%20R.%20DARBY%20CV.pdf",
+        "method": "web and terminal",
+        "outcome": "Retrieved36-pageCV. Read cover and printedpp11,20; reprint lead found. Not article text."
+      },
+      {
+        "url": "https://papers.nber.org/papers/w1018.pdf",
+        "method": "terminal",
+        "outcome": "HTTP success; 58-page1982draft; checksum identical to prior retrieved NBERPDF."
+      },
+      {
+        "url": "https://www.econ.ucla.edu/workingpapers/wp304.pdf",
+        "method": "web and terminal",
+        "outcome": "Web inaccessible; terminal connection timed out after75003ms,HTTP000; no file content."
+      },
+      {
+        "url": "https://www.econ.ucla.edu/workingpapers/wp266.pdf",
+        "method": "web",
+        "outcome": "Inaccessible; no text read."
+      },
+      {
+        "url": "https://www.e-elgar.com/shop/isbn/9781858984209",
+        "method": "web and terminal",
+        "outcome": "Web inaccessible; terminalHTTP403; no reprint pages read."
+      },
+      {
+        "url": "https://www.e-elgar.com/shop/gb/the-economics-of-productivity-9781858984209.html",
+        "method": "web",
+        "outcome": "Conventional publisher path attempted, inaccessible; no content read."
+      },
+      {
+        "url": "https://books.google.com/books?vid=ISBN1858984203",
+        "method": "web and terminal",
+        "outcome": "Web inaccessible; terminalHTTP200 redirected to https://books.google.co.uk/books?vid=ISBN1858984203&redir_esc=y ; catalogue forvolI RA8PAQAAMAAJ, withvolII link."
+      },
+      {
+        "url": "https://books.google.com/books?id=RA8PAQAAMAAJ",
+        "method": "web",
+        "outcome": "Inaccessible; volI catalogue already retrieved by ISBN terminal route."
+      },
+      {
+        "url": "https://books.google.co.uk/books?id=EBAPAQAAMAAJ",
+        "method": "terminal",
+        "outcome": "HTTP200; volII catalogue, snippet-view collection. No article text read."
+      },
+      {
+        "url": "https://api.openalex.org/works?search=The%20U.S.%20Productivity%20Slowdown%3A%20A%20Case%20of%20Statistical%20Myopia&per-page=5",
+        "method": "terminal",
+        "outcome": "HTTP200; matched actualrecordW1760003876 groups draft/final locations; no new accessible finalPDF."
+      },
+      {
+        "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=304758",
+        "method": "web and terminal",
+        "outcome": "Discovery from OpenAlex; web inaccessible and terminalHTTP403; version not inspected."
+      },
+      {
+        "url": "https://archive.org/advancedsearch.php?q=title%3A%22American%20Economic%20Review%22%20AND%20year%3A1984&output=json&rows=50",
+        "method": "terminal",
+        "outcome": "HTTP200; numFound1, identifier sim_american-economic-review_1984_74_contents; no article retrieved."
+      }
+    ],
+    "actual_reading": {
+      "final_article": "All printed pp. 301–322, including footnotes, data appendix and references, read from extracted text; visuals checked pp. 301, 307, 310–312, 315–316, including all three figures and disputed equations/Tables 6–7. Not an empirical replication or cell-by-cell appendix audit.",
+      "cv": "Cover and printed pp. 11 and 20; bibliographic entries only",
+      "nber_alias": "Cover and abstract reread to establish version; prior selected reading retained, not upgraded",
+      "catalogues": "RePEc, official faculty page, Google Books volumes I/II, OpenAlex and Internet Archive metadata; no snippet-derived Darby claims"
+    },
+    "temporary_artifacts": [
+      {
+        "path": "/tmp/darby-final-cv.pdf",
+        "bytes": 267358,
+        "sha256": "756ad9a93dcce63e51a43c31e757201d46ad864791a728bc6472d8b677cc0c34"
+      },
+      {
+        "path": "/tmp/darby-final-nber-alias.pdf",
+        "bytes": 527603,
+        "sha256": "b1b79c875f0d9e20789b28996bcba74edd9c7849c78445c4cc7dc1d6258e8829"
+      },
+      {
+        "path": "/tmp/darby-final-openalex.json",
+        "bytes": 80188,
+        "sha256": "ea7095de6b6ad34f4b33ba72a941991c993a34a1938efb0a2acfadeef519564c"
+      },
+      {
+        "path": "/tmp/darby-final-googlebooks.html",
+        "bytes": 48133,
+        "sha256": "2529c4880d771dc8ba3714d15a99575b17d2472775af895ecc1b08d9adf1eb65"
+      },
+      {
+        "path": "/tmp/darby-final-googlebooks-vol2.html",
+        "bytes": 42339,
+        "sha256": "515c52d16d176097f4654627bc0719024dc810cffb40f8050c0497c898a805ab"
+      },
+      {
+        "path": "/tmp/darby-final-ia-search.json",
+        "bytes": 1952,
+        "sha256": "fa221ac1344a13ccc2137a9e1609cce779feafdeae2c65389234f01ba4b23def"
+      }
+    ],
+    "proposed_supporting_registry_updates": [
+      {
+        "id": "support-darby-1984-productivity",
+        "fields": {
+          "reading_depth": "full_text_read",
+          "version": "Published article, AER 74(3), June 1984, pp. 301–322; user-supplied JSTOR scan verified after initial failed retrieval",
+          "urls": [
+            {
+              "url": "https://www.jstor.org/stable/i304558",
+              "role": "Journal issue contents",
+              "consulted": true,
+              "locator": "Darby entry, pp. 301–322; volume 74 issue 3 June 1984"
+            },
+            {
+              "url": "https://www.nber.org/papers/w1018",
+              "role": "Institutional cross-reference to published version",
+              "consulted": true,
+              "locator": "Published Versions; landing page retrieved via terminal"
+            },
+            {
+              "url": "https://www.jstor.org/stable/1804009",
+              "role": "Stable archive identifier corroborated by user-supplied final scan",
+              "consulted": true,
+              "locator": "Initial web route exposed no article text; subsequently read user-supplied JSTOR scan with this stable identifier, printed pp.301–322."
+            },
+            {
+              "url": "https://www.jstor.org/stable/pdf/1804009.pdf",
+              "role": "Attempted published PDF",
+              "consulted": false,
+              "locator": "Agent direct download returned challenge HTML. Full article later read from user-supplied local JSTOR download; this direct URL was not successfully retrieved by the agent."
+            },
+            {
+              "url": "https://www.anderson.ucla.edu/sites/default/files/documents/areas/fac/strategy/MICHAEL%20R.%20DARBY%20CV.pdf",
+              "role": "Official author CV corroborating final identity and reported1997reprint",
+              "consulted": true,
+              "locator": "Printedp20 publication32; p11 provides inconsistent draft date/cross-reference. Selected entries only."
+            },
+            {
+              "url": "https://ideas.repec.org/a/aea/aecrev/v74y1984i3p301-22.html",
+              "role": "Publisher-supplied RePEc bibliographic record",
+              "consulted": true,
+              "locator": "Final article citation; abstract explicitly borrowed from another version."
+            },
+            {
+              "url": "https://books.google.co.uk/books?id=EBAPAQAAMAAJ",
+              "role": "Catalogue for authorised reprint collection",
+              "consulted": true,
+              "locator": "The Economics of Productivity,volII(1997),ISBN1858984203; snippet-view catalogue only, no Darby article pages read."
+            },
+            {
+              "url": "https://api.openalex.org/works?search=The%20U.S.%20Productivity%20Slowdown%3A%20A%20Case%20of%20Statistical%20Myopia&per-page=5",
+              "role": "Discovery API response, not version verification",
+              "consulted": true,
+              "locator": "ActualrecordW1760003876 combines NBER/UCLA/SSRN/AERlocations; primaryDOI belongs to working paper."
+            }
+          ],
+          "findings": "Published pp. 311–312 convert the price-control coefficient into annual growth adjustments; p. 315 economically interprets a coefficient difference despite non-significance. Equation (12) retains a control with t=.31, but oil terms are excluded after zero-restriction tests. P. 317 distinguishes explaining growth variation from trend importance. These observations support H&S on magnitude reasoning while preserving a narrower MZ selection/absence objection.",
+          "uncertainty": "Published DOI unverified. Full reading is not replication or cell-by-cell data audit. P. 315 supplies no complete covariance-aware Eq(12)-versus-Eq(16) difference test; note39 instead concerns within-regression control/decontrol equality. Non-rejection does not establish economic equivalence. Final Table6 row-reference and Table7 caption inconsistencies preserved in evidence note. No corrected survey rate follows. Reprint remains unread.",
+          "access_failures": [
+            "JSTOR stable page exposed no usable article text.",
+            "Published-PDF URL returned HTTP-success Client Challenge HTML; file magic and parser confirmed not a PDF.",
+            "Renewed webPDF opening remained inaccessible. Root browser check is outside this agent access record.",
+            "OfficialCVlinks back to JSTOR; its NBERlink serves the same1982draft.",
+            "UCLAHTTPSwp304 timed out,HTTP000; wp266 web route inaccessible.",
+            "Elgar publisher reprint page and SSRN304758 returnedHTTP403; no content inspected.",
+            "GoogleBooks catalogue obtained after web-opener failures, but no authorised complete reprint preview found.",
+            "InternetArchive public catalogue query returned only a1984table-of-contents item.",
+            "These failures preceded the user-supplied final PDF; they no longer imply final article unread or unavailable."
+          ],
+          "next_reading": "Final-text access gap resolved. For empirical adjudication, reconstruct data/estimation and compare specifications with economically justified bounds and covariance-aware uncertainty. Independently assess selection effects and causal/measurement assumptions.",
+          "evidence_note": "../../wiki/evidence/darby-final-followup.md",
+          "verifier": "inference_sources",
+          "local_supplied_pdf": "supplied-document:Darby-USProductivitySlowdown-1984.pdf",
+          "sha256": "eb0978c229c4562c6b2ab0f46c39a91ad46967218046289575c868f9b6053c7d",
+          "locators": "Complete printed pp. 301–322 read, including footnotes, appendix and references; visual checks 301, 307, 310–312, 315–316. Main dispute: 310–312, 314–317.",
+          "reading_coverage": "All printed pp. 301–322, including footnotes, data appendix and references, read from extracted text; visuals checked pp. 301, 307, 310–312, 315–316, including all three figures and disputed equations/Tables 6–7. Not an empirical replication or cell-by-cell appendix audit.",
+          "metadata_notes": "Published scan identity and pagination match JSTOR 1804009 and independently retrieved issue/CV/NBER records. Do not substitute draft DOI or merge draft/final estimates. Initial route failures remain historical, not current no-access status."
+        }
+      },
+      {
+        "id": "support-darby-1982-productivity-draft",
+        "append_url": {
+          "url": "https://papers.nber.org/papers/w1018.pdf",
+          "role": "AuthorCVNBERalias/versioncheck",
+          "consulted": true,
+          "locator": "Served identical1982manuscript; SHA256b1b79c875f0d9e20789b28996bcba74edd9c7849c78445c4cc7dc1d6258e8829; noreadingdepthupgrade"
+        },
+        "metadata_note": "Author CV p. 11 labels NBER 1018 July 1984 and cross-refers publication 33; the actual served PDF cover says November 1982. That file and the NBER landing page control the current retrieved version. The CV final-article entry is 32."
+      }
+    ],
+    "repository_edits": [
+      "wiki/evidence/darby-final-followup.md"
+    ],
+    "slide_gate": "CLOSED",
+    "human_review_approval": false,
+    "chronology": [
+      {
+        "stage": "initial_search",
+        "outcome": "No final article or reprint text recovered; metadata_only was accurate at that time."
+      },
+      {
+        "stage": "user_supplied_final",
+        "outcome": "User downloaded the final JSTOR article; local file verified and full text read on 2026-10-24."
+      }
+    ],
+    "supplied_artifact": {
+      "path": "supplied-document:Darby-USProductivitySlowdown-1984.pdf",
+      "bytes": 1229008,
+      "sha256": "eb0978c229c4562c6b2ab0f46c39a91ad46967218046289575c868f9b6053c7d",
+      "pdf_pages": 23,
+      "mapping": "PDF index 0 is JSTOR cover; indices 1–22 are printed pp. 301–322",
+      "version": "Published AER June 1984 article, user-supplied JSTOR scan",
+      "copied_to_repository": false
+    },
+    "numerical_checks": {
+      "price_control_log_adjustment": 0.036857187,
+      "published_rounded_log_adjustment": 0.0369,
+      "annual_percentage_point_adjustments_from_published_rounded_value": [
+        -0.46125000000000005,
+        0.6150000000000001
+      ],
+      "cross_equation_coefficient_difference": 0.015710000000000002,
+      "interpretation": "Arithmetic checks only, not replication, uncertainty calculation or equality/equivalence tests."
+    }
+  },
+  "bernheim_wantz": {
+    "audit_id": "bernheim-wantz-final-followup-2026-10-24",
+    "verifier": "decision_finance_sources",
+    "access_date": "2026-10-24",
+    "outcome": "User subsequently supplied the final AER PDF; selected final sections including disputed pp.543–547 and conclusion now directly read, with visual table checks. Earlier failed retrieval trail preserved.",
+    "core_corpus_additions": 0,
+    "gate": "closed",
+    "scope": "Selected final-text audit and draft/disputant comparison after user supply; no access bypass, external contact, registry/synthesis edit or Git operation.",
+    "query_batches": [
+      {
+        "batch": 1,
+        "queries": [
+          "\"Bernheim\" \"Wantz\" \"1995\" \"pdf\" \"stanford\"",
+          "\"Tax-Based Test\" \"pdf\" -site:nber.org -site:scispace.com -site:researchgate.net -site:ssrn.com -site:scribd.com -site:ideas.repec.org -site:anpec.org.br -site:dartmouth.edu",
+          "\"Bbernheimwantz\"",
+          "\"2118186\" \"pdf\""
+        ],
+        "results": "NBER/RePEc draft record and irrelevant number/title matches; no new final-text lead.",
+        "disposition": "Discard irrelevant matches; do not infer absence of a final copy.",
+        "date": "2026-10-24",
+        "tool": "web search"
+      },
+      {
+        "batch": 2,
+        "queries": [
+          "\"A Tax-Based Test of the Dividend Signaling Hypothesis\""
+        ],
+        "results": "Stanford author record, JSTOR final record, NBER draft, SSRN draft, RePEc versions and Google Books draft.",
+        "disposition": "Reopen primary author/JSTOR/NBER records; retain draft/final distinction.",
+        "date": "2026-10-24",
+        "tool": "web search"
+      },
+      {
+        "batch": 3,
+        "queries": [
+          "\"Bernheim\" \"Wantz\" filetype:pdf -\"NBER\" -\"significance\" -\"dividends and taxes\" -\"references\"",
+          "\"A Tax-Based Test\" site:edu -site:nber.org -site:bernheim.people.stanford.edu -site:dartmouth.edu",
+          "\"Bernheim\" \"Wantz\" site:archive.org",
+          "\"Bernheim\" \"Wantz\" \"532\" \"download\""
+        ],
+        "results": "Known NBER/JSTOR/RePEc/SSRN records and other papers citing the target; no new final article text.",
+        "disposition": "Citation-only hits not treated as substantive article evidence.",
+        "date": "2026-10-24",
+        "tool": "web search"
+      },
+      {
+        "batch": 4,
+        "queries": [
+          "\"Bernheim\" \"Wantz\" \"pdf\" site:web.stanford.edu",
+          "\"Bernheim\" \"Wantz\" \"pdf\" site:msu.edu",
+          "\"Tax-Based Test\" \"Dividend\" \"pdf\" -site:nber.org -site:ssrn.com -site:ideas.repec.org -site:researchgate.net -site:scispace.com -site:brunel.ac.uk -site:scribd.com -site:dartmouth.edu -site:anpec.org.br"
+        ],
+        "results": "Academia author-profile entry; MIT OCW and Dartmouth reading lists; a blog repeats the prior MSU URL.",
+        "disposition": "Inspect Academia version and MIT link; neither supplies new final text. Do not repeat earlier failed MSU download.",
+        "date": "2026-10-24",
+        "tool": "web search"
+      },
+      {
+        "batch": 5,
+        "queries": [
+          "\"A Tax-Based Test of the Dividend Signaling Hypothesis\" \"532\" -\"NBER\" -\"References\" -\"SSRN\" -\"bibliography\"",
+          "\"Bernheim\" \"Wantz\" site:aeaweb.org",
+          "\"Bernheim\" \"Wantz\" site:repository -site:ideas.repec.org",
+          "\"Bernheim\" \"Wantz\" site:researchgate.net/publication"
+        ],
+        "results": "Known records and reference lists in other papers; no final-text route identified in returned results.",
+        "disposition": "No claim that no repository copy exists; stop treating reference-list hits as candidates.",
+        "date": "2026-10-24",
+        "tool": "web search"
+      },
+      {
+        "batch": 6,
+        "queries": [
+          "Michael Conlin EC860 teaching signalling screening",
+          "\"Bbernheimwantz.pdf\" \"https\"",
+          "\"Bernheim\" \"Wantz\" \"pdf\" -\"NBER\" -\"SSRN\" -\"references\" -\"bibliography\" -\"significance\" -\"Dividend Announcements\" -\"dividends and taxes\" -\"nominal\""
+        ],
+        "results": "MSU instructor/course listing, the same blog/MSU URL, syllabi and citations. A later dividend-signalling paper surfaced but is not the target.",
+        "disposition": "No relocated final copy identified; later findings are not used to adjudicate what the 1995 article says.",
+        "date": "2026-10-24",
+        "tool": "web search"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://bernheim.people.stanford.edu/publications/tax-based-test-dividend-signaling-hypothesis",
+        "method": "web open and link click",
+        "outcome": "Author metadata and abstract read; sole paper link leads to JSTOR stable/2118186.",
+        "reading_depth": "abstract_read",
+        "date": "2026-10-24"
+      },
+      {
+        "url": "https://www.jstor.org/stable/2118186",
+        "method": "web search/open; public curl; normal Chrome UI",
+        "outcome": "Search exposed final metadata/abstract; web open showed no substantive text; curl returned a JavaScript client-challenge document. Normal browser loaded final metadata/abstract and explicitly offered library login for reading/download and a JPASS subscription. No institutional access active in that session; no authentication, subscription or purchase attempted.",
+        "reading_depth": "abstract_read",
+        "local_file": "/tmp/bernheim-final-jstor.html",
+        "date": "2026-10-24",
+        "sha256": "32ed63159c77e21ee19ca1b9aa3213ccf0218eb59539560b132a8e68ef0e18ea",
+        "bytes": 3038
+      },
+      {
+        "url": "https://www.nber.org/papers/w4244",
+        "method": "web search/open",
+        "outcome": "Primary publisher search result displays Working Paper 4244, December 1992 and DOI 10.3386/w4244; direct open returned 403. DOI is corroborated as draft metadata, not an AER article DOI.",
+        "reading_depth": "metadata_only",
+        "date": "2026-10-24"
+      },
+      {
+        "url": "https://api.openalex.org/works?search=A%20Tax-Based%20Test%20of%20the%20Dividend%20Signaling%20Hypothesis&per-page=5",
+        "method": "public curl",
+        "outcome": "Successful JSON. Matching record W1492516548 combines NBER DOI/year with NBER and journal/RePEc locations. Its open-access location is the NBER draft; no new final PDF location supplied. Version labels are not adopted without document inspection.",
+        "reading_depth": "metadata_only",
+        "local_file": "/tmp/bernheim-final-openalex.json",
+        "date": "2026-10-24",
+        "sha256": "5f6c51d964532c2a127ca56058e065a918de125e388cc1a24bfc24c72b40dfbf",
+        "bytes": 89193
+      },
+      {
+        "url": "https://stanford.academia.edu/BDouglasBernheim",
+        "method": "web open and target link click",
+        "outcome": "Profile leads to Academia item 117537520. The download-link click produced an internal error; the item page independently identifies the version as NBER 4244, December 1992.",
+        "reading_depth": "metadata_only",
+        "date": "2026-10-24"
+      },
+      {
+        "url": "https://www.academia.edu/117537520/A_Tax_Based_Test_of_the_Dividend_Signaling_Hypothesis",
+        "method": "web open",
+        "outcome": "1992, 37-page item. Exposed text begins with NBER Working Paper 4244, December 1992. Version/header checked only; no additional full-text reading claimed. Not the final AER article.",
+        "reading_depth": "metadata_only",
+        "date": "2026-10-24"
+      },
+      {
+        "url": "https://ocw.mit.edu/courses/14-471-public-economics-i-fall-2012/pages/readings/",
+        "method": "web open/find",
+        "outcome": "Session 14 target citation links to EconPapers/RePEc, not a hosted final PDF. Its nearby PDF link is a different Bernheim paper.",
+        "reading_depth": "metadata_only",
+        "date": "2026-10-24"
+      },
+      {
+        "url": "https://web.archive.org/cdx/search/cdx?url=msu.edu/~conlinmi/teaching/EC860/signallingscreening/Bbernheimwantz.pdf&output=json&filter=statuscode:200&filter=mimetype:application/pdf&collapse=digest",
+        "method": "public archive index request",
+        "outcome": "Returned empty JSON array under this exact query and filters; does not establish that no archived copy exists.",
+        "local_file": "/tmp/bernheim-final-wayback.json",
+        "date": "2026-10-24",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "bytes": 3
+      },
+      {
+        "url": "https://web.archive.org/cdx/search/cdx?url=*.msu.edu/~conlinmi/teaching/EC860/signallingscreening/Bbernheimwantz.pdf&output=json&filter=statuscode:200&collapse=digest",
+        "method": "public archive index request",
+        "outcome": "Wildcard unexpectedly returned broader MSU-domain captures rather than the intended path and timed out after 30 seconds. Partial response is not a successful target search and is not evidence of absence.",
+        "local_file": "/tmp/bernheim-final-wayback-wildcard.json",
+        "date": "2026-10-24",
+        "sha256": "83b8683696197f41727655011a63221116ea31a13e0fbd14509e4e8f4bb15b0b",
+        "bytes": 2336582
+      },
+      {
+        "url": "https://archive.org/wayback/available?url=https%3A%2F%2Fmsu.edu%2F~conlinmi%2Fteaching%2FEC860%2Fsignallingscreening%2FBbernheimwantz.pdf",
+        "method": "public archive availability request",
+        "outcome": "HTTP 429; no result received, no quota or absence inference.",
+        "date": "2026-10-24"
+      },
+      {
+        "url": "https://web.archive.org/cdx/search/cdx?url=www.msu.edu%2F~conlinmi%2Fteaching%2FEC860%2Fsignallingscreening%2FBbernheimwantz.pdf&matchType=exact&output=json&filter=statuscode:200&collapse=digest&limit=20",
+        "method": "bounded exact-path public archive index request",
+        "outcome": "Returned empty JSON array for this exact www-hostname query. Does not prove global archive absence.",
+        "local_file": "/tmp/bernheim-final-wayback-exact-www.json",
+        "date": "2026-10-24",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "bytes": 3
+      },
+      {
+        "url": "https://www.jstor.org/stable/2118186",
+        "method": "in-app-browser creation before Chrome fallback",
+        "outcome": "In-app browser unavailable; no source content accessed by this route.",
+        "date": "2026-10-24"
+      },
+      {
+        "method": "User supply followed by local PDF extraction and visual inspection",
+        "date": "2026-10-24",
+        "path": "supplied-document:Bernheim-TaxBasedTestDividend-1995.pdf",
+        "outcome": "Final identity verified and selected empirical text read; supersedes earlier access gap without reclassifying the failed access attempts.",
+        "reading_depth": "selected_sections_read",
+        "sha256": "0be5d095c01e9b765c7ebbf0e1f212ecae73f7c2fa30d3fa5b64467d8904e0c9",
+        "bytes": 830063
+      }
+    ],
+    "previous_access_not_repeated": [
+      {
+        "url": "https://msu.edu/~conlinmi/teaching/EC860/signallingscreening/Bbernheimwantz.pdf",
+        "outcome": "Earlier pass returned 212-byte anti-bot HTML, not a PDF; this pass sought public archives and index leads instead."
+      }
+    ],
+    "rechecked_existing_texts": [
+      {
+        "path": "/tmp/aer-bernheim-wantz-1992-draft.txt",
+        "version": "December 1992 NBER draft",
+        "locators": "Selected discussion corresponding to printed pp. 23–29, rechecked; Table 4 p. 35 was visually checked in the earlier pass.",
+        "depth": "selected_sections_read",
+        "pdf_sha256": "8f5553bae13431c2fa98944acd2f3af6cb98714153fd55980aed3a8164ad394f"
+      },
+      {
+        "path": "/tmp/significance-sound-2008.txt",
+        "locators": "Printed p. 11 and surrounding case commentary/note 5 rechecked.",
+        "depth": "selected_sections_read"
+      },
+      {
+        "path": "/tmp/significance-reply-text/page-09.txt",
+        "locators": "Printed p. 47 rechecked; p. 48 selection passage already directly read in the preceding review.",
+        "depth": "selected_sections_read"
+      }
+    ],
+    "proposed_supporting_registry_changes": [
+      {
+        "id": "bernheim-wantz-1995-dividend-signalling",
+        "change_type": "final_selected_text_reading",
+        "reading_depth": "selected_sections_read",
+        "keep_doi": "",
+        "version": "Published 1995 AER article; user-supplied JSTOR PDF with independently matched metadata; selected final text read 2026-10-24",
+        "local_source": {
+          "path": "supplied-document:Bernheim-TaxBasedTestDividend-1995.pdf",
+          "bytes": 830063,
+          "sha256": "0be5d095c01e9b765c7ebbf0e1f212ecae73f7c2fa30d3fa5b64467d8904e0c9",
+          "pdf_pages": 21,
+          "printed_pages": "532–551",
+          "version": "Final published AER85(3), June1995, plus JSTOR cover",
+          "identity_basis": "JSTOR cover and printed headers match independently verified Stanford author/JSTOR metadata",
+          "reading_depth": "selected_sections_read",
+          "text_read": "printed pp.532–533,538–549; conclusion continuation p.550",
+          "visual_read": "printed pp.543,544,547,548,549,550",
+          "not_read_fully": "theoretical derivation pp.534–537; reference list",
+          "access_date": "2026-10-24",
+          "provenance": "User-supplied local file after unsuccessful public retrieval",
+          "redistributed": false
+        },
+        "suggested_findings": [
+          {
+            "label": "Source observation—final article",
+            "locator": "pp.543–544, Tables1–2 and associated prose",
+            "claim": "The high-rating passage distinguishes economic and statistical effects immediately after the criticised sentence; the subsequent paragraph interprets bang-for-buck in return units and against observed dividend changes. Non-significance is qualified for Table1, not all four regressions."
+          },
+          {
+            "label": "Source observation—final article",
+            "locator": "p.547 Table4, fn17; pp.548–549",
+            "claim": "Table4 combines magnitude estimates and standard errors with joint tests. Test1* marks an alternative comparison, not significance. Footnote17 directly tests between-regime differences in estimated bang-for-buck. The authors explain why representative magnitudes alone are incomplete."
+          },
+          {
+            "label": "Source observation—final article",
+            "locator": "p.549",
+            "claim": "The authors use rejection between tax regimes and non-rejection within regimeII, alongside magnitude movements and alternative comparisons, as support for their tax-signalling explanation."
+          },
+          {
+            "label": "Project interpretation",
+            "locator": "pp.547–549 versus JSE2004pp.534–535, H&S2008p.11 and replypp.47–48",
+            "claim": "The final pages refute a significance-star reading and strengthen the contextual correction, but do not establish equivalence from within-regime non-rejection or independently validate tax identification and every selection choice."
+          },
+          {
+            "label": "Source observation—final article",
+            "locator": "pp.541–543, especially fn15",
+            "claim": "Footnote 15 gives substantive confounding and magnitude reasons for reporting inclusive regressions, including inflation; other specification and sample checks are described as unreported."
+          },
+          {
+            "label": "Source discrepancy",
+            "locator": "p.543 sample/exclusion/results prose; p.544 Table2 heading",
+            "claim": "Prose identifies Table 2 as 1978–1988 after earnings-conflict exclusions; the heading prints 1962–1988. Underlying estimation data were not checked, so the discrepancy is preserved."
+          }
+        ],
+        "suggested_limits": "Selected pp. 532–533, 538–549 and conclusion continuation p. 550 only; no full theory/reference reading, replication, proof of tax identification or equivalence, complete version collation, or revised questionnaire score. Apparent Table 2 heading/sample-prose inconsistency retained. Final DOI unverified.",
+        "retain_earlier_failed_routes": true
+      },
+      {
+        "id": "support-bernheim-wantz-1992-nber",
+        "change_type": "version_boundary_update",
+        "keep_doi": "10.3386/w4244",
+        "keep_reading_depth": "selected_sections_read",
+        "remove_obsolete_limit": "Final pp. 543/547 remain unverified",
+        "replacement_limit": "Final disputed pages now read separately; checked final has added magnitude panel and changed estimates. No complete draft/final identity assumed."
+      },
+      {
+        "id": "both existing Bernheim–Wantz supporting records",
+        "change_type": "additional_evidence_link",
+        "suggested_note": "../../wiki/evidence/bernheim-wantz-final-followup.md",
+        "instruction": "Preserve prior retrieval failures, user-supply chronology and separate version records."
+      }
+    ],
+    "remaining_tasks": [
+      "Root to integrate exact final reading scope and updated findings into supporting registry and synthesis, without changing core count or slide gate.",
+      "If a broader adjudication is required, read remaining theoretical derivation and evaluate test assumptions, relevant power and identification alternatives.",
+      "No original-data replication has been performed."
+    ],
+    "earlier_retrieval_outcome": "Final article empirical text not obtained; final pp. 543–547 remain unresolved.",
+    "supplied_final": {
+      "path": "supplied-document:Bernheim-TaxBasedTestDividend-1995.pdf",
+      "bytes": 830063,
+      "sha256": "0be5d095c01e9b765c7ebbf0e1f212ecae73f7c2fa30d3fa5b64467d8904e0c9",
+      "pdf_pages": 21,
+      "printed_pages": "532–551",
+      "version": "Final published AER 85(3), June 1995, plus JSTOR cover",
+      "identity_basis": "JSTOR cover and printed headers match independently verified Stanford author/JSTOR metadata",
+      "reading_depth": "selected_sections_read",
+      "text_read": "Printed pp. 532–533, 538–549; conclusion continuation p. 550",
+      "visual_read": "Printed pp. 543, 544, 547, 548, 549, 550",
+      "not_read_fully": "Theoretical derivation pp. 534–537; reference list",
+      "access_date": "2026-10-24",
+      "provenance": "User-supplied local file after unsuccessful public retrieval",
+      "redistributed": false
+    },
+    "final_findings": [
+      {
+        "label": "Source observation—final article",
+        "locator": "pp.543–544, Tables1–2 and associated prose",
+        "claim": "The high-rating passage distinguishes economic and statistical effects immediately after the criticised sentence; the subsequent paragraph interprets bang-for-buck in return units and against observed dividend changes. Non-significance is qualified for Table1, not all four regressions."
+      },
+      {
+        "label": "Source observation—final article",
+        "locator": "p.547 Table4, fn17; pp.548–549",
+        "claim": "Table4 combines magnitude estimates and standard errors with joint tests. Test1* marks an alternative comparison, not significance. Footnote17 directly tests between-regime differences in estimated bang-for-buck. The authors explain why representative magnitudes alone are incomplete."
+      },
+      {
+        "label": "Source observation—final article",
+        "locator": "p.549",
+        "claim": "The authors use rejection between tax regimes and non-rejection within regimeII, alongside magnitude movements and alternative comparisons, as support for their tax-signalling explanation."
+      },
+      {
+        "label": "Project interpretation",
+        "locator": "pp.547–549 versus JSE2004pp.534–535, H&S2008p.11 and replypp.47–48",
+        "claim": "The final pages refute a significance-star reading and strengthen the contextual correction, but do not establish equivalence from within-regime non-rejection or independently validate tax identification and every selection choice."
+      },
+      {
+        "label": "Source observation—final article",
+        "locator": "pp.541–543, especially fn15",
+        "claim": "The authors give substantive confounding and magnitude reasons for reporting inclusive regressions; reported and unreported specification checks do not constitute a demonstrated purely significance-based selection algorithm."
+      },
+      {
+        "label": "Source discrepancy",
+        "locator": "p.543 sample/exclusion/results prose; p.544 Table2 heading",
+        "claim": "Prose identifies Table2 as1978–1988 after earnings-conflict exclusions; the heading prints1962–1988. Underlying estimation data not checked, so the discrepancy is preserved."
+      }
+    ],
+    "numerical_checks": [
+      {
+        "locator": "p.544 visually checked",
+        "author_reported_values": {
+          "bang_for_buck": 3.88,
+          "average_dividend_increase_percent_share_price": 0.14,
+          "incremental_abnormal_return_percentage_points": 0.54,
+          "average_abnormal_return_percent": 1.19
+        },
+        "replicated": false,
+        "interpretation": "Authors fitted example and sample benchmark; not independently validated population effects."
+      }
+    ],
+    "version_comparison": {
+      "scope": "Selected empirical sections only",
+      "differences": [
+        "Final Table 4 includes representative bang-for-buck magnitude panel A, absent from draft Table 4, p. 35.",
+        "Final magnitude example uses 3.88 versus 3.28 in the draft.",
+        "Final includes the capacity-utilisation theory variable in the checked specifications."
+      ],
+      "no_complete_identity_claim": true
+    },
+    "additional_disputant_reading": {
+      "path": "/tmp/expanded-article190.pdf",
+      "version": "Final JSE 2004 author-hosted scan",
+      "locators": "pp.534–535 visually read for Bernheim–Wantz criticism and nearby argument",
+      "reading_depth": "selected_sections_read",
+      "sha256": "ec4f1d738f03f246dd715ccd33f289f3ef7961e4e44352b0299f5c86d9add153",
+      "scope_increment": "Adds pp. 534–535 to the separately recorded root reading of pp. 527–533, 540–542; no whole-article reading."
+    }
+  },
+  "root_checks": [
+    {
+      "route": "https://www.jstor.org/stable/1804009",
+      "method": "ordinary in-app browser",
+      "outcome": "Final metadata shown; reading/download and preview required library login in that session. No credentials entered. User later supplied final local file."
+    },
+    {
+      "route": "connected Google Drive search",
+      "query": "Darby",
+      "outcome": "Tool interface returned Unknown tool google_drive.search; not empty search results and not evidence no copy exists."
+    },
+    {
+      "route": "local filenames in Downloads and neighbouring PhD training folder",
+      "outcome": "Initial targeted filename search found no final copies. Subsequent Downloads checks found the two PDFs supplied during this turn; hashes independently matched the reading records."
+    },
+    {
+      "route": "local supplied final articles",
+      "coverage": "Root visually verified Darby pp. 310–311,315 and Bernheim–Wantz pp. 543,544,547; read extracted Bernheim–Wantz pp. 546,548–549. Darby passages independently checked again by debate_sources."
+    }
+  ]
+}

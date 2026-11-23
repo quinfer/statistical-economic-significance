@@ -1,0 +1,96 @@
+{
+  "label": "Synthetic deterministic illustrations; no empirical observations",
+  "assumptions": "Known-variance normal likelihood; fixed thresholds; decision example uses stated proper prior and linear risk-neutral utility; no selection or identification failure",
+  "alpha": 0.05,
+  "normal_critical_value": 1.9599639845400534,
+  "power_by_noncentrality": {
+    "1": 0.17007504575308774,
+    "0.1": 0.05114630281081067,
+    "0.01": 0.050011455103510905,
+    "0": 0.04999999999999993
+  },
+  "cases": {
+    "small_precise": {
+      "estimate": 0.1,
+      "se": 0.02,
+      "margin": 1,
+      "p_zero_two_sided": 5.733031437360481e-07,
+      "ci95": [
+        0.06080072030919894,
+        0.13919927969080106
+      ],
+      "ci90": [
+        0.06710292746097057,
+        0.13289707253902944
+      ],
+      "equivalent_tost_05": true,
+      "positive_beyond_margin_onesided_05": false
+    },
+    "large_imprecise": {
+      "estimate": 2,
+      "se": 2,
+      "margin": 1,
+      "p_zero_two_sided": 0.31731050786291415,
+      "ci95": [
+        -1.9199279690801068,
+        5.919927969080106
+      ],
+      "ci90": [
+        -1.289707253902943,
+        5.289707253902943
+      ],
+      "equivalent_tost_05": false,
+      "positive_beyond_margin_onesided_05": false
+    },
+    "precise_zero": {
+      "estimate": 0,
+      "se": 0.001,
+      "margin": 0.01,
+      "p_zero_two_sided": 1.0,
+      "ci95": [
+        -0.0019599639845400535,
+        0.0019599639845400535
+      ],
+      "ci90": [
+        -0.0016448536269514716,
+        0.0016448536269514716
+      ],
+      "equivalent_tost_05": true,
+      "positive_beyond_margin_onesided_05": false
+    },
+    "positive_but_not_established_above_margin": {
+      "estimate": 1.1,
+      "se": 0.2,
+      "margin": 1,
+      "p_zero_two_sided": 3.797912495606681e-08,
+      "ci95": [
+        0.7080072030919894,
+        1.491992796908011
+      ],
+      "ci90": [
+        0.7710292746097058,
+        1.4289707253902943
+      ],
+      "equivalent_tost_05": false,
+      "positive_beyond_margin_onesided_05": false
+    }
+  },
+  "decision": {
+    "estimate": 400.0,
+    "se": 500.0,
+    "prior_mean": 0.0,
+    "prior_sd": 1000.0,
+    "posterior_mean": 320.00000000000006,
+    "posterior_sd": 447.213595499958,
+    "p_zero_two_sided": 0.4237107971667933,
+    "expected_net_at_cost_100": 220.00000000000006,
+    "expected_net_at_cost_500": -179.99999999999994
+  },
+  "equivalence_counterexample": {
+    "theta": 0,
+    "se": 1,
+    "margin": 0.1,
+    "ci90_halfwidth": 1.6448536269514715,
+    "equivalence_failure_probability": 1.0
+  }
+}

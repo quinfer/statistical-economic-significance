@@ -1,0 +1,56 @@
+[
+  {
+    "date": "2026-10-24",
+    "url": "https://public.econ.duke.edu/~kdh9/research.html",
+    "method": "web open",
+    "outcome": "Retrieved; links to Rankings and Omitted Papers followed."
+  },
+  {
+    "date": "2026-10-24",
+    "url": "https://public.econ.duke.edu/~kdh9/Source%20Materials/McCloskey/Rankings.htm",
+    "method": "web open",
+    "outcome": "Retrieved; provenance attributes survey tables to Stephen Ziliak personal communication."
+  },
+  {
+    "date": "2026-10-24",
+    "url": "https://public.econ.duke.edu/~kdh9/Source%20Materials/McCloskey/1980s%20Alphabetical.htm",
+    "method": "web then curl",
+    "outcome": "Web Unicode decoding error; curl successfully retrieves cp1252 HTML."
+  },
+  {
+    "date": "2026-10-24",
+    "url": "https://public.econ.duke.edu/~kdh9/Source%20Materials/McCloskey/1990s%20Alphabetical.htm",
+    "method": "web then curl",
+    "outcome": "Web sees frame notice only; linked underlying sheets successfully retrieved via curl."
+  },
+  {
+    "date": "2026-10-24",
+    "url": "https://www.uky.edu/AS/PoliSci/Peffley/pdf/Size%20Matters%20Journal%20of%20Socio-Economics%20Ziliak%20and%20McCloskey.pdf",
+    "method": "curl --fail --location",
+    "outcome": "Redirect ends HTTP404; no finalJSEPDF obtained; not evidence of paywall."
+  },
+  {
+    "date": "2026-10-24",
+    "url": "https://www.sciencedirect.com/science/article/abs/pii/S1053535704000836",
+    "method": "web indexed search",
+    "outcome": "Publisher identity/abstract and section excerpts available; not complete final text."
+  },
+  {
+    "date": "2026-10-24",
+    "url": "https://www.jstor.org/stable/i304577",
+    "method": "web open",
+    "outcome": "Full issue contents retrieved; supports Simon author/title/issue/pages identity."
+  },
+  {
+    "date": "2026-10-24",
+    "url": "https://www.jstor.org/stable/1806847",
+    "method": "web open",
+    "outcome": "Only tag-manager shell text returned; no Simon full-text reading claimed."
+  },
+  {
+    "date": "2026-10-24",
+    "url": "local tools",
+    "method": "PDF extraction/render/OCR",
+    "outcome": "MZ1996 pypdf extraction empty,19scanpages. Poppler rendered scan; Tesseract succeeds with/private/tmp paths but not/tmp aliases. Poppler rendering ofEJW triggered fontconfig errors and was stopped; pypdfium2 p336 render succeeds. Numeric table values visually checked."
+  }
+]

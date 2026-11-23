@@ -1,0 +1,20 @@
+item,label,operational_paraphrase,original_1996_printed_locator,table_1996_denominator,table_1996_percent_yes,ejw2004_table1_1990s_percent_yes,matrix_1990s_yes_count,matrix_1990s_all_papers_denominator,matrix_1990s_all_papers_percent,comparison_denominator,comparison_percent,notes
+1,Small sample,Sample not so large that conventional rejection is obtained merely through sample size; source discusses size/power trade-off.,101–102,182,85.7,67.9,93,137,67.883212,137,67.883212,
+2,Variable description,Units and descriptive statistics supplied for all regression variables.,102,178,32.4,66.4,91,137,66.423358,137,66.423358,
+3,Interpretable coefficients,Elasticities or another economically interpretable scale allowing readers to assess impact.,102,173,66.5,86.9,119,137,86.861314,137,86.861314,
+4,Appropriate null,Null corresponds to the substantive hypothesis rather than an automatic zero-null.,102,180,97.3,83.9,115,137,83.941606,137,83.941606,
+5,Coefficient interpretation,"Coefficients interpreted with their theoretical meaning, measurement units and data limitations in view.",102,181,44.5,81.0,111,137,81.021898,137,81.021898,
+6,Avoid irrelevant statistics,Does not report all t/F statistics or standard errors indiscriminately where a test is inappropriate.,102,181,8.3,12.4,17,137,12.408759,137,12.408759,
+7,More than testing at first crucial use,"At the first crucial inferential passage, uses criteria of importance beyond statistical significance. Original prose question is negatively phrased; good-practice coding reverses that wording.",102–103,182,47.3,36.5,50,137,36.49635,137,36.49635,EJW2004 comparative 1980s Q7 cell is 13.2%; original1996 table is47.3%.
+8,Power mentioned,"Mentions the tests’ power, with substantive alternatives relevant to its interpretation.",103,182,4.4,8.0,11,137,8.029197,137,8.029197,
+9,Power acted upon,"Conditional question: if power is mentioned, takes action concerning it; source allows not-applicable for some tests.",103,12,16.7,45.5,5,137,3.649635,11,45.454545,"Q9 published percentage is conditional, not all-paper percentage."
+10,No ranking by test statistic,Avoids ranking coefficients by the absolute magnitude of their t statistics.,103,182,74.7,32.8,45,137,32.846715,137,32.846715,
+11,No sign-only interpretation,Avoids discussing coefficient signs without discussing magnitudes.,103,181,46.7,19.0,26,137,18.978102,137,18.978102,
+12,Magnitude discussed,Discusses coefficient sizes and whether corresponding variables have economic influence.,103,182,80.2,78.1,107,137,78.10219,137,78.10219,
+13,Substantive comparison,Places large/small coefficient judgments in a scientific conversation about relevant quantitative comparisons.,104,181,28.0,54.0,74,137,54.014599,137,54.014599,
+14,Variable selection,Avoids choosing variables for inclusion solely by statistical significance.,104,180,68.1,25.5,39,137,28.467153,137,28.467153,Q14 and Q15 printed percentages are transposed relative to supplied matrix labels.
+15,After the crucial passage,Uses criteria of importance beyond statistical significance after the principal test.,104,182,40.7,28.5,35,137,25.547445,137,25.547445,Q14 and Q15 printed percentages are transposed relative to supplied matrix labels.
+16,Testing not decisive alone,Does not let statistical significance end the empirical argument. Original prose question asks whether it is decisive; good-practice coding reverses that wording.,104,182,29.7,18.2,25,137,18.248175,137,18.248175,
+17,Reasonableness calculation,"Uses simulation to examine whether coefficients are reasonable, beyond merely inserting regressions in a further argument; excludes screening simulation inputs only by statistical significance.",104; EJW 2004 p.337,179,13.2,35.0,48,137,35.036496,137,35.036496,
+18,Distinguish in conclusions,"Keeps statistical significance distinct from economic, policy and scientific importance in conclusions and implications.",104,181,30.1,52.6,72,137,52.554745,137,52.554745,
+19,Unambiguous significance,Avoids switching between statistical and substantive meanings of significance without distinction.,104,180,41.2,37.2,51,137,37.226277,137,37.226277,

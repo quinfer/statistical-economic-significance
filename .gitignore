@@ -1,0 +1,9 @@
+.DS_Store
+__pycache__/
+*.pyc
+.quarto/
+_site/
+_freeze/
+.venv/
+sources/local-full-text/
+scratch/

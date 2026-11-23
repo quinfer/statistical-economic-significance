@@ -1,0 +1,6 @@
+case_id,author_issue_match,yes_reported,no_reported,positive_item_numbers,negative_item_numbers,source_row,mapping_limit
+darby1984,"Darby, Michael R.; 1984(3)",3,17,not available,not available,64,author/issue match; total exceeds 19; original item-level codes unavailable
+woodbury-spiegelman1987,"Woodbury, Stephen A.; 1987(4)",7,12,not available,not available,276,author/issue match; original item-level codes unavailable
+bernanke-blinder1992,Bernanke and Blinder; 9209,8,11,1;3;4;5;12;13;18;19,2;6;7;8;9;10;11;14;15;16;17,18,codes verified; source passage-to-code reasoning not supplied
+becker-grossman-murphy1994,"Becker, Grossman, and Murphy; 9406",6,13,2;3;4;5;12;18,1;6;7;8;9;10;11;13;14;15;16;17;19,15,codes verified; source passage-to-code reasoning not supplied
+bernheim-wantz1995,Bernheim and Wantz; 9506,1,18,3,1;2;4;5;6;7;8;9;10;11;12;13;14;15;16;17;18;19,20,codes verified; source passage-to-code reasoning not supplied

@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "Cite with the commit used and access date. Cite original papers for substantive claims."
+title: "Statistical and Economic Significance: A Research and Learning Repository"
+type: software
+authors:
+  - family-names: Quinn
+    given-names: Barry
+repository-code: "https://github.com/quinfer/statistical-economic-significance"
+url: "https://github.com/quinfer/statistical-economic-significance"
+abstract: "An evolving PhD learning resource and evidence-linked research wiki on magnitude, inference and decisions in economics and finance."
+license: "CC-BY-4.0 AND MIT"
+keywords:
+  - statistical significance
+  - economic significance
+  - equivalence testing
+  - decision theory
+  - economics
+  - finance

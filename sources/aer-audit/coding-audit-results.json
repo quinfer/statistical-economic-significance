@@ -1,0 +1,586 @@
+{
+  "scope": "Arithmetic/provenance of retrieved 1980s author totals and original 137-paper 1990s matrix; not a recoding of articles and not the 2008 book expanded187-paper corpus.",
+  "n_1980s_author_paper_rows": 281,
+  "n_1990s_paper_rows": 137,
+  "all_1990s_row_scores_and_display_percentages_match": true,
+  "yes_counts_1990s": {
+    "q1": 93,
+    "q2": 91,
+    "q3": 119,
+    "q4": 115,
+    "q5": 111,
+    "q6": 17,
+    "q7": 50,
+    "q8": 11,
+    "q9": 5,
+    "q10": 45,
+    "q11": 26,
+    "q12": 107,
+    "q13": 74,
+    "q14": 39,
+    "q15": 35,
+    "q16": 25,
+    "q17": 48,
+    "q18": 72,
+    "q19": 51
+  },
+  "q16_adverse": {
+    "count": 112,
+    "denominator": 137,
+    "percent": 81.75182481751825
+  },
+  "q7_q16_cross_tab": {
+    "q7=0,q16=0": 80,
+    "q7=0,q16=1": 7,
+    "q7=1,q16=0": 32,
+    "q7=1,q16=1": 18
+  },
+  "q9_conditional": {
+    "yes": 5,
+    "denominator_q8_yes": 11,
+    "percent": 45.45454545454545,
+    "no_q9_yes_without_q8_yes": true
+  },
+  "ejw_table1_vs_1990s_matrix_differences": [
+    {
+      "item": 14,
+      "matrix_yes": 39,
+      "denominator": 137,
+      "computed": 28.5,
+      "ejw_table": 25.5
+    },
+    {
+      "item": 15,
+      "matrix_yes": 35,
+      "denominator": 137,
+      "computed": 25.5,
+      "ejw_table": 28.5
+    }
+  ],
+  "totals_1980s_author_rows": {
+    "15": 2,
+    "16": 2,
+    "17": 1,
+    "18": 15,
+    "19": 219,
+    "20": 42
+  },
+  "author_rows_above19": [
+    {
+      "source_row": 6,
+      "author": "Alston, Lee J.",
+      "issue": "1984(3)",
+      "yes": 5,
+      "no": 15
+    },
+    {
+      "source_row": 9,
+      "author": "Ash, Colin",
+      "issue": "1983(1)",
+      "yes": 5,
+      "no": 15
+    },
+    {
+      "source_row": 17,
+      "author": "Behrman, Jere R.",
+      "issue": "1987(1)",
+      "yes": 4,
+      "no": 16
+    },
+    {
+      "source_row": 28,
+      "author": "Block, Michael K.",
+      "issue": "1985(3)",
+      "yes": 6,
+      "no": 14
+    },
+    {
+      "source_row": 31,
+      "author": "Bloom, David E.",
+      "issue": "1986(3)",
+      "yes": 10,
+      "no": 10
+    },
+    {
+      "source_row": 32,
+      "author": "Boissiere, M.",
+      "issue": "1985(5)",
+      "yes": 6,
+      "no": 14
+    },
+    {
+      "source_row": 36,
+      "author": "Bowen, Harry B.",
+      "issue": "1987(5)",
+      "yes": 16,
+      "no": 4
+    },
+    {
+      "source_row": 41,
+      "author": "Card, David",
+      "issue": "1986(5)",
+      "yes": 10,
+      "no": 10
+    },
+    {
+      "source_row": 46,
+      "author": "Cavanaugh, Christopher L.",
+      "issue": "1986(3)",
+      "yes": 10,
+      "no": 10
+    },
+    {
+      "source_row": 52,
+      "author": "Clark, Kim B.",
+      "issue": "1984(5)",
+      "yes": 15,
+      "no": 5
+    },
+    {
+      "source_row": 54,
+      "author": "Cogan, John F.",
+      "issue": "1982(4)",
+      "yes": 10,
+      "no": 10
+    },
+    {
+      "source_row": 59,
+      "author": "Craig, Steven G.",
+      "issue": "1987(1)",
+      "yes": 4,
+      "no": 16
+    },
+    {
+      "source_row": 64,
+      "author": "Darby, Michael R.",
+      "issue": "1984(3)",
+      "yes": 3,
+      "no": 17
+    },
+    {
+      "source_row": 76,
+      "author": "Eckel, Catherine",
+      "issue": "1989(4)",
+      "yes": 9,
+      "no": 11
+    },
+    {
+      "source_row": 91,
+      "author": "Feinstein, Jonathan S.",
+      "issue": "1985(3)",
+      "yes": 6,
+      "no": 14
+    },
+    {
+      "source_row": 120,
+      "author": "Heckman, James J.",
+      "issue": "1989(1)",
+      "yes": 15,
+      "no": 5
+    },
+    {
+      "source_row": 122,
+      "author": "Hendricks, Kenneth",
+      "issue": "1988(5)",
+      "yes": 5,
+      "no": 15
+    },
+    {
+      "source_row": 128,
+      "author": "Holt, Charles A.",
+      "issue": "1989(4)",
+      "yes": 9,
+      "no": 11
+    },
+    {
+      "source_row": 129,
+      "author": "Huffman, Wallace E.",
+      "issue": "1981(1)",
+      "yes": 5,
+      "no": 15
+    },
+    {
+      "source_row": 138,
+      "author": "Joskow, Paul L.",
+      "issue": "1987(1)",
+      "yes": 15,
+      "no": 5
+    },
+    {
+      "source_row": 141,
+      "author": "Kagel, John H.",
+      "issue": "1986(5)",
+      "yes": 6,
+      "no": 14
+    },
+    {
+      "source_row": 142,
+      "author": "Kalt, Joseph P.",
+      "issue": "1984(3)",
+      "yes": 3,
+      "no": 17
+    },
+    {
+      "source_row": 147,
+      "author": "Knight, J.B.",
+      "issue": "1985(5)",
+      "yes": 6,
+      "no": 14
+    },
+    {
+      "source_row": 150,
+      "author": "Kormendi, Roger C.",
+      "issue": "1983(5)",
+      "yes": 7,
+      "no": 13
+    },
+    {
+      "source_row": 155,
+      "author": "Leamer, Edward E.",
+      "issue": "1987(5)",
+      "yes": 16,
+      "no": 4
+    },
+    {
+      "source_row": 156,
+      "author": "Levin, Dan",
+      "issue": "1986(5)",
+      "yes": 6,
+      "no": 14
+    },
+    {
+      "source_row": 169,
+      "author": "Martin, Robert E.",
+      "issue": "1988(5)",
+      "yes": 5,
+      "no": 15
+    },
+    {
+      "source_row": 177,
+      "author": "McNown, Robert F.",
+      "issue": "1983(1)",
+      "yes": 5,
+      "no": 15
+    },
+    {
+      "source_row": 183,
+      "author": "Mishkin, Frederic",
+      "issue": "1981(3)",
+      "yes": 9,
+      "no": 11
+    },
+    {
+      "source_row": 192,
+      "author": "Nold, Frederick D.",
+      "issue": "1985(3)",
+      "yes": 6,
+      "no": 14
+    },
+    {
+      "source_row": 202,
+      "author": "Parsons, Donald O.",
+      "issue": "1980(5)",
+      "yes": 10,
+      "no": 10
+    },
+    {
+      "source_row": 204,
+      "author": "Payner, Brook S.",
+      "issue": "1989(1)",
+      "yes": 15,
+      "no": 5
+    },
+    {
+      "source_row": 206,
+      "author": "Peltzman, Sam",
+      "issue": "1985(4)",
+      "yes": 5,
+      "no": 15
+    },
+    {
+      "source_row": 209,
+      "author": "Plant, Mark W.",
+      "issue": "1984(4)",
+      "yes": 11,
+      "no": 9
+    },
+    {
+      "source_row": 212,
+      "author": "Porter, Robert H.",
+      "issue": "1988(5)",
+      "yes": 5,
+      "no": 15
+    },
+    {
+      "source_row": 227,
+      "author": "Sabot, Richard H.",
+      "issue": "1985(5)",
+      "yes": 6,
+      "no": 14
+    },
+    {
+      "source_row": 228,
+      "author": "Sachs, Jeffrey",
+      "issue": "1980(1)",
+      "yes": 13,
+      "no": 7
+    },
+    {
+      "source_row": 235,
+      "author": "Shiller, Robert J.",
+      "issue": "1981(3)",
+      "yes": 10,
+      "no": 10
+    },
+    {
+      "source_row": 252,
+      "author": "Sveikauskas, Leo",
+      "issue": "1987(5)",
+      "yes": 16,
+      "no": 4
+    },
+    {
+      "source_row": 256,
+      "author": "Thiel, Stuart E.",
+      "issue": "1988(5)",
+      "yes": 6,
+      "no": 14
+    },
+    {
+      "source_row": 261,
+      "author": "Udis, Bernard",
+      "issue": "1983(1)",
+      "yes": 5,
+      "no": 15
+    },
+    {
+      "source_row": 281,
+      "author": "Zupan, Mark A.",
+      "issue": "1984(3)",
+      "yes": 3,
+      "no": 17
+    }
+  ],
+  "selected_1990s_cumulative_percentiles": {
+    "Becker, Grossman, and Murphy": {
+      "score": 6,
+      "count_scoring_at_most": 46,
+      "denominator": 137,
+      "cumulative_percent": 33.57664233576642
+    },
+    "Bernanke and Blinder": {
+      "score": 8,
+      "count_scoring_at_most": 79,
+      "denominator": 137,
+      "cumulative_percent": 57.66423357664234
+    },
+    "Bernheim and Wantz": {
+      "score": 1,
+      "count_scoring_at_most": 1,
+      "denominator": 137,
+      "cumulative_percent": 0.7299270072992701
+    }
+  },
+  "omission_records": 82,
+  "omission_categories": [
+    {
+      "decade": "1980s",
+      "regression": "no",
+      "significance": "yes",
+      "count": 5
+    },
+    {
+      "decade": "1980s",
+      "regression": "yes",
+      "significance": "yes",
+      "count": 15
+    },
+    {
+      "decade": "1990s",
+      "regression": "no",
+      "significance": "yes",
+      "count": 5
+    },
+    {
+      "decade": "1990s",
+      "regression": "yes",
+      "significance": "no",
+      "count": 1
+    },
+    {
+      "decade": "1990s",
+      "regression": "yes",
+      "significance": "yes",
+      "count": 56
+    }
+  ],
+  "simon_cross_list_contradiction": {
+    "omission_group": "1980s regression=yes significance=yes item13",
+    "scored_row": 238,
+    "author": "Simon, Carol J.",
+    "issue": "1989(3)",
+    "yes": 9,
+    "no": 10,
+    "identity_url": "https://www.jstor.org/stable/i304577",
+    "limit": "Same author/issue checked against publisher issue contents; reason for contradiction and 81/82 discrepancy unknown."
+  },
+  "rounding_1980s_table_diagnostics": [
+    {
+      "item": 1,
+      "denominator": 182,
+      "reported_percent": 85.7,
+      "compatible_integer_yes_counts": [
+        156
+      ]
+    },
+    {
+      "item": 2,
+      "denominator": 178,
+      "reported_percent": 32.4,
+      "compatible_integer_yes_counts": []
+    },
+    {
+      "item": 3,
+      "denominator": 173,
+      "reported_percent": 66.5,
+      "compatible_integer_yes_counts": [
+        115
+      ]
+    },
+    {
+      "item": 4,
+      "denominator": 180,
+      "reported_percent": 97.3,
+      "compatible_integer_yes_counts": []
+    },
+    {
+      "item": 5,
+      "denominator": 181,
+      "reported_percent": 44.5,
+      "compatible_integer_yes_counts": []
+    },
+    {
+      "item": 6,
+      "denominator": 181,
+      "reported_percent": 8.3,
+      "compatible_integer_yes_counts": [
+        15
+      ]
+    },
+    {
+      "item": 7,
+      "denominator": 182,
+      "reported_percent": 47.3,
+      "compatible_integer_yes_counts": [
+        86
+      ]
+    },
+    {
+      "item": 8,
+      "denominator": 182,
+      "reported_percent": 4.4,
+      "compatible_integer_yes_counts": [
+        8
+      ]
+    },
+    {
+      "item": 9,
+      "denominator": 12,
+      "reported_percent": 16.7,
+      "compatible_integer_yes_counts": [
+        2
+      ]
+    },
+    {
+      "item": 10,
+      "denominator": 182,
+      "reported_percent": 74.7,
+      "compatible_integer_yes_counts": [
+        136
+      ]
+    },
+    {
+      "item": 11,
+      "denominator": 181,
+      "reported_percent": 46.7,
+      "compatible_integer_yes_counts": []
+    },
+    {
+      "item": 12,
+      "denominator": 182,
+      "reported_percent": 80.2,
+      "compatible_integer_yes_counts": [
+        146
+      ]
+    },
+    {
+      "item": 13,
+      "denominator": 181,
+      "reported_percent": 28.0,
+      "compatible_integer_yes_counts": []
+    },
+    {
+      "item": 14,
+      "denominator": 180,
+      "reported_percent": 68.1,
+      "compatible_integer_yes_counts": []
+    },
+    {
+      "item": 15,
+      "denominator": 182,
+      "reported_percent": 40.7,
+      "compatible_integer_yes_counts": [
+        74
+      ]
+    },
+    {
+      "item": 16,
+      "denominator": 182,
+      "reported_percent": 29.7,
+      "compatible_integer_yes_counts": [
+        54
+      ]
+    },
+    {
+      "item": 17,
+      "denominator": 179,
+      "reported_percent": 13.2,
+      "compatible_integer_yes_counts": []
+    },
+    {
+      "item": 18,
+      "denominator": 181,
+      "reported_percent": 30.1,
+      "compatible_integer_yes_counts": []
+    },
+    {
+      "item": 19,
+      "denominator": 180,
+      "reported_percent": 41.2,
+      "compatible_integer_yes_counts": []
+    }
+  ],
+  "limits": [
+    "Author rows cannot be safely collapsed into182 independent1980s papers by author-free score/issue matching.",
+    "All omission eligibility flags are source claims; no exhaustive article universe audit.",
+    "No item-to-passage justifications or independent coder sheets were retrieved.",
+    "No expanded187-paper matrix for the2008 book was retrieved."
+  ],
+  "raw_validation": {
+    "checksums_checked": [
+      "aer-coding-1980s-wrapper",
+      "aer-coding-1990s-wrapper",
+      "aer-coding-1980s-alphabetical",
+      "aer-coding-1980s-ranked",
+      "aer-coding-1990s-alphabetical",
+      "aer-coding-1990s-ranked",
+      "aer-coding-omissions",
+      "aer-coding-mz1996",
+      "aer-coding-zm2004-ejw",
+      "aer-coding-sound2008",
+      "aer-coding-zm2004-jse"
+    ],
+    "alphabetical_and_ranked_records_match_both_decades": true,
+    "csv_matches_parsed_source_rows": true
+  }
+}

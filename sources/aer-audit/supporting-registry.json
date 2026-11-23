@@ -1,0 +1,770 @@
+{
+  "schema_version": 1,
+  "scope": "Supporting case, version and historical materials for the bounded AER/book audit; excluded from the 35-work core. Drafts and finals are separate version records, not independent contributions. Coding artefacts have their own coding-manifest.json.",
+  "sources": [
+    {
+      "id": "support-darby-1984-productivity",
+      "core_corpus": false,
+      "title": "The U.S. Productivity Slowdown: A Case of Statistical Myopia",
+      "authors": [
+        "Michael R. Darby"
+      ],
+      "year": 1984,
+      "type": "article",
+      "venue": "American Economic Review",
+      "volume": "74",
+      "issue": "3",
+      "pages": "301–322",
+      "doi": "",
+      "access_date": "2026-10-24",
+      "reading_depth": "full_text_read",
+      "version": "Published article, AER 74(3), June 1984, pp. 301–322; user-supplied JSTOR scan verified after initial failed retrieval",
+      "urls": [
+        {
+          "url": "https://www.jstor.org/stable/i304558",
+          "role": "Journal issue contents",
+          "consulted": true,
+          "locator": "Darby entry, pp. 301–322; volume 74 issue 3 June 1984"
+        },
+        {
+          "url": "https://www.nber.org/papers/w1018",
+          "role": "Institutional cross-reference to published version",
+          "consulted": true,
+          "locator": "Published Versions; landing page retrieved via terminal"
+        },
+        {
+          "url": "https://www.jstor.org/stable/1804009",
+          "role": "Stable archive identifier corroborated by user-supplied final scan",
+          "consulted": true,
+          "locator": "Initial web route exposed no article text; subsequently read user-supplied JSTOR scan with this stable identifier, printed pp.301–322."
+        },
+        {
+          "url": "https://www.jstor.org/stable/pdf/1804009.pdf",
+          "role": "Attempted published PDF",
+          "consulted": false,
+          "locator": "Agent direct download returned challenge HTML. Full article later read from user-supplied local JSTOR download; this direct URL was not successfully retrieved by the agent."
+        },
+        {
+          "url": "https://www.anderson.ucla.edu/sites/default/files/documents/areas/fac/strategy/MICHAEL%20R.%20DARBY%20CV.pdf",
+          "role": "Official author CV corroborating final identity and reported 1997 reprint",
+          "consulted": true,
+          "locator": "Printed p. 20, publication 32; p. 11 provides inconsistent draft date/cross-reference. Selected entries only."
+        },
+        {
+          "url": "https://ideas.repec.org/a/aea/aecrev/v74y1984i3p301-22.html",
+          "role": "Publisher-supplied RePEc bibliographic record",
+          "consulted": true,
+          "locator": "Final article citation; abstract explicitly borrowed from another version."
+        },
+        {
+          "url": "https://books.google.co.uk/books?id=EBAPAQAAMAAJ",
+          "role": "Catalogue for authorised reprint collection",
+          "consulted": true,
+          "locator": "The Economics of Productivity, vol. II (1997), ISBN1858984203; snippet-view catalogue only, no Darby article pages read."
+        },
+        {
+          "url": "https://api.openalex.org/works?search=The%20U.S.%20Productivity%20Slowdown%3A%20A%20Case%20of%20Statistical%20Myopia&per-page=5",
+          "role": "Discovery API response, not version verification",
+          "consulted": true,
+          "locator": "Actual record W1760003876 combines NBER/UCLA/SSRN/AER locations; primary DOI belongs to working paper."
+        }
+      ],
+      "locators": "Complete printed pp. 301–322 read, including footnotes, appendix and references; visual checks 301, 307, 310–312, 315–316. Main dispute: 310–312, 314–317.",
+      "findings": "Published pp. 311–312 convert the price-control coefficient into annual growth adjustments; p. 315 economically interprets a coefficient difference despite non-significance. Equation (12) retains a control with t=.31, but oil terms are excluded after zero-restriction tests. P. 317 distinguishes explaining growth variation from trend importance. These observations support H&S on magnitude reasoning while preserving a narrower MZ selection/absence objection.",
+      "uncertainty": "Published DOI unverified. Full reading is not replication or cell-by-cell data audit. P. 315 supplies no complete covariance-aware Eq(12)-versus-Eq(16) difference test; note 39 instead concerns within-regression control/decontrol equality. Non-rejection does not establish economic equivalence. Final Table 6 row-reference and Table 7 caption inconsistencies preserved in evidence note. No corrected survey rate follows. Reprint remains unread.",
+      "access_failures": [
+        "JSTOR stable page exposed no usable article text.",
+        "Published-PDF URL returned HTTP-success Client Challenge HTML; file magic and parser confirmed not a PDF.",
+        "Renewed web PDF opening remained inaccessible. Root browser check is outside this agent access record.",
+        "Official CV links back to JSTOR; its NBER link serves the same 1982 draft.",
+        "UCLA HTTPS wp304 timed out, HTTP000; wp266 web route inaccessible.",
+        "Elgar publisher reprint page and SSRN304758 returned HTTP403; no content inspected.",
+        "Google Books catalogue obtained after web-opener failures, but no authorised complete reprint preview found.",
+        "Internet Archive public catalogue query returned only a 1984 table-of-contents item.",
+        "These failures preceded the user-supplied final PDF; they no longer imply final article unread or unavailable."
+      ],
+      "next_reading": "Final-text access gap resolved. For empirical adjudication, reconstruct data/estimation and compare specifications with economically justified bounds and covariance-aware uncertainty. Independently assess selection effects and causal/measurement assumptions.",
+      "verifier": "inference_sources; root and debate_sources independently checked pp. 310–311 and 315 visually",
+      "evidence_note": "../../wiki/evidence/darby-final-followup.md",
+      "bibliographic_status": "verified_identity",
+      "local_supplied_pdf": "supplied-document:Darby-USProductivitySlowdown-1984.pdf",
+      "sha256": "eb0978c229c4562c6b2ab0f46c39a91ad46967218046289575c868f9b6053c7d",
+      "reading_coverage": "All printed pp. 301–322, including footnotes, data appendix and references, read from extracted text; visuals checked pp. 301, 307, 310–312, 315–316, including all three figures and disputed equations/Tables 6–7. Not an empirical replication or cell-by-cell appendix audit. Root and debate_sources independently verified pp. 310–311 and 315 visually.",
+      "metadata_notes": "Published scan identity and pagination match JSTOR 1804009 and independently retrieved issue/CV/NBER records. Do not substitute draft DOI or merge draft/final estimates. Initial route failures remain historical, not current no-access status.",
+      "bytes": 1229008,
+      "previous_evidence_note": "../../wiki/evidence/aer-darby-woodbury.md"
+    },
+    {
+      "id": "support-darby-1982-productivity-draft",
+      "core_corpus": false,
+      "title": "The U.S. Productivity Slowdown: A Case of Statistical Myopia",
+      "authors": [
+        "Michael R. Darby"
+      ],
+      "year": 1982,
+      "type": "working_paper",
+      "venue": "NBER Working Paper",
+      "volume": "",
+      "issue": "1018",
+      "pages": "",
+      "doi": "10.3386/w1018",
+      "access_date": "2026-10-24",
+      "reading_depth": "selected_sections_read",
+      "version": "NBER Working Paper 1018, November 1982; manuscript D.3 dated 15October1982.58PDFpages include cover and abstract.",
+      "urls": [
+        {
+          "url": "https://www.nber.org/papers/w1018",
+          "role": "Institutional metadata and final-publication cross-reference",
+          "consulted": true,
+          "locator": "DOI, Issue Date, Published Versions; HTML metadata directly checked"
+        },
+        {
+          "url": "https://www.nber.org/system/files/working_papers/w1018/w1018.pdf",
+          "role": "Primary institutional working-paper PDF",
+          "consulted": true,
+          "locator": "Cover/abstract; printedp 1, pp 15–22,p26,notespp 38–39,Tables 6–7 pp 45–46. Visual checks p17 and Table 6p45."
+        },
+        {
+          "url": "http://www.econ.ucla.edu/workingpapers/wp304.pdf",
+          "role": "Attempted later 1983university working-paper version",
+          "consulted": false,
+          "locator": "HTTP 404; no reading"
+        },
+        {
+          "url": "https://papers.nber.org/papers/w1018.pdf",
+          "role": "Author CV NBER alias and version check",
+          "consulted": true,
+          "locator": "Served byte-identical November 1982 manuscript; SHA256 b1b79c875f0d9e20789b28996bcba74edd9c7849c78445c4cc7dc1d6258e8829. Reading depth unchanged."
+        }
+      ],
+      "locators": [
+        "p17 equations 13–14 and selection discussion",
+        "pp 17–18 coefficient-based productivity calculations",
+        "p21 distinction between changes in growth and influences on trend level",
+        "p26 second coefficient and economic explanation",
+        "Table 6 p45 and Table 7p46"
+      ],
+      "findings": "Draft uses hypothesis tests in specification selection and coefficient magnitudes in its growth interpretation. Equation 14 retains some weakly significant controls, so it is not a uniform rule deleting every insignificant regressor. Failure to reject oil-price restrictions does not itself establish economic negligibility.",
+      "uncertainty": "Selected reading only; not a replication. Final article differs in equation numbering, coefficient-derived adjustments and sample horizon. NBER draft is supporting evidence, not a second core contribution or substitute for final pages.",
+      "access_failures": [
+        "Web opener initially returned403 for NBER landing page; later terminal retrieval of landing page and PDF succeeded.",
+        "UCLA wp304 cited link returned404."
+      ],
+      "next_reading": "Compare selected draft evidence with published 1984article before upgrading final-article reading depth.",
+      "verifier": "inference_sources",
+      "evidence_note": "../../wiki/evidence/aer-darby-woodbury.md",
+      "local_temporary_pdf": "/tmp/aer-darby1982-nber.pdf",
+      "page_count": 58,
+      "sha256": "b1b79c875f0d9e20789b28996bcba74edd9c7849c78445c4cc7dc1d6258e8829",
+      "bibliographic_status": "verified_identity",
+      "metadata_notes": "Author CV p. 11 labels NBER 1018 July 1984 and cross-refers publication 33; the actual served PDF cover says November 1982. That file and the NBER landing page control the current retrieved version. The CV final-article entry is 32."
+    },
+    {
+      "id": "support-woodbury-spiegelman-1987-bonuses",
+      "core_corpus": false,
+      "title": "Bonuses to Workers and Employers to Reduce Unemployment: Randomized Trials in Illinois",
+      "authors": [
+        "Stephen A. Woodbury",
+        "Robert G. Spiegelman"
+      ],
+      "year": 1987,
+      "type": "article",
+      "venue": "American Economic Review",
+      "volume": "77",
+      "issue": "4",
+      "pages": "513–530",
+      "doi": "",
+      "access_date": "2026-10-24",
+      "reading_depth": "selected_sections_read",
+      "version": "Published September 1987article, from extracted text of a public author-uploaded JSTOR scan; PDF itself unavailable.",
+      "urls": [
+        {
+          "url": "https://research.upjohn.org/jrnlarticles/126/",
+          "role": "Author institution's publication record",
+          "consulted": true,
+          "locator": "Authors,title,publication details and full-text JSTOR link"
+        },
+        {
+          "url": "https://www.researchgate.net/publication/4980344_Bonuses_to_Workers_and_Employers_to_Reduce_Unemployment_Randomized_Trials_in_Illinois",
+          "role": "Public full text uploaded by Stephen A. Woodbury",
+          "consulted": true,
+          "locator": "Cover/abstract; selectedp 515design/size; pp 523–524subgroup discussion; Table 7p525andnotes; Table 8p526anddiscussion; benefit–costsectionpp 527–528; conclusionpp 528–529. Extracted text with printed headers, not visualPDFreading."
+        },
+        {
+          "url": "https://www.jstor.org/stable/1814528",
+          "role": "Stable archive identifier verified from Upjohn link and reproduced cover",
+          "consulted": false,
+          "locator": "Identifier verified; article not read on this landing page"
+        },
+        {
+          "url": "https://www.jstor.org/stable/pdf/1814528.pdf",
+          "role": "Attempted published PDF",
+          "consulted": false,
+          "locator": "Client Challenge HTML, not PDF"
+        },
+        {
+          "url": "https://www.researchgate.net/profile/Stephen-Woodbury/publication/4980344_Bonuses_to_Workers_and_Employers_to_Reduce_Unemployment_Randomized_Trials_in_Illinois/links/00b7d5261aa9fb929c000000/Bonuses-to-Workers-and-Employers-to-Reduce-Unemployment-Randomized-Trials-in-Illinois.pdf",
+          "role": "Attempted author-upload PDF download",
+          "consulted": false,
+          "locator": "HTTP 403 through terminal; web open also failed"
+        }
+      ],
+      "locators": [
+        "Table 7p525",
+        "Subgroup wordingp 527",
+        "Take-up sensitivitypp 527–529",
+        "Sample-size economic criterionp 515",
+        "Table 8p526significance filtering of decompositions"
+      ],
+      "findings": "Paper contains substantive economic analysis and policy contingencies. Its overall Employer benefit–cost ratio is 4.29(SE 2.90), compared with 7.07(2.95) for white women and 24.65(34.06) for Black women. Complete take-up with unchanged benefit reductions yields overall ratio 0.53. Subgroup-specific significance alone cannot support exclusive effects or treatment-effect heterogeneity.",
+      "uncertainty": "No full reading or replication; Table 6 extraction incomplete; Tables 6–7 not visually verified. Underlying experiment report and data not read. Ratios' reported standard errors are Taylor approximations. Printed journal dateSeptember controls over ResearchGate headerFebruary. DOI unverified.",
+      "access_failures": [
+        "JSTOR PDF returned browser challenge HTML.",
+        "ResearchGate page directcurl403; web extraction succeeded.",
+        "Web linkedPDFclick returned cachemiss for malformed publication/profile address; corrected authorPDFaddress also failed via web and403via terminal."
+      ],
+      "next_reading": "Obtain visual published Tables 6–7, read detailed report for interaction/equality tests and replicate relevant uncertainty if data become available.",
+      "verifier": "inference_sources",
+      "evidence_note": "../../wiki/evidence/aer-darby-woodbury.md",
+      "bibliographic_status": "verified_identity"
+    },
+    {
+      "id": "bernanke-blinder-1992-monetary-transmission",
+      "title": "The Federal Funds Rate and the Channels of Monetary Transmission",
+      "authors": [
+        "Ben S. Bernanke",
+        "Alan S. Blinder"
+      ],
+      "year": 1992,
+      "type": "article",
+      "venue": "American Economic Review",
+      "volume": "82",
+      "issue": "4",
+      "pages": "901–921",
+      "doi": "",
+      "access_date": "2026-10-24",
+      "reading_depth": "selected_sections_read",
+      "version": "Published AER scan, with JSTOR cover, hosted on an academic website; not an author-hosted draft",
+      "core_corpus": false,
+      "urls": [
+        {
+          "url": "https://drphilipshaw.com/Protected/The%20Federal%20Funds%20Rate%20and%20the%20Channels%20of%20Monetary%20Transmission.pdf",
+          "role": "Retrieved published primary text",
+          "consulted": true,
+          "locator": "Selected printed pp. 901–902, 905–910, 919; OCR supported reading. Printed pp. 905 and 909 inspected visually, including Tables 1, 3 and 4."
+        },
+        {
+          "url": "https://collaborate.princeton.edu/en/publications/the-federal-funds-rate-and-the-channels-of-monetary-transmission/",
+          "role": "Author-institution publication metadata",
+          "consulted": true,
+          "locator": "Author list, title, year, journal, volume, issue and pages; retrieved through search."
+        },
+        {
+          "url": "https://www.jstor.org/stable/i337065",
+          "role": "Journal archive issue metadata",
+          "consulted": true,
+          "locator": "Article listing and stable article identifier 2117350; retrieved through search."
+        },
+        {
+          "url": "https://pages.stern.nyu.edu/~dbackus/Identification/BernankeBlinder_AER_92.pdf",
+          "role": "Failed institution-hosted final PDF route",
+          "consulted": false,
+          "locator": "Indexed first-page metadata surfaced, but direct web open and approved curl returned 404; not the full text used."
+        }
+      ],
+      "findings": [
+        {
+          "label": "Source observation",
+          "locator": "pp. 905–906, Tables 1 and 3",
+          "claim": "The tables are organised by variable rather than ranked or starred, but the accompanying prose ranks predictive performance using significance tests."
+        },
+        {
+          "label": "Source observation",
+          "locator": "pp. 906–910, Tables 2 and 4",
+          "claim": "The authors explain why conditional Granger tests may miss a transmitting policy variable, compare variance decompositions, and acknowledge ordering and horizon dependence."
+        },
+        {
+          "label": "Visually checked source values",
+          "locator": "p. 909, Tables 3 and 4",
+          "claim": "FUNDS has marginal significance level 0.86 for industrial production; its variance share is 6.6% in Table 4A and 21.8% in Table 4B under a different ordering."
+        },
+        {
+          "label": "Project interpretation",
+          "locator": "Compare S2008 p. 10 and Reply 2008 p. 47",
+          "claim": "Literal no-stars defence does not remove predictive ranking; magnitude discussion rebuts a broader claim of no substantive assessment. Neither test results nor variance shares independently identify policy effects."
+        }
+      ],
+      "limits": "Selected sections only. No raw-data replication, complete VAR or identification audit, out-of-sample evaluation, or revised survey score. Final-article DOI not verified; working-paper DOI not substituted.",
+      "sha256": "624dbbea57b407220a2c49ee88e93a37d2bd4a59c463131fe7b66c1677d38ef5",
+      "verifier": "decision_finance_sources",
+      "search_queries": [
+        "Bernanke Blinder 1992 federal funds rate channels monetary transmission American Economic Review pdf",
+        "\"The Federal Funds Rate and the Channels of Monetary Transmission\" pdf",
+        "\"Bernanke\" \"Blinder\" \"1992\" \"901\" pdf -site:federalreserve.gov -site:newyorkfed.org",
+        "\"BernankeBlinder\" \"pdf\"",
+        "\"Federal Funds Rate\" \"Channels\" filetype:pdf -site:newyorkfed.org -site:federalreserve.gov -site:banrep.gov.co -site:nber.org -site:ideas.repec.org"
+      ],
+      "search_date": "2026-10-24",
+      "search_disposition": "Targeted title/author retrieval. Primary originals or declared draft/version used; metadata/citation hits were not treated as substantive readings. Access failures and version limits recorded in URLs and evidence note.",
+      "bibliographic_status": "verified_identity",
+      "evidence_note": "../../wiki/evidence/aer-macro-finance-addiction.md"
+    },
+    {
+      "id": "bernheim-wantz-1995-dividend-signalling",
+      "title": "A Tax-Based Test of the Dividend Signaling Hypothesis",
+      "authors": [
+        "B. Douglas Bernheim",
+        "Adam Wantz"
+      ],
+      "year": 1995,
+      "type": "article",
+      "venue": "American Economic Review",
+      "volume": "85",
+      "issue": "3",
+      "pages": "532–551",
+      "doi": "",
+      "access_date": "2026-10-24",
+      "reading_depth": "selected_sections_read",
+      "version": "Published 1995 AER article; user-supplied JSTOR PDF with independently matched metadata; selected final text read 2026-10-24",
+      "core_corpus": false,
+      "urls": [
+        {
+          "url": "https://bernheim.people.stanford.edu/publications/tax-based-test-dividend-signaling-hypothesis",
+          "role": "Author metadata and final abstract",
+          "consulted": true,
+          "locator": "Title, coauthor, journal 85(3), June 1995, 532–551 and abstract; final paper link leads to JSTOR."
+        },
+        {
+          "url": "https://www.jstor.org/stable/2118186",
+          "role": "Final journal metadata and abstract",
+          "consulted": true,
+          "locator": "During public retrieval the ordinary browser showed metadata/abstract and required library login. The user subsequently supplied the final JSTOR PDF; its identity matches this record and its selected empirical/concluding pages are now read. Exact coverage in the linked final reading note."
+        },
+        {
+          "url": "https://msu.edu/~conlinmi/teaching/EC860/signallingscreening/Bbernheimwantz.pdf",
+          "role": "Failed final full-text lead",
+          "consulted": false,
+          "locator": "Approved curl downloaded a 212-byte anti-bot HTML, not a PDF; no article text read."
+        }
+      ],
+      "supporting_versions": [
+        {
+          "id": "support-bernheim-wantz-1992-nber",
+          "year": 1992,
+          "version": "See separate supporting record for actual draft reading; same contribution, not an additional core work."
+        }
+      ],
+      "findings": [
+        {
+          "label": "Source observation—final article",
+          "locator": "pp.543–544, Tables1–2 and associated prose",
+          "claim": "The high-rating passage distinguishes economic and statistical effects immediately after the criticised sentence; the subsequent paragraph interprets bang-for-buck in return units and against observed dividend changes. Non-significance is qualified for Table1, not all four regressions."
+        },
+        {
+          "label": "Source observation—final article",
+          "locator": "p.547 Table4, fn17; pp.548–549",
+          "claim": "Table4 combines magnitude estimates and standard errors with joint tests. Test1* marks an alternative comparison, not significance. Footnote17 directly tests between-regime differences in estimated bang-for-buck. The authors explain why representative magnitudes alone are incomplete."
+        },
+        {
+          "label": "Source observation—final article",
+          "locator": "p.549",
+          "claim": "The authors use rejection between tax regimes and non-rejection within regimeII, alongside magnitude movements and alternative comparisons, as support for their tax-signalling explanation."
+        },
+        {
+          "label": "Project interpretation",
+          "locator": "pp.547–549 versus JSE2004pp.534–535, H&S2008p.11 and replypp.47–48",
+          "claim": "The final pages refute a significance-star reading and strengthen the contextual correction, but do not establish equivalence from within-regime non-rejection or independently validate tax identification and every selection choice."
+        },
+        {
+          "label": "Source observation—final article",
+          "locator": "pp.541–543, especially fn15",
+          "claim": "Footnote 15 gives substantive confounding and magnitude reasons for reporting inclusive regressions, including inflation; other specification and sample checks are described as unreported."
+        },
+        {
+          "label": "Source discrepancy",
+          "locator": "p.543 sample/exclusion/results prose; p.544 Table2 heading",
+          "claim": "Prose identifies Table 2 as 1978–1988 after earnings-conflict exclusions; the heading prints 1962–1988. Underlying estimation data were not checked, so the discrepancy is preserved."
+        }
+      ],
+      "limits": "Selected pp. 532–533, 538–549 and conclusion continuation p. 550 only; no full theory/reference reading, replication, proof of tax identification or equivalence, complete version collation, or revised questionnaire score. Apparent Table 2 heading/sample-prose inconsistency retained. Final DOI unverified.",
+      "verifier": "decision_finance_sources; root independently checked selected disputed passages",
+      "search_queries": [
+        "Bernheim Wantz 1995 tax policy dividend signalling hypothesis pdf",
+        "\"A Tax-Based Test of the Dividend Signaling Hypothesis\" pdf",
+        "\"Bernheim\" \"Wantz\" \"1995\" filetype:pdf",
+        "\"A Tax-Based Test\" \"Bernheim\" \"pdf\" -site:nber.org -site:researchgate.net",
+        "\"A Tax-Based Test\" Bernheim Wantz site:stanford.edu",
+        "\"Bernheim\" \"Wantz\" \"532\" \"pdf\"",
+        "\"bernheimwantz.pdf\"",
+        "\"tax-based\" \"547\" \"bang\"",
+        "\"Tax-Based Test\" filetype:pdf -site:nber.org -site:researchgate.net -site:dartmouth.edu -site:ssrn.com -site:scispace.com -site:anpec.org.br",
+        "\"Bernheim\" \"Wantz\" \"bang-for-the-buck\" \"543\"",
+        "\"Bernheimwantz\"",
+        "\"2118186\" pdf",
+        "\"Bernheim Wantz\" \"pdf\" dividend",
+        "\"Bernheim\" \"Wantz\" \"A Tax-Based Test\" -site:ideas.repec.org -site:scispace.com -site:ssrn.com -site:researchgate.net -site:bernheim.people.stanford.edu -site:nber.org -site:dartmouth.edu",
+        "\"A Tax-Based Test of the Dividend Signaling Hypothesis\" \"filetype:pdf\" site:edu",
+        "\"Bernheim\" \"Wantz\" \"532-551\" download",
+        "\"Tax-Based Test of the Dividend\" \"pdf\" \"1995\" -site:ssrn.com -site:nber.org -site:researchgate.net -site:scispace.com -site:ideas.repec.org -site:scribd.com -site:dartmouth.edu -site:brunel.ac.uk -site:anpec.org.br"
+      ],
+      "search_date": "2026-10-24",
+      "search_disposition": "Targeted title/author retrieval. Primary originals or declared draft/version used; metadata/citation hits were not treated as substantive readings. Access failures and version limits recorded in URLs and evidence note.",
+      "bibliographic_status": "verified_identity",
+      "evidence_note": "../../wiki/evidence/bernheim-wantz-final-followup.md",
+      "followup_evidence_note": "../../wiki/evidence/bernheim-wantz-final-followup.md",
+      "sha256": "0be5d095c01e9b765c7ebbf0e1f212ecae73f7c2fa30d3fa5b64467d8904e0c9",
+      "bytes": 830063,
+      "local_supplied_pdf": "supplied-document:Bernheim-TaxBasedTestDividend-1995.pdf",
+      "reading_coverage": "Printed pp. 532–533 and 538–549, plus the conclusion continuation on p. 550, read; pp. 543, 544, 547–550 visually checked. Theoretical derivation pp. 534–537 and references not fully read. Root independently visually checked pp. 543, 544, 547 and read extracted pp. 546, 548–549. No whole-paper claim.",
+      "previous_evidence_note": "../../wiki/evidence/aer-macro-finance-addiction.md"
+    },
+    {
+      "id": "support-bernheim-wantz-1992-nber",
+      "related_final_id": "bernheim-wantz-1995-dividend-signalling",
+      "same_contribution_as_final": true,
+      "core_corpus": false,
+      "title": "A Tax-Based Test of the Dividend Signaling Hypothesis",
+      "authors": [
+        "B. Douglas Bernheim",
+        "Adam Wantz"
+      ],
+      "year": 1992,
+      "type": "working_paper",
+      "venue": "NBER Working Paper",
+      "number": "4244",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "doi": "10.3386/w4244",
+      "access_date": "2026-10-24",
+      "reading_depth": "selected_sections_read",
+      "version": "December 1992 working paper; not silently equated to the 1995 final article",
+      "urls": [
+        {
+          "url": "https://www.nber.org/system/files/working_papers/w4244/w4244.pdf",
+          "role": "Institution-hosted primary working-paper text",
+          "consulted": true,
+          "locator": "Title/abstract; selected empirical results printed pp. 23–29 and Table 4, p. 35. Printed p. 24 and Table 4, p. 35 inspected visually."
+        },
+        {
+          "url": "https://www.nber.org/papers/w4244",
+          "role": "Primary draft metadata retrieved through indexed NBER result",
+          "consulted": true,
+          "locator": "Primary NBER search metadata explicitly displays DOI10.3386/w4244, paper4244, December1992 and matching title/authors; direct opening returned403. Corroborated by retrieved OpenAlexW1492516548, whose combined draft/final locations are not adopted as version proof."
+        }
+      ],
+      "findings": [
+        {
+          "label": "Source observation—1992 draft only",
+          "locator": "printed pp. 23–25",
+          "claim": "The draft distinguishes economic and statistical effects, qualifies the bond-rating evidence and interprets bang-for-buck estimates against observed announcement magnitudes."
+        },
+        {
+          "label": "Source observation—1992 draft only",
+          "locator": "printed pp. 27–29 and Table 4, p. 35",
+          "claim": "The structural-change table uses 1* as an alternative test, not a significance tier. The design discusses unequal time spans/sample sizes and constructs an additional comparison."
+        }
+      ],
+      "limits": "December 1992 draft only; selected results and table inspected, not full text read. Final disputed pages are now read separately: the final adds a magnitude panel and changes estimates. No complete draft/final identity is assumed. The corroborated draft DOI must not be assigned to the final article.",
+      "sha256": "8f5553bae13431c2fa98944acd2f3af6cb98714153fd55980aed3a8164ad394f",
+      "verifier": "decision_finance_sources",
+      "search_queries": [
+        "Bernheim Wantz 1995 tax policy dividend signalling hypothesis pdf",
+        "\"A Tax-Based Test of the Dividend Signaling Hypothesis\" pdf",
+        "\"Bernheim\" \"Wantz\" \"1995\" filetype:pdf",
+        "\"A Tax-Based Test\" \"Bernheim\" \"pdf\" -site:nber.org -site:researchgate.net",
+        "\"A Tax-Based Test\" Bernheim Wantz site:stanford.edu",
+        "\"Bernheim\" \"Wantz\" \"532\" \"pdf\"",
+        "\"bernheimwantz.pdf\"",
+        "\"tax-based\" \"547\" \"bang\"",
+        "\"Tax-Based Test\" filetype:pdf -site:nber.org -site:researchgate.net -site:dartmouth.edu -site:ssrn.com -site:scispace.com -site:anpec.org.br",
+        "\"Bernheim\" \"Wantz\" \"bang-for-the-buck\" \"543\"",
+        "\"Bernheimwantz\"",
+        "\"2118186\" pdf",
+        "\"Bernheim Wantz\" \"pdf\" dividend",
+        "\"Bernheim\" \"Wantz\" \"A Tax-Based Test\" -site:ideas.repec.org -site:scispace.com -site:ssrn.com -site:researchgate.net -site:bernheim.people.stanford.edu -site:nber.org -site:dartmouth.edu",
+        "\"A Tax-Based Test of the Dividend Signaling Hypothesis\" \"filetype:pdf\" site:edu",
+        "\"Bernheim\" \"Wantz\" \"532-551\" download",
+        "\"Tax-Based Test of the Dividend\" \"pdf\" \"1995\" -site:ssrn.com -site:nber.org -site:researchgate.net -site:scispace.com -site:ideas.repec.org -site:scribd.com -site:dartmouth.edu -site:brunel.ac.uk -site:anpec.org.br"
+      ],
+      "search_date": "2026-10-24",
+      "search_disposition": "Earlier primary version retrieved substantively when final empirical pages could not be obtained; tracked as a version, not a distinct core contribution.",
+      "bibliographic_status": "verified_identity",
+      "evidence_note": "../../wiki/evidence/aer-macro-finance-addiction.md",
+      "followup_evidence_note": "../../wiki/evidence/bernheim-wantz-final-followup.md"
+    },
+    {
+      "id": "becker-grossman-murphy-1994-cigarette-addiction",
+      "title": "An Empirical Analysis of Cigarette Addiction",
+      "authors": [
+        "Gary S. Becker",
+        "Michael Grossman",
+        "Kevin M. Murphy"
+      ],
+      "year": 1994,
+      "type": "article",
+      "venue": "American Economic Review",
+      "volume": "84",
+      "issue": "3",
+      "pages": "396–418",
+      "doi": "",
+      "access_date": "2026-10-24",
+      "reading_depth": "selected_sections_read",
+      "version": "Published 1994 AER scan hosted by coauthor Michael Grossman; not the 1990 NBER draft",
+      "core_corpus": false,
+      "urls": [
+        {
+          "url": "https://mgrossman.ws.gc.cuny.edu/files/2017/06/bmg-aer.pdf",
+          "role": "Author-hosted published primary text",
+          "consulted": true,
+          "locator": "Printed pp. 396–397 introduction and 403–412 empirical discussion. OCR supported reading; printed pp. 407, 409 and 411 visually checked, including Tables 4 and 7."
+        },
+        {
+          "url": "https://mgrossman.ws.gc.cuny.edu/papers/",
+          "role": "Author publication metadata",
+          "consulted": true,
+          "locator": "Article listed as AER 84(3), June 1994, 396–418."
+        },
+        {
+          "url": "https://www.jstor.org/stable/i337078",
+          "role": "Journal issue metadata",
+          "consulted": true,
+          "locator": "Article listing, authors, pages 396–418 and stable identifier 2118059 retrieved through search."
+        }
+      ],
+      "findings": [
+        {
+          "label": "Source observation",
+          "locator": "pp. 396–397 and p. 407, Table 4",
+          "claim": "The authors interpret temporary/permanent and short/long-run price effects and tax-revenue implications; they assess implausible discount rates."
+        },
+        {
+          "label": "Source observation",
+          "locator": "pp. 403–406",
+          "claim": "Tests enter estimation/model assessment, and significance is used in the discussion of smuggling importance. The future-price test is expressly not definitive structural evidence for rational addiction."
+        },
+        {
+          "label": "Source observation",
+          "locator": "pp. 408–410, Table 6",
+          "claim": "The authors caution against mechanically following an adverse Hausman test and compare weak predictors, specification sensitivity, a covariance simulation and prior judgements."
+        },
+        {
+          "label": "Visually checked values",
+          "locator": "p. 407, Table 4 model (i) and prose",
+          "claim": "Long-run elasticity −0.734 and short-run −0.407. Original upper implied rate 222.6%, not 226.6% in S2008 p. 12 quotation."
+        },
+        {
+          "label": "Project interpretation",
+          "locator": "Compare EJW 2004 pp. 348–349, Reply 2008 p. 48, S2008 pp. 11–13/n. 9",
+          "claim": "Literal failure-to-interpret allegation is contradicted; broad pure-threshold model-selection characterisation also encounters counterevidence. This does not validate identification or individual-behaviour interpretation."
+        },
+        {
+          "label": "Project criticism",
+          "locator": "footnote 12, pp. 411–412",
+          "claim": "Equating non-rejection of an imposed discount-factor restriction with its validity risks overstating what the test establishes."
+        }
+      ],
+      "limits": "Selected sections only; no data/code replication or full structural/aggregation/instrument audit. No replacement survey score. Coefficients and hypotheses remain model-dependent. Final DOI not verified; no draft DOI substituted. The existence of a simulation alone does not overturn Question 17: the original 1996 discussion, p. 104, also excludes statistical significance as an input-screening rule. This audit does not reconstruct every input decision.",
+      "sha256": "631c07e726c3f307c3541410bf48c81981bcb16a1bf34a5588cbdf4238920097",
+      "verifier": "decision_finance_sources",
+      "search_queries": [
+        "Becker Grossman Murphy 1994 empirical analysis cigarette addiction pdf",
+        "\"An Empirical Analysis of Cigarette Addiction\" pdf",
+        "\"Becker\" \"Grossman\" \"Murphy\" \"1994\" \"396\" filetype:pdf \"Addiction\"",
+        "\"An Empirical Analysis of Cigarette Addiction\" \"jstor\""
+      ],
+      "search_date": "2026-10-24",
+      "search_disposition": "Targeted title/author retrieval. Primary originals or declared draft/version used; metadata/citation hits were not treated as substantive readings. Access failures and version limits recorded in URLs and evidence note.",
+      "bibliographic_status": "verified_identity",
+      "evidence_note": "../../wiki/evidence/aer-macro-finance-addiction.md"
+    },
+    {
+      "id": "ziliak-mccloskey-2004-ejw-version-audit",
+      "related_core_id": "ziliak-mccloskey-2004",
+      "same_contribution_as_core": true,
+      "title": "Size Matters: The Standard Error of Regressions in the American Economic Review",
+      "authors": [
+        "Stephen T. Ziliak",
+        "Deirdre N. McCloskey"
+      ],
+      "year": 2004,
+      "type": "article",
+      "venue": "Econ Journal Watch",
+      "volume": "1",
+      "issue": "2",
+      "pages": "331–358",
+      "doi": "",
+      "access_date": "2026-10-24",
+      "reading_depth": "selected_sections_read",
+      "version": "August 2004 EJW publication version; not silently equated with JSE 33(5), 527–546. Do not count as additional core contribution.",
+      "core_corpus": false,
+      "urls": [
+        {
+          "url": "https://econjwatch.org/file_download/56/2004-08-ziliakmccloskey-econ_practice.pdf?mimetype=pdf",
+          "role": "Journal-hosted primary text",
+          "consulted": true,
+          "locator": "Selected printed pp. 340–342, 348–349 and title metadata."
+        },
+        {
+          "url": "https://www.uky.edu/AS/PoliSci/Peffley/pdf/Size%20Matters%20Journal%20of%20Socio-Economics%20Ziliak%20and%20McCloskey.pdf",
+          "role": "Failed final JSE route",
+          "consulted": false,
+          "locator": "Approved curl redirected to 404; not used for detailed claim verification."
+        }
+      ],
+      "findings": [
+        {
+          "label": "Source claim",
+          "locator": "EJW pp. 340–342",
+          "claim": "Criticises Bernheim–Wantz sign focus and cites Bernanke–Blinder/Bernheim–Wantz tables as test-statistic hierarchy examples."
+        },
+        {
+          "label": "Source claim",
+          "locator": "EJW pp. 348–349",
+          "claim": "Criticises BGM tests, elasticity interpretation and aggregate inference; its narrative misdates the 1994 article as June 1999, although the reference entry is 1994."
+        }
+      ],
+      "limits": "Not whole paper read, no full version identity check with JSE, no prevalence or error-rate replication. Original critic claim distinguished from our adjudication.",
+      "sha256": "52a270f5b1206e21818679ebac2a3d069e64fb4b79a02b4f4a8db638f3de28a5",
+      "verifier": "decision_finance_sources",
+      "search_queries": [
+        "\"Size matters\" \"standard error\" \"pdf\" \"527\""
+      ],
+      "search_date": "2026-10-24",
+      "search_disposition": "Targeted title/author retrieval. Primary originals or declared draft/version used; metadata/citation hits were not treated as substantive readings. Access failures and version limits recorded in URLs and evidence note.",
+      "bibliographic_status": "verified_identity",
+      "evidence_note": "../../wiki/evidence/aer-macro-finance-addiction.md"
+    },
+    {
+      "id": "support-matrixx-2011-opinion",
+      "title": "Matrixx Initiatives, Inc. v. Siracusano",
+      "authors": [
+        "Supreme Court of the United States"
+      ],
+      "opinion_author": "Sonia Sotomayor",
+      "year": 2011,
+      "decision_date": "2011-03-22",
+      "type": "judicial_opinion",
+      "venue": "United States Reports",
+      "volume": "563",
+      "pages": "27–50",
+      "citation": "563 U.S. 27 (2011)",
+      "doi": "",
+      "version": "Official published United States Reports text; unanimous opinion",
+      "reading_depth": "selected_sections_read",
+      "locator": "Syllabus pp. 27–29; opinion pp. 30–32 and 36–50; all of section II A–B. Opinion pp. 33–35 not read.",
+      "access_date": "2026-10-24",
+      "urls": [
+        {
+          "url": "https://www.supremecourt.gov/opinions/boundvolumes/563bv.pdf",
+          "role": "official bound-volume PDF; principal reading source",
+          "consulted": true,
+          "locator": "Printed pp. 27–50; zero-based PDF index 104 corresponds to printed p. 27"
+        },
+        {
+          "url": "https://www.govinfo.gov/app/details/USREPORTS-563/USREPORTS-563-27",
+          "role": "official bibliographic record",
+          "consulted": true,
+          "locator": "Decision date and United States Reports citation"
+        },
+        {
+          "url": "https://www.govinfo.gov/content/pkg/USREPORTS-563/pdf/USREPORTS-563-27.pdf",
+          "role": "official individual-case PDF",
+          "consulted": true,
+          "locator": "24-page reproduction of printed pp. 27–50"
+        },
+        {
+          "url": "https://supreme.justia.com/cases/federal/us/563/09-1156/opinion.pdf",
+          "role": "slip-opinion reproduction; superseded by official text for this audit",
+          "consulted": true,
+          "locator": "Web tool displayed 22-page slip opinion; terminal download HTTP 403"
+        }
+      ],
+      "source_claim": "The complaint adequately pleaded materiality and scienter without alleging statistically significant evidence of causation. Statistical significance is potentially relevant but not dispositive; adverse-event reports alone do not establish materiality. The opinion distinguishes pleading sufficiency from proving the allegations.",
+      "findings": "Supports distinguishing investor materiality and action under uncertainty from a threshold test of pharmaceutical causation. Does not establish liability, medical causation on the merits, or the irrelevance of statistical inference.",
+      "limitations": "Bounded historical legal-source check, not current legal advice. No lower-court record, trial evidence, later case law, underlying medical studies or oral-argument transcript audited. Allegations and the Court's characterisations are not independently verified empirical findings.",
+      "access_failures": [
+        "Direct terminal request for Justia slip-opinion PDF returned HTTP 403; web access succeeded.",
+        "An earlier Justia landing URL failed to open; no paywall inference drawn."
+      ],
+      "temporary_local_source": "/tmp/usreports563.pdf",
+      "sha256": "1cbb8049fbce28b3b54f3cc023ab6f34312ee23f500f4d215990d6acc0214285",
+      "core_corpus": false,
+      "verifier": "inference_sources",
+      "bibliographic_status": "verified_identity",
+      "evidence_note": "../../wiki/evidence/matrixx-2011-lecture-audit.md",
+      "bibtex_authors": [
+        "{Supreme Court of the United States}"
+      ]
+    },
+    {
+      "id": "support-basic-1988-opinion",
+      "title": "Basic Inc. v. Levinson",
+      "authors": [
+        "Supreme Court of the United States"
+      ],
+      "opinion_author": "Harry A. Blackmun",
+      "year": 1988,
+      "decision_date": "1988-03-07",
+      "type": "judicial_opinion",
+      "venue": "United States Reports",
+      "volume": "485",
+      "pages": "224",
+      "citation": "485 U.S. 224 (1988)",
+      "doi": "",
+      "version": "Official published United States Reports text; first-page metadata and section II checked",
+      "reading_depth": "selected_sections_read",
+      "locator": "Printed p. 224 for date; section II, pp. 230–232, for adoption of TSC Industries materiality standard",
+      "access_date": "2026-10-24",
+      "urls": [
+        {
+          "url": "https://www.govinfo.gov/content/pkg/USREPORTS-485/pdf/USREPORTS-485-224.pdf",
+          "role": "official primary case PDF",
+          "consulted": true,
+          "locator": "p. 224 and section II, pp. 230–232"
+        },
+        {
+          "url": "https://www.law.cornell.edu/supremecourt/text/485/224",
+          "role": "primary opinion text reproduced by Cornell LII; discovery and selected reading",
+          "consulted": true,
+          "locator": "Decision metadata, section II and selected materiality discussion"
+        }
+      ],
+      "source_claim": "Decided on 7 March 1988. Section II adopts TSC Industries' materiality standard for the section 10(b) and Rule 10b-5 context; TSC Industries is dated 1976.",
+      "findings": "The 2012 Ziliak lecture's page 23 date of 1976 for Basic v. Levinson is incorrect. A possible confusion with TSC Industries is an interpretation, not verified provenance of the error.",
+      "limitations": "Selected sections only. No full reading of the fraud-on-the-market analysis or separate opinions. Pages field records the first reporter page, not an asserted full page range.",
+      "core_corpus": false,
+      "verifier": "inference_sources",
+      "bibliographic_status": "verified_identity",
+      "evidence_note": "../../wiki/evidence/matrixx-2011-lecture-audit.md",
+      "bibtex_authors": [
+        "{Supreme Court of the United States}"
+      ]
+    },
+    {
+      "id": "support-ziliak-2012-leuven",
+      "authors": [
+        "Stephen T. Ziliak"
+      ],
+      "year": 2012,
+      "title": "The Cult of Statistical Significance: Science after Gosset, Fisher, and Matrixx v. Siracusano",
+      "type": "lecture",
+      "venue": "KU Leuven, Belgium",
+      "date": "2012-05-15",
+      "core_corpus": false,
+      "bibliographic_status": "verified_supplied_document_identity",
+      "reading_depth": "full_text_read",
+      "version": "User-supplied 31-slide PDF Ziliak_Week2.cleaned.pdf; original-download identity not independently checked",
+      "access_date": "2026-10-24",
+      "urls": [],
+      "source_location": "User-supplied local Downloads/Ziliak_Week2.cleaned.pdf",
+      "locator": "All 31 slides extracted text read; root visual checks 1,3,10,17,26,31; inference_sources visual check 23 and text 22–27",
+      "source_claim": "Advocates magnitude, power, loss and expected-value reasoning; uses Gosset/Fisher history and Matrixx as illustrations. These are lecture claims, not verification of the cited originals.",
+      "limitations": "Not the 2008 book; historical/medical assertions unverified; oral-argument quotations unverified; Basic date error checked separately. Full-text label covers 31 slide text, not all cited works or all visual elements.",
+      "sha256": "884beb0bf3e11200a29904be6d6a4f4b90525ebc8379a9a644599b10ace9a160",
+      "bytes": 766065,
+      "verifier": "root; inference_sources for bounded court check",
+      "evidence_note": "../../wiki/evidence/ziliak-2012-lecture.md"
+    }
+  ]
+}

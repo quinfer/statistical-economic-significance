@@ -1,0 +1,138 @@
+source_row,authors_as_listed,year_month_as_listed,yes_reported,percent_yes_reported,q1,q2,q3,q4,q5,q6,q7,q8,q9,q10,q11,q12,q13,q14,q15,q16,q17,q18,q19,source_material_id
+1,Aitken and Harrison,9906,7,36.8,0,0,1,1,1,0,1,0,0,0,0,1,1,0,0,0,0,1,0,aer-coding-1990s-alphabetical
+2,Alesina and Peroti,9712,8,42.1,1,0,1,1,1,0,0,0,0,0,0,1,0,0,0,1,0,1,1,aer-coding-1990s-alphabetical
+3,Allen,9203,16,84.2,1,1,1,1,1,0,1,0,0,1,1,1,1,1,1,1,1,1,1,aer-coding-1990s-alphabetical
+4,Alogoskoufis and Smith,9112,6,31.6,1,0,0,0,0,0,0,0,0,1,1,0,1,1,0,0,1,0,0,aer-coding-1990s-alphabetical
+5,"Altonji, Hayashi, and Kotlikoff",9212,8,42.1,0,1,1,1,1,0,1,0,0,1,0,1,1,0,0,0,0,0,0,aer-coding-1990s-alphabetical
+6,Anderson and Holt,9712,15,78.9,1,1,1,1,1,0,1,0,0,1,1,1,0,1,1,1,1,1,1,aer-coding-1990s-alphabetical
+7,Angrist,9512,13,68.4,0,1,1,1,1,0,1,0,0,1,1,1,1,0,1,1,0,1,1,aer-coding-1990s-alphabetical
+8,Angrist,9006,13,68.4,0,1,0,1,1,1,1,1,0,1,1,1,1,1,0,0,1,0,1,aer-coding-1990s-alphabetical
+9,Angrist and Evans,9806,14,73.7,0,1,1,1,1,0,1,1,0,0,1,1,1,1,0,1,1,1,1,aer-coding-1990s-alphabetical
+10,Ashenfelter and Krueger,9412,8,42.1,1,1,1,1,1,0,0,0,0,1,0,1,1,0,0,0,0,0,0,aer-coding-1990s-alphabetical
+11,Attanasio and Browning,9512,5,26.3,0,0,1,1,1,0,0,0,0,0,0,1,1,0,0,0,0,0,0,aer-coding-1990s-alphabetical
+12,Ausubel,9012,16,84.2,1,1,1,1,1,1,1,0,0,1,1,1,1,0,1,1,1,1,1,aer-coding-1990s-alphabetical
+13,Ayers and Siegelman,9506,6,31.6,1,1,1,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,aer-coding-1990s-alphabetical
+14,Baker and Benjamin,9709,12,63.2,0,1,1,1,1,0,1,0,0,0,1,1,1,1,0,1,1,1,0,aer-coding-1990s-alphabetical
+15,"Becker, Grossman, and Murphy",9406,6,31.6,0,1,1,1,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,aer-coding-1990s-alphabetical
+16,Benhabib and Jovanovic,9103,13,68.4,1,0,1,0,1,1,1,0,0,1,1,1,1,1,1,1,1,0,0,aer-coding-1990s-alphabetical
+17,"Berk, Hughson, and Vandezande",9609,14,73.7,0,1,1,1,1,1,1,1,0,0,1,1,1,0,1,0,1,1,1,aer-coding-1990s-alphabetical
+18,Bernanke and Blinder,9209,8,42.1,1,0,1,1,1,0,0,0,0,0,0,1,1,0,0,0,0,1,1,aer-coding-1990s-alphabetical
+19,Bernard and Jones,9612,5,26.3,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,aer-coding-1990s-alphabetical
+20,Bernheim and Wantz,9506,1,5.3,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,aer-coding-1990s-alphabetical
+21,"Berry, Levinsohn, and Pakes",9906,9,47.4,0,1,1,1,1,0,1,0,0,0,0,1,1,1,0,0,0,1,0,aer-coding-1990s-alphabetical
+22,Besley and Case,9503,3,15.8,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,aer-coding-1990s-alphabetical
+23,Blank,9112,12,63.2,1,1,1,1,1,1,1,0,0,1,0,1,0,1,0,1,0,1,0,aer-coding-1990s-alphabetical
+24,Blonigen,9706,7,36.8,0,0,1,1,1,0,0,0,0,0,0,1,1,0,0,0,0,1,1,aer-coding-1990s-alphabetical
+25,"Blundell, Pashardes, and Weber",9306,7,36.8,0,0,0,1,0,0,1,1,1,0,0,1,0,0,0,0,0,1,1,aer-coding-1990s-alphabetical
+26,Borjas,9506,11,57.9,1,1,1,1,1,0,1,0,0,1,1,1,0,0,1,1,0,0,0,aer-coding-1990s-alphabetical
+27,Brainard,9709,2,10.5,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,aer-coding-1990s-alphabetical
+28,Brainerd,9812,11,57.9,0,1,1,1,1,0,1,0,0,1,0,1,0,1,0,0,1,1,1,aer-coding-1990s-alphabetical
+29,Bronars and Deere,9303,5,26.3,1,0,1,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,aer-coding-1990s-alphabetical
+30,Bronars and Grogger,9412,5,26.3,0,1,1,1,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,aer-coding-1990s-alphabetical
+31,Burman and Randolph,9409,6,31.6,0,1,1,1,1,0,0,0,0,0,0,1,1,0,0,0,0,0,0,aer-coding-1990s-alphabetical
+32,Calomiris and Mason,9712,11,57.9,1,1,1,1,1,0,0,0,0,0,0,1,1,1,1,1,0,1,0,aer-coding-1990s-alphabetical
+33,Calvo and Leiderman,9203,11,57.9,1,1,1,1,1,0,1,0,0,0,0,1,1,1,0,0,0,1,1,aer-coding-1990s-alphabetical
+34,Card,9009,8,42.1,1,1,0,0,1,1,0,0,0,1,1,1,1,0,0,0,0,0,0,aer-coding-1990s-alphabetical
+35,Card and Krueger,9409,7,36.8,1,1,1,1,1,0,1,0,0,1,0,0,0,0,0,0,0,0,0,aer-coding-1990s-alphabetical
+36,Cardia,9703,6,31.6,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,1,0,1,aer-coding-1990s-alphabetical
+37,"Cecchetti, Lam, and Mark",9006,13,68.4,1,1,1,1,1,1,0,1,1,1,1,1,1,0,0,0,1,0,0,aer-coding-1990s-alphabetical
+38,Chevalier,9506,5,26.3,0,1,1,1,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,aer-coding-1990s-alphabetical
+39,Chevalier and Scharfstein,9609,8,42.1,1,1,1,1,1,0,0,0,0,0,0,1,0,0,0,0,0,1,1,aer-coding-1990s-alphabetical
+40,Cohen,9306,8,42.1,1,1,1,0,1,0,1,0,0,0,0,1,0,0,0,0,1,1,0,aer-coding-1990s-alphabetical
+41,Craft,9812,10,52.6,0,1,1,1,1,0,0,0,0,0,0,1,1,0,1,0,1,1,1,aer-coding-1990s-alphabetical
+42,Craig and Pencavel,9212,15,78.9,1,1,1,1,1,0,1,0,0,1,0,1,1,1,1,1,1,1,1,aer-coding-1990s-alphabetical
+43,"Cukierman, Edwards, and Tabellini",9206,4,21.1,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,aer-coding-1990s-alphabetical
+44,Currie and McConnell,9109,10,52.6,1,1,1,0,0,0,1,0,0,0,1,1,1,1,1,0,1,0,0,aer-coding-1990s-alphabetical
+45,Currie and Thomas,9506,5,26.3,0,1,1,0,1,0,0,0,0,1,0,1,0,0,0,0,0,0,0,aer-coding-1990s-alphabetical
+46,Dorwick and Quiggin,9703,8,42.1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,1,1,1,0,0,aer-coding-1990s-alphabetical
+47,Dyck,9709,10,52.6,1,1,1,1,1,0,1,0,0,0,0,1,0,0,1,1,0,1,0,aer-coding-1990s-alphabetical
+48,Engel and Rogers,9612,3,15.8,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,aer-coding-1990s-alphabetical
+49,Fair and Dominguez,9112,6,31.6,1,0,0,0,1,0,0,0,0,1,0,1,1,0,0,0,1,0,0,aer-coding-1990s-alphabetical
+50,Fair and Shiller,9006,11,57.9,1,1,0,1,1,1,0,0,0,1,1,1,1,0,1,0,0,0,1,aer-coding-1990s-alphabetical
+51,Falvey and Gemmell,9112,5,26.3,1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0,0,aer-coding-1990s-alphabetical
+52,Feldstein,9506,8,42.1,1,0,1,1,1,0,0,0,0,1,0,1,0,0,0,0,0,1,1,aer-coding-1990s-alphabetical
+53,Fernald,9906,8,42.1,1,1,0,1,1,0,1,0,0,0,0,1,1,0,0,0,0,1,0,aer-coding-1990s-alphabetical
+54,"Forsythe, Nelson, Neumann, and Wright",9212,9,47.4,1,0,1,1,1,0,1,0,0,0,0,1,1,0,0,0,1,1,0,aer-coding-1990s-alphabetical
+55,Foster and Rosenweig,9609,6,31.6,1,1,1,0,1,0,0,0,0,0,0,1,1,0,0,0,0,0,0,aer-coding-1990s-alphabetical
+56,Frankel and Romer,9906,5,26.3,1,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,0,0,aer-coding-1990s-alphabetical
+57,Froot and Obstfeld,9112,12,63.2,1,0,0,1,1,1,0,1,1,0,0,1,1,1,1,0,1,0,1,aer-coding-1990s-alphabetical
+58,Fuchs,9603,9,47.4,1,1,1,1,1,0,1,0,0,0,0,1,0,0,0,0,1,1,0,aer-coding-1990s-alphabetical
+59,Fuhrer and Moore,9503,6,31.6,1,0,1,1,1,0,0,0,0,1,0,1,0,0,0,0,0,0,0,aer-coding-1990s-alphabetical
+60,Gale and Scholz,9412,8,42.1,1,1,1,1,1,0,0,0,0,1,0,1,0,0,0,0,0,1,0,aer-coding-1990s-alphabetical
+61,Gali,9903,8,42.1,1,0,1,1,1,0,1,0,0,0,0,1,1,0,0,0,1,0,0,aer-coding-1990s-alphabetical
+62,Genesove and Meyer,9706,10,52.6,0,1,1,1,1,0,0,0,0,1,0,1,1,0,0,0,1,1,1,aer-coding-1990s-alphabetical
+63,Gilligan,9212,13,68.4,1,1,1,1,1,0,1,0,0,1,0,1,1,1,1,0,1,1,0,aer-coding-1990s-alphabetical
+64,Goldin,9109,16,84.2,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,0,1,aer-coding-1990s-alphabetical
+65,Gordon and Bovenberg,9612,13,68.4,1,0,1,1,1,0,1,0,0,0,1,1,1,1,1,1,0,1,1,aer-coding-1990s-alphabetical
+66,Griliches and Cockburn,9412,9,47.4,1,1,1,1,1,0,0,0,0,1,0,1,1,0,0,0,0,1,0,aer-coding-1990s-alphabetical
+67,"Grinblatt, Titman, and Wermers",9512,7,36.8,1,0,1,1,1,0,0,0,0,0,0,1,1,0,0,0,1,0,0,aer-coding-1990s-alphabetical
+68,Grossman,9209,4,21.1,0,0,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,aer-coding-1990s-alphabetical
+69,"Guiso, Jappell, and Terlizzese",9603,11,57.9,0,1,1,1,1,0,1,0,0,1,0,1,1,0,0,0,1,1,1,aer-coding-1990s-alphabetical
+70,Hallock,9809,9,47.4,0,1,1,1,1,0,1,0,0,0,0,1,1,1,0,0,0,1,0,aer-coding-1990s-alphabetical
+71,"Ham, Sveinar, and Terrell",9812,9,47.4,1,1,1,1,1,0,0,0,0,0,0,1,0,1,1,0,0,1,0,aer-coding-1990s-alphabetical
+72,Hamermesh and Biddle,9412,4,21.1,1,1,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,aer-coding-1990s-alphabetical
+73,Hamilton,9703,6,31.6,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,aer-coding-1990s-alphabetical
+74,Hanes,9309,7,36.8,1,0,1,1,1,0,0,0,0,0,0,1,0,0,0,0,0,1,1,aer-coding-1990s-alphabetical
+75,Hardouvelis,9009,7,36.8,1,1,0,0,1,1,0,1,0,0,0,0,0,0,0,0,1,0,1,aer-coding-1990s-alphabetical
+76,Harrigan,9709,8,42.1,1,1,1,1,1,0,0,0,0,0,0,1,1,0,0,0,0,1,0,aer-coding-1990s-alphabetical
+77,Henderson,9609,7,36.8,0,1,1,1,1,0,1,0,0,0,0,1,0,0,0,0,0,0,1,aer-coding-1990s-alphabetical
+78,Hendricks and Porter,9606,6,31.6,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,aer-coding-1990s-alphabetical
+79,Hendry and Ericsson,9103,10,52.6,1,0,0,1,0,0,0,1,1,1,1,0,1,1,0,0,1,0,1,aer-coding-1990s-alphabetical
+80,Hines,9612,7,36.8,1,1,1,1,1,0,1,0,0,0,0,1,0,0,0,0,0,0,0,aer-coding-1990s-alphabetical
+81,Hoover and Sheffrin,9203,13,68.4,1,1,1,1,1,0,0,0,0,1,0,1,1,1,1,0,1,1,1,aer-coding-1990s-alphabetical
+82,"Ichnowski, Shaw, and Prennushi",9706,9,47.4,0,1,1,1,1,0,0,0,0,0,0,1,1,0,0,0,1,1,1,aer-coding-1990s-alphabetical
+83,James,9309,9,47.4,1,0,1,1,1,0,0,0,0,0,0,0,0,1,1,1,1,1,0,aer-coding-1990s-alphabetical
+84,Jones and Kato,9506,6,31.6,1,1,1,1,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,aer-coding-1990s-alphabetical
+85,Kachelmeier and Shehata,9212,7,36.8,1,0,1,1,1,0,0,0,0,0,0,1,1,0,0,0,0,1,0,aer-coding-1990s-alphabetical
+86,Kaminsky,9306,11,57.9,1,1,1,1,1,0,1,0,0,0,0,1,1,1,1,0,0,1,0,aer-coding-1990s-alphabetical
+87,"Kashyap, Stein, and Wilcox",9303,5,26.3,1,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,1,1,0,aer-coding-1990s-alphabetical
+88,Keane,9309,4,21.1,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,aer-coding-1990s-alphabetical
+89,Keane and Runkle,9009,4,21.1,0,0,0,1,0,1,0,0,0,0,1,0,0,0,0,0,0,0,1,aer-coding-1990s-alphabetical
+90,Keeley,9012,5,26.3,1,1,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1,aer-coding-1990s-alphabetical
+91,Kim and Singal,9306,5,26.3,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,aer-coding-1990s-alphabetical
+92,Krozner and Rajan,9409,5,26.3,1,1,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,aer-coding-1990s-alphabetical
+93,Krozner and Stratman,9812,5,26.3,0,1,1,1,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,aer-coding-1990s-alphabetical
+94,Laitner and Juster,9609,7,36.8,0,1,1,1,1,0,0,0,0,0,0,1,1,0,0,0,0,1,0,aer-coding-1990s-alphabetical
+95,"Landers, Rebitzer, and Taylor",9606,11,57.9,1,1,1,1,1,0,1,0,0,0,0,1,1,0,0,0,1,1,1,aer-coding-1990s-alphabetical
+96,"Lemieux, Fortin, and Frechette",9403,7,36.8,0,1,1,1,0,0,0,0,0,0,0,1,0,0,0,0,1,1,1,aer-coding-1990s-alphabetical
+97,"Levin, Kagel, and Richard",9606,8,42.1,1,1,1,1,1,0,0,0,0,0,0,1,0,0,0,0,1,1,0,aer-coding-1990s-alphabetical
+98,Levine and Renelt,9209,3,15.8,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,aer-coding-1990s-alphabetical
+99,Levine and Zervos,9806,7,36.8,1,1,1,1,1,0,0,0,0,0,0,1,1,0,0,0,0,0,0,aer-coding-1990s-alphabetical
+100,Levitt,9706,6,31.6,0,1,1,1,1,0,0,0,0,0,0,1,1,0,0,0,0,0,0,aer-coding-1990s-alphabetical
+101,Lin,9203,9,47.4,1,0,1,1,1,0,0,0,0,1,0,1,0,1,1,0,0,1,0,aer-coding-1990s-alphabetical
+102,Marin and Schnitzer,9512,5,26.3,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,aer-coding-1990s-alphabetical
+103,Mark,9503,8,42.1,1,0,1,1,1,0,0,1,1,0,0,1,1,0,0,0,0,0,0,aer-coding-1990s-alphabetical
+104,"Mendelson, Nordhaus, Shaw",9409,8,42.1,0,1,1,1,1,0,0,0,0,0,0,1,1,0,1,0,0,1,0,aer-coding-1990s-alphabetical
+105,"Meyer, Viscusi, and Durbin",9506,6,31.6,1,1,1,1,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,aer-coding-1990s-alphabetical
+106,Morrison and Schwartz,9612,11,57.9,1,1,1,0,1,0,1,0,0,0,0,1,0,1,1,1,0,1,1,aer-coding-1990s-alphabetical
+107,"Munnell, Tootell, Browne, and McEneany",9603,5,26.3,0,0,1,1,1,0,0,0,0,0,0,1,1,0,0,0,0,0,0,aer-coding-1990s-alphabetical
+108,"Murray, Evans, and Schwab",9809,8,42.1,1,1,1,1,0,0,1,0,0,0,0,1,1,0,0,0,0,1,0,aer-coding-1990s-alphabetical
+109,Myagkov and Plott,9712,13,68.4,1,1,1,1,1,1,0,0,0,0,0,1,0,1,1,1,1,1,1,aer-coding-1990s-alphabetical
+110,Nalbantian and Schotter,9706,9,47.4,1,1,1,1,1,0,0,0,0,0,0,1,1,0,0,0,1,1,0,aer-coding-1990s-alphabetical
+111,Palfrey and Prisbrey,9712,6,31.6,1,0,1,1,1,0,1,0,0,0,0,1,0,0,0,0,0,0,0,aer-coding-1990s-alphabetical
+112,Paxson,9203,12,63.2,0,1,1,1,1,0,1,0,0,1,0,1,1,1,1,0,0,1,1,aer-coding-1990s-alphabetical
+113,Peek and Rosengren,9709,6,31.6,1,0,1,1,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,aer-coding-1990s-alphabetical
+114,Persson and Tabellini,9406,6,31.6,1,1,1,1,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,aer-coding-1990s-alphabetical
+115,"Pitt, Rosenzwieg, and Hassan",9012,10,52.6,1,0,1,0,1,0,0,0,0,1,0,1,0,1,1,1,1,0,1,aer-coding-1990s-alphabetical
+116,Pontiff,9703,10,52.6,1,1,1,1,1,0,1,0,0,0,0,1,1,1,0,0,1,0,0,aer-coding-1990s-alphabetical
+117,Rajan and Zingales,9806,9,47.4,0,1,1,1,1,0,1,0,0,0,0,1,1,0,0,0,0,1,1,aer-coding-1990s-alphabetical
+118,Ramey and Ramey,9512,4,21.1,0,0,1,1,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,aer-coding-1990s-alphabetical
+119,Ransom,9303,15,78.9,1,1,1,1,1,0,1,0,0,0,1,1,1,1,1,1,1,1,1,aer-coding-1990s-alphabetical
+120,Roberts and Tybout,9709,3,15.8,0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,aer-coding-1990s-alphabetical
+121,Rosenszweig and Wolpin,9412,10,52.6,1,1,1,1,1,0,1,0,0,1,0,1,1,0,0,0,0,1,0,aer-coding-1990s-alphabetical
+122,Rotemberg and Woodford,9603,9,47.4,1,0,1,1,0,0,0,0,0,1,0,1,1,0,1,1,1,0,0,aer-coding-1990s-alphabetical
+123,Sauer and Leffler,9003,11,57.9,1,1,1,1,1,1,0,0,0,0,0,1,1,1,0,0,1,1,0,aer-coding-1990s-alphabetical
+124,Schachar and Nalebuff,9906,10,52.6,1,1,1,1,1,0,1,0,0,0,0,1,1,0,0,0,0,1,1,aer-coding-1990s-alphabetical
+125,Shea,9503,6,31.6,1,1,1,1,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,aer-coding-1990s-alphabetical
+126,Simon,9812,14,73.7,1,0,1,1,1,0,1,0,0,1,1,1,1,1,1,1,0,1,1,aer-coding-1990s-alphabetical
+127,Solon,9206,16,84.2,1,1,1,1,1,0,1,0,0,1,1,1,1,1,1,1,1,1,1,aer-coding-1990s-alphabetical
+128,Stratman,9212,9,47.4,1,0,1,1,1,0,1,0,0,1,0,1,1,0,0,0,0,1,0,aer-coding-1990s-alphabetical
+129,Trefler,9512,8,42.1,1,0,1,1,1,0,0,0,0,1,0,1,1,0,0,0,0,0,1,aer-coding-1990s-alphabetical
+130,Trejo,9109,3,15.8,0,1,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,aer-coding-1990s-alphabetical
+131,Viscusi and Evans,9006,9,47.4,1,1,0,0,1,1,0,0,0,1,0,0,1,0,1,0,1,1,0,aer-coding-1990s-alphabetical
+132,Wilhelm,9609,9,47.4,0,1,1,0,1,0,1,0,0,0,0,1,1,0,0,0,1,1,1,aer-coding-1990s-alphabetical
+133,Wolak and Kolstad,9106,4,21.1,1,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,1,0,0,aer-coding-1990s-alphabetical
+134,Wolff,9106,7,36.8,1,1,1,0,0,0,0,0,0,0,1,0,1,1,0,0,0,0,1,aer-coding-1990s-alphabetical
+135,Wright,9009,7,36.8,1,0,0,0,0,0,0,0,0,1,1,0,1,0,1,0,0,1,1,aer-coding-1990s-alphabetical
+136,Yano and Nugent,9906,9,47.4,1,1,1,1,1,0,0,0,0,0,0,1,1,0,0,0,0,1,1,aer-coding-1990s-alphabetical
+137,Zimmerman,9206,15,78.9,1,1,1,1,1,0,1,0,0,1,1,1,1,1,1,1,0,1,1,aer-coding-1990s-alphabetical

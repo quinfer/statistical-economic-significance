@@ -1,0 +1,460 @@
+{
+  "schema_version": 1,
+  "audit_date": "2026-10-24",
+  "owner": "debate_sources",
+  "scope": "Bounded public retrieval attempt for expanded 187-paper1990s AER coding matrix reported in Cult (2008), pp. 80–81; separate from original 137-row audit.",
+  "result": "Expanded187-row item matrix, list of 50 added articles and versioned 137-to-187 crosswalk not recovered in this pass. No absence, nonexistence or exhaustive-search claim.",
+  "records": [
+    {
+      "id": "publisher",
+      "url": "https://press.umich.edu/Books/T/The-Cult-of-Statistical-Significance",
+      "access_date": "2026-10-24",
+      "method": "public curl --fail --location",
+      "outcome": "retrieved",
+      "coverage": "Publisher page retrieved via web and curl; publication/Look Inside/related links inspected. No data supplement link identified on this retrieved page. Look Inside is contents, not a row-level dataset.",
+      "verifier": "debate_sources",
+      "repository_copy": "none; source bodies remain temporary",
+      "temporary_path": "/tmp/expanded-publisher.html",
+      "bytes": 89907,
+      "sha256": "cc7d18bff34437c0647667879024498dc88cd069995e94d058ee78dbdbf2440e"
+    },
+    {
+      "id": "fulcrum",
+      "url": "https://www.fulcrum.org/concern/monographs/cr56n193q",
+      "access_date": "2026-10-24",
+      "method": "public curl --fail --location",
+      "outcome": "retrieved",
+      "coverage": "Public metadata, tabs and links inspected; body says no access to the book and suggests institutional login. No coding-data link identified in public body. No authenticated book access attempted.",
+      "verifier": "debate_sources",
+      "repository_copy": "none; source bodies remain temporary",
+      "temporary_path": "/tmp/expanded-fulcrum.html",
+      "bytes": 55891,
+      "sha256": "8848488ec1778a9d579f794528f4f66cab478de4a352a3b62072c08e24ee9daf"
+    },
+    {
+      "id": "ziliak-cult",
+      "url": "https://blogs.roosevelt.edu/sziliak/cult-of-statistical-significance/",
+      "access_date": "2026-10-24",
+      "method": "public curl --fail --location",
+      "outcome": "retrieved",
+      "coverage": "Author book page body/links inspected; book praise, related writing and legal material; no coding matrix link identified.",
+      "verifier": "debate_sources",
+      "repository_copy": "none; source bodies remain temporary",
+      "temporary_path": "/tmp/expanded-ziliak-cult.html",
+      "bytes": 55277,
+      "sha256": "1f2195bcb0b8441b068e70c4ba49e5cb06a7ae7ec950a6adbe03852be2c61fb0",
+      "prior_attempt": "Web tool returned 502 Bad Gateway; public curl subsequently succeeded."
+    },
+    {
+      "id": "ziliak-old-cult",
+      "url": "https://blogs.roosevelt.edu/sziliak/home/cult-of-statistical-significance/",
+      "access_date": "2026-10-24",
+      "method": "public curl --fail --location",
+      "outcome": "retrieved",
+      "coverage": "Legacy nested book URL retrieved with redirects; response matches current book page; no matrix link.",
+      "verifier": "debate_sources",
+      "repository_copy": "none; source bodies remain temporary",
+      "temporary_path": "/tmp/expanded-ziliak-old-cult.html",
+      "bytes": 55277,
+      "sha256": "1f2195bcb0b8441b068e70c4ba49e5cb06a7ae7ec950a6adbe03852be2c61fb0"
+    },
+    {
+      "id": "ziliak-home",
+      "url": "https://blogs.roosevelt.edu/sziliak/",
+      "access_date": "2026-10-24",
+      "method": "public curl --fail --location",
+      "outcome": "retrieved",
+      "coverage": "Navigation and links inspected to discover book and archival-research pages; no matrix link identified.",
+      "verifier": "debate_sources",
+      "repository_copy": "none; source bodies remain temporary",
+      "temporary_path": "/tmp/expanded-ziliak-home.html",
+      "bytes": 53071,
+      "sha256": "c6e9c5eb9e249576cd8d793081402b2c909c32569337682e5213df185c423e25"
+    },
+    {
+      "id": "ziliak-archival",
+      "url": "https://blogs.roosevelt.edu/sziliak/archival-research/",
+      "access_date": "2026-10-24",
+      "method": "public curl --fail --location",
+      "outcome": "retrieved",
+      "coverage": "Main text and links read. Describes historical archive projects, including history/philosophy of statistical significance; not a repository of AER item codes.",
+      "verifier": "debate_sources",
+      "repository_copy": "none; source bodies remain temporary",
+      "temporary_path": "/tmp/expanded-ziliak-archival.html",
+      "bytes": 45982,
+      "sha256": "d8fcdb56f216dbb573a8ce9cde26f376dfe8dff33ff16da63eeafee97c9e6e5c"
+    },
+    {
+      "id": "mccloskey-home",
+      "url": "https://www.deirdremccloskey.com/",
+      "access_date": "2026-10-24",
+      "method": "public curl --fail --location",
+      "outcome": "retrieved",
+      "coverage": "Navigation and relevant links inspected; leads to articles/books indexes, not expanded matrix.",
+      "verifier": "debate_sources",
+      "repository_copy": "none; source bodies remain temporary",
+      "temporary_path": "/tmp/expanded-mccloskey-home.html",
+      "bytes": 200817,
+      "sha256": "27ff1a3e42e546cf0c84a09e6bd6ac2e83d8110fc09d48c4404850c16743c56f"
+    },
+    {
+      "id": "mccloskey-articles",
+      "url": "https://www.deirdremccloskey.com/articles/index.php",
+      "access_date": "2026-10-24",
+      "method": "public curl --fail --location",
+      "outcome": "retrieved",
+      "coverage": "Relevant significance entries and links inspected; led to final JSE Article_190.pdf, dedicated statistics page and ICPSR interview link. No matrix link identified.",
+      "verifier": "debate_sources",
+      "repository_copy": "none; source bodies remain temporary",
+      "temporary_path": "/tmp/expanded-mccloskey-articles.html",
+      "bytes": 131609,
+      "sha256": "9873c33d11ddd91e9bef88f80021da468f305bcf2027ad1b1e46a84ddff5bfd3"
+    },
+    {
+      "id": "mccloskey-books",
+      "url": "https://www.deirdremccloskey.com/books/index.php",
+      "access_date": "2026-10-24",
+      "method": "public curl --fail --location",
+      "outcome": "retrieved",
+      "coverage": "Cult entry and links inspected; Main navigation page is /academics/stats.php, not a spreadsheet.",
+      "verifier": "debate_sources",
+      "repository_copy": "none; source bodies remain temporary",
+      "temporary_path": "/tmp/expanded-mccloskey-books.html",
+      "bytes": 50690,
+      "sha256": "60806c0e5650edab4371ad083f015b094dab2df14d277fa099407fcd672c5f95"
+    },
+    {
+      "id": "mccloskey-stats",
+      "url": "https://www.deirdremccloskey.com/academics/stats.php",
+      "access_date": "2026-10-24",
+      "method": "public curl --fail --location",
+      "outcome": "retrieved",
+      "coverage": "Complete main text and all hyperlinks inspected. Links preface, articles, reviews, legal documents and legacy Roosevelt author address; no expanded coding matrix link identified.",
+      "verifier": "debate_sources",
+      "repository_copy": "none; source bodies remain temporary",
+      "temporary_path": "/tmp/expanded-mccloskey-stats.html",
+      "bytes": 13588,
+      "sha256": "75f15f847460fb0102bf03fe8a59f6f54b4e9b3a42c3299ce9f9a71cb77a8699"
+    },
+    {
+      "id": "mccloskey-trouble",
+      "url": "https://www.deirdremccloskey.com/articles/stats/stats.php",
+      "access_date": "2026-10-24",
+      "method": "public curl --fail --location",
+      "outcome": "retrieved",
+      "coverage": "Downloaded as relevant author-linked methodological article; link inventory only, no substantive full-text reading claimed; no matrix identified.",
+      "verifier": "debate_sources",
+      "repository_copy": "none; source bodies remain temporary",
+      "temporary_path": "/tmp/expanded-mccloskey-trouble.html",
+      "bytes": 62520,
+      "sha256": "1c2d5874fffb35db94757d55d00510e66045e3b74e2f1e7200c5764dac62a9f8"
+    },
+    {
+      "id": "mccloskey-wrong-path",
+      "url": "https://www.deirdremccloskey.com/articles/stats.php",
+      "access_date": "2026-10-24",
+      "method": "web open",
+      "outcome": "web_tool_inaccessible",
+      "coverage": "Exploratory path was not accessible through web tool; actual author-linked /academics/stats.php was found and read separately.",
+      "verifier": "debate_sources",
+      "repository_copy": "none; source bodies remain temporary"
+    },
+    {
+      "id": "icpsr",
+      "url": "https://www.icpsr.umich.edu/icpsrweb/content/ICPSR/mccloskey.html",
+      "access_date": "2026-10-24",
+      "method": "public curl --fail --location",
+      "outcome": "http_403",
+      "coverage": "Author-linked Challenging Statistical Significance page; curl returned HTTP 403, web open inaccessible. Contents and any links remain unverified.",
+      "verifier": "debate_sources",
+      "repository_copy": "none; source bodies remain temporary",
+      "prior_attempt": "Web tool inaccessible; curl error 56 reported HTTP 403."
+    },
+    {
+      "id": "jse-final",
+      "url": "https://www.deirdremccloskey.com/docs/pdf/Article_190.pdf",
+      "access_date": "2026-10-24",
+      "method": "public curl --fail --location",
+      "outcome": "retrieved",
+      "coverage": "20-page scanned final JSE article. First page visually read: Ziliak/McCloskey, 33 (2004), 527–546, DOI 10.1016/j.socec.2004.09.024; abstract reports 137 articles. pypdf extraction on first/last pages empty. No full-article reading in this search. Passed to root for further source audit.",
+      "verifier": "debate_sources",
+      "repository_copy": "none; source bodies remain temporary",
+      "temporary_path": "/tmp/expanded-article190.pdf",
+      "bytes": 1400410,
+      "sha256": "ec4f1d738f03f246dd715ccd33f289f3ef7961e4e44352b0299f5c86d9add153",
+      "reading_depth": "abstract_read",
+      "version": "Published JSE 2004 final, not expanded book 2008 data"
+    },
+    {
+      "id": "hoover-directory",
+      "url": "https://public.econ.duke.edu/~kdh9/Source%20Materials/McCloskey/",
+      "access_date": "2026-10-24",
+      "method": "public curl --fail --location",
+      "outcome": "retrieved",
+      "coverage": "Complete visible directory listing and links inspected. Old 1980s/1990s HTML rankings, omission list and 2005/2007 papers; no named 187 matrix listed. Dates on ranking wrappers 2005; child directories 2007. Dates alone do not establish dataset contents; prior 137-row audit does.",
+      "verifier": "debate_sources",
+      "repository_copy": "none; source bodies remain temporary",
+      "temporary_path": "/tmp/expanded-hoover-directory.html",
+      "bytes": 4378,
+      "sha256": "d75dc0cba72e924ce1330bdf6fff4cd8f1f0e3c1183d821f761dceab527b7aa5"
+    },
+    {
+      "id": "archive-com-extensions",
+      "url": "https://web.archive.org/cdx/search/cdx?url=deirdremccloskey.com/*&output=json&filter=statuscode:200&filter=urlkey:.*%28xls%7Ccsv%7Czip%29.*&collapse=urlkey",
+      "access_date": "2026-10-24",
+      "method": "public curl --fail --location",
+      "outcome": "retrieved",
+      "coverage": "Filtered CDX response is empty array. Not evidence that no differently named/formatted archive exists.",
+      "verifier": "debate_sources",
+      "repository_copy": "none; source bodies remain temporary",
+      "temporary_path": "/tmp/expanded-wayback-mccloskey.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "result_rows": 0
+    },
+    {
+      "id": "archive-org-excel",
+      "url": "https://web.archive.org/cdx/search/cdx?url=deirdremccloskey.org/*&output=json&filter=statuscode:200&filter=mimetype:application/vnd.ms-excel&collapse=urlkey",
+      "access_date": "2026-10-24",
+      "method": "public curl --fail --location",
+      "outcome": "retrieved",
+      "coverage": "Filtered CDX response is empty array. MIME/path filter and archive capture limits apply.",
+      "verifier": "debate_sources",
+      "repository_copy": "none; source bodies remain temporary",
+      "temporary_path": "/tmp/expanded-wayback-org-xls.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "result_rows": 0
+    },
+    {
+      "id": "archive-stats-index",
+      "url": "https://web.archive.org/cdx/search/cdx?url=www.deirdremccloskey.com/academics/stats.php&output=json&filter=statuscode:200&collapse=digest",
+      "access_date": "2026-10-24",
+      "method": "public curl --fail --location",
+      "outcome": "retrieved",
+      "coverage": "CDX response 52 capture records after digest collapse, not 52 distinct datasets. Earliest listed 20110107145946 selected for page retrieval.",
+      "verifier": "debate_sources",
+      "repository_copy": "none; source bodies remain temporary",
+      "temporary_path": "/tmp/expanded-wayback-stats.json",
+      "bytes": 9387,
+      "sha256": "6c82907364ec68300d182792a712b34ec7dc98db663fb4f9a6c8dd8c23bca9fe",
+      "result_rows": 52
+    },
+    {
+      "id": "archive-stats2011",
+      "url": "https://web.archive.org/web/20110107145946id_/http://www.deirdremccloskey.com:80/academics/stats.php",
+      "access_date": "2026-10-24",
+      "method": "public curl --fail --location",
+      "outcome": "retrieved",
+      "coverage": "Archived page hyperlinks inspected; preface, JSM article, reviews, methodology articles and author/publisher links; no matrix link identified.",
+      "verifier": "debate_sources",
+      "repository_copy": "none; source bodies remain temporary",
+      "temporary_path": "/tmp/expanded-archive-stats2011.html",
+      "bytes": 12613,
+      "sha256": "fe7ff1fcf1fe939b695e934389503734028a829026df370397c303c690dbfe0e",
+      "archive_timestamp": "20110107145946"
+    },
+    {
+      "id": "archive-roosevelt-index",
+      "url": "https://web.archive.org/cdx/search/cdx?url=faculty.roosevelt.edu/Ziliak/*&output=json&filter=statuscode:200&collapse=urlkey&fl=timestamp,original,mimetype,statuscode",
+      "access_date": "2026-10-24",
+      "method": "public curl --fail --location",
+      "outcome": "retrieved",
+      "coverage": "306 distinct URL-key records inspected programmatically for data/rank/survey/aer/sheet/xls/csv/zip names or spreadsheet MIME; no matches. Relevant article/book/home entries inspected manually. CDX metadata is not the content of 306 pages.",
+      "verifier": "debate_sources",
+      "repository_copy": "none; source bodies remain temporary",
+      "temporary_path": "/tmp/expanded-wayback-roosevelt.json",
+      "bytes": 33859,
+      "sha256": "c3b3540c2258ff9c4da603808223a773d85b565ce6b55e6883bffb550d1a4c78",
+      "result_rows": 306
+    },
+    {
+      "id": "archive-roosevelt-home-index",
+      "url": "https://web.archive.org/cdx/search/cdx?url=faculty.roosevelt.edu/Ziliak/index.html&output=json&filter=statuscode:200&from=2008&to=2011&collapse=digest",
+      "access_date": "2026-10-24",
+      "method": "public curl --fail --location",
+      "outcome": "retrieved",
+      "coverage": "Eight capture records after digest collapse; selected May 2008 and June 2010 homepage captures for actual link inspection.",
+      "verifier": "debate_sources",
+      "repository_copy": "none; source bodies remain temporary",
+      "temporary_path": "/tmp/expanded-wayback-roosevelt-home.json",
+      "bytes": 1480,
+      "sha256": "1ecfbb47ca319d367e1843a0213f126ad70a6c6986e68cb51f4fefa1ee8a9323",
+      "result_rows": 8
+    },
+    {
+      "id": "archive-roosevelt2008",
+      "url": "https://web.archive.org/web/20080527000145id_/http://faculty.roosevelt.edu:80/Ziliak/index.html",
+      "access_date": "2026-10-24",
+      "method": "public curl --fail --location",
+      "outcome": "retrieved",
+      "coverage": "Archived homepage links inspected; Cult link points to front matter (preface/contents), no expanded matrix link identified.",
+      "verifier": "debate_sources",
+      "repository_copy": "none; source bodies remain temporary",
+      "temporary_path": "/tmp/expanded-archive-roosevelt2008.html",
+      "bytes": 43035,
+      "sha256": "553679001e1e6df60365cfad1d69dc260e1b9c80b2bda6fbfb2556e23bc4531e",
+      "archive_timestamp": "20080527000145"
+    },
+    {
+      "id": "archive-roosevelt2010",
+      "url": "https://web.archive.org/web/20100612204926id_/http://faculty.roosevelt.edu/ziliak/index.html",
+      "access_date": "2026-10-24",
+      "method": "public curl --fail --location",
+      "outcome": "retrieved",
+      "coverage": "Archived homepage links inspected; links original survey articles, reviews and commentaries; no expanded matrix link identified. CultStatSignif.pdf link is labelled Science (a review), not assumed book or dataset.",
+      "verifier": "debate_sources",
+      "repository_copy": "none; source bodies remain temporary",
+      "temporary_path": "/tmp/expanded-archive-roosevelt2010.html",
+      "bytes": 104825,
+      "sha256": "43ebcb5a19c248c7c15196a1d9b4d5ce7bbeda95bd05a656c5a5d7bcbf989716",
+      "archive_timestamp": "20100612204926"
+    },
+    {
+      "id": "archive-roosevelt-redirect",
+      "url": "https://web.archive.org/web/20110809132715id_/http://faculty.roosevelt.edu/Ziliak/Default.htm",
+      "access_date": "2026-10-24",
+      "method": "public curl --fail --location",
+      "outcome": "retrieved",
+      "coverage": "234-byte archived page contains meta-refresh to http://sites.roosevelt.edu/sziliak; it is a migration pointer, not substantive data.",
+      "verifier": "debate_sources",
+      "repository_copy": "none; source bodies remain temporary",
+      "temporary_path": "/tmp/expanded-archive-roosevelt-default.html",
+      "bytes": 234,
+      "sha256": "90ace1ea1f7a37c098b6137383d6e77e7a38534f682e4c98752d789dc5c66a66",
+      "archive_timestamp": "20110809132715"
+    },
+    {
+      "id": "archive-com-name-filter",
+      "url": "https://web.archive.org/cdx/search/cdx?url=deirdremccloskey.com/*&output=json&filter=statuscode:200&filter=original:.*%28data%7Crank%7Csurvey%7Caer%7Csheet%29.*&collapse=urlkey&fl=timestamp,original,mimetype,statuscode",
+      "access_date": "2026-10-24",
+      "method": "public curl --fail --location",
+      "outcome": "retrieved",
+      "coverage": "15 returned records inspected. Name filter matched mostly Frank/franklin and paer.pdf; no identifiable coding matrix. Contents of these unrelated records not read.",
+      "verifier": "debate_sources",
+      "repository_copy": "none; source bodies remain temporary",
+      "temporary_path": "/tmp/expanded-wayback-com-names.json",
+      "bytes": 2531,
+      "sha256": "4ceef2886565d21b4c689fe4aec7fa5e1b435472945f8d1ab2c9b8e217956cda",
+      "result_rows": 15
+    },
+    {
+      "id": "archive-sites-index",
+      "url": "https://web.archive.org/cdx/search/cdx?url=sites.roosevelt.edu/sziliak/*&output=json&filter=statuscode:200&collapse=urlkey&fl=timestamp,original,mimetype,statuscode",
+      "access_date": "2026-10-24",
+      "method": "public curl --fail --location",
+      "outcome": "retrieved",
+      "coverage": "50 URL-key records inspected; book page, articles, legal PDFs, syllabi and images; no identifiable AER matrix. Followed actual archived book page.",
+      "verifier": "debate_sources",
+      "repository_copy": "none; source bodies remain temporary",
+      "temporary_path": "/tmp/expanded-wayback-sites-roosevelt.json",
+      "bytes": 7315,
+      "sha256": "93786465bdb84d7e87e7033befd1fa4fa073553d99a84f956ae77cdbb4ba4d21",
+      "result_rows": 50
+    },
+    {
+      "id": "archive-ziliak-cult2011",
+      "url": "https://web.archive.org/web/20111104134202id_/http://sites.roosevelt.edu:80/sziliak/home/cult-of-statistical-significance/",
+      "access_date": "2026-10-24",
+      "method": "public curl --fail --location",
+      "outcome": "retrieved",
+      "coverage": "Complete main text and links inspected; book praise/related writing and legal links, no expanded matrix link identified.",
+      "verifier": "debate_sources",
+      "repository_copy": "none; source bodies remain temporary",
+      "temporary_path": "/tmp/expanded-archive-ziliak-cult2011.html",
+      "bytes": 16064,
+      "sha256": "27ea8b3191719394ea31e9c8880a930b153e092c7936a9a4c871a8a1eea36a72",
+      "archive_timestamp": "20111104134202"
+    }
+  ],
+  "search_queries": [
+    {
+      "query": "Ziliak McCloskey \"187\" \"data\" significance",
+      "method": "web search_query",
+      "outcome": "Discovery only; no expanded matrix retrieved. Primary leads are logged separately. Search snippets not used as coding evidence."
+    },
+    {
+      "query": "\"Cult of Statistical Significance\" data questionnaire spreadsheet",
+      "method": "web search_query",
+      "outcome": "Discovery only; no expanded matrix retrieved. Primary leads are logged separately. Search snippets not used as coding evidence."
+    },
+    {
+      "query": "Ziliak McCloskey \"187\" AER survey coding",
+      "method": "web search_query",
+      "outcome": "Discovery only; no expanded matrix retrieved. Primary leads are logged separately. Search snippets not used as coding evidence."
+    },
+    {
+      "query": "\"Ziliak\" \"1990s\" \"rankings\" data",
+      "method": "web search_query",
+      "outcome": "Discovery only; no expanded matrix retrieved. Primary leads are logged separately. Search snippets not used as coding evidence."
+    },
+    {
+      "query": "\"187\" \"Ziliak\" data [domains:deirdremccloskey.com,deirdremccloskey.org,roosevelt.edu,press.umich.edu]",
+      "method": "web search_query",
+      "outcome": "Discovery only; no expanded matrix retrieved. Primary leads are logged separately. Search snippets not used as coding evidence."
+    },
+    {
+      "query": "\"Cult of Statistical Significance\" \"data\" \"download\"",
+      "method": "web search_query",
+      "outcome": "Discovery only; no expanded matrix retrieved. Primary leads are logged separately. Search snippets not used as coding evidence."
+    },
+    {
+      "query": "\"Ziliak\" \"McCloskey\" \"data\" filetype:xls",
+      "method": "web search_query",
+      "outcome": "Discovery only; no expanded matrix retrieved. Primary leads are logged separately. Search snippets not used as coding evidence."
+    },
+    {
+      "query": "Stephen Ziliak statistical significance data website",
+      "method": "web search_query",
+      "outcome": "Discovery only; no expanded matrix retrieved. Primary leads are logged separately. Search snippets not used as coding evidence."
+    },
+    {
+      "query": "site:deirdremccloskey.com statistical significance data",
+      "method": "web search_query",
+      "outcome": "Discovery only; no expanded matrix retrieved. Primary leads are logged separately. Search snippets not used as coding evidence."
+    },
+    {
+      "query": "site:roosevelt.edu Ziliak \"data\" \"significance\"",
+      "method": "web search_query",
+      "outcome": "Discovery only; no expanded matrix retrieved. Primary leads are logged separately. Search snippets not used as coding evidence."
+    },
+    {
+      "query": "\"187\" \"AER\" \"McCloskey\" \"data\"",
+      "method": "web search_query",
+      "outcome": "Discovery only; no expanded matrix retrieved. Primary leads are logged separately. Search snippets not used as coding evidence."
+    },
+    {
+      "query": "\"Ziliak\" \"McCloskey\" \"coding\" \"2008\" data",
+      "method": "web search_query",
+      "outcome": "Discovery only; no expanded matrix retrieved. Primary leads are logged separately. Search snippets not used as coding evidence."
+    },
+    {
+      "query": "\"Ziliak\" \"McCloskey\" filetype:xlsx",
+      "method": "web search_query",
+      "outcome": "Discovery only; no expanded matrix retrieved. Primary leads are logged separately. Search snippets not used as coding evidence."
+    },
+    {
+      "query": "\"McCloskey\" \"187\" survey data download",
+      "method": "web search_query",
+      "outcome": "Discovery only; no expanded matrix retrieved. Primary leads are logged separately. Search snippets not used as coding evidence."
+    },
+    {
+      "query": "site:icpsr.umich.edu \"McCloskey\" \"significance\"",
+      "method": "web search_query",
+      "outcome": "Discovery only; no expanded matrix retrieved. Primary leads are logged separately. Search snippets not used as coding evidence."
+    }
+  ],
+  "known_prior_materials": {
+    "book_claim_ledger": "wiki/evidence/cult-2008-reading.md",
+    "original_coding_manifest": "sources/aer-audit/coding-manifest.json",
+    "original_coding_audit": "wiki/evidence/aer-coding-audit.md"
+  },
+  "limits": [
+    "No authenticated or private author files were accessed; no messages were sent to authors or institutions.",
+    "URL and MIME filters can miss differently named/formatted files; archive coverage is incomplete. Only selected actual archived pages were read, not every capture.",
+    "The book tables contain marginals with potentially varying applicable denominators; no 187-row matrix was reconstructed from percentages.",
+    "No new independent coding, inter-rater reliability estimate or expanded-corpus arithmetic check was possible without underlying rows.",
+    "No copyrighted full-text source bodies are copied into repository. Hashes document temporary response versions only; temporary paths need not persist.",
+    "Slide gate remains CLOSED."
+  ]
+}
