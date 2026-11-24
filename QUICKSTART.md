@@ -36,21 +36,32 @@ If you already have a checkout, run the last two commands from its top-level dir
 
 ## Check one result by hand
 
-**Illustration.** Suppose an estimate is 0.10 percentage points with a known standard error of 0.02 percentage points. Under the stated normal model, an approximate 95% confidence interval is:
+**Illustration.** A lender wants to know whether a new programme makes an economically meaningful difference to defaults. The target is the average reduction in the one-year default rate among eligible borrowers. Positive values mean fewer defaults. Before seeing the results, the lender sets −1 and +1 percentage points as the limits of a negligible effect for this exercise.
+
+Suppose the study identifies that average effect and gives an unbiased, normally distributed estimate with a known standard error. The estimate is 0.10 percentage points and the standard error is 0.02 percentage points. Look at the 95% confidence interval. Does it exclude zero? How far do its endpoints lie from the lender's limits?
 
 ```text
 0.10 ± 1.96 × 0.02 = [0.0608, 0.1392] percentage points
 ```
 
-The interval excludes zero. If a defensible negligibility region had been set at −1 to +1 percentage points, this same estimate could also support equivalence under the compatible TOST procedure. Standard TOST at 5% uses a 90% interval; calculate that interval separately rather than silently substituting 95%. The margin must be justified before it becomes an economic conclusion. The [interval and equivalence exercise](exercises/02-intervals-equivalence.md) develops the comparison, and the [checked mathematical examples](wiki/evidence/mathematical-checks.md) record the underlying assumptions.
+The 95% interval excludes zero, so the two-sided 5% test rejects a zero effect. To test practical equivalence at 5%, check each of the lender's limits with a one-sided test. Those tests use the two endpoints of the central 90% interval, [0.0671, 0.1329] percentage points. Both endpoints lie strictly inside the limits, so the data also support practical equivalence for this margin.
+
+Now keep the estimate and the lender's limits fixed, and raise the standard error to 0.10 percentage points. Before you calculate, predict which conclusion changes. Then calculate both intervals and explain what the wider intervals tell you about the evidence.
+
+<details>
+<summary>Check your reasoning</summary>
+
+The 95% interval widens to [−0.0960, 0.2960] percentage points and now includes zero. The 90% interval widens to [−0.0645, 0.2645] percentage points and still fits inside the fixed limits. The test against zero no longer rejects at 5%. The equivalence test still supports the conclusion that the effect is within the limits.
+
+</details>
 
 Write three sentences:
 
-1. What magnitude would matter, and to whom?
-2. What does this estimate and uncertainty model support?
-3. What additional information would you need before choosing an action?
+1. What would make the lender's margin of one percentage point defensible?
+2. What does each version of the study tell you about the size of the effect?
+3. What would you need to know about programme costs and losses from default before recommending a decision?
 
-Do not add a policy or trading recommendation to this deliberately incomplete example.
+Try the [interval and equivalence exercise](exercises/02-intervals-equivalence.md) next, or see the [checked mathematical examples](wiki/evidence/mathematical-checks.md) for the assumptions behind these calculations.
 
 ## Your first study session
 
