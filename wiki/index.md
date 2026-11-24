@@ -1,49 +1,53 @@
-# Research wiki
+# Statistical and economic significance wiki
 
-**Status: final AER source follow-up, bounded coding audit, direct book excerpts, full 2008 exchange reading and targeted 2024–2026 update, 24 October 2026.** Source claims are attributed accounts of consulted material. Project interpretations and open questions are not verified findings.
+A lender estimates that a programme cuts defaults by just over one percentage point. Is that enough to call the effect economically important? What else would you need to know before the lender adopts the programme? Work through the example in [Economic significance](concepts/economic-significance.md).
 
-This is a local, interconnected Markdown knowledge base: source records feed paper notes; paper notes connect to concepts and claims; disagreements and synthesis link back to those evidence trails. It uses ordinary links so it remains readable without a particular wiki application. It is a practical interpretation of a Karpathy-style research wiki, not a claim to implement a formally specified system.
-
-## Read the argument
-
-[Research question and scope](../README.md) → [taxonomy](../planning/literature-taxonomy.md) → [competing positions](disagreements/methodological-positions.md) → [critical synthesis](../synthesis/critical-synthesis.md) → [review and revisions](../reviews/2026-10-24-synthesis-review.md) → [critical-review gate](../reviews/review-gate.md).
-
-[2008 exchange ledger](disagreements/2008-exchange.md) · [Contemporary update](../sources/update-2024-2026.md) · [Equivalence audit](disagreements/equivalence-audit.md) · [Checked mathematical examples](evidence/mathematical-checks.md).
-
-[Book and access ledger](evidence/cult-2008-reading.md) · [Coding audit](evidence/aer-coding-audit.md) · [Darby/Woodbury–Spiegelman](evidence/aer-darby-woodbury.md) · [Three further AER cases](evidence/aer-macro-finance-addiction.md) · [2012 lecture](evidence/ziliak-2012-lecture.md) · [New review](../reviews/2026-10-24-book-aer-review.md).
-
-[Final Darby](evidence/darby-final-followup.md) · [Final Bernheim–Wantz](evidence/bernheim-wantz-final-followup.md) · [Final JSE version check](evidence/jse-2004-version-check.md) · [Expanded-matrix search](evidence/expanded-matrix-followup.md) · [Latest source review](../reviews/2026-10-24-final-source-review.md).
-
-**Learning extension, 23 November 2026:** [Simulation labs](../simulations/README.md) · [Simulation evidence boundary](evidence/simulation-labs.md) · [Implementation review](../reviews/2026-11-23-simulation-review.md). Synthetic experiments do not change the source-reading status above or reopen the slide gate.
+Start with the [course overview](../README.md), try the [quick start](../QUICKSTART.md) or choose a question below. When you want to check an argument, follow its links to the paper notes. Each paper note records the version and passages consulted. A **source claim** reports what an author says. A **project interpretation** explains how the project understands the evidence. An **open question** identifies a judgement still to be made, and an **illustration** works through an example under stated assumptions.
 
 ## Concepts
 
-- [Economic significance: magnitude, evidence and action](concepts/economic-significance.md)
-- [Statistical inference and p-values](concepts/statistical-inference.md)
-- [Confidence intervals and their interpretation](concepts/intervals.md)
-- [Power, selection and magnitude errors](concepts/power-selection.md)
-- [Equivalence and meaningful margins](concepts/equivalence.md)
-- [Decisions under uncertainty](concepts/decisions.md)
-- [Identification and transportability](concepts/identification.md)
-- [Finance applications and replication](concepts/finance.md)
-- [Uncertainty beyond sampling](concepts/uncertainty-beyond-sampling.md)
+| Question | Read |
+|---|---|
+| How big would an effect have to be to matter? | [Economic significance](concepts/economic-significance.md) |
+| What does the p-value tell me about this result? | [Statistical inference and p-values](concepts/statistical-inference.md) |
+| How should I interpret the range given by an interval? | [Confidence intervals](concepts/intervals.md) |
+| What evidence would support calling the effect negligible? | [Equivalence and meaningful margins](concepts/equivalence.md) |
+| Why might published estimates exaggerate effects? | [Power, selection and magnitude errors](concepts/power-selection.md) |
+| Does this study estimate the effect I care about in the population I care about? | [Identification and transportability](concepts/identification.md) |
+| Would a return predictor survive replication and trading costs? | [Finance applications and replication](concepts/finance.md) |
+| What might the standard error leave out? | [Uncertainty beyond sampling](concepts/uncertainty-beyond-sampling.md) |
+| How can I choose an action while the effect is still uncertain? | [Decisions under uncertainty](concepts/decisions.md) |
 
-- [Auditing research practice](concepts/auditing-research-practice.md)
+Try these ideas in the [simulation labs](../simulations/README.md) or work through a calculation in the [checked mathematical examples](evidence/mathematical-checks.md). The [simulation evidence note](evidence/simulation-labs.md) and [implementation review](../reviews/2026-11-23-simulation-review.md) document what the synthetic results establish under the lab assumptions.
 
 ## Claims to examine
 
-- [C001: In what sense can economic significance be independent of inference?](claims/C001-independence.md)
-- [C002: Can action be rational without rejecting a zero null?](claims/C002-action-without-rejection.md)
-- [C003: Does non-significance establish negligibility?](claims/C003-equivalence.md)
-- [C004: Does evidence of misuse invalidate testing?](claims/C004-practice-and-validity.md)
-- [C005: Abandon, tighten or retain thresholds?](claims/C005-threshold-reforms.md)
-- [C006: Is a large estimate enough?](claims/C006-noisy-magnitudes.md)
-- [C007: Do intervals solve the problem?](claims/C007-intervals.md)
-- [C008: Is the finance replication diagnosis settled?](claims/C008-finance-replication.md)
-- [C009: Is precision enough for economic relevance?](claims/C009-identification.md)
-- [C010: Does replacing p-values supply a complete answer?](claims/C010-uncertainty-and-choice.md)
-- [C011: When does meaningful-effect certification entail rejecting zero?](claims/C011-nested-meaningful-tests.md)
+- [Can we establish economic significance independently of inference?](claims/C001-independence.md)
+- [Can it be rational to act without rejecting a zero effect?](claims/C002-action-without-rejection.md)
+- [When does failing to reject zero leave room for a large effect?](claims/C003-equivalence.md)
+- [What does evidence of misuse tell us about the validity of a method?](claims/C004-practice-and-validity.md)
+- [When should we abandon, tighten or retain significance thresholds?](claims/C005-threshold-reforms.md)
+- [How much can we learn from a large point estimate?](claims/C006-noisy-magnitudes.md)
+- [Which problems can confidence intervals solve?](claims/C007-intervals.md)
+- [Why do finance replication studies reach different conclusions?](claims/C008-finance-replication.md)
+- [Is a precise estimate enough to establish economic relevance?](claims/C009-identification.md)
+- [What would still need to be settled if we replaced p-values?](claims/C010-uncertainty-and-choice.md)
+- [When does evidence of a worthwhile effect also rule out zero?](claims/C011-nested-meaningful-tests.md)
 
-## Evidence and maintenance
+Read the [competing positions](disagreements/methodological-positions.md) and the [critical synthesis](../synthesis/critical-synthesis.md) for the arguments across these questions. The [synthesis review](../reviews/2026-10-24-synthesis-review.md) records objections and revisions.
 
-[Paper notes](papers/index.md) · [Literature catalogue](../sources/literature-map.md) · [Source registry](../sources/registry.json) · [Search and exclusion log](../sources/search-log.md) · [Research log](../planning/research-log.md) · [Standards](../AGENTS.md).
+## Evidence and research records
+
+- **Find and check a paper.** Use the [paper notes](papers/index.md), [literature catalogue](../sources/literature-map.md) and [source registry](../sources/registry.json). The [literature taxonomy](../planning/literature-taxonomy.md), [2024–2026 update](../sources/update-2024-2026.md) and [search log](../sources/search-log.md) explain what the project sought and found.
+- **Examine a disagreement.** Compare the arguments in the [2008 exchange](disagreements/2008-exchange.md) or see how a proposed equivalence test was checked in the [equivalence audit](disagreements/equivalence-audit.md).
+- **Trace a research decision.** Consult the [research log](../planning/research-log.md), [research standards](../AGENTS.md), [status and limits](../STATUS.md) or [review gate](../reviews/review-gate.md).
+
+<details>
+<summary>Historical case study and source audits</summary>
+
+- [Auditing research practice](concepts/auditing-research-practice.md), [book reading and access record](evidence/cult-2008-reading.md), [coding audit](evidence/aer-coding-audit.md) and [expanded survey data search](evidence/expanded-matrix-followup.md).
+- [Darby and Woodbury–Spiegelman](evidence/aer-darby-woodbury.md), [three further AER cases](evidence/aer-macro-finance-addiction.md) and [2012 lecture](evidence/ziliak-2012-lecture.md).
+- [Darby final article](evidence/darby-final-followup.md), [Bernheim–Wantz final article](evidence/bernheim-wantz-final-followup.md) and [2004 article version check](evidence/jse-2004-version-check.md).
+- [Book and AER review](../reviews/2026-10-24-book-aer-review.md) and [final source review](../reviews/2026-10-24-final-source-review.md).
+
+</details>
