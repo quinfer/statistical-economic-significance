@@ -16,8 +16,8 @@ Start with the [quick start](QUICKSTART.md), follow the [five core modules](CURR
 
 | Background | Start here | Focus |
 |---|---|---|
-| Economics or finance | [Quick start](QUICKSTART.md), modules 1–2 | Units, intervals and hand-checking calculations |
-| Statistics or programming | [Learning map](resources/learning-map.md), modules 1 and 4 | Estimands, identification and costs |
+| Economics or Finance | [Quick start](QUICKSTART.md), modules 1–2 | Units, intervals and hand-checking calculations |
+| Statistics or Computer Science | [Learning map](resources/learning-map.md), modules 1 and 4 | Estimands, identification and costs |
 
 ## Five core modules
 
