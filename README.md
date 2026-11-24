@@ -1,65 +1,39 @@
 # Statistical and Economic Significance
 
-A PhD learning resource on applied statistics and econometrics for economics and finance. Learn to distinguish **how large an effect is, what the evidence supports, and what action is justified**.
+A PhD self-study resource in applied statistics and econometrics for economics and finance. Start with a practical question. If an estimated effect clears an economic benchmark, what would you need before reporting that the true effect is worthwhile or recommending action?
 
-Start with the [quick start](QUICKSTART.md), follow the [five core modules](CURRICULUM.md), and use the [annotated readings](papers/essential-readings.md) alongside the [exercises](exercises/README.md). The structure follows [Quantitative Finance Foundations](https://github.com/quinfer/quantitative-finance-foundations), adapted for self-study in statistical methods.
+## Start here
 
-## What you will learn
+1. **Work through one result.** Check a lender’s confidence interval, change one input and explain which conclusion changes. [Quick start](QUICKSTART.md)
+2. **Follow the five modules.** Each takes you from a chapter section to a concept or source in the wiki and then to a calculation or argument of your own. [Curriculum](CURRICULUM.md)
+3. **Check your reasoning.** Attempt the task before opening its worked solution. Compare the assumptions and interpretation as well as the arithmetic. [Exercises](exercises/README.md) · [Simulation labs and solutions](simulations/README.md)
 
-- Define an estimand and an economic benchmark, with units, population, horizon and costs.
-- Interpret estimates, confidence intervals and hypothesis tests under their assumptions. Use equivalence tests when the question is practical negligibility.
-- Evaluate what a design can detect and how selecting results affects estimated signs and magnitudes.
-- Distinguish sampling uncertainty from identification, selection and implementation risks in finance.
-- Defend a decision under stated priors and losses, including evidence that would change the conclusion.
+The [critical synthesis chapter](synthesis/critical-synthesis.md) develops the argument from defining a worthwhile effect to choosing an action under uncertainty. Use the [wiki](wiki/index.md) when you need to unpack a method or trace a claim to the passages consulted in a paper note. The [annotated readings](papers/essential-readings.md) and [learning map](resources/learning-map.md) help you find more material for a particular question.
 
-## Choose your starting point
+## What you will do
 
-| Background | Start here | Focus |
-|---|---|---|
-| Economics or Finance | [Quick start](QUICKSTART.md), modules 1–2 | Units, intervals and hand-checking calculations |
-| Statistics or Computer Science | [Learning map](resources/learning-map.md), modules 1 and 4 | Estimands, identification and costs |
+| Module | What you will practise |
+|---|---|
+| [1. Magnitude, evidence and action](CURRICULUM.md#module-1-magnitude-evidence-and-action) | State what you want to estimate, what would count as a worthwhile effect, and what evidence a decision would need. |
+| [2. Intervals and equivalence](CURRICULUM.md#module-2-intervals-meaningful-thresholds-and-equivalence) | Explain when an interval supports negligibility and when the estimate is too imprecise to decide. |
+| [3. Power and selection](CURRICULUM.md#module-3-power-selection-and-noisy-magnitudes) | Compare what a design can detect with what a reader sees after results pass a reporting screen. |
+| [4. Finance and identification](CURRICULUM.md#module-4-finance-identification-and-analysis-choices) | Work from gross alpha to net alpha, and assess assumptions that precision alone leaves unresolved. |
+| [5. Decisions under uncertainty](CURRICULUM.md#module-5-decisions-under-uncertainty-and-the-capstone) | Write a decision memo and specify which evidence, priors or costs would change your recommendation. |
 
-## Five core modules
+## Use the calculations
 
-| Module | Central question | Deliverable |
-|---|---|---|
-| 1. Magnitude, evidence, action | Which judgement are we making? | Estimand and benchmark sheet |
-| 2. Intervals and equivalence | Which relevant alternatives remain compatible? | Four-case interpretation table |
-| 3. Power and selection | What happens when noisy results are selected? | Design and selection critique |
-| 4. Finance and identification | What survives costs and assumptions? | Alpha interpretation and robustness plan |
-| 5. Decisions under uncertainty | Which action follows under which losses? | Adversarial decision memo |
-
-The [curriculum](CURRICULUM.md) supplies prerequisites, readings, tasks and readiness checks. The [three simulation labs](simulations/README.md) cover power, selection and decisions under uncertainty. Each has exercises, worked solutions and a reproducible reference run.
-
-## Run the examples
-
-Python 3.10 or later; no third-party packages are needed. From the repository root:
-
-```sh
-python3 implementations/worked_examples.py
-python3 simulations/run_labs.py --lab all --replications 50000 --seed 20261123
-python3 scripts/check_all.py
-```
-
-The [worked examples](implementations/README.md) use **synthetic inputs and deterministic normal-model calculations**. The [simulation labs](simulations/README.md) add random replications with fixed seeds, analytic benchmarks and reported Monte Carlo error. Neither is evidence about actual policies or markets. Every lab states its assumptions, target and limitations.
+Begin by hand, or run the [deterministic worked examples](implementations/README.md) with Python 3.10 or later and its standard library. When you reach Module 3, use the seeded simulations to compare probabilities and expectations with their exact benchmarks. The calculations use synthetic inputs under stated models. The labs report Monte Carlo error for the simulated results. [Setup and first run](QUICKSTART.md#get-the-repository-and-run-the-examples) · [Simulation guide](simulations/README.md)
 
 ## Follow a claim to its evidence
 
-The [wiki](wiki/index.md) connects paper notes, concepts, claims, disagreements and evidence ledgers. Notes distinguish **Source claim**, **Project interpretation**, **Open question** and **Illustration**. Attribution records what an author says; it does not settle whether the author is right.
+The wiki labels attributed statements **Source claim** and the project’s reasoning **Project interpretation**. It also marks synthetic examples as **Illustration** and unresolved judgements as **Open question**. Check the paper note for the version, locator and reading depth. [Source catalogue](sources/literature-map.md) · [BibTeX](sources/references.bib) · [Targeted 2024–2026 update](sources/update-2024-2026.md)
 
-| Resource | Purpose |
-|---|---|
-| [Source catalogue](sources/literature-map.md) and [BibTeX](sources/references.bib) | Verified identity, version and reading/access limits |
-| [Critical synthesis](synthesis/critical-synthesis.md) | Empirical support versus action, with objections and counterexamples |
-| [2024–2026 update](sources/update-2024-2026.md) | Targeted search recorded on 24 October 2026; not exhaustive coverage |
-| [Optional case study](CURRICULUM.md#optional-case-study-the-2008-debate) | Compare McCloskey and Ziliak’s critique with Hoover and Siegler’s response and audit a disputed claim |
-| [Status and limits](STATUS.md) | Research coverage, outstanding evidence gaps and the closed slide gate |
-| [Review gate](reviews/review-gate.md) | Review decisions and evidence needed before developing slides |
+The 2008 exchange is an optional case study in evaluating methodological disagreements. It pairs McCloskey and Ziliak’s critique with Hoover and Siegler’s response and gives you a way to audit one disputed claim. [Optional case study](CURRICULUM.md#optional-case-study-the-2008-debate)
 
-The organising question is **how should an empirical researcher estimate and communicate an economically meaningful effect, and what evidence and assumptions justify acting on it?**
+The **slide gate is closed**. The project status records the remaining research and review work. [Status and limits](STATUS.md) · [Review gate](reviews/review-gate.md)
 
 ## Contribute and cite
 
-Read [CONTRIBUTING.md](CONTRIBUTING.md) and [AGENTS.md](AGENTS.md). Corrections with locators, rival arguments and exercises that expose assumptions are welcome. AI assistance and review limits are recorded in [PROVENANCE.md](PROVENANCE.md).
+Barry Quinn maintains this repository. The self-study structure draws on Quantitative Finance Foundations. Corrections with locators, rival interpretations and exercises that test assumptions are welcome. [Quantitative Finance Foundations](https://github.com/quinfer/quantitative-finance-foundations) · [Contributing guide](CONTRIBUTING.md) · [Research standards](AGENTS.md) · [Provenance](PROVENANCE.md)
 
-Maintained by **Barry Quinn**. Cite the repository with its commit and access date using [CITATION.cff](CITATION.cff); cite underlying papers for substantive claims. Original writing is [CC BY 4.0](LICENSE); original software is [MIT licensed](LICENSE-CODE). Third-party works retain their own rights; their full texts are linked rather than redistributed.
+Cite the repository with its commit and access date, and cite the original papers for substantive source claims. Original writing is CC BY 4.0 and original software is MIT licensed. Third-party works retain their own rights. [Citation details](CITATION.cff) · [Writing licence](LICENSE) · [Code licence](LICENSE-CODE)
