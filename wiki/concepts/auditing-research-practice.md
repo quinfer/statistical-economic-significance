@@ -1,30 +1,34 @@
 # Auditing claims about research practice
 
-**Status:** project methodological framework, informed by the [AER coding audit](../evidence/aer-coding-audit.md) and [direct book reading](../evidence/cult-2008-reading.md). A faithful aggregation of codes is distinct from a valid measure of scientific practice.
+The original 1990s *American Economic Review* coding sheet records 137 papers. Eleven are coded as mentioning power, and five of those receive a positive code for discussing a power function. If you report that five papers met the second criterion, which denominator would you use? [Coding audit and question definitions](../evidence/aer-coding-audit.md)
 
-## The evidence chain
+**Project interpretation.** Use 5/11 to describe the papers that mention power and 5/137 to describe all coded papers. Each answers a different question. Before interpreting either fraction, check what qualified as a mention, what counted as a positive power-function code and how inapplicable entries were scored. The printed conditional denominator for the 1980s survey has an unresolved discrepancy. Check the records before extending the comparison across decades. [Denominator check](../evidence/aer-coding-audit.md)
 
-| Layer | Necessary question | AER illustration |
+## What does it take to audit a survey of papers?
+
+**Project framework.** Choose a claim and try to trace it from the percentage back to the passages that warranted the underlying scores. The choices made along the way determine what the survey can tell you.
+
+| Check | Question to ask | AER example from the audit |
 |---|---|---|
-| Universe | Which articles, dates and designs qualify? | Original 182/137 surveys and revised 182/187 book corpus differ. An omission claim needs an article-level inclusion crosswalk. |
-| Provenance | Whose scores are these, and which version? | Hoover's hosted sheets attribute scores to Ziliak; reproducing them is not independent coding. |
-| Unit | Does each row represent a paper, author or coefficient? | The 1980s file has 281 author–paper entries; the 1990s file has 137 paper rows. |
-| Construct | What behaviour is being measured? | Discussing size, selecting coefficients and interpreting a test are separate questions. |
-| Coding | Which passage supports each response? | A negative simulation item can depend on how simulation inputs were screened. A table title alone does not disclose the whole rule. |
-| Reliability | Would independent readers apply the rule similarly? | No coder-by-coder data or agreement estimate was recovered in this audit. |
-| Arithmetic | Do totals, denominators and percentages agree? | The earlier 82% and a cross-tabulation reproduce, while other printed values conflict with supplied material. |
-| Generalisation | What population and conclusion do the codes support? | A finite journal census does not establish a universal rate of confusion or causal harm. |
+| Coverage | Which articles, dates and designs qualify? | The original surveys report 182 and 137 papers respectively. The book retains the 1980s count and expands the reported 1990s count to 187. Testing an omission claim requires matching article lists across versions. |
+| Provenance | Who supplied the scores, and which version are we using? | Hoover’s hosted sheets attribute the scores to Ziliak. Reproducing the totals uses those scores. Independent recoding would require readers to apply the rules to the articles. |
+| Unit | What does each row represent? | The 1980s file has 281 author–paper entries. The earlier 1990s file has 137 paper rows. |
+| Meaning | Which behaviour does the question capture? | Discussing effect size, selecting coefficients and interpreting a test are different practices. |
+| Coding | Which passage or decision supports the code? | A negative code for the simulation question can depend on how coefficients were selected. Read the screening rule alongside any table. |
+| Reliability | Would other readers apply the rule similarly? | Coder-by-coder records and an agreement estimate remain unrecovered in this audit. |
+| Arithmetic | Can you reproduce the count and the denominator? | About 82% of the original 137 papers receive the adverse Q16 code. The associated cross-tabulation reproduces, and some other printed values differ from the available data. |
+| Generalisation | Which population and claim do those codes speak to? | A census of a journal for specified years supports descriptions within that frame, subject to the quality of the codes. A broader rate or causal claim about harm needs additional evidence. |
 
-**Project interpretation.** Disagreement may arise at any layer. The code's validity is not established because its arithmetic reproduces. A disputed description of one purposively selected paper can refute a universal accusation, but cannot estimate prevalence. Conversely, a paper's thoughtful magnitude analysis does not acquit every use of significance elsewhere in it.
+Historical counts and comparisons are documented in the [AER coding audit](../evidence/aer-coding-audit.md) and [selected book passages](../evidence/cult-2008-reading.md).
 
-Conditional denominators deserve explicit treatment. In the original 1990s sheet, five papers receive a positive power-function code among eleven mentioning power: 5/11 and 5/137 answer different questions. The printed 1980s conditional denominator has its own unresolved discrepancy. Missing or inapplicable responses must not silently become evidence of bad practice; a row total above the instrument's maximum requires explanation before interpretation.
+**Project interpretation.** Reproducing a total checks the arithmetic. Judging whether the total measures sound practice requires a defensible rule and evidence that readers applied it consistently. One selected counterexample can overturn a universal claim. Estimating prevalence requires a design for the population you want to describe. A paper can discuss magnitudes well in one section and make an unjustified inference elsewhere. [Practice versus validity](../claims/C004-practice-and-validity.md) · [Economic significance](economic-significance.md)
 
-**Project derivation — why margins cannot recover missing codes.** An item percentage constrains a column total, not the identities of positive papers or its overlap with other items. Many binary matrices can share the same column totals. A known earlier matrix does not solve the problem if retained papers could be recoded, inclusion rules or denominators could change, or new cases lack an identified crosswalk. Consequently, the book's 187-paper percentages cannot supply the missing 50 rows by subtraction. The [expanded-matrix search](../evidence/expanded-matrix-followup.md) preserves that limit.
+## What can you reconstruct from published totals?
 
-Version control also changes the substantive audit. The [final 2004 table check](../evidence/jse-2004-version-check.md) shows that an EJW error in 1980s Q7 is absent from final JSE, while Q14/Q15 still disagree with the supplied matrix. Repeated figures across versions are not independent coding confirmations; a consistent figure in one version does not silently amend an earlier publication or identify the source of another discrepancy.
+**Illustration.** Four papers are scored on two questions, with two yes responses to each. The same two papers could score yes on both questions, or each question could have yes responses from a different pair. The item totals are identical. The joint pattern changes completely.
 
-A future independent recoding should preserve the original rubric for replication and separately specify any revised rubric. Predefine the article universe and eligibility rules; record passage-level reasons; distinguish missing information from negative evidence; use independently coded overlapping samples and adjudicate disagreement; report sensitivity to item weights and alternative defensible interpretations. No reliability threshold or sample size is prescribed here without a design justification.
+**Project interpretation.** Published percentages constrain the total for each item. Recovering the codes for the 50 additional articles in the book’s expanded corpus requires article-level records. Subtracting earlier totals would already assume that coverage, applicability and the codes for retained papers carried over. Even with those assumptions, the differences would give sums and leave the identities and joint responses unresolved. Keep versions explicit. The checked final JSE tables give a different 1980s Q7 figure from EJW, while the Q14/Q15 discrepancies with the supplied matrix persist. Repeated figures may come from common coding, and the origin of the remaining discrepancies is unresolved. [Expanded matrix search](../evidence/expanded-matrix-followup.md) · [Final 2004 table check](../evidence/jse-2004-version-check.md)
 
-**Open question:** Would the diagnosis survive when “confusion” is operationalised narrowly as an invalid inference about an economic magnitude, rather than an equally weighted sum of reporting, interpretation and presentation practices? The existing arithmetic audit cannot answer that question.
+**Open question.** How would you measure confusion if your target were specifically invalid inference about an economic magnitude? Try coding one passage under the original rubric and under your proposed rule. For a larger audit, set eligibility rules, record reasons at passage level, distinguish missing information from adverse evidence, and explain any row total above the instrument’s maximum. Code an overlapping sample independently, adjudicate disagreements and examine sensitivity to item weights. Justify the sample and reliability criteria for your proposed design. [Source audit exercise](../../exercises/04-aer-source-audit.md) · [Uncertainty beyond sampling](uncertainty-beyond-sampling.md)
 
-[Practice versus validity](../claims/C004-practice-and-validity.md) · [Economic significance](economic-significance.md) · [Uncertainty beyond sampling](uncertainty-beyond-sampling.md) · [Wiki home](../index.md)
+[Wiki home](../index.md)

@@ -1,9 +1,18 @@
 # Statistical inference and p-values
 
-**Conceptual definition, to be retained with assumptions.** A p-value compares an observed test statistic with its reference distribution under the specified null and modelling assumptions. It is not the probability that the null is true, a measure of effect magnitude, or a realised probability of having made a Type I error. The nominal alpha level describes a procedure's error control under relevant conditions.
+**Illustration.** Two studies each estimate a reduction of 0.10 percentage points in the one-year default rate among eligible borrowers. In the first study the standard error is 0.02 percentage points. In the second it is 0.10. Which study gives stronger evidence against zero, and what has changed about the estimated size of the effect?
 
-The [ASA statement](../papers/wasserstein-lazar-2016.md) and [Greenland et al.](../papers/greenland-et-al-2016.md) supply the initial interpretive evidence. Full reading of the statement's six principles remains on the reading queue. Inference also includes estimation, confidence procedures, Bayesian updating and other uncertainty arguments; rejecting a significance convention does not reject this whole category.
+Assume each study identifies the target effect and gives an unbiased normal estimate with known standard error. For a test of zero, divide the estimate by its standard error. If the null holds, this test statistic has a standard normal distribution. The first estimate is five standard errors from zero and the second is one. The two-sided p-values are about 0.00000057 and 0.32. A shift in precision can therefore change the p-value substantially even when both studies report the same reduction. [Related worked example](../../QUICKSTART.md#check-one-result-by-hand)
 
-**Project interpretation:** select a summary that answers the question. A scientific test, magnitude estimate and policy choice have different targets. [Imbens](../papers/imbens-2021.md) is an especially relevant economics anchor, currently read at abstract level.
+## What probability are you calculating?
 
-[C005: competing reforms](../claims/C005-threshold-reforms.md) · [C001](../claims/C001-independence.md) · [Intervals](intervals.md) · [Wiki home](../index.md).
+**Project interpretation.** Specify the null, the model and what counts as an outcome at least as extreme as the one you observed. Here the calculation asks how often the test statistic would be at least as far from zero in either direction if the null and model held. A posterior probability would reverse the direction of the conditioning and require a probability model for the unknown effect. The nominal level, such as 5%, concerns how often a test rejects under the null in repeated use under its assumptions. It gives no case-specific probability that a rejection was a mistake. [Confidence intervals](intervals.md)
+
+**Open question.** Suppose the lender requires a reduction of one percentage point to call the programme worthwhile. Which of these p-values bears directly on that benchmark? Write down the hypothesis and the estimate and interval you would report to answer the economic question. Statistical inference also includes estimation, confidence procedures and Bayesian updating. A policy choice additionally needs an account of consequences. [Economic significance and inference](../claims/C001-independence.md) · [Competing threshold proposals](../claims/C005-threshold-reforms.md)
+
+## Evidence and further reading
+
+- **Source claim.** The ASA statement and Greenland et al. explain how to interpret p-values under model assumptions. The ASA note draws on selected passages, with a full reading of the six principles still pending. [ASA statement](../papers/wasserstein-lazar-2016.md) · [Greenland et al.](../papers/greenland-et-al-2016.md)
+- **Source claim.** Imbens distinguishes tasks for reporting statistical uncertainty in applied economics. The project consulted the abstract. [Imbens](../papers/imbens-2021.md)
+
+[Wiki home](../index.md)

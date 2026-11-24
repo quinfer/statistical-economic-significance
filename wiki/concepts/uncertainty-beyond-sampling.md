@@ -1,17 +1,26 @@
 # Uncertainty beyond sampling
 
-**Project taxonomy.** A conventional sampling standard error describes uncertainty under an observation model and analysis. It is not a complete inventory of reasons an economic claim may fail.
+**Illustration.** Two analysts use the same monthly returns to assess a hypothetical strategy. One adjusts for the market. The other also adjusts for size and value factors. Both report tight standard errors, but they disagree about whether the strategy earns a positive alpha. Before deciding which result to report, ask what payoff each model is trying to measure.
 
-| Source of uncertainty | Question | What narrower precision does not solve |
+## What would resolve the disagreement?
+
+**Project interpretation.** A sampling standard error describes how an estimate varies when the sampling process repeats under the stated model and analysis. In the strategy example, a longer return history might narrow both standard errors while the two intercepts remain different. Adjusting for different risks can change what counts as a return unexplained by the model. Compare the assumptions and the targets before combining or ranking the estimates. [Finance applications](finance.md)
+
+| Issue | Question to ask | What to inspect |
 |---|---|---|
-| Sampling | How variable is the estimator under the stated process? | Wrong model, selection or wrong target |
-| Analysis choices | How do defensible implementations change the result? | Whether all implementations target the same quantity |
-| Identification | Which causal/welfare states fit the observable information? | Unidentified counterfactuals |
-| Transportability | Does evidence apply to the target population and setting? | External validity through sample size alone |
-| Values and costs | Which consequences count, for whom and at what price? | Disagreement about objectives |
+| Sampling | How much would the estimate vary in repeated samples? | The sampling process, such as dependence across months |
+| Analysis choices | How sensitive is the estimate to defensible choices? | The analysis steps and the quantity each version estimates |
+| Identification | Which effects are consistent with the data and assumptions? | The assumptions linking observable returns to the effect or payoff of interest |
+| Transportability | Would the result carry over to the proposed trading regime? | Differences in markets, investors, scale and implementation |
+| Values and costs | Which gains and risks matter to the investor? | Trading costs, constraints and the investor’s preferences |
 
-**Source trail:** [Menkveld et al. 2024](../papers/menkveld-etal-2024-nonstandard-errors.md), selected sections, addresses analysts using common data; [Aradillas Fernández et al. 2026](../papers/aradillas-fernandez-etal-2026-robust-bayes.md), framework and conclusion, addresses partial identification and multiple-prior decisions; [Deaton–Cartwright](../papers/deaton-cartwright-2018-rcts.md), selected passages, motivates the transportability distinction. These sources do not jointly estimate a universal uncertainty decomposition.
+Some of these questions concern different targets or disagreements about objectives. Adding variances as if the sources were independent would require a model that justifies treating them as random and independent. Agreement across specifications can be useful once you justify the range of specifications and show that their assumptions bear on the claim. Causal identification still needs its own argument. [Identification](identification.md) · [Uncertainty and choice](../claims/C010-uncertainty-and-choice.md)
 
-**Project caution:** do not sum these rows as independent variances. Some concern a different estimand; others concern unidentified sets or normative disagreement rather than random error. Robustness across several arbitrary specifications is also not proof of causal identification. Justify the specification set and distinguish learning about an effect from assessing a decision.
+**Open question.** Give one reason to use each factor model in the example. Which conclusion could both support? Which would still depend on trading costs even if the estimates agreed? [Critical synthesis](../../synthesis/critical-synthesis.md)
 
-[C010](../claims/C010-uncertainty-and-choice.md) · [Finance](finance.md) · [Identification](identification.md) · [Synthesis](../../synthesis/critical-synthesis.md) · [Wiki home](../index.md).
+## Evidence and further reading
+
+- **Source claim.** Menkveld et al. examine analyst variation on common data. The project consulted selected sections. [Menkveld et al.](../papers/menkveld-etal-2024-nonstandard-errors.md)
+- **Source claim.** Aradillas Fernández et al. consider partial identification and decisions with multiple priors in the framework and conclusion consulted here. Selected passages in Deaton and Cartwright motivate checking whether a study result applies elsewhere. Each source addresses a specific part of the diagnosis. [Aradillas Fernández et al.](../papers/aradillas-fernandez-etal-2026-robust-bayes.md) · [Deaton and Cartwright](../papers/deaton-cartwright-2018-rcts.md)
+
+[Wiki home](../index.md)
