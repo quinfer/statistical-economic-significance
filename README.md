@@ -4,7 +4,9 @@ A learning repository for PhD students in economics and finance: distinguish **h
 
 Start with the [quick start](QUICKSTART.md), follow the [six-module curriculum](CURRICULUM.md), and use the [annotated readings](papers/essential-readings.md) alongside the [exercises](exercises/README.md). The structure follows [Quantitative Finance Foundations](https://github.com/quinfer/quantitative-finance-foundations), adapted to a research-led methodological course.
 
-**An evolving learning and research resource.** There are 35 core works with verified identities, an interconnected evidence wiki, a conditional synthesis, six guided exercises and reproducible analytical examples. Reading depth varies. The expanded 187-paper AER coding matrix remains unrecovered, and the book has only been read in selected passages. **The slide gate is closed; no deck has been generated.** See [status and limits](STATUS.md).
+**An evolving learning and research resource.** There are 35 core works with verified identities, an interconnected evidence wiki, a conditional synthesis, six guided exercises and reproducible analytical examples. Reading depth varies. **The slide gate is closed.** See [status and limits](STATUS.md).
+
+**Historical audit.** We read printed pp. 57–61 and 74–85 of Ziliak and McCloskey’s *The Cult of Statistical Significance* (2008), including its revised survey table. The recovered coding sheet lets us reproduce the earlier 137-paper result for Question 16. To reproduce the book’s revised result from its underlying scores, we still need the article list and scores for the expanded 187-paper survey. [Book reading ledger](wiki/evidence/cult-2008-reading.md) · [AER coding audit](wiki/evidence/aer-coding-audit.md) · [Search for the expanded data](wiki/evidence/expanded-matrix-followup.md).
 
 ## What you will learn
 

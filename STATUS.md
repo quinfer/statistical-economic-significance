@@ -1,6 +1,6 @@
 # Status and limits
 
-**Learning conversion: 23 November 2026. Latest recorded literature search and source-audit milestone: 24 October 2026.** Reorganisation does not imply a new literature search or additional full-text reading.
+**Learning conversion: 23 November 2026. Latest literature and source-audit milestone: 24 October 2026.** A targeted book and dataset access check on 24 November did not extend reading coverage. See the [search log](sources/search-log.md).
 
 | Component | Available now | Remaining work |
 |---|---|---|
