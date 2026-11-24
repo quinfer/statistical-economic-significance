@@ -6,8 +6,8 @@
 |---|---|---|
 | Literature | 35 verified core identities; 11 supporting/version records; exact reading depths | Deepen incompletely read items; continue coverage checks |
 | Wiki | Paper, concept, claim and disagreement notes with evidence trails | Resolve contested interpretations and improve reciprocal links |
-| 2008 debate | Complete three-paper exchange ledgers; book pp. 57–61 and 74–85 | Read the rest of the book; no full-book review claimed |
-| AER audit | Supplied final Darby/Bernheim–Wantz readings; original 137-paper matrix arithmetic | Expanded 187-paper matrix unrecovered; independent full recoding not performed |
+| 2008 debate | Complete three-paper exchange ledgers and [book pp. 57–61 and 74–85](wiki/evidence/cult-2008-reading.md) | Read the rest of the book |
+| AER audit | Final Darby and Bernheim–Wantz articles checked. Recalculated totals from the original 137-paper scoring sheet. | Locate the expanded survey’s article list and scores. Check the remaining judgements against the original articles. |
 | Synthesis | Conditional argument, counterarguments and mathematical checks | Human scholarly review and unresolved empirical/coding questions |
 | Learning | Six modules, two entry routes, annotated readings and guided exercises | Classroom piloting and learner feedback |
 | Computation | Deterministic examples plus three seeded simulation labs, exercises, worked solutions, reference outputs and tests | Realistic dependence, endogenous selection, richer losses and empirical applications |
@@ -17,8 +17,8 @@ The [source review](reviews/2026-10-24-final-source-review.md), [learning review
 
 ## Keep these gaps visible
 
-1. The original 137-paper matrix and the expanded 187-paper survey are different objects. One cannot validate the other's percentages.
-2. Reproducing an aggregate does not validate article-level codes. Reporting a magnitude does not settle every question about selection or interpretation.
+1. Ziliak and McCloskey scored articles from the *American Economic Review* against 19 questions about statistical practice. The scoring sheet records their answers for each paper. We can reproduce the earlier 137-paper total for the question about treating statistical significance as decisive. The book reports a revised result for 187 papers, and we have yet to locate the underlying article list and scores. [Coding audit](wiki/evidence/aer-coding-audit.md) · [Expanded-data search](wiki/evidence/expanded-matrix-followup.md).
+2. Checking the arithmetic tests whether the published aggregate follows from the scores. Checking the scores themselves requires comparing the authors’ judgements with the articles.
 3. Final articles resolve access gaps without completing a reanalysis of underlying data.
 4. A non-significant result is not automatically negligible; a large estimate does not establish a consequential population effect.
 5. Action under a specified prior and loss function is not proof of a large effect. Confidence sets, Bayesian decisions, partial identification and robust decisions answer related but distinct questions.

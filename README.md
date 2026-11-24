@@ -4,10 +4,6 @@ A learning repository for PhD students in economics and finance: distinguish **h
 
 Start with the [quick start](QUICKSTART.md), follow the [six-module curriculum](CURRICULUM.md), and use the [annotated readings](papers/essential-readings.md) alongside the [exercises](exercises/README.md). The structure follows [Quantitative Finance Foundations](https://github.com/quinfer/quantitative-finance-foundations), adapted to a research-led methodological course.
 
-**An evolving learning and research resource.** There are 35 core works with verified identities, an interconnected evidence wiki, a conditional synthesis, six guided exercises and reproducible analytical examples. Reading depth varies. **The slide gate is closed.** See [status and limits](STATUS.md).
-
-**Historical audit.** We read printed pp. 57–61 and 74–85 of Ziliak and McCloskey’s *The Cult of Statistical Significance* (2008), including its revised survey table. The recovered coding sheet lets us reproduce the earlier 137-paper result for Question 16. To reproduce the book’s revised result from its underlying scores, we still need the article list and scores for the expanded 187-paper survey. [Book reading ledger](wiki/evidence/cult-2008-reading.md) · [AER coding audit](wiki/evidence/aer-coding-audit.md) · [Search for the expanded data](wiki/evidence/expanded-matrix-followup.md).
-
 ## What you will learn
 
 - Define an estimand and an economic benchmark, with units, population, horizon and costs.
@@ -59,9 +55,10 @@ The [wiki](wiki/index.md) connects paper notes, concepts, claims, disagreements 
 | [Source catalogue](sources/literature-map.md) and [BibTeX](sources/references.bib) | Verified identity, version and reading/access limits |
 | [Critical synthesis](synthesis/critical-synthesis.md) | Empirical support versus action, with objections and counterexamples |
 | [2024–2026 update](sources/update-2024-2026.md) | Targeted search recorded on 24 October 2026; not exhaustive coverage |
-| [Book ledger](wiki/evidence/cult-2008-reading.md) | Bounded reading of *The Cult of Statistical Significance* |
-| [AER supporting sources](sources/aer-audit/README.md) | Final papers, version comparisons and original 137-paper matrix |
-| [Review gate](reviews/review-gate.md) | Objections, revisions and continuing hold on slides |
+| [Book ledger](wiki/evidence/cult-2008-reading.md) | Pages read and evidence from *The Cult of Statistical Significance* |
+| [AER audit](sources/aer-audit/README.md) | Evidence behind disputed claims about how published papers used significance tests |
+| [Status and limits](STATUS.md) | Research coverage, outstanding evidence gaps and the closed slide gate |
+| [Review gate](reviews/review-gate.md) | Review decisions and evidence needed before developing slides |
 
 The organising question is: **under what conditions can economic importance be defined, empirically supported, or acted upon without conventional significance testing—and what uncertainty or identification arguments are still needed?** Conclusions remain open to challenge in either direction.
 
