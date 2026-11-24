@@ -1,0 +1,30 @@
+# Learning-path walkthrough — 24 November 2026
+
+**Decision.** Apply the learner-facing corrections recorded here. The slide gate is **closed**. [Review gate](review-gate.md)
+
+## Scope of the walkthrough
+
+The Codex assistant used a fresh public checkout at commit `1641060` to follow the [quick start](../QUICKSTART.md), [five modules](../CURRICULUM.md) and [optional source audit](../exercises/04-aer-source-audit.md). The walkthrough traced chapter arguments through the wiki and its reading records, derived the exercise results, then checked the worked solutions. It also ran the documented Python examples, the audit on the committed transcriptions and the simulation labs. Documentary interpretations use the repository’s recorded passages and limits. Independent empirical replication, primary-source reading beyond those records and classroom piloting remain outside this walkthrough.
+
+## Checks along the route
+
+| Where | What the walkthrough checked |
+|---|---|
+| Quick start and Module 1 | Holding the estimate at 0.10 percentage points and widening the SE from 0.02 to 0.10 changes the zero-test conclusion and still supports equivalence within ±1 percentage point. The ASA paper note supplied the first evidence trail, with selected passages and the access limit recorded. Exercise 1’s estimate of 1.1 has a one-sided 95% lower bound of about 0.771 pp, below the benchmark. The observed-data claim, the causal claim about the reduction and the adoption recommendation ask different questions. |
+| Module 2 | All four combinations of zero rejection and equivalence reproduced. At δ = 0.05 pp, the small precise case still rejects zero and its TOST p-value is about 0.9938. When δ = 0.1 pp and SE = 1 pp, the 90% interval is too wide to fit for any estimate, even when the true effect is zero. |
+| Module 3 | At fixed test size the near-null power sequence approaches 0.05. Under the weak-effect reporting screen the selected absolute ratio exceeds about 19.60. The 50,000-replication power run had two of 11 pointwise Wilson intervals miss their exact benchmarks. Increasing to 200,000 roughly halved the nonzero MCSEs checked. The selection lab was run at 500, 5,000 and 50,000 repetitions with seeds 20261123, 20261124 and 20261125. The selected denominators varied across runs. In the reference strong-positive case, 42,442 discoveries contained zero wrong-sign events and the analytic probability was still positive. The independent null-family benchmarks at 20 candidates were about 0.6415 unadjusted and 0.04883 with the Bonferroni cutoff. |
+| Module 4 | At SE = 2 bp and cost = 25 bp, the 95% interval for net alpha is approximately [−8.92, −1.08] bp per month. When cost is 10 bp and the bias can be anywhere from 0 to 10 bp, the union of conditional intervals is about [−3.92, 13.92] bp. The factor-replication evidence trails support comparing research targets and procedures before treating different conclusions as a contradiction. |
+| Module 5 | The baseline posterior mean is £320. Moving cost from £100 to £500 changes expected net benefit from £220 to −£180 while keeping the zero-test p-value at about 0.4237. The narrower prior also changes the recommendation at £100. For the lab, utility plus regret equals the oracle payoff across rules and scenarios, and paired utility and regret differences have opposite signs and equal MCSEs. The matched-prior and fixed-state rankings answer different questions. Seed 20261124 at 10,000 and 50,000 repetitions exhibited a finite-run plug-in advantage in the £100 matched scenario while the exact difference favours Bayes. |
+| Optional AER audit | Independently counted 112 adverse Q16 scores out of the original 137 and recovered all four Q7 × Q16 cells and the conditional Q9 numerator and denominator. The two-case comparison used the recorded Darby and Bernheim–Wantz passages and version checks. This leaves the expanded survey and the validity of the original codes open. |
+
+## Gaps and revisions
+
+| What interrupted the route | Revision |
+|---|---|
+| The chapter and Module 1 distinguished four claims, but the first exercise’s claim-map prompt asked for three. | Kept the three-sentence warm-up and added the observed-data claim to Exercise 1 and its solution. |
+| Case C meant a different estimate in Exercise 2, and the fourth testing outcome depended on bringing in the chapter’s opening example. | Added the case crosswalk and a direct route from the chapter to Exercise 2 and the two interval concepts. |
+| The sequence after Exercise 3 led into the optional audit. The curriculum’s audit entry described one case, while the full exercise asks for two. | Linked the remaining Module 3 labs and next core exercise, and specified when to use one case or both. |
+| Finding the conditioning denominator and paired results required translating prose into output field names. The candidate-count task also left learners to edit a hard-coded search. | Added an output guide with exact field names, put the two conditional quantities in the wiki, and ran a standalone 10-candidate starter using the existing rate summary. |
+| The capstone and simulation assignments both called for memos without showing how to connect them. | Identified the Exercise 6 memo as the capstone and linked the lab comparison back to it. The worked solution now includes the observed finite-run reversal and its paired uncertainty. |
+
+All seven embedded Python snippets in the exercise and lab sheets ran in the fresh checkout. The additional candidate-count exercise produced rates of 0.40046 and 0.05026, compared with exact benchmarks of about 0.40126 and 0.04889. An independent normal-tail calculation matched expected utility and regret for all five cutoff rules across the six decision scenarios. The full repository check passed, including 28 tests and regeneration checks against the committed simulation reference. Source records, baseline simulation designs and the committed reference outputs retain their existing scope. [Learning materials](../README.md) · [Simulation guide](../simulations/README.md)

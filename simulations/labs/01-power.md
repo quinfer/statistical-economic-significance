@@ -33,7 +33,7 @@ For a simulated event rate `p_hat`, its plug-in Monte Carlo standard error is `s
 ## Exercises
 
 1. **Make predictions for the design.** Calculate the true SE for each n. For each effect and design, predict zero rejection, coverage and equivalence. Find where £20 should be detectable and still lie inside the chosen equivalence margin. Explain both judgements.
-2. **Check the simulation against exact probabilities.** For all 11 scenarios, report the zero-rejection rate, MCSE, Wilson interval and exact benchmark. Count the benchmarks outside their individual 95% intervals. What pattern of misses would prompt you to look at your simulation code?
+2. **Check the simulation against exact probabilities.** In `scratch/power/metrics.csv`, filter for `zero_rejection`. For all 11 scenarios, report the estimate, MCSE, Wilson interval and exact benchmark. Count the benchmarks outside their individual 95% intervals. What pattern of misses would prompt you to look at your simulation code? [Find a result in the output](../README.md#find-a-result-you-need)
 3. **Compare the two targets.** For `meaningful_n100` and `small_n100000`, compare the rate of rejecting zero with the rate of supporting an effect above £100. Write two warranted interpretations of a single study and two that overreach.
 4. **Reconstruct the four outcomes.** Use `both_reject`, `neither_reject`, `zero_rejection` and `equivalence`. At n = 100 check how wide the 90% interval is relative to the margin. Then explain what the boundary scenario tests.
 5. **Change the reported uncertainty.** At n = 2,500 compare the calibrated and understated-SE null scenarios. Derive rejection and coverage in both. Explain what the stress case shows, and what you would have to investigate to diagnose an incorrect SE in real data.
@@ -49,7 +49,7 @@ print(result["metrics"])
 print(result["benchmarks"])
 ```
 
-**Submit:** one operating-characteristics table with seed and R, the two analytic derivations, and a 500-word design memo. State the estimand, units, horizon, identification assumption, benchmark justification, uncertainty model and what would change your recommendation. You may propose rejecting this model for a real application. [Worked solutions](../solutions/01-power.md) are available after your first attempt.
+**Submit:** one operating-characteristics table with seed and R, the rejection and coverage derivations from task 5, and a 500-word design memo. State the estimand, units, horizon, identification assumption, benchmark justification, uncertainty model and what would change your recommendation. You may propose rejecting this model for a real application. [Worked solutions](../solutions/01-power.md) are available after your first attempt.
 
 ## Evidence links and limits
 

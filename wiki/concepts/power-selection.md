@@ -10,6 +10,10 @@ The test rejects when the estimate is more than 1.96 standard errors from zero i
 
 **Project interpretation.** Power describes how often a test rejects at a specified true effect under a specified design. With greater precision in the example, smaller estimates can pass the screen, and rejection becomes more likely. Whether the design identifies the intended effect is a separate question. [Is a large estimate enough?](../claims/C006-noisy-magnitudes.md) · [Finance](finance.md)
 
+## Which estimates count in a selection analysis?
+
+**Project interpretation.** Once you condition on passing the screen, use the selected studies as your denominator. **Type S error** asks how often a selected estimate has the wrong sign. **Type M** asks how large selected estimates are on average in absolute value relative to the true magnitude. Both require a nonzero true effect. In the zero-effect case there is neither a true sign nor a nonzero magnitude to divide by. You can still compare the signed and absolute means of selected estimates. [Lab 2, Selection](../../simulations/labs/02-selection.md)
+
 **Open question.** Would you design the study around an effect of 0.50 percentage points? Explain where that number came from. Then sketch how you would estimate wrong-sign risk among significant results at two plausible values of the true effect. In the labs, the proposed true effects are inputs to the simulation. Their results describe the specified synthetic models. [Power and selection labs](../../simulations/README.md) · [Simulation evidence boundary](../evidence/simulation-labs.md)
 
 ## Evidence and further reading

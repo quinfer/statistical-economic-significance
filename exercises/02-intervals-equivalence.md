@@ -15,6 +15,8 @@ Read the chapter’s examples before comparing the four studies. Return to its d
 | C | 0 | 0.001 | 0.01 |
 | D | 1.1 | 0.2 | 1 |
 
+A and B carry over from Exercise 1. Its case C, the 1.1 pp estimate, is case D here. This exercise uses C for the precise zero estimate added to complete the four possible test outcomes.
+
 For two one-sided tests (TOST), test both H₀L: β ≤ −δ and H₀U: β ≥ δ. Declare equivalence only if both reject at .05. The compatible normal 90% interval must lie strictly inside the fixed bounds. This is a repeated-sampling procedure, not a posterior probability that β lies within the bounds.
 
 ## Tasks
@@ -23,7 +25,7 @@ For two one-sided tests (TOST), test both H₀L: β ≤ −δ and H₀U: β ≥ 
 2. **Compare B with C.** Which study supports negligibility, and how can C be informative with a zero-null p-value of exactly one? Point to the relevant interval and margin in each case.
 3. **Change the question.** For A, set δ = 0.05 pp and recalculate. Explain what you are now asking the study to establish. What would change about the inference if you selected that margin after inspecting the estimates?
 4. **Check what the design allows.** Set the true β = 0, s = 1 pp and δ = 0.1 pp. Show that the 90% interval is too wide to fit inside the bounds for any estimate. What would a 100% equivalence failure rate mean in this example?
-5. **Compare with break-even.** If each percentage-point reduction is valued at V pounds per borrower and adoption costs c pounds, the positive net-benefit threshold is β > c/V. Explain whether ruling out positive viability would require ruling out a large harmful effect.
+5. **Compare with break-even.** Value each percentage-point reduction at V > 0 pounds per borrower and set the fixed adoption cost at c pounds per borrower over the same horizon. With linear benefits, the positive net-benefit threshold is β > c/V. Explain whether ruling out positive viability would require ruling out a large harmful effect.
 
 ```python
 from implementations.normal_model import interval, tost_p, two_sided_p

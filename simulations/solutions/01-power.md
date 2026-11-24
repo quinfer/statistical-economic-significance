@@ -38,7 +38,7 @@ The latter claim has its own one-sided test:
 
 `P(support theta > delta | theta) = Φ((theta−delta−q)/s)`.
 
-This probability is less than the zero-rejection probability in the positive-effect examples. A defensible single-study statement reports the estimate, interval, benchmark and relevant test. “The coefficient was significant, so the programme is worthwhile” ignores both the benchmark and costs; “it was non-significant, so it is negligible” ignores the relevant alternatives.
+This probability is less than the zero-rejection probability in the positive-effect examples. In the reference run, `meaningful_n100` rejects zero in 0.51676 of replications and supports an effect above £100 in 0.26008. For `small_n100000` these frequencies are 1 and 0, with analytic benchmarks close to those limits. Those rates describe the designs. For a single study, you could say that a 90% interval wholly within ±£100 supports equivalence at the 5% level, or that a one-sided 95% lower bound above £100 supports an effect above that benchmark. Give the actual interval and assumptions in either case. “The coefficient was significant, so the programme is worthwhile” ignores the benchmark and costs. “It was non-significant, so it is negligible” ignores the relevant alternatives.
 
 ## 4. Reconstruct the four cells
 

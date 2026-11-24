@@ -82,7 +82,7 @@ The positive-significance rule is one explicit cost-blind comparator. The cost-c
 | `fixed_moderate_benefit` | 212.220 (0.610) | 5.400 (0.178) |
 | `fixed_large_benefit` | 1082.224 (0.620) | 2.112 (0.215) |
 
-At matched-prior cost £100, the paired difference is small relative to its simulation error. Its finite-run estimate does not overturn the analytical ordering. At fixed positive states the sign reverses, as predicted. The full JSON includes cost-confidence, tight-prior, always/never and cost-blind significance rules; report their separate objectives before treating a utility ranking as a methodological verdict.
+At matched-prior cost £100, the paired difference is small relative to its simulation error. Check task 6 using `plugin_minus_bayes_utility` for `matched_prior_cost100`. With seed 20261124 and 50,000 replications, the estimate is about +£0.022 (MCSE £0.201), compared with an exact difference of −£0.089. The gap is about half a Monte Carlo standard error. In the fixed positive states, the exact difference favours the plug-in rule, so that reversal concerns a different evaluation criterion. The full JSON includes cost-confidence, tight-prior, always/never and cost-blind significance rules. Report the objective of each rule before using the utility ranking to make a methodological claim.
 
 ## 5. Replication and extension answers
 

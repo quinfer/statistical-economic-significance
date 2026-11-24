@@ -47,6 +47,8 @@ python3 scripts/check_integrity.py
 
 If you already have a checkout, run the two Python commands from the top-level directory. In the worked output, look for the small, precise case and compare its 95% and 90% intervals with your notes. The code labels the effect units generically. For the lender, read the endpoints in percentage points. The integrity script checks the repository’s records and links. Assess the evidence for a citation or argument by following it to its source. [Implemented examples](implementations/README.md)
 
+To run a Python snippet from an exercise, start `python3` from the top-level directory and paste the code at the Python prompt. Leave a blank line after an indented loop to run it. Use `exit()` to return to the terminal for commands such as the simulation runs below.
+
 ## Continue with the modules
 
 Start with [Module 1](CURRICULUM.md#module-1-magnitude-evidence-and-action), then work through the [curriculum](CURRICULUM.md) in order. In Module 2, use the [interval and equivalence exercise](exercises/02-intervals-equivalence.md) to compare all four combinations of test outcomes. When a question needs more explanation, look it up in the [wiki](wiki/index.md) or follow its evidence route in the [learning map](resources/learning-map.md). The [exercise index](exercises/README.md) links each task to its chapter reading. For a reading group on contested claims, try the [optional debate case](CURRICULUM.md#optional-case-study-the-2008-debate).

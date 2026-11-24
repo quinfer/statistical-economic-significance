@@ -42,4 +42,4 @@ Substituting β̂ into the power formula reuses the test statistic, so the resul
 
 </details>
 
-[Exercise index](README.md) · [Next: AER source audit](04-aer-source-audit.md)
+[Exercise index](README.md) · [Finish Module 3 with the simulation labs](../CURRICULUM.md#module-3-power-selection-and-noisy-magnitudes) · [Next core exercise: finance and identification](05-finance-identification.md) · [Optional AER source audit](04-aer-source-audit.md)

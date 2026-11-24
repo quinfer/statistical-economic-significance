@@ -34,6 +34,10 @@ Each command writes three files in the specified folder, replacing an earlier ge
 
 The default configuration is committed in [reference.json](results/reference.json), [metrics.csv](results/metrics.csv) and the [results summary](results/summary.md). These are computed outputs, not targets to tune the simulation towards. Personal experiments belong in ignored `scratch/` directories.
 
+## Find a result you need
+
+Open your run’s `summary.md` and expand the scenario named in the task. To compare scenarios, filter `metrics.csv` by its `lab`, `scenario` and `metric` columns. Read the estimate alongside its MCSE and analytic benchmark where one is available. The output column `n` counts the replications used **for that metric**. For a rate over all repetitions it is R; for a conditional result it counts the selected cases. To find the simulated study’s sample size in Lab 1, use `sample_size` in the scenario parameters. Those parameters are in the summary and `reference.json`.
+
 ## Reproduce and validate
 
 ```sh

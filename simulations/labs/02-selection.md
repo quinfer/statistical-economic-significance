@@ -37,15 +37,46 @@ A zero observed event count gives plug-in MCSE zero, but is not evidence that th
 ## Exercises
 
 1. **Predict before running.** For each nonzero θ, predict signed bias, relative exaggeration and Type S risk after the screen. At θ = 0, decide whether symmetry implies anything about the signed and absolute means separately.
-2. **Show the denominators.** Tabulate R, K, estimated rejection probability, MCSE, Type S, Type M, selected bias and independent-holdout bias beside the exact benchmarks. Label the units, including which quantities are dimensionless.
+2. **Show the denominators.** In `scratch/selection/metrics.csv`, use `rejection_rate` for the rate across R studies and `selected_type_s`, `selected_type_m`, `selected_bias` and `selected_holdout_bias` for quantities based on K. Report each estimate and MCSE beside its exact benchmark where available. Use `n` for the relevant denominator and label the units. [Find a result in the output](../README.md#find-a-result-you-need)
 3. **Work from both tails.** With `c = 10z₀.₉₇₅`, derive `P(A)`, `E(X | A)` and `E(|X| | A)`. Use the last quantity to get the Type M benchmark. Explain what changes if you use the selected X in place of the stipulated θ.
 4. **Use the independent holdout.** Compare `selected_bias`, `selected_holdout_bias` and the paired difference. Explain why the holdout returns to θ in expectation and what one unsuccessful holdout would allow you to say about θ.
 5. **Search 20 candidates.** Start from the probability that none of the independent null candidates rejects. Derive the family rejection probability at the unadjusted and Bonferroni cutoffs. Describe what population that probability refers to, and compare the signed and absolute winner means.
 6. **Vary simulation precision.** Use 500, 5,000 and 50,000 repetitions and at least three seeds chosen in advance. Compare MCSE with the expected square-root scaling and record all 95% intervals that miss the benchmark. For a zero-event Type S result in the strong-effect regime, inspect the Wilson bound.
-7. **Challenge the design.** In a separately saved copy, change the candidate count or add a justified correlated-error model. Name the benchmark you would revise. Explain what additional assumptions would be needed for heterogeneous effects or changing markets. Mark any unimplemented extensions as proposals.
+7. **Challenge the design.** Try a different candidate count using the starter below, or propose a justified model for correlated errors. Name the benchmark you would revise. Explain what additional assumptions would be needed for heterogeneous effects or changing markets. Mark any unimplemented extensions as proposals.
 8. **Compare the empirical questions.** Write the strongest inference this simulation permits and the strongest caution about transferring it to finance. Identify which features of an empirical replication study you would check before comparing it with a search critique. [Finance disagreement trail](../../wiki/concepts/finance.md) · [Chapter §4, Comparing analyses of the same data](../../synthesis/critical-synthesis.md#comparing-analyses-of-the-same-data)
 
 **Submit:** commands and environment/commit information, your labelled results table, two tail-moment derivations, a repeated-seed check, and a 500-word interpretation separating the synthetic result, the source positions and the limits of generalisation. Use [worked solutions](../solutions/02-selection.md) after completing the prediction and derivation tasks.
+
+<details>
+<summary>Starter for changing the candidate count in task 7</summary>
+
+This small extension compares family rejection rates for 10 independent null candidates. It uses the same normal discovery estimates with known SE of 10 basis points per month and the same two cutoffs as the main search, recalculated for the new count. Compare the rates with the formulas you derived in task 5. This extension evaluates family false rejections and leaves the holdout comparison to the main lab. Run the snippet from the repository root.
+
+```python
+from random import Random
+from statistics import NormalDist
+
+from simulations.common import rate_summary
+
+candidate_count = 10
+replications = 50_000
+alpha = 0.05
+se = 10.0
+rng = Random(20261123)
+normal = NormalDist()
+cutoffs = {
+    "unadjusted": se * normal.inv_cdf(1 - alpha / 2),
+    "bonferroni": se * normal.inv_cdf(1 - alpha / (2 * candidate_count)),
+}
+maxima = [
+    max(abs(rng.gauss(0.0, se)) for _ in range(candidate_count))
+    for _ in range(replications)
+]
+for rule, cutoff in cutoffs.items():
+    print(rule, rate_summary(sum(value > cutoff for value in maxima), replications))
+```
+
+</details>
 
 ## Sources and explicit limitations
 
