@@ -2,7 +2,7 @@
 
 **Slide planning only in this directory. No slides or Quarto deck generated.** The [critical-review gate](../reviews/review-gate.md) remains closed. The [curriculum](../CURRICULUM.md), [Markdown exercises](../exercises/README.md) and [deterministic worked examples](../implementations/README.md) are now available as a separate learning pathway. Their publication does not authorise slides.
 
-Intended outcomes are to distinguish magnitude, evidence and action; interpret uncertainty without significance shortcuts; justify an economic threshold; evaluate selected or noisy estimates; and defend a decision under stated costs and assumptions.
+The core teaching starts from applied statistical and econometric practice. Learners define an estimand and an economic threshold, interpret estimates and uncertainty under stated assumptions, assess design and selection, and defend decisions given costs and consequences. Use the McCloskey–Ziliak and Hoover–Siegler exchange as an optional case for examining disagreement about methods and evidence.
 
 | Planned activity | Economics/finance setting | Methodological question |
 |---|---|---|
@@ -13,7 +13,7 @@ Intended outcomes are to distinguish magnitude, evidence and action; interpret u
 | Decisions with asymmetric losses | A reversible pilot versus a costly irreversible rollout | Can actions differ while the data and p-value stay the same? |
 | Predictive portfolio choice | Synthetic stock/cash allocation with estimated predictability | How do priors, risk aversion, parameter uncertainty and trading costs change action? |
 | Multiple searches and out-of-sample checks | Synthetic factor research | How do false discoveries, missed discoveries and shrinkage interact? |
-| Adversarial seminar | Matched passages in the 2008 exchange and later reform proposals | Which disagreement concerns evidence, which concerns aims, and what would settle each? |
+| Optional debate seminar | Matched passages in the 2008 exchange and later reform proposals | Which disagreement concerns evidence, which concerns aims, and what would settle each? |
 
 All proposed data are synthetic unless a later exercise explicitly obtains and documents real data. The learning exercises contain labelled synthetic calibrations and hand-checkable calculations, not empirical findings. The [three simulation labs](../simulations/README.md), authorised on 23 November 2026, now add random experiments, MCSEs and worked solutions. They include challenges to their apparent lessons. Slide development remains deferred under the user's continuing hold.
 

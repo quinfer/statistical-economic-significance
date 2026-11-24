@@ -1,6 +1,6 @@
 # Annotated reading pathways
 
-This guide maps the **35-work verified core** to the six modules in the [curriculum](../CURRICULUM.md). It is a teaching selection and ordering, not a new bibliography or an exhaustive review. The [generated catalogue](../sources/literature-map.md) and [registry](../sources/registry.json) remain authoritative for source identity, versions and reading coverage. Each linked paper note supplies primary-source URLs and the evidence trail.
+This guide maps the **35-work verified core** to the five core modules and optional debate case in the [curriculum](../CURRICULUM.md). It is a teaching selection and ordering, not a new bibliography or an exhaustive review. The [generated catalogue](../sources/literature-map.md) and [registry](../sources/registry.json) remain authoritative for source identity, versions and reading coverage. Each linked paper note supplies primary-source URLs and the evidence trail.
 
 **Project interpretation.** The prompts below suggest what to examine and compare. They are not additional empirical findings. Attributed claims, exact consulted locators and their limits are recorded in the linked notes. Reading a note is not a substitute for reading its source, and a result reported by an author is not independently established by its inclusion here.
 
@@ -11,9 +11,8 @@ Begin with the named notes and inspect their consulted passages where access per
 1. **Magnitude, evidence, action:** Wasserstein–Lazar (2016), then Imbens (2021). Write three different questions that the phrase *economic significance* might conceal.
 2. **Uncertainty and equivalence:** Greenland and colleagues (2016), then Lakens (2017). Explain how a finding can be distinguishable from zero yet compatible with practical negligibility.
 3. **Power and selection:** Gelman–Carlin (2014), then Lakens (2022). State the external effect-size assumptions needed for an informative design calculation.
-4. **The historical dispute:** read all three 2008 exchange notes in order, then the bounded book and AER audit notes. Separate arguments about practice from arguments about inference.
-5. **Finance and identification:** compare Harvey–Liu–Zhu (2016) with Jensen–Kelly–Pedersen (2023), then Deaton–Cartwright (2018). Identify which definitions or assumptions could reconcile apparently conflicting conclusions.
-6. **Decisions:** compare Kandel–Stambaugh (1996), Manski (2019) and the 2026 robust Bayes article. Specify the choice criterion before recommending an action.
+4. **Finance and identification:** compare Harvey–Liu–Zhu (2016) with Jensen–Kelly–Pedersen (2023), then Deaton–Cartwright (2018). Identify which definitions or assumptions could reconcile apparently conflicting conclusions.
+5. **Decisions:** compare Kandel–Stambaugh (1996), Manski (2019) and the 2026 robust Bayes article. Specify the choice criterion before recommending an action.
 
 The coverage column describes **the project's existing reading**, not how much you are expected to read. `selected_sections_read` can mean a bounded selection of full text or indexed passages; the note states which. `abstract_read` and `metadata_only` entries identify substantial remaining reading work. All statuses below reflect the registry checked on 24 October 2026; this guide does not certify later versions or new access.
 
@@ -62,9 +61,38 @@ Use the [power and selection note](../wiki/concepts/power-selection.md), [C006: 
 
 **Discussion:** Defend a design under a plausible range of effects, then identify a range under which its conclusions would be uninformative. Keep design calculations separate from claims about the true effect in an already completed study.
 
-## 4. The 2008 exchange and the AER coding audit
+## 4. Finance, identification and competing replication diagnoses
 
-Start with the [matched exchange](../wiki/disagreements/2008-exchange.md), then use the [audit exercise](../exercises/04-aer-source-audit.md). The exchange and the book have different reading histories: the rejoinder explicitly says the book was unavailable when the responses were written.
+Use the [finance](../wiki/concepts/finance.md), [identification](../wiki/concepts/identification.md) and [uncertainty beyond sampling](../wiki/concepts/uncertainty-beyond-sampling.md) notes with the [module exercise](../exercises/05-finance-identification.md).
+
+| Reading | Existing coverage and version | One passage or distinction to inspect |
+|---|---|---|
+| [Harvey, Liu and Zhu (2016)](../wiki/papers/harvey-liu-zhu-2016-cross-section.md), *… and the Cross-Section of Expected Returns* | `abstract_read`; published article. | The abstract's multiple-search argument. Specify the research family and selection process before treating any proposed hurdle as transferable to your study. Detailed calculations have not been assessed here. |
+| [McLean and Pontiff (2016)](../wiki/papers/mclean-pontiff-2016-predictability.md), *Does Academic Research Destroy Stock Return Predictability?* | `abstract_read`; published article. | Separate out-of-sample and post-publication comparisons in the abstract. Which observations could distinguish statistical selection from investors learning? No quantitative decay estimates are verified in this resource. |
+| [Harvey and Liu (2020)](../wiki/papers/harvey-liu-2020-false-missed.md), *False (and Missed) Discoveries in Financial Economics* | `selected_sections_read`; final article, opening pp. 2503–2505. | The opening discussion of false versus missed discoveries and their costs. Identify the chosen definition of manager skill; the double-bootstrap implementation is not independently audited. |
+| [Jensen, Kelly and Pedersen (2023)](../wiki/papers/jensen-kelly-pedersen-2023-replication.md), *Is There a Replication Crisis in Finance?* | `selected_sections_read`; published article, selected model and replication discussion. | Compare replication definitions, risk adjustment, sample construction and the hierarchical model with the earlier critique. A more favourable diagnosis is conditional on these choices; the complete implementation and supplements remain unreviewed. |
+| [Menkveld and colleagues (2024)](../wiki/papers/menkveld-etal-2024-nonstandard-errors.md), *Nonstandard Errors* | `selected_sections_read`; published article, selected sections I.A, I.C, II.D and III. | Section II.D and the discussion of analyst dispersion: what varies when analysts receive the same data? Dispersion alone does not identify bias or supply a quantity to add mechanically to a sampling standard error. |
+| [Deaton and Cartwright (2018)](../wiki/papers/deaton-cartwright-2018-rcts.md), *Understanding and misunderstanding randomized controlled trials* | `selected_sections_read`; selected indexed passages from the published article, sections 1–3. | Separate unbiasedness, precision and extrapolation. Which extra assumptions connect a study's estimate to a target policy population? The authors' criticism is not a general rejection of randomised trials. |
+
+**Discussion:** A strategy can pass a statistical screen yet fail after costs or outside its estimation setting. Explain which question each reading helps address, and which questions require additional identification, market or decision evidence. Do not claim that this repository establishes a profitable strategy.
+
+## 5. Decisions under uncertainty and the capstone
+
+Use the [decisions note](../wiki/concepts/decisions.md), [C002: action without rejection](../wiki/claims/C002-action-without-rejection.md), [C010: uncertainty and choice](../wiki/claims/C010-uncertainty-and-choice.md) and [capstone exercise](../exercises/06-decision-memo.md).
+
+| Reading | Existing coverage and version | One passage or distinction to inspect |
+|---|---|---|
+| [Kandel and Stambaugh (1996)](../wiki/papers/kandel-stambaugh-1996-asset-allocation.md), *On the Predictability of Stock Returns: An Asset-Allocation Perspective* | `abstract_read`; published article. | The abstract's distinction between conventional evidence strength and allocation under Bayesian learning. Specify prior beliefs, investor preferences and parameter uncertainty before proposing an application; this is not an inference-free result. |
+| [Manski (2019)](../wiki/papers/manski-2019-treatment-choice.md), *Treatment Choice With Trial Data* | `selected_sections_read`; indexed abstract and section 3 passages of the published article. Direct full text was blocked. | Section 3's combination of error probabilities and welfare losses through regret. Identify the benchmark for regret. The exposition concerns medical trials; it is not an empirical economics finding. |
+| [Manski (2021)](../wiki/papers/manski-2021-econometrics-decisions.md), *Econometrics for Decision Making* | `abstract_read`; published article superseding a 2019 draft. | The abstract's distinction between model space and feasible state space. What would fail if a decision were evaluated only under a convenient model? Methods and examples still require full reading. |
+| [Aradillas Fernández and colleagues (2026)](../wiki/papers/aradillas-fernandez-etal-2026-robust-bayes.md), *Robust Bayes Treatment Choice with Partial Identification* | `selected_sections_read`; published FirstView article, 23 July 2026; final HTML controls, not earlier arXiv versions. | Sections 2.1–2.3, Assumption 1 and conclusion: compare ex ante and ex post criteria under the stated prior class and partial-identification model. Proofs are unread; do not generalise randomisation or optimality beyond the framework. |
+| [Wald (1950)](../wiki/papers/wald-1950-decision-functions.md), *Statistical Decision Functions* | `metadata_only`; first-edition book identity verified. No book content read. | A historical extension assignment: obtain the book and locate a decision rule, loss function and risk definition. No theoretical proposition in this project is attributed to the unread book merely because it is foundational. |
+
+**Capstone prompt:** Give an empirical assessment and an action recommendation separately. State uncertainty, identification assumptions, the feasible actions, consequences, criterion and sensitivity. Then construct a defensible rival recommendation. Explain whether disagreement concerns the evidence, the target population or the value assigned to outcomes.
+
+## Optional case study: The 2008 exchange and the AER coding audit
+
+Compare the competing methodological positions in the [matched exchange](../wiki/disagreements/2008-exchange.md), then use the [audit exercise](../exercises/04-aer-source-audit.md). The exchange and the book have different reading histories: the rejoinder explicitly says the book was unavailable when the responses were written.
 
 | Reading | Existing coverage and version | One passage or distinction to inspect |
 |---|---|---|
@@ -80,35 +108,6 @@ The application papers are **supporting sources**, not extra core works. Follow 
 Keep three objects distinct in the [coding audit](../wiki/evidence/aer-coding-audit.md): the original **137-paper** 1990s matrix, the book's expanded **187-paper** survey, and **author–paper** totals with coauthors repeated. The [expanded-matrix search](../wiki/evidence/expanded-matrix-followup.md) did not recover the 187-paper matrix. A checked denominator or arithmetic total cannot establish whether a disputed code is justified.
 
 **Discussion:** Produce two memos about one case: the strongest defensible coding criticism and the strongest defensible response. End with what the surviving evidence can and cannot settle about profession-wide practice.
-
-## 5. Finance, identification and competing replication diagnoses
-
-Use the [finance](../wiki/concepts/finance.md), [identification](../wiki/concepts/identification.md) and [uncertainty beyond sampling](../wiki/concepts/uncertainty-beyond-sampling.md) notes with the [module exercise](../exercises/05-finance-identification.md).
-
-| Reading | Existing coverage and version | One passage or distinction to inspect |
-|---|---|---|
-| [Harvey, Liu and Zhu (2016)](../wiki/papers/harvey-liu-zhu-2016-cross-section.md), *… and the Cross-Section of Expected Returns* | `abstract_read`; published article. | The abstract's multiple-search argument. Specify the research family and selection process before treating any proposed hurdle as transferable to your study. Detailed calculations have not been assessed here. |
-| [McLean and Pontiff (2016)](../wiki/papers/mclean-pontiff-2016-predictability.md), *Does Academic Research Destroy Stock Return Predictability?* | `abstract_read`; published article. | Separate out-of-sample and post-publication comparisons in the abstract. Which observations could distinguish statistical selection from investors learning? No quantitative decay estimates are verified in this resource. |
-| [Harvey and Liu (2020)](../wiki/papers/harvey-liu-2020-false-missed.md), *False (and Missed) Discoveries in Financial Economics* | `selected_sections_read`; final article, opening pp. 2503–2505. | The opening discussion of false versus missed discoveries and their costs. Identify the chosen definition of manager skill; the double-bootstrap implementation is not independently audited. |
-| [Jensen, Kelly and Pedersen (2023)](../wiki/papers/jensen-kelly-pedersen-2023-replication.md), *Is There a Replication Crisis in Finance?* | `selected_sections_read`; published article, selected model and replication discussion. | Compare replication definitions, risk adjustment, sample construction and the hierarchical model with the earlier critique. A more favourable diagnosis is conditional on these choices; the complete implementation and supplements remain unreviewed. |
-| [Menkveld and colleagues (2024)](../wiki/papers/menkveld-etal-2024-nonstandard-errors.md), *Nonstandard Errors* | `selected_sections_read`; published article, selected sections I.A, I.C, II.D and III. | Section II.D and the discussion of analyst dispersion: what varies when analysts receive the same data? Dispersion alone does not identify bias or supply a quantity to add mechanically to a sampling standard error. |
-| [Deaton and Cartwright (2018)](../wiki/papers/deaton-cartwright-2018-rcts.md), *Understanding and misunderstanding randomized controlled trials* | `selected_sections_read`; selected indexed passages from the published article, sections 1–3. | Separate unbiasedness, precision and extrapolation. Which extra assumptions connect a study's estimate to a target policy population? The authors' criticism is not a general rejection of randomised trials. |
-
-**Discussion:** A strategy can pass a statistical screen yet fail after costs or outside its estimation setting. Explain which question each reading helps address, and which questions require additional identification, market or decision evidence. Do not claim that this repository establishes a profitable strategy.
-
-## 6. Decisions under uncertainty and the capstone
-
-Use the [decisions note](../wiki/concepts/decisions.md), [C002: action without rejection](../wiki/claims/C002-action-without-rejection.md), [C010: uncertainty and choice](../wiki/claims/C010-uncertainty-and-choice.md) and [capstone exercise](../exercises/06-decision-memo.md).
-
-| Reading | Existing coverage and version | One passage or distinction to inspect |
-|---|---|---|
-| [Kandel and Stambaugh (1996)](../wiki/papers/kandel-stambaugh-1996-asset-allocation.md), *On the Predictability of Stock Returns: An Asset-Allocation Perspective* | `abstract_read`; published article. | The abstract's distinction between conventional evidence strength and allocation under Bayesian learning. Specify prior beliefs, investor preferences and parameter uncertainty before proposing an application; this is not an inference-free result. |
-| [Manski (2019)](../wiki/papers/manski-2019-treatment-choice.md), *Treatment Choice With Trial Data* | `selected_sections_read`; indexed abstract and section 3 passages of the published article. Direct full text was blocked. | Section 3's combination of error probabilities and welfare losses through regret. Identify the benchmark for regret. The exposition concerns medical trials; it is not an empirical economics finding. |
-| [Manski (2021)](../wiki/papers/manski-2021-econometrics-decisions.md), *Econometrics for Decision Making* | `abstract_read`; published article superseding a 2019 draft. | The abstract's distinction between model space and feasible state space. What would fail if a decision were evaluated only under a convenient model? Methods and examples still require full reading. |
-| [Aradillas Fernández and colleagues (2026)](../wiki/papers/aradillas-fernandez-etal-2026-robust-bayes.md), *Robust Bayes Treatment Choice with Partial Identification* | `selected_sections_read`; published FirstView article, 23 July 2026; final HTML controls, not earlier arXiv versions. | Sections 2.1–2.3, Assumption 1 and conclusion: compare ex ante and ex post criteria under the stated prior class and partial-identification model. Proofs are unread; do not generalise randomisation or optimality beyond the framework. |
-| [Wald (1950)](../wiki/papers/wald-1950-decision-functions.md), *Statistical Decision Functions* | `metadata_only`; first-edition book identity verified. No book content read. | A historical extension assignment: obtain the book and locate a decision rule, loss function and risk definition. No theoretical proposition in this project is attributed to the unread book merely because it is foundational. |
-
-**Capstone prompt:** Give an empirical assessment and an action recommendation separately. State uncertainty, identification assumptions, the feasible actions, consequences, criterion and sensitivity. Then construct a defensible rival recommendation. Explain whether disagreement concerns the evidence, the target population or the value assigned to outcomes.
 
 ## Continue the research
 

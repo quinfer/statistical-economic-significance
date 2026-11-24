@@ -9,7 +9,7 @@
 | 2008 debate | Complete three-paper exchange ledgers and [book pp. 57–61 and 74–85](wiki/evidence/cult-2008-reading.md) | Read the rest of the book |
 | AER audit | Final Darby and Bernheim–Wantz articles checked. Recalculated totals from the original 137-paper scoring sheet. | Locate the expanded survey’s article list and scores. Check the remaining judgements against the original articles. |
 | Synthesis | Conditional argument, counterarguments and mathematical checks | Human scholarly review and unresolved empirical/coding questions |
-| Learning | Six modules, two entry routes, annotated readings and guided exercises | Classroom piloting and learner feedback |
+| Learning | Five core modules, two entry routes, annotated readings, guided exercises and an optional debate case | Classroom piloting and learner feedback |
 | Computation | Deterministic examples plus three seeded simulation labs, exercises, worked solutions, reference outputs and tests | Realistic dependence, endogenous selection, richer losses and empirical applications |
 | Slides | Design brief only | **Closed by user instruction; gate NOT PASSED** |
 

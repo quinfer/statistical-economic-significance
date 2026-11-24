@@ -1,17 +1,18 @@
 # Exercises: evidence, importance and action
 
-These six exercises turn the [learning route](../CURRICULUM.md) into a sequence of research products: a claim map, an interval report, a design analysis, a documentary audit, a finance interpretation and a decision memo. They can be completed individually or discussed in a PhD reading group. Attempt each task before opening its self-check.
+These five core exercises follow the [learning route](../CURRICULUM.md). Complete them individually or discuss them in a PhD reading group. Attempt each task before opening its self-check.
 
 | Exercise | Main question | Submission |
 |---|---|---|
-| [01. Magnitude, evidence and action](01-magnitude-evidence-action.md) | What exactly would “economically significant” mean here? | Claim map and a 300-word argument |
-| [02. Intervals and equivalence](02-intervals-equivalence.md) | What does the evidence establish relative to a meaningful margin? | Results table and interpretation |
-| [03. Power and selection](03-power-selection.md) | What can a design detect, and what changes after selection? | Power table and design note |
-| [04. AER source audit](04-aer-source-audit.md) | Which claims survive arithmetic and passage-level scrutiny? | Reproduction table and evidence ledger |
-| [05. Finance and identification](05-finance-identification.md) | Which estimated return is relevant to which decision? | Gross/net report and identification critique |
-| [06. Decision memo](06-decision-memo.md) | Can a justified choice precede a decisive effect claim? | A reproducible policy memo with sensitivity analysis |
+| [Magnitude, evidence and action](01-magnitude-evidence-action.md) | What exactly would “economically significant” mean here? | Claim map and a 300-word argument |
+| [Intervals and equivalence](02-intervals-equivalence.md) | What does the evidence establish relative to a meaningful margin? | Results table and interpretation |
+| [Power and selection](03-power-selection.md) | What can a design detect, and what changes after selection? | Power table and design note |
+| [Finance and identification](05-finance-identification.md) | Which estimated return is relevant to which decision? | Gross/net report and identification critique |
+| [Decision memo](06-decision-memo.md) | Can a justified choice precede a decisive effect claim? | A reproducible policy memo with sensitivity analysis |
 
-**Illustration:** every numerical policy or finance scenario in these exercises is synthetic. Normal-model calculations are deterministic, with no random draws, seed or Monte Carlo error. Their assumptions are stated in each sheet. The AER exercise instead reproduces arithmetic on documented historical coding artefacts; reproducing those counts does not validate the codes or the underlying papers.
+**Illustration:** every numerical policy or finance scenario in the core exercises is synthetic. Normal-model calculations are deterministic, with their assumptions stated in each sheet.
+
+The [optional AER source audit](04-aer-source-audit.md) lets you compare a disputed classification with the original article and check the arithmetic of the historical survey.
 
 Use Python 3.10 or later and the standard library from the repository root. The [worked examples](../implementations/worked_examples.py) and [normal-model functions](../implementations/normal_model.py) support the calculations; the [quick start](../QUICKSTART.md) explains the entry points. You may instead calculate by hand or in another language if you record the formulas, inputs and rounding. Keep personal responses in `scratch/`, which Git ignores, or outside the repository. Do not replace the research notes with exercise answers.
 

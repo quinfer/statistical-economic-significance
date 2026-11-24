@@ -10,7 +10,7 @@ This repository combines a research wiki with a self-study pathway. The learning
 
 **Coming from statistics or programming?** Start with the same question, but focus on what the numbers represent. A standardised coefficient, a percentage-point change, a gross return and a welfare gain answer different questions. Use [Module 1](CURRICULUM.md#module-1-magnitude-evidence-and-action) to translate a calculation into an economic claim before extending the code.
 
-Both routes use the same six modules. You can work through them alone or use the questions for a reading group.
+Both routes use the same five core modules. Use the [optional debate case study](CURRICULUM.md#optional-case-study-the-2008-debate) for a reading group on interpreting contested claims.
 
 ## What you need
 
@@ -19,7 +19,7 @@ Both routes use the same six modules. You can work through them alone or use the
 | Statistics | Estimates, standard errors and a normal distribution | Test inversion, power and conditional selection |
 | Economics or finance | One question about benefits, costs or returns | Welfare, identification and implementability |
 | Programming | Run a Python file and read its output | Functions, assertions and numerical checks |
-| Research practice | Distinguish an author's statement from your interpretation | Source versions, passage locators and coding audits |
+| Research practice | Distinguish an author's statement from your interpretation | Trace evidence to specific passages and versions |
 
 The initial calculations use Python 3.10 or later and its standard library. No downloaded dataset, paid package, account or notebook service is needed. Some primary readings require library access; the notes state what this project actually consulted.
 

@@ -2,7 +2,7 @@
 
 An economic argument needs a quantity that matters, evidence about that quantity and a reason for choosing an action. Those requirements overlap, but none supplies the others automatically. This pathway uses calculations, source criticism and decision memos to make their relationships explicit.
 
-Work through the six modules in order on a first pass. Each produces something you can discuss or revise: a claim map, an interval table, a design analysis, an audit ledger, an application assessment and a decision memo. The pathway is self-paced and provisional; it does not claim assessed learning outcomes or a completed empirical replication. Slides remain on hold under the [review gate](reviews/review-gate.md).
+Work through the five core modules in order. Start by defining the quantity and its economic benchmark. Then assess uncertainty, design, selection and identification before comparing decisions. Each module gives you a calculation or piece of writing to review. Slides remain on hold under the [review gate](reviews/review-gate.md).
 
 ## Preparation and entry routes
 
@@ -17,7 +17,7 @@ Neither route permits skipping source criticism. A correct calculation applied t
 
 **Question:** what exactly are you claiming when you call a result economically significant?
 
-Read [economic significance](wiki/concepts/economic-significance.md), [C001: independence](wiki/claims/C001-independence.md) and the paper note for the [ASA statement](wiki/papers/wasserstein-lazar-2016.md). Use the paper note's locator and access record for any statement attributed to the ASA.
+Read [economic significance](wiki/concepts/economic-significance.md), [C001: independence](wiki/claims/C001-independence.md) and the paper note for the [ASA statement](wiki/papers/wasserstein-lazar-2016.md). Use the paper note's locator and access record for any statement attributed to the ASA. Practise explaining what a p-value measures under the stated model and hypothesis, and use estimates and intervals to discuss the magnitude directly.
 
 **Work:** complete [Exercise 1](exercises/01-magnitude-evidence-action.md). For a policy or finance question, distinguish a meaningful benchmark, a description of what was observed, a claim about an unknown effect and a choice of action. Specify units, population, horizon, aggregation and whose gains or losses count. Construct two contexts in which the same estimated effect would have different importance.
 
@@ -31,7 +31,7 @@ Read [economic significance](wiki/concepts/economic-significance.md), [C001: ind
 
 Read [intervals](wiki/concepts/intervals.md), [equivalence](wiki/concepts/equivalence.md), [Lakens's tutorial note](wiki/papers/lakens-2017-equivalence.md) and [C011: meaningful-effect tests](wiki/claims/C011-nested-meaningful-tests.md). For a contemporary challenge, follow the [equivalence audit](wiki/disagreements/equivalence-audit.md) to the Fitzgerald working-paper note; its reading and replication limits remain relevant.
 
-**Work:** complete [Exercise 2](exercises/02-intervals-equivalence.md). Compare a small precise estimate, a large imprecise estimate and an estimate near zero. Report an interval, a zero-null comparison and a justified equivalence margin separately. Change the margin while holding the estimate fixed, then change the standard error while holding the margin fixed. Explain which question each change alters.
+**Work:** complete [Exercise 2](exercises/02-intervals-equivalence.md). Compare a small precise estimate, a large imprecise estimate and an estimate near zero. Report an interval, a zero-null comparison and a justified equivalence margin separately. Explain which hypothesis addresses the research question in each case. Change the margin while holding the estimate fixed, then change the standard error while holding the margin fixed. Explain which question each change alters.
 
 **Deliverable:** an annotated table in natural units, with interval levels, hypotheses and margins stated. Include a paragraph on why failure to establish equivalence is not evidence that the effect lies outside the margin.
 
@@ -51,43 +51,37 @@ Read [power and selection](wiki/concepts/power-selection.md), the [Gelman–Carl
 
 **Simulation labs:** complete [Lab 1: power](simulations/labs/01-power.md) and [Lab 2: selection](simulations/labs/02-selection.md). Compare simulated rates with exact normal benchmarks, then vary study sample size separately from simulation replications. Explain why independent holdout estimates and selected discovery estimates target different conditional distributions. Submit the lab tables and critiques before reading the worked solutions.
 
-## Module 4: Read the disagreement and audit its evidence
-
-**Question:** which propositions do the participants in the 2008 exchange actually dispute, and what would settle a coding disagreement?
-
-Start with the [matched 2008 exchange ledger](wiki/disagreements/2008-exchange.md). Follow its passages to the three paper notes: [Hoover–Siegler's article](wiki/papers/hoover-siegler-2008-sound.md), [McCloskey–Ziliak's reply](wiki/papers/mccloskey-ziliak-2008-reply.md) and the [rejoinder](wiki/papers/hoover-siegler-2008-rejoinder.md). These are separate from the [book reading ledger](wiki/evidence/cult-2008-reading.md), which records selected excerpts and access limits.
-
-**Work:** complete [Exercise 4](exercises/04-aer-source-audit.md). Reconstruct each side's strongest claim and concession before judging either. Select one disputed AER case and follow the version-specific evidence. Separate checking arithmetic, establishing source provenance and judging whether a questionnaire item measures the alleged practice.
-
-**Deliverable:** a two-sided argument ledger plus a short audit record: proposition, source/version, locator, original code or claim, contrary evidence, your provisional judgement and what remains unresolved. Use the [coding audit](wiki/evidence/aer-coding-audit.md) and [expanded-matrix follow-up](wiki/evidence/expanded-matrix-followup.md) to mark the boundary of what can be reproduced.
-
-**Before moving on:** you can distinguish the original 137-paper matrix from the expanded 187-paper survey, paper counts from author-paper rows, and arithmetic reproduction from coding validation. You can explain why finding a magnitude in a paper does not settle every selection or interpretation issue, and why a negative questionnaire answer does not always show an absence of magnitude reasoning.
-
-## Module 5: Finance, identification and analysis choices
+## Module 4: Finance, identification and analysis choices
 
 **Question:** when could a precise estimate still answer the wrong economic question?
 
 Read [finance](wiki/concepts/finance.md), [identification](wiki/concepts/identification.md), [uncertainty beyond sampling](wiki/concepts/uncertainty-beyond-sampling.md) and [C008: finance replication](wiki/claims/C008-finance-replication.md). Follow the competing papers through their notes, checking reading depth before drawing conclusions. Use the [Menkveld et al. note](wiki/papers/menkveld-etal-2024-nonstandard-errors.md) to examine analysis choices without assuming that analyst dispersion automatically measures bias.
 
-**Work:** complete [Exercise 5](exercises/05-finance-identification.md). Trace a proposed predictor or intervention from the estimated coefficient to an economically relevant target. For finance, distinguish gross returns, risk adjustment, costs, implementation constraints and investor utility. For policy, distinguish association, causal identification, target population and welfare. Identify where a narrow standard error leaves an important assumption untested.
+**Work:** complete the [finance and identification exercise](exercises/05-finance-identification.md). Trace a proposed predictor or intervention from the estimated coefficient to an economically relevant target. For finance, distinguish gross returns, risk adjustment, costs, implementation constraints and investor utility. For policy, distinguish association, causal identification, target population and welfare. Identify where a narrow standard error leaves an important assumption untested.
 
 **Deliverable:** an application assessment with an estimand table, a chain of identifying and implementation assumptions, and one sensitivity analysis. Compare two apparently conflicting research claims only after checking whether their samples, targets and procedures are comparable.
 
 **Before moving on:** you can explain how a result can be precisely estimated yet poorly identified or difficult to transport. You can distinguish a reproducible calculation from an independently replicated empirical result and an implementable strategy from an attractive in-sample return.
 
-## Module 6: Decisions under uncertainty and the capstone
+## Module 5: Decisions under uncertainty and the capstone
 
 **Question:** what can justify an action when the evidence has not established a materially positive effect?
 
 Read [decisions under uncertainty](wiki/concepts/decisions.md), [C002: action without rejection](wiki/claims/C002-action-without-rejection.md), the [Manski treatment-choice note](wiki/papers/manski-2019-treatment-choice.md) and the [critical synthesis](synthesis/critical-synthesis.md). For further challenge, consult the [robust Bayes note](wiki/papers/aradillas-fernandez-etal-2026-robust-bayes.md) within its recorded selected-section scope.
 
-**Work:** complete [Exercise 6](exercises/06-decision-memo.md). Specify feasible actions, uncertain states, consequences and a decision criterion. Use a synthetic normal-model example to compare a zero-null test with a decision based on posterior expected net benefit. Vary a cost or prior. Then discuss how a justified uncertainty set or a minimax-regret criterion could change the question; do not claim to implement a method you have only described.
+**Work:** complete the [decision memo exercise](exercises/06-decision-memo.md). Specify feasible actions, uncertain states, consequences and a decision criterion. Use a synthetic normal-model example to compare a zero-null test with a decision based on posterior expected net benefit. Vary a cost or prior. Then discuss how a justified uncertainty set or a minimax-regret criterion could change the question; do not claim to implement a method you have only described.
 
 **Deliverable:** a decision memo with a concise recommendation conditional on stated assumptions, the evidential claim kept separate, sensitivity analysis, the strongest objection, an evidence trail and a condition that would change your conclusion. Include a short appendix assessing whether the repository's synthesis should be retained, narrowed or revised.
 
 **Before completing the pathway:** you can defend a rational action without presenting it as proof of an effect. You can also identify settings in which a meaningful-effect certification entails rejecting zero under a compatible procedure. You recognise that a loss function, prior or uncertainty set needs justification; choosing one does not make disagreement disappear.
 
 **Simulation lab:** complete [Lab 3: decisions](simulations/labs/03-decisions.md). Evaluate the same rules under matched and mismatched priors and fixed states. Report paired utility differences with MCSEs, and distinguish average optimality under an assumed distribution from state-by-state performance. Use the resulting counterexample to qualify the capstone memo.
+
+## Optional case study: The 2008 debate
+
+Use the [McCloskey–Ziliak and Hoover–Siegler exchange](wiki/disagreements/2008-exchange.md) to practise assessing competing methodological arguments. Choose a proposition and distinguish a claim about observed research practice from a claim about valid inference or a recommendation about decisions. State the strongest argument and concession on each side, then identify what evidence or assumptions could resolve the disagreement.
+
+For a deeper exercise in evidence provenance, choose one disputed *American Economic Review* article in the [source audit exercise](exercises/04-aer-source-audit.md). Compare its text with the questionnaire item and the scores available for that version of the survey. Record your provisional judgement and its limits. The [book reading ledger](wiki/evidence/cult-2008-reading.md) and [expanded-data search](wiki/evidence/expanded-matrix-followup.md) document the scope of the available evidence.
 
 ## Review your work
 
