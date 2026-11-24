@@ -1,20 +1,20 @@
 # Worked solution — selection bias
 
-**Illustration and project derivation.** These calculations concern the DGP in [Lab 2](../labs/02-selection.md), not observed finance data. They do not extend the reading claims in the linked source notes. The [implementation](../selection.py), [reference output](../results/reference.json) and [generated summary](../results/summary.md) expose inputs, seeds, denominators and Monte Carlo uncertainty. No slides are authorised.
+**Illustration and project derivation.** Start by asking which estimates entered the summary. Every simulated study contributes to the rejection rate. Only discoveries passing the reporting screen contribute to the bias, sign and exaggeration calculations after selection. The results refer to the stipulated synthetic model. [Lab 2 questions](../labs/02-selection.md) · [Chapter §2, Estimates after selection](../../synthesis/critical-synthesis.md#2-what-do-the-data-tell-you-about-the-benchmark) · [Implementation](../selection.py) · [Reference output](../results/reference.json) · [Generated summary](../results/summary.md)
 
 ## 1. The conditional population
 
-Let `X ~ N(θ,s²)`, `c = zs`, `z = Φ⁻¹(1−α/2)`, and `A = {|X|>c}`. Write `a=(−c−θ)/s`, `b=(c−θ)/s`, `L=Φ(a)` and `U=1−Φ(b)`. Then
+Take the discovery estimate X, in basis points per month, and measure how far its two reporting cutoffs lie from the true mean θ. Let `X ~ N(θ,s²)`, `c = zs`, `z = Φ⁻¹(1−α/2)`, and `A = {|X|>c}`. Write `a=(−c−θ)/s`, `b=(c−θ)/s`, `L=Φ(a)` and `U=1−Φ(b)`. The selected set includes both tails, giving
 
 `P(A) = L + U`.
 
-This is size α at θ = 0 and power at a specified alternative. For θ > 0, Type S is `L/(L+U)`; for θ < 0, it is `U/(L+U)`. There is no true sign to be wrong about at θ = 0, so do not report zero Type S there.
+This is size α at θ = 0 and power at a specified alternative. To calculate Type S, divide the probability of the wrong-sign tail by the total probability of selection. For θ > 0 this gives `L/(L+U)`. For θ < 0 it gives `U/(L+U)`. Type S is undefined at θ = 0 because there is no true sign to compare with.
 
-Using `∫ᵦ∞ tφ(t)dt=φ(b)` and `∫₋∞ᵃ tφ(t)dt=−φ(a)`, the unnormalised first selected moment is
+First weight the estimate by its indicator of selection. The two normal-tail integrals are `∫ᵦ∞ tφ(t)dt=φ(b)` and `∫₋∞ᵃ tφ(t)dt=−φ(a)`. They give the unnormalised first selected moment
 
 `E[X 1(A)] = θ(L+U) + s[φ(b)−φ(a)]`.
 
-Thus
+To find conditional signed bias, divide by the selection probability and subtract θ. The θ term then cancels, giving
 
 `E(X−θ | A) = s[φ(b)−φ(a)]/(L+U)`.
 
@@ -37,7 +37,7 @@ The following are **computed simulation results**, rounded from the default 50,0
 | 30 | 42,442 | .84884 (.001602) | 0 observed | 1.08964 | 2.689 (.0389) |
 | −1 | 2,633 | .05266 (.000999) | .39233 | 23.4543 | −4.208 (.451) |
 
-For θ = 1, the Type S MCSE is about .00955; Type M MCSE is about .0671. Their denominator is 2,597, not 50,000. At θ = 0, the selected absolute mean is 23.395 bp (MCSE .0672), despite the exact zero signed mean. The random selected signed bias .587 bp is consistent with ordinary Monte Carlo fluctuation; it is not evidence that the symmetric DGP has a positive conditional mean.
+For θ = 1, the Type S MCSE is about .00955 and the Type M MCSE is about .0671. Use the 2,597 selected estimates for these denominators. At θ = 0, the selected absolute mean is 23.395 bp (MCSE .0672). The exact signed mean is zero because the two tails balance. The simulated signed bias .587 bp is consistent with ordinary Monte Carlo fluctuation around that benchmark.
 
 At θ = 30, zero wrong-sign events were observed. The exact wrong-sign probability is positive, and the Wilson upper bound is positive. Plug-in MCSE zero does not turn the simulation into a proof of zero risk. Simulation is especially inefficient for resolving such a rare event; the known analytic benchmark is more informative in this model.
 
@@ -53,7 +53,7 @@ Compute the variance of paired differences from `X_i−Y_i` for the selected i. 
 
 ## 4. Searching 20 independent null candidates
 
-Each unadjusted test has null rejection probability α. Under independence, no candidate rejects with probability `(1−α)^20`, hence
+Work out the probability of no rejection first. Each unadjusted test has null rejection probability α, so independence gives `(1−α)^20` for no rejections. Take the complement to get
 
 `FWER = 1−(1−.05)^20 ≈ .641514`.
 
@@ -75,4 +75,4 @@ A valid extension specifies the new joint distribution before simulating. Correl
 
 **Project interpretation:** unbiased estimation before selection does not guarantee reliable magnitudes after selection. The opposing caution is just as important: selection effects depend on true effects, noise and the precise filter, and the strong-effect case has much smaller relative exaggeration than the weak-effect case. Nothing here estimates profession-wide misuse, validates the AER coding, or settles the empirical finance replication debate.
 
-The [Gelman–Carlin note](../../wiki/papers/gelman-carlin-2014.md) has selected-section coverage. [Harvey–Liu–Zhu](../../wiki/papers/harvey-liu-zhu-2016-cross-section.md) and [McLean–Pontiff](../../wiki/papers/mclean-pontiff-2016-predictability.md) are abstract-only here; [Jensen–Kelly–Pedersen](../../wiki/papers/jensen-kelly-pedersen-2023-replication.md) is selected sections. These source limitations remain unchanged. An intellectually defensible discussion compares their targets and assumptions without filling unread sections from memory.
+To relate these results to a paper, compare its target and the selection or replication procedure with the synthetic one. Here the Gelman–Carlin and Jensen–Kelly–Pedersen notes cover selected sections, while the Harvey–Liu–Zhu and McLean–Pontiff notes draw on abstracts. Use the recorded passages to support your interpretation. The slide gate is closed. [Chapter §4, Comparing analyses of the same data](../../synthesis/critical-synthesis.md#comparing-analyses-of-the-same-data) · [Gelman and Carlin](../../wiki/papers/gelman-carlin-2014.md) · [Harvey, Liu and Zhu](../../wiki/papers/harvey-liu-zhu-2016-cross-section.md) · [McLean and Pontiff](../../wiki/papers/mclean-pontiff-2016-predictability.md) · [Jensen, Kelly and Pedersen](../../wiki/papers/jensen-kelly-pedersen-2023-replication.md)

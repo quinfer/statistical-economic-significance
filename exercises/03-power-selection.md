@@ -1,8 +1,8 @@
 # 03. Power and selection
 
-**Aim:** reason about design-stage power and selected estimates without confusing either with the probability that a reported result is true. Prerequisite: exercises 01–02 and the standard normal distribution.
+Suppose the lender wants to detect a small reduction in defaults, and the study will only be reported if its test rejects zero. Work out what the design can detect before deciding what to make of the reported estimates. This exercise builds on exercises 01–02 and uses the standard normal distribution.
 
-Read [power and selection](../wiki/concepts/power-selection.md), [Gelman–Carlin](../wiki/papers/gelman-carlin-2014.md), [Hoenig–Heisey](../wiki/papers/hoenig-heisey-2001-power.md) and [C006](../wiki/claims/C006-noisy-magnitudes.md). The source notes distinguish externally justified plausible effects from same-data “observed power”.
+The chapter discusses selection in its treatment of intervals and checks the limit of power near zero in the 2008 exchange. Use the paper notes when distinguishing a design analysis at externally justified effects from “observed power” reusing the same estimate. [§2, Evidence about the benchmark](../synthesis/critical-synthesis.md#2-what-do-the-data-tell-you-about-the-benchmark) · [§3, Competing arguments](../synthesis/critical-synthesis.md#3-where-do-the-competing-arguments-disagree) · [Power and selection](../wiki/concepts/power-selection.md) · [Gelman and Carlin](../wiki/papers/gelman-carlin-2014.md) · [Hoenig and Heisey](../wiki/papers/hoenig-heisey-2001-power.md) · [Claim C006](../wiki/claims/C006-noisy-magnitudes.md)
 
 ## Problem and assumptions
 
@@ -14,12 +14,12 @@ Assume β is specified independently of the eventual estimate. No observations a
 
 ## Tasks
 
-1. At s = 1 pp, calculate rejection probabilities for true β = 1, 0.1, 0.01 and 0 pp. What is the limit as β approaches zero? Is rejection probability at the exact null customarily called power against an alternative?
-2. For a substantively motivated true effect of 0.1 pp, compare s = 1 pp with s = 0.02 pp. Explain why a power calculation alone cannot establish that 0.1 pp matters or that the identification assumptions hold.
-3. Suppose an independent-sampling design justifies s ∝ 1/√n. What sample-size multiplier would reduce s from 1 to 0.02? State why this extrapolation could fail with clustering, dependence or different measurement quality.
-4. At s = 1, a two-sided .05 publication filter retains only estimates satisfying |β̂| > 1.95996 pp. If true β = 0.1 pp, what lower bound does this place on |β̂|/|β| among retained estimates? Can some retained estimates have the wrong sign? Distinguish the deterministic selection bound from an expected exaggeration ratio or a calculated sign-error probability.
-5. A researcher substitutes a large significant estimate into the power formula and calls the resulting number “the study's achieved reliability”. Explain the problem. Propose a design analysis over plausible effects chosen from substantive knowledge, and record what evidence could justify that range.
-6. Present the strongest caution against your own proposed solution. More observations, preregistration and a different threshold address different problems; identify at least one problem each leaves unresolved.
+1. **Approach zero with the design fixed.** At s = 1 pp, calculate rejection probabilities for true β = 1, 0.1, 0.01 and 0 pp. Predict the limit as β approaches zero and name the rejection probability at the exact null.
+2. **Change precision with the effect fixed.** At a substantively motivated effect of 0.1 pp, compare s = 1 pp with s = 0.02 pp. State what the comparison establishes about detection and what separate arguments you would need about importance and identification.
+3. **Translate precision into sample size.** Suppose independent sampling justifies s ∝ 1/√n. What sample-size multiplier reduces s from 1 to 0.02? Explain when clustering, dependence or changes in measurement could make that extrapolation unreliable.
+4. **Apply the reporting screen.** At s = 1, a two-sided .05 publication filter retains only estimates satisfying |β̂| > 1.95996 pp. When true β = 0.1 pp, write a lower bound for |β̂|/|β| among retained estimates. Inspect both tails for wrong signs. Say what further calculation would give an expected exaggeration ratio or a sign-error probability.
+5. **Evaluate a reliability claim.** A researcher plugs a large significant estimate into the power formula and calls it “the study’s achieved reliability”. Trace how the input and the reported test statistic are related. Propose a design analysis over plausible effects and say what evidence would justify that range.
+6. **Stress-test your recommendation.** Consider more observations, preregistration and a different threshold. For each, identify the problem it addresses and one that it leaves unresolved.
 
 ```python
 from implementations.normal_model import power_two_sided
@@ -32,15 +32,13 @@ print("Precise design:", power_two_sided(0.1, se=0.02))
 **Submit:** a power table, the selection-bound derivation and a 400-word design note. Give units, plausible alternatives, target precision or power, and a separate account of identification. Do not describe this exercise as a simulation or evidence about the actual publication process.
 
 <details>
-<summary>Self-check and discussion guide</summary>
+<summary>Worked solution and discussion</summary>
 
-**Illustration — calculated results:** rejection probabilities at s = 1 are approximately 0.170075, 0.051146, 0.050011 and 0.05. The limit is α = .05, not zero; at the null this is the test's size. At β = 0.1 and s = 0.02, power is approximately 0.998817. The stipulated sample-size multiplier is (1/0.02)² = 2,500, not 50. It is a ratio, not a claim that a particular real study needs 2,500 observations.
+**Illustration.** At s = 1 the rejection probabilities are approximately 0.170075, 0.051146, 0.050011 and 0.05. As the true effect approaches zero, the standardised sampling distribution approaches the null distribution. The fixed rejection region still takes probability α = .05 at the null, the test’s size. At β = 0.1 and s = 0.02 power is approximately 0.998817. Under the stipulated scaling law a fiftyfold reduction in s requires squaring that factor, giving a sample-size multiplier of (1/0.02)² = 2,500. This ratio applies to the two hypothetical designs. [§3, Technical claims about power](../synthesis/critical-synthesis.md#3-where-do-the-competing-arguments-disagree) · [Mathematical evidence note](../wiki/evidence/mathematical-checks.md)
 
-Among selected estimates at s = 1 and true β = 0.1, the absolute ratio exceeds 1.95996/0.1 ≈ 19.60. The lower tail is also retained, so wrong-sign estimates are possible. This bound is not an expected Type M error and does not give a Type S error probability. Nor does it establish the distortion in a real literature, where selection and true effects may differ.
+Among selected estimates at s = 1 and true β = 0.1, divide the minimum absolute estimate that clears the screen by 0.1. The ratio exceeds 1.95996/0.1 ≈ 19.60. To find expected Type M, average the absolute ratio over both retained tails. To find Type S for this positive true effect, divide the probability in the retained lower tail by the total probability of selection. The bound itself follows from the screen. Extending it to a literature would need evidence about how estimates are selected and what effects and precisions are plausible.
 
-Substituting β̂ for a substantively plausible alternative reuses the result in a quantity determined by its test statistic. It does not create independent evidence of reliability or reveal the true β. A good answer uses a defensible range of effects, allows the preferred design to be infeasible and explains why bias or non-identification can persist as sampling error shrinks.
-
-The [mathematical evidence note](../wiki/evidence/mathematical-checks.md) checks the limiting power statement within the debate. Correcting that local statement does not invalidate every argument made by its authors.
+Substituting β̂ into the power formula reuses the test statistic, so the resulting number is already determined by the study’s result. For a prospective design, justify plausible inputs from relevant evidence and compare power across that range. If the sample size is infeasible, discuss which precision you can achieve. Even a much larger sample can leave bias or non-identification intact. To see the effect of selection across repeated studies, follow the lab after completing this calculation. [Selection lab](../simulations/labs/02-selection.md)
 
 </details>
 

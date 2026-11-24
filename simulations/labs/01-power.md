@@ -1,6 +1,6 @@
 # Lab 1 — power, precision and meaningful effects
 
-**Illustration: synthetic data, not a study of an actual programme.** This lab asks what repeated samples can tell us about zero effects, economically relevant magnitudes and an uncertainty model. Complete [intervals and equivalence](../../exercises/02-intervals-equivalence.md) and the [analytical power exercise](../../exercises/03-power-selection.md) first.
+**Illustration.** A precisely estimated £20 effect may be detectable and still lie inside a prespecified negligible region. A much larger true effect may be harder to establish as worthwhile in a smaller study. Predict which designs show those patterns, then check your predictions with synthetic repeated studies. Complete the two analytical exercises first. [Intervals and equivalence](../../exercises/02-intervals-equivalence.md) · [Analytical power exercise](../../exercises/03-power-selection.md) · [Chapter §2, Evidence about the benchmark](../../synthesis/critical-synthesis.md#2-what-do-the-data-tell-you-about-the-benchmark)
 
 ## Design before computation
 
@@ -32,12 +32,12 @@ For a simulated event rate `p_hat`, its plug-in Monte Carlo standard error is `s
 
 ## Exercises
 
-1. **Predict before running.** For each effect and n, calculate the true SE and predict zero rejection, interval coverage and equivalence. Identify a design where £20 is detectable and lies inside the chosen equivalence margin. Explain why those two descriptions are compatible.
-2. **Audit simulation error.** Tabulate the simulated zero-rejection probability, its MCSE and Wilson interval, and the exact benchmark for all 11 scenarios. Count how many benchmark values lie outside their individual 95% intervals. Explain why requiring every such interval to contain its target would be an unsuitable correctness rule.
-3. **Separate uncertainty from importance.** Compare `meaningful_n100` with `small_n100000`. Compare their zero-rejection rates with the rates of supporting a positive effect above £100. Write two conclusions that would be defensible after a single study and two that would not.
-4. **Four outcomes.** Use `both_reject`, `neither_reject`, `zero_rejection` and `equivalence` to recover all four joint test outcomes. Explain why equivalence failure at n = 100 is uninformative about whether theta actually falls inside the margin. What does the boundary scenario test?
-5. **Break calibration deliberately.** Compare the calibrated and understated-SE null scenarios at n = 2,500. Derive both their rejection and coverage probabilities. Explain why the stress case demonstrates the consequence of incorrect uncertainty without establishing a particular cause in real data.
-6. **Separate R from n.** Repeat the run at R = 200,000 with the same seed. Compare Monte Carlo precision, then use the custom API below to change the equivalence margin from £100 to £50. Do not choose the margin after inspecting the output and call it preregistered. State what substantive evidence a real margin would need.
+1. **Make predictions for the design.** Calculate the true SE for each n. For each effect and design, predict zero rejection, coverage and equivalence. Find where £20 should be detectable and still lie inside the chosen equivalence margin. Explain both judgements.
+2. **Check the simulation against exact probabilities.** For all 11 scenarios, report the zero-rejection rate, MCSE, Wilson interval and exact benchmark. Count the benchmarks outside their individual 95% intervals. What pattern of misses would prompt you to look at your simulation code?
+3. **Compare the two targets.** For `meaningful_n100` and `small_n100000`, compare the rate of rejecting zero with the rate of supporting an effect above £100. Write two warranted interpretations of a single study and two that overreach.
+4. **Reconstruct the four outcomes.** Use `both_reject`, `neither_reject`, `zero_rejection` and `equivalence`. At n = 100 check how wide the 90% interval is relative to the margin. Then explain what the boundary scenario tests.
+5. **Change the reported uncertainty.** At n = 2,500 compare the calibrated and understated-SE null scenarios. Derive rejection and coverage in both. Explain what the stress case shows, and what you would have to investigate to diagnose an incorrect SE in real data.
+6. **Vary repetitions and the margin separately.** Repeat at R = 200,000 with the same seed and compare Monte Carlo precision. Then use the code below to compare £100 with a £50 equivalence margin. Record that comparison as a sensitivity exercise and say what evidence would justify a margin specified in advance. [Chapter §4, Setting a margin worth testing](../../synthesis/critical-synthesis.md#setting-a-margin-worth-testing)
 
 ```python
 from simulations.power import simulate_scenario

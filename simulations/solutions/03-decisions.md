@@ -1,22 +1,22 @@
 # Worked solution — Decisions under uncertainty
 
-**Illustration: all numbers below belong to the declared synthetic model.** These are mathematical derivations and interpretation checks for [Lab 3](../labs/03-decisions.md), not empirical programme findings or a claim of complete primary-source reading.
+**Illustration.** Start with the choice at Y=£400. Ask what each rule compares the estimate with. Then shift to how each rule would perform over repeated synthetic decisions. Keep the criteria visible when ranking the rules. [Lab 3 questions](../labs/03-decisions.md) · [Chapter §5, Action under uncertainty](../../synthesis/critical-synthesis.md#5-what-can-justify-an-action-under-uncertainty)
 
 ## 1. Derive the decision thresholds
 
-For prior `θ∼N(m₀,τ₀²)` and known sampling SE s, the posterior mean is
+Write θ for the gross benefit in pounds per eligible person over one year. For prior `θ∼N(m₀,τ₀²)` and known sampling SE s, the posterior mean is
 
 `m(Y)=wY+(1−w)m₀`, where `w=τ₀²/(τ₀²+s²)`.
 
-Expected adoption payoff is `m(Y)−c`, so the risk-neutral Bayes rule adopts iff
+Compare `m(Y)−c`, the expected adoption payoff, with zero for the status quo. Solving the inequality for Y gives the cutoff for the risk-neutral Bayes rule
 
 `Y > [c−(1−w)m₀]/w`.
 
 At s=£500, the baseline prior has w=.8: its cutoffs are £125 for cost £100 and £625 for cost £500. The tight prior has w=1/26: corresponding cutoffs are £2600 and £13,000. The plug-in cutoffs equal the costs. The positive significance cutoff is `Φ⁻¹(.975)×500 ≈ £979.98`, independent of cost. The cost-confidence cutoff is `c+Φ⁻¹(.95)×500`, approximately £922.43 or £1322.43 for the two costs.
 
-For the cost-confidence rule, at the boundary θ=c the false-adoption probability is `Pr(Z>Φ⁻¹(.95))=.05`. For θ<c, the required standardised deviation is larger, so the probability is at most .05. This is calibrated control of an evidential error under the model, not a claim that the rule maximises expected welfare. Under a distribution of θ, the proportion of all replications adopting a harmful programme is a different quantity from the conditional error bound at each θ≤c.
+For the cost-confidence rule, start at break-even θ=c. The false-adoption probability there is `Pr(Z>Φ⁻¹(.95))=.05`. For θ<c, the required standardised deviation is larger, so the probability is at most .05. The guarantee controls an evidential error at each θ≤c under the model. To find the proportion of all replications adopting a harmful programme, average the relevant probabilities across the evaluation distribution of θ. To compare expected welfare, bring in the sizes of the payoffs too.
 
-At Y=£400, the baseline posterior mean is £320: adopt at cost £100 and retain the status quo at cost £500. The tight-prior mean is approximately £15.38, so it recommends the status quo at either cost. The two-sided zero-null p-value remains approximately .4237. These recommendations follow from stipulated priors, costs and utility; none certifies the population effect as positive or economically important.
+At Y=£400, the baseline posterior mean is £320. Compare that with £100 and £500 to see why the rule adopts at the lower cost and retains the status quo at the higher one. The tight-prior mean is approximately £15.38, below both costs, so it recommends the status quo in both cases. The two-sided zero-null p-value remains approximately .4237. Report the recommendations as conditional on priors, costs and utility, and discuss the evidence for the population effect separately.
 
 The strict `>` tie rule chooses the status quo at exact zero net posterior benefit. Both actions have equal posterior expected utility there, and exact ties have probability zero under the continuous model.
 
@@ -49,11 +49,11 @@ at a fixed state it is simply `max(μ−c,0)`. Subtract a rule's expected utilit
 | Fixed θ=400 | 212.652 | 36.910 | 217.724 | 0 |
 | Fixed θ=1200 | 1082.645 | 737.049 | 1084.706 | 0 |
 
-Compare these rounded expectations with the estimates **and MCSEs** in the generated [reference report](../results/summary.md); the full [JSON](../results/reference.json) contains all seven rules, including the cost-confidence comparator, paired differences and exact benchmarks. The simulated mean need not equal its expectation or rank very close rules correctly in one finite run. At matched-prior cost £100, the baseline–plug-in expected utility difference is only about £0.089; reporting a precise ranking from unrelated unpaired standard errors would be misleading.
+Read the exact expectations alongside the estimates and MCSEs in the reference run. At matched-prior cost £100, the baseline–plug-in expected utility difference is only about £0.089. To assess whether a finite-run reversal is surprising, use the MCSE of their difference on the same repeated decisions. The full results include all seven rules, their exact benchmarks and their paired differences. [Reference report](../results/summary.md) · [Full JSON](../results/reference.json)
 
 ## 3. Why pairing matters
 
-For replication r, compute `Dᵣ=U_other,r−U_bayes,r` before summarising. Its MCSE is `sd(D)/sqrt(R)`. It includes the covariance induced by shared states and observations. In general it is not `sqrt(MCSE_other²+MCSE_bayes²)`, which assumes independence.
+For replication r, compute `Dᵣ=U_other,r−U_bayes,r` on the same state and observation before summarising. Its MCSE is `sd(D)/sqrt(R)`. This calculation includes the covariance induced by the shared problem. Using `sqrt(MCSE_other²+MCSE_bayes²)` would assume independent rule estimates.
 
 Each regret difference is exactly `−Dᵣ`, because both rules use the same oracle payoff. Their estimated differences therefore have opposite signs and identical MCSEs. Likewise, mean utility plus mean regret must equal mean oracle utility for every rule. Negative individual regret would signal a coding or benchmark error under this two-action model.
 

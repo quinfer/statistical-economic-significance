@@ -1,6 +1,6 @@
 # Lab 3 — Decisions under uncertainty
 
-**Illustration.** Evaluate decision rules in synthetic repeated policy problems. This is an exercise in conditional reasoning, not evidence for adopting a real programme. Start after [exercise 06](../../exercises/06-decision-memo.md); basic normal distributions, expectation and Monte Carlo standard errors are assumed.
+**Illustration.** Two decision rules can recommend different actions from the same estimate. Which rule would you choose before the data arrive, and would you still choose it if the distribution of programme benefits changed? Compare rules under the synthetic model below after completing the individual decision problem. You will use the normal distribution, expectation and Monte Carlo standard errors. [Exercise 06](../../exercises/06-decision-memo.md) · [Chapter §5, Action under uncertainty](../../synthesis/critical-synthesis.md#5-what-can-justify-an-action-under-uncertainty)
 
 ## Question and design
 
@@ -49,13 +49,13 @@ For a mean utility, regret or **paired difference**, MCSE is the replication-lev
 
 ## Tasks
 
-1. Derive each finite adoption cutoff. At Y=£400, compare the baseline and tight-prior actions at costs £100 and £500. Prove the cost-confidence rule's false-adoption bound for θ≤c. Keep the action claim separate from a claim about θ.
-2. Predict which rule maximises average utility in the matched-prior scenarios and why. Run the lab, compare Monte Carlo estimates with exact benchmarks, and explain any apparent reversal between closely performing rules in terms of paired MCSE.
-3. For each rule, verify `mean utility + mean regret = mean oracle payoff`. Interpret the `other_minus_bayes_utility` and `other_minus_bayes_regret` metrics. Explain why adding separate MCSEs as if the policies were independent is inappropriate.
-4. Find a case where adoption occurs without zero-null rejection. Is the adoption frequency evidence that the effect is economically important? Explain the difference between an ex ante rule evaluation and a posterior action for observed data.
-5. Evaluate the mismatch and three fixed-state scenarios. Identify which conclusions about baseline Bayes performance survive. Explain why prior-average optimality need not imply pointwise dominance and why an oracle benchmark does not give a feasible rule knowledge of θ.
-6. Repeat with seed 20261124 and with 10,000 versus 50,000 replications. Does increasing R fix a disputed prior, wrong loss function or failed identification assumption? Explain any rare-event zeros without treating them as certainty.
-7. Propose one extension with uncertain costs or asymmetric losses. State the revised utility and what additional assumptions the simulation would need before changing code. Do not tune a prior or scenario solely to obtain a favoured ranking.
+1. **Find the cutoffs.** Derive each finite threshold. At Y=£400, compare the baseline and tight-prior actions at costs £100 and £500. Prove the cost-confidence rule’s false-adoption bound at θ≤c and identify the event the bound controls.
+2. **Predict the ranking before running.** Under the matched prior, say which rule should maximise average utility and why. Compare the simulated means with exact benchmarks and use the paired MCSE to explain any apparent reversal among close rules.
+3. **Check the pairing.** For each rule verify `mean utility + mean regret = mean oracle payoff`. Compare `other_minus_bayes_utility` and `other_minus_bayes_regret`. Explain what you would miss by computing uncertainty from separate MCSEs as though the rules had seen independent samples.
+4. **Distinguish the two decisions.** Find an adoption without rejection of zero. Name what the frequency of that event measures, and distinguish the action taken after observing data from the performance of the rule over repeated decisions.
+5. **Change the evaluation.** Compare the mismatch and all three fixed-state scenarios. Which conclusions about baseline Bayes survive? Explain what information the oracle uses that a feasible rule lacks, and what the average result under one prior tells you about any individual state.
+6. **Measure simulation noise.** Repeat with seed 20261124 and with 10,000 versus 50,000 replications. Which sources of uncertainty does R change? Explain rare-event zeros using their counts and the benchmark.
+7. **Change the decision problem.** Propose uncertain costs or asymmetric losses. Write the revised utility and justify the extra assumptions before changing code. Explain the substantive purpose of any new prior or scenario you propose. [Chapter §6, What would change the conclusion?](../../synthesis/critical-synthesis.md#6-what-would-change-the-conclusion)
 
 **Submit:** a 700-word decision-method memo, exact commands, result tables including MCSEs and denominators, and one strong objection to your preferred rule. Explain what empirical evidence and stakeholder judgement would be needed to apply it. The [worked solution](../solutions/03-decisions.md) supplies derivations and interpretation checks.
 

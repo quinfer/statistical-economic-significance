@@ -4,11 +4,11 @@
 
 Each lab pairs a reproducible experiment with questions, a concrete submission and a separate worked solution. Try the exercises before opening the solutions.
 
-| Lab | Experiment | Worked solution |
-|---|---|---|
-| [1. Power and precision](labs/01-power.md) | Vary sample size and effect size; compare zero-null tests, coverage and equivalence; understate the standard error | [Power solution](solutions/01-power.md) |
-| [2. Selection bias](labs/02-selection.md) | Compare all estimates with significant estimates, independent holdouts and a search across null candidates | [Selection solution](solutions/02-selection.md) |
-| [3. Decisions under uncertainty](labs/03-decisions.md) | Compare decision rules under stated benefits, costs and priors; evaluate average and state-specific regret | [Decision solution](solutions/03-decisions.md) |
+| Lab | What you will compare | Chapter reading | Worked solution |
+|---|---|---|---|
+| [1. Power and precision](labs/01-power.md) | How sample size, effect size and reporting the wrong standard error affect tests and intervals | [§2, Evidence about the benchmark](../synthesis/critical-synthesis.md#2-what-do-the-data-tell-you-about-the-benchmark) | [Power solution](solutions/01-power.md) |
+| [2. Selection bias](labs/02-selection.md) | All estimates, significant estimates, independent holdouts and a search across null candidates | [§2, Evidence about the benchmark](../synthesis/critical-synthesis.md#2-what-do-the-data-tell-you-about-the-benchmark) and [§4, Comparing analyses](../synthesis/critical-synthesis.md#comparing-analyses-of-the-same-data) | [Selection solution](solutions/02-selection.md) |
+| [3. Decisions under uncertainty](labs/03-decisions.md) | Decision rules under different costs and priors, with average and state-specific regret | [§5, Action under uncertainty](../synthesis/critical-synthesis.md#5-what-can-justify-an-action-under-uncertainty) | [Decision solution](solutions/03-decisions.md) |
 
 ## Run a lab
 

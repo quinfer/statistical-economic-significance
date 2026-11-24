@@ -1,20 +1,20 @@
 # Worked solutions — power and precision
 
-**Illustration.** All quantities below follow from the declared normal sampling model, not from observed policy effects. Use the exact values in the `benchmarks` fields and the realised values in `metrics` in [reference.json](../results/reference.json); the [summary](../results/summary.md) records the reference run. Simulation values vary with seed and replication count.
+**Illustration.** Start with the £20 effect and the £100 margin. Ask how often a repeated study rejects zero, then how often it supports a negligible effect. The exact probabilities come from the stipulated normal model. The estimates in the reference run also depend on the seed and replication count. Use `benchmarks` for the exact values and `metrics` for the realised values. [Chapter §2, Evidence about the benchmark](../../synthesis/critical-synthesis.md#2-what-do-the-data-tell-you-about-the-benchmark) · [Reference JSON](../results/reference.json) · [Reference summary](../results/summary.md)
 
 ## 1. Start from the estimand and sampling distribution
 
-Write `s = sigma/√n` for the true sampling SE and `r` for the reported SE. With sigma = £1,000, sample sizes 100, 2,500 and 100,000 give s = £100, £20 and approximately £3.1623 per person per year. The main grid has r = s. A sample size does not change theta or the prespecified margin; it changes the distribution of the estimator.
+The quantity of interest is the mean one-year policy effect in pounds per eligible person. Write `s = sigma/√n` for the true sampling SE and `r` for the reported SE. With sigma = £1,000, sample sizes 100, 2,500 and 100,000 give s = £100, £20 and approximately £3.1623 per person per year. Start with r = s, as in the main grid. Vary n while holding the effect and prespecified margin fixed.
 
 Let `c = z(.975)*r` and let Φ denote the standard normal CDF. Zero-null rejection occurs in the two tails. Therefore
 
 `P(reject zero | theta) = Φ((−c−theta)/s) + Φ((theta−c)/s)`.
 
-At theta = 0 and r = s, this is .05 for every n. That is the test's size at the null, rather than evidence that 5% of null hypotheses are true. At a fixed nonzero theta, shrinking s increases this rejection probability. The reference run estimates these probabilities; it does not estimate the plausibility of theta itself.
+At theta = 0 and r = s, this is .05 for every n. This is the test’s size, the rejection probability with the null held true. At a fixed nonzero theta in the calibrated grid, shrinking s increases the rejection probability. Keep theta as an input when interpreting the reference run. The simulation estimates a probability conditional on that input. [Chapter §3, Technical claims about power](../../synthesis/critical-synthesis.md#3-where-do-the-competing-arguments-disagree)
 
 ## 2. Monte Carlo uncertainty is a separate layer
 
-Each repeated study contributes an indicator, so at a fixed design the event count is binomial `(R,p)`. Its rate has variance `p(1−p)/R`, estimated by plugging in the realised rate. For example, a probability near .05 at R = 50,000 has MCSE about .000975, or 0.0975 percentage points. This calculation is about numerical precision of the simulated rate. It says nothing about how precisely a particular study estimates theta.
+Each repeated study contributes an indicator, so at a fixed design the event count is binomial `(R,p)`. Its rate has variance `p(1−p)/R`, estimated by plugging in the realised rate. For example, a probability near .05 at R = 50,000 has MCSE about .000975, or 0.0975 percentage points. Measure that error in the estimated rate. For precision of the effect estimate from a single study, go back to the sampling SE in pounds per person per year.
 
 An individual 95% Wilson interval is not a simultaneous guarantee for a table of many probabilities. Some targets can fall outside their intervals even when the generator is correct. Metrics within a scenario are also dependent, so the chance of at least one miss should not be computed as if every reported interval were independent. Automated tests use more conservative tolerances against exact probabilities; statistical checks still supplement, rather than replace, code inspection.
 
@@ -22,7 +22,7 @@ When zero or R events occur, the plug-in MCSE is zero but the Wilson interval ha
 
 ## 3. Zero, negligibility and a positive meaningful effect
 
-Let `q = z(.95)*r` and delta = £100. The equivalence rejection region is
+Put the 90% interval inside the equivalence region by moving each margin inwards by the interval’s half-width. Let `q = z(.95)*r` and delta = £100. The equivalence rejection region is
 
 `−delta + q < Xbar < delta − q`.
 
@@ -69,7 +69,7 @@ At k = 1 these are .05 and .95. At k = .5 they are approximately .327 and .673. 
 
 ## 6. Change a design, not a conclusion by decree
 
-Increasing R from 50,000 to 200,000 approximately halves MCSE without changing the exact benchmark. Increasing n affects s and therefore the probabilities themselves. A tighter margin changes the scientific claim: with delta = £50, r = £20, and theta = £20, insert those quantities into the equivalence formula rather than recycling the £100-margin conclusion.
+Increasing R from 50,000 to 200,000 approximately halves MCSE and keeps the exact benchmark fixed. Increasing n affects s and therefore the study probabilities themselves. For the margin sensitivity run hold r = £20 and theta = £20 fixed. Inserting delta = £50 into the equivalence formula gives probability 0.4106, compared with 0.9907 at £100. The same true effect lies inside both margins. The smaller margin leaves less room for the entire interval to fit. [Chapter §4, Setting a margin worth testing](../../synthesis/critical-synthesis.md#setting-a-margin-worth-testing)
 
 An adequate memo would justify a real margin using units, opportunity costs, population, distributional consequences and horizon, then assess sensitivity. It would distinguish these normative and measurement choices from power. It would also allow the conclusion that the desired precision is infeasible, or that more data are less valuable than better identification. Choosing a margin to fit the observed interval cannot retrospectively create a prespecified claim.
 

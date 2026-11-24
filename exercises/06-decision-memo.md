@@ -1,8 +1,8 @@
 # 06. A decision before certainty
 
-**Aim:** give a defensible recommendation under explicit uncertainty and preferences while keeping it separate from a claim that an economically important effect has been established. Prerequisites: exercises 01–05 and basic conditional probability.
+A committee asks whether to adopt a programme after seeing an uncertain estimate of its benefits. Write the recommendation you could make under an explicit decision rule and explain what would change it. Bring your work from exercises 01–05 and basic conditional probability.
 
-Read [decisions under uncertainty](../wiki/concepts/decisions.md), [C002](../wiki/claims/C002-action-without-rejection.md), [C010](../wiki/claims/C010-uncertainty-and-choice.md) and section 5 of the [working synthesis](../synthesis/critical-synthesis.md). The [Manski 2019 note](../wiki/papers/manski-2019-treatment-choice.md) supplies a source trail for the distinction between treatment choice and testing; this exercise is the project's own normal-prior illustration, not a replication of that paper.
+The chapter builds the same decision problem in §5. Use §3 for the objections you will address in your memo. The numerical example is a project illustration. Manski’s treatment-choice argument supplies background for the distinction between a decision and a test. [§5, Action under uncertainty](../synthesis/critical-synthesis.md#5-what-can-justify-an-action-under-uncertainty) · [§3, Competing arguments](../synthesis/critical-synthesis.md#3-where-do-the-competing-arguments-disagree) · [Decision concepts](../wiki/concepts/decisions.md) · [Claim C002](../wiki/claims/C002-action-without-rejection.md) · [Claim C010](../wiki/claims/C010-uncertainty-and-choice.md) · [Manski 2019](../wiki/papers/manski-2019-treatment-choice.md)
 
 ## Problem and assumptions
 
@@ -20,12 +20,12 @@ and posterior mean is
 
 ## Tasks
 
-1. Calculate the posterior mean and standard deviation, the frequentist two-sided zero-null p-value and the posterior expected net benefit at c = £100. State the preferred action under the baseline criterion. What proposition has this calculation established, and what has it not established?
-2. Keep the same likelihood and prior but set c = £500. Explain why the preferred action can change although the zero-null p-value does not.
-3. Return to c = £100 and replace the prior by N(0, 100²), keeping it proper. Recalculate. Present the strongest substantive justification that a decision-maker would need for each prior, and explain why selecting a prior to obtain a preferred recommendation is unpersuasive.
-4. For both priors at c = £100, compute Pr(β > c | data). Compare maximising expected net benefit with a separate rule requiring this probability to exceed .95. Why do these criteria differ? Do not label either rule uniquely rational without an objective that justifies it.
-5. Consider an alternative payoff `β − c − k × max(c − β, 0)`, with k > 0: shortfalls below break-even receive an extra penalty. Explain how this changes the decision problem. You may derive the expectation as an extension, but a different decision under a changed payoff does not contradict the baseline calculation.
-6. Write the decision memo below. Include one objection from the strongest inferential position and one from the strongest contextualist position. Say what further evidence or stakeholder judgement could change your recommendation, and which uncertainty more data might fail to resolve.
+1. **Make a baseline recommendation.** At c = £100, calculate the posterior mean and standard deviation, the two-sided frequentist p-value against zero and the posterior expected net benefit. State the action under the baseline criterion and the evidential claim the data support.
+2. **Change only cost.** Keep the likelihood and prior fixed and set c = £500. Identify the quantities that change and explain why the decision can reverse with the zero-null p-value held fixed.
+3. **Change only the prior at the original cost.** Return to c = £100 and use the proper prior N(0, 100²). Recalculate. Give the strongest substantive defence of each prior and explain what would make one more credible to the committee before comparing recommendations.
+4. **Compare decision criteria.** At c = £100 calculate Pr(β > c | data) under both priors. Compare the expected-net-benefit rule with a rule that requires this probability to exceed .95. Explain what each criterion values and what would justify using it.
+5. **Penalise shortfalls.** Consider `β − c − k × max(c − β, 0)`, with k > 0. Explain how charging extra for outcomes below break-even changes the comparison. As an extension, derive the expected penalty. A change in the recommended action would now reflect a change in the payoff.
+6. **Write for the committee.** Include one strong inferential objection and one strong contextual objection. State what further evidence or stakeholder judgement would change your recommendation and which uncertainty could persist with more observations.
 
 ```python
 from implementations.normal_model import normal_cdf, normal_posterior, two_sided_p
@@ -53,15 +53,21 @@ Use this rubric for self-assessment or peer discussion. Score each dimension 0 (
 | Critical balance | Strong objections, source-reading limits and evidence that could change the judgement are recorded |
 
 <details>
-<summary>Self-check and discussion guide</summary>
+<summary>Worked solution and memo guidance</summary>
 
-**Illustration — calculated results:** the baseline posterior mean is £320 and standard deviation approximately £447.21. The frequentist two-sided p-value is approximately .4237. At c = £100, expected net benefit is £220, so baseline expected payoff favours adoption. At c = £500, expected net benefit is −£180, so it favours the status quo. Neither action proves the true effect is positive, negligible or economically large.
+**Illustration.** With the baseline prior, combine its precision with the likelihood precision using the two formulas in the setup. The posterior mean is £320 and the posterior standard deviation is about £447.21. The two-sided p-value against zero is about .4237, calculated from the estimate and its sampling standard error. Under linear utility the expected adoption payoff is the posterior mean minus cost. Compare that payoff with zero for the status quo.
 
-With prior standard deviation £100, posterior mean is approximately £15.38 and standard deviation £98.06. Expected net benefit at c = £100 becomes −£84.62, favouring the status quo. The likelihood and its zero-null p-value are unchanged. Under the wider and tighter priors, posterior probabilities of positive net benefit are approximately .6886 and .1941 respectively. A .95 probability rule favours neither adoption case; it is a different criterion, and the fixed threshold requires justification.
+| Prior SD | Cost | Posterior expected net benefit | Choice under linear utility |
+|---:|---:|---:|---|
+| £1,000 | £100 | £220 | Adopt |
+| £1,000 | £500 | −£180 | Keep the status quo |
+| £100 | £100 | −£84.62 | Keep the status quo |
+
+The tighter prior brings the posterior mean to approximately £15.38 and the posterior standard deviation to £98.06. The likelihood and its p-value stay fixed. At £100 use each posterior to find the area above break-even. The probabilities are about .6886 for the wider prior and .1941 for the tighter prior. Both fall below .95. A probability rule counts how often net benefit is positive under the posterior, while an expected-payoff rule also weights the sizes of gains and losses. Defend the criterion as well as the prior. [§5, Action under uncertainty](../synthesis/critical-synthesis.md#5-what-can-justify-an-action-under-uncertainty)
 
 For the optional asymmetric-loss extension, let μ and σ be the posterior mean and standard deviation, d = (c − μ)/σ, and φ/Φ the standard normal density/distribution functions. Expected shortfall below break-even is `(c − μ)Φ(d) + σφ(d)`. Expected adoption payoff becomes `μ − c − k × expected_shortfall`. This formula makes the additional penalty explicit. It should not be mistaken for a universal welfare function or an empirical estimate of stakeholder preferences.
 
-**Project interpretation:** the example refutes a universal requirement to reject zero before acting under every defensible criterion. It does not refute the need for reliable evidence about unknown effects. “Adopt under these assumptions” and “the population effect is established as important” remain distinct. A good memo also recognises that a prior, loss function and causal target can be disputed even when all arithmetic is correct. [C011](../wiki/claims/C011-nested-meaningful-tests.md) preserves the narrower case in which a meaningful-effect evidential criterion logically entails rejection of zero.
+**Project interpretation.** For your memo, give the committee a conditional recommendation and state where it relies on the prior, costs, loss and causal assumptions. The baseline adoption case demonstrates how a choice can be justified under stated conditions without rejecting zero. To establish the population effect as important you would need evidence about its magnitude relative to a benchmark. The chapter’s nested-test argument describes a narrower evidential criterion that entails zero-null rejection. [§2, Evidence about the benchmark](../synthesis/critical-synthesis.md#2-what-do-the-data-tell-you-about-the-benchmark) · [Claim C011](../wiki/claims/C011-nested-meaningful-tests.md)
 
 </details>
 

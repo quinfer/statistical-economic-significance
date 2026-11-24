@@ -1,8 +1,8 @@
 # 01. Magnitude, evidence and action
 
-**Aim:** distinguish a benchmark, an inference about an unknown effect and a choice under uncertainty. Prerequisites: estimates, standard errors and the meaning of a confidence interval.
+You are reviewing three estimates for a lender. One is small and precise, one is large and imprecise, and one falls just above the lender’s benchmark. Before running a test, write down what you would need to know to recommend adoption. You’ll use estimates, standard errors and confidence intervals to separate that decision from what each study establishes.
 
-Read the [economic-significance note](../wiki/concepts/economic-significance.md), [C001: independence](../wiki/claims/C001-independence.md) and sections 1–3 of the [working synthesis](../synthesis/critical-synthesis.md). The [matched 2008 exchange](../wiki/disagreements/2008-exchange.md) supplies the competing positions and locators; do not treat either side as defending an unrestricted slogan.
+Use the chapter’s distinctions in [§1, Which claim are you trying to establish?](../synthesis/critical-synthesis.md#1-which-claim-are-you-trying-to-establish) and [§2, What do the data tell you about the benchmark?](../synthesis/critical-synthesis.md#2-what-do-the-data-tell-you-about-the-benchmark). If you draw on the debate, check each side’s concessions and the passages cited. [§3, Competing arguments](../synthesis/critical-synthesis.md#3-where-do-the-competing-arguments-disagree) · [Economic significance](../wiki/concepts/economic-significance.md) · [Claim C001](../wiki/claims/C001-independence.md) · [Matched 2008 exchange](../wiki/disagreements/2008-exchange.md)
 
 ## Problem and assumptions
 
@@ -18,11 +18,11 @@ Before examining results, the lender regards effects strictly between −1 and +
 
 ## Tasks
 
-1. Write three distinct sentences beginning “A reduction would matter if…”, “The evidence supports…” and “The lender should adopt if…”. Identify the additional inputs needed for the third sentence, including costs and consequences of defaults.
-2. Compute the two-sided zero-null p-value and 95% confidence interval for each case. Explain the coverage statement without assigning a frequentist probability to the fixed β inside the realised interval.
-3. Evaluate: “A rejects zero, so its effect is important”; “B has a large estimate, so it establishes importance”; “C's estimate exceeds 1, so it establishes β > 1.” State exactly which implication fails in each.
-4. For C, calculate the one-sided 95% lower confidence bound, β̂ − 1.64485s. Then consider a generic compatible test: if its lower bound L exceeds a positive meaningful threshold δ, must L also exceed zero? Explain why this restricted implication neither requires two separate tests nor establishes a universal testing prerequisite for action.
-5. Challenge one stipulation. For example, distinguish a one-year average from long-term effects, or explain how severe losses among a subgroup could make an average-based negligible region inadequate.
+1. **Write the three claims.** Begin “A reduction would matter if…”, “The evidence supports…” and “The lender should adopt if…”. List what you need to complete the third sentence, including the costs and consequences of defaults.
+2. **Calculate, then interpret.** Find the two-sided zero-null p-value and 95% confidence interval for each case. Explain 95% coverage by describing what would happen if you repeated the study with β held fixed.
+3. **Check three proposed interpretations.** A colleague says A’s effect is important because it rejects zero, B establishes importance because the estimate is large, and C establishes β > 1 because its estimate exceeds 1. For each claim, identify the step that needs more evidence.
+4. **Check the narrower implication.** For C, calculate the one-sided 95% lower confidence bound, β̂ − 1.64485s. In a compatible procedure, if the lower bound L exceeds a positive threshold δ, what follows about L relative to zero? Explain why the same bound is enough for the two comparisons and why an adoption decision raises a further question.
+5. **Challenge one stipulation.** Say what would change if the lender cared about long-term effects, or if severe losses among a subgroup made the average-based negligible region inappropriate.
 
 From the repository root:
 
@@ -36,15 +36,19 @@ for estimate, se in [(0.1, 0.02), (2, 2), (1.1, 0.2)]:
 **Submit:** a one-page claim map, the calculated table and a 300-word argument distinguishing insufficiency from non-necessity. Include one condition under which your conclusion would change.
 
 <details>
-<summary>Self-check and discussion guide</summary>
+<summary>Worked solution and discussion</summary>
 
-**Illustration — calculated results:** A has p ≈ 5.73 × 10⁻⁷ and 95% interval [0.0608, 0.1392] pp. B has p ≈ 0.3173 and [−1.9199, 5.9199] pp. C has p ≈ 3.80 × 10⁻⁸ and [0.7080, 1.4920] pp. C's one-sided 95% lower bound is about 0.7710 pp, below the 1 pp threshold.
+**Illustration.** Divide each estimate by its standard error for the two-sided normal test. For the 95% interval, go 1.96 standard errors either side of the estimate. Under the model, 95% of intervals constructed this way over repeated samples would cover the fixed target effect.
 
-A rebuts the sufficiency of zero-null rejection for importance under the stipulated margin. It does not rebut necessity. B does not establish a positive effect exceeding 1 pp; negative, negligible and large positive effects remain within its interval. C shows that rejecting zero and comparing the point estimate with δ do not establish the same proposition as a calibrated meaningful-effect test.
+| Case | Two-sided p-value against zero | 95% interval (pp) | What you can say about the benchmark |
+|---|---:|---|---|
+| A | 5.73 × 10⁻⁷ | [0.0608, 0.1392] | The interval excludes zero and lies inside the negligible region. Zero-null rejection is insufficient to establish importance. |
+| B | 0.3173 | [−1.9199, 5.9199] | The range includes negative, negligible and large positive effects. The point estimate is above the benchmark and the interval crosses it. |
+| C | 3.80 × 10⁻⁸ | [0.7080, 1.4920] | The two-sided zero test rejects and the point estimate clears the threshold. C’s one-sided 95% lower bound is about 0.7710 pp, below the 1 pp threshold. |
 
-The implication L > δ > 0 ⇒ L > 0 is valid within a compatible one-sided procedure at a common error level. Do not silently substitute a two-sided zero-null cutoff. It is an implication between evidential criteria, not a proof that every rational action requires rejection. An exactly observed accounting total can also answer a different, purely descriptive question without sampling extrapolation.
+Case A tells you about sufficiency. To assess necessity for a specific evidence standard, consider L > δ > 0. This implies L > 0 at the same error level within the compatible one-sided procedure. Keep the tail fixed when making that comparison. If the question instead asks about an exactly observed accounting total, you may be able to answer it descriptively without sampling extrapolation. [§2, Benchmark and nested tests](../synthesis/critical-synthesis.md#2-what-do-the-data-tell-you-about-the-benchmark)
 
-A strong answer specifies what would make 1 pp matter economically, separates the assumed causal target from the observation model, and leaves adoption unresolved until consequences and a decision criterion are supplied. See [C011](../wiki/claims/C011-nested-meaningful-tests.md) and the [checked derivations](../wiki/evidence/mathematical-checks.md).
+For the adoption sentence, say how much the lender would gain from averting defaults, whose losses count, and how the programme’s costs or risk would affect its choice. A different horizon or borrower mix can require an argument for a different causal target. [§5, Action under uncertainty](../synthesis/critical-synthesis.md#5-what-can-justify-an-action-under-uncertainty) · [Claim C011](../wiki/claims/C011-nested-meaningful-tests.md) · [Checked derivations](../wiki/evidence/mathematical-checks.md)
 
 </details>
 

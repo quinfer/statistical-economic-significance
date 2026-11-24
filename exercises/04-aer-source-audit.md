@@ -1,8 +1,8 @@
 # 04. Audit a claim about research practice
 
-**Aim:** separate reproducible arithmetic, provenance, interpretation of a passage and validity of a research-practice measure. Prerequisites: basic proportions and a willingness to retain unresolved disagreements.
+Suppose a reader cites the survey’s headline as evidence that economists ignored effect sizes. Find the exact version and question behind the number. Then check two papers to see how much the coding summaries can tell you about what the researchers actually did.
 
-Start with the [AER audit guide](../sources/aer-audit/README.md), [coding narrative](../wiki/evidence/aer-coding-audit.md) and [2008 exchange](../wiki/disagreements/2008-exchange.md). The exercise uses factual transcriptions and original project notes already in the repository. It does not require access to copyrighted article files or temporary downloads.
+Begin with the chapter’s account of versions, codes and disputed cases. Work from the factual transcriptions and reading records in this repository, which are sufficient for the tasks. [Chapter appendix, Auditing claims about research practice](../synthesis/critical-synthesis.md#appendix-auditing-claims-about-research-practice) · [AER audit guide](../sources/aer-audit/README.md) · [Coding narrative](../wiki/evidence/aer-coding-audit.md) · [2008 exchange](../wiki/disagreements/2008-exchange.md)
 
 ## Problem and scope
 
@@ -20,28 +20,35 @@ The unit of the 1990s matrix is an article, with 19 binary items. The 1980s tota
 
    The default run needs only committed CSVs and computes arithmetic diagnostics. `--raw-dir` is optional and requires separately retrieved historical source files; a default run does not repeat the earlier raw-source checksum and transcription checks.
 
-2. Using the [question dictionary](../sources/aer-audit/coding-questionnaire.csv) and [137-row matrix](../sources/aer-audit/coding-1990s-paper-scores.csv), independently calculate the Q16 adverse count/proportion, the Q7 × Q16 cross-tabulation, and Q9's affirmative rate both over all 137 rows and conditional on Q8 = 1. Explain which question each denominator answers. Do not automatically translate every adverse item into “no magnitude reasoning”.
-3. Compare matrix Q14/Q15 percentages with the [final JSE version check](../wiki/evidence/jse-2004-version-check.md). Record the observed discrepancy without inventing its cause. Explain why the final JSE and EJW 1980s Q7 entries must be distinguished.
-4. Inspect the 1980s row-total anomaly and the omission-list overlap. For each, write one warranted conclusion and one conclusion that would overreach. Do not count author rows as independent miscoded papers or assume every listed omission satisfies a verified eligibility rule.
-5. Build a two-case ledger using [final Darby](../wiki/evidence/darby-final-followup.md) and [final Bernheim–Wantz](../wiki/evidence/bernheim-wantz-final-followup.md). For each, give the exact disputed allegation, published version and printed locator, evidence bearing on it, a narrower surviving concern, and what would require replication. Include one correction to the original critique and one qualification of the defence. Consult the linked [supporting catalogue](../sources/aer-audit/supporting-materials.md); do not assign a working-paper DOI to the final article.
-6. Read the [expanded-matrix search](../wiki/evidence/expanded-matrix-followup.md). Can you subtract earlier counts from rounded book percentages and recover the 50 added papers' codes? Explain both the mathematical non-uniqueness and the unverified version assumptions. Specify the records needed for a proper follow-up.
+2. **Reproduce the counts independently.** Calculate the Q16 adverse count and proportion, the Q7 × Q16 cross-tabulation and Q9’s affirmative rate over all 137 rows and conditional on Q8 = 1. Explain what each denominator counts and what the questionnaire means by an adverse response. [Question dictionary](../sources/aer-audit/coding-questionnaire.csv) · [137-row matrix](../sources/aer-audit/coding-1990s-paper-scores.csv)
+3. **Name the version where each discrepancy occurs.** Compare matrix Q14/Q15 percentages with the final JSE tables. Record where they differ and what you would need to explain the difference. Check the final JSE and EJW 1980s Q7 entries separately. [Final JSE version check](../wiki/evidence/jse-2004-version-check.md)
+4. **Check what a row represents.** For the 1980s row-total anomaly and the omission-list overlap, write one warranted statement and one that would overreach. Take account of author–paper rows and the limits of the eligibility evidence.
+5. **Build a two-case ledger.** For Darby and Bernheim–Wantz, identify the exact allegation, published version and printed locator, evidence bearing on the allegation, a narrower concern and what would require replication. Give one correction to the critique and one qualification of the defence. Check that any DOI you give corresponds to the version you use. [Final Darby reading](../wiki/evidence/darby-final-followup.md) · [Final Bernheim–Wantz reading](../wiki/evidence/bernheim-wantz-final-followup.md) · [Supporting catalogue](../sources/aer-audit/supporting-materials.md)
+6. **Test a proposed reconstruction.** Could subtracting earlier counts from rounded book percentages recover the 50 added papers’ codes? Explain the mathematical non-uniqueness and the unverified assumptions about versions. Specify what you would seek in a follow-up. [Expanded-matrix search](../wiki/evidence/expanded-matrix-followup.md)
 
 **Submit:** a reproduction table, a two-case evidence ledger and a 500-word assessment of what remains unresolved. Label your ledger's documentary claims as based on the repository's existing reading record unless you actually obtain and consult the primary passages yourself. A primary-source reading, a note-based exercise and an empirical replication are different accomplishments.
 
 <details>
-<summary>Self-check and discussion guide</summary>
+<summary>Worked audit and discussion</summary>
 
-**Project reproduction:** Q16 has 25 affirmative codes and 112 adverse codes: 112/137 ≈ 81.7518%. The Q7 × Q16 cells are (0,0): 80; (0,1): 7; (1,0): 32; (1,1): 18. Q9 has five affirmative codes: 5/137 ≈ 3.65%, or 5/11 ≈ 45.45% conditional on Q8 = 1. All five Q9 positives fall within those eleven rows. Check the instrument's conditional meaning before interpreting either denominator.
+**Project reproduction.** Start with the earlier 137-paper matrix. Count 25 affirmative Q16 codes and 112 adverse codes, giving 112/137 ≈ 81.7518%. Keep the row and column labels on the joint table so the order of the four counts is visible.
+
+| Q7 | Q16 = 0 | Q16 = 1 |
+|---|---:|---:|
+| 0 | 80 | 7 |
+| 1 | 32 | 18 |
+
+All five affirmative Q9 responses occur in the eleven rows with Q8 = 1. Report 5/137 ≈ 3.65% for all coded papers or 5/11 ≈ 45.45% for the papers that met the preceding criterion. Name the denominator when reporting the result. [Chapter appendix, What do the scores and percentages tell you?](../synthesis/critical-synthesis.md#what-do-the-scores-and-percentages-tell-you)
 
 The matrix gives Q14 = 39/137 ≈ 28.5% and Q15 = 35/137 ≈ 25.5%; the checked final JSE tables reverse these values. The 1980s Q7 value is 47.3% in the checked final JSE version, while the checked EJW table gives 13.2%. The [version ledger](../wiki/evidence/jse-2004-version-check.md) supports reporting those specific observations, not a reconstructed explanation.
 
 There are 281 author–paper rows, of which 42 total 20 responses despite 19 items. This is an unexplained record inconsistency, not 42 proven independent miscoded papers. The omission list has 82 rows against the rejoinder's stated 81; Simon appears in both an omission and a scored list. The [coding audit](../wiki/evidence/aer-coding-audit.md) records the provenance and limits. The discrepancy does not show that all omissions were fictitious.
 
-**Project interpretation of the documented source readings:** Darby's final pp. 311–312 translate a coefficient into growth magnitudes, and p. 315 discusses an economically interpretable difference. This contradicts a blanket absence-of-magnitude description. Oil-term exclusion and non-rejection-as-absence still require scrutiny; the existence of later magnitude calculations does not validate selection. The defence's interval-containment argument is not a reported covariance-aware cross-equation test. See the [Darby ledger](../wiki/evidence/darby-final-followup.md).
+**Project interpretation of the documented readings.** For Darby, use final pp. 311–312 to show how he translates a coefficient into growth magnitudes and p. 315 for his economic interpretation of a difference. These passages correct a blanket description of magnitude neglect. To judge the exclusion of the oil term and the reading of non-rejection as absence, examine the selection step. The defence uses interval containment, so a covariance-aware cross-equation test would require further evidence. [Darby ledger](../wiki/evidence/darby-final-followup.md)
 
 Bernheim–Wantz final pp. 543–544 interpret magnitudes; p. 547 Table 4 contains magnitude estimates, and footnote 17 reports direct tests of differences. The star labels an alternative comparison, not a significance tier. Thus a critique based solely on missing magnitudes or separate significance labels misdescribes the checked final passages. Within-regime non-rejection still does not establish practical equivalence, and no causal identification claim has been replicated. See the [Bernheim–Wantz ledger](../wiki/evidence/bernheim-wantz-final-followup.md).
 
-Rounded column percentages cannot identify individual rows or joint coding patterns. Subtracting older totals would additionally assume unchanged codes, eligibility, applicability and denominators for retained papers. Required follow-up includes a versioned 187-paper roster/matrix, the 50-paper crosswalk, coding rules, item-to-passage rationales and independent coding checks. Failed retrieval is not proof that the records never existed. These selected cases do not supply a corrected corpus-wide misuse rate.
+To see the reconstruction problem, imagine two surveys with identical column totals and different papers scoring yes. The totals match while the joint coding patterns differ. Subtracting older totals would also assume unchanged codes, eligibility, applicability and denominators for retained papers. A follow-up needs a versioned 187-paper roster and matrix, the 50-paper crosswalk, coding rules, passage-level reasons and independent coding checks. Retrieval remains incomplete. The case checks can correct particular descriptions, while a corpus-wide rate would need a defensible article universe and coding design. [Chapter appendix, Reading the original papers](../synthesis/critical-synthesis.md#what-changes-when-you-read-the-original-papers)
 
 </details>
 

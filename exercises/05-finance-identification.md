@@ -1,8 +1,8 @@
 # 05. From gross alpha to an economic claim
 
-**Aim:** identify the estimand, units, costs and assumptions between an estimated return and a claim about economic value. Prerequisites: exercises 01–03.
+An investment committee sees a gross alpha estimate of 20 basis points a month. A member asks whether the portfolio could earn enough after costs. Work through that question with two levels of precision, then check what happens when the factor model may be biased. This exercise builds on exercises 01–03.
 
-Read [finance](../wiki/concepts/finance.md), [identification](../wiki/concepts/identification.md), [C008: finance replication](../wiki/claims/C008-finance-replication.md) and [C009](../wiki/claims/C009-identification.md). For the discussion task, use the existing notes on [Harvey–Liu–Zhu](../wiki/papers/harvey-liu-zhu-2016-cross-section.md), [McLean–Pontiff](../wiki/papers/mclean-pontiff-2016-predictability.md) and [Jensen–Kelly–Pedersen](../wiki/papers/jensen-kelly-pedersen-2023-replication.md), preserving their stated reading depths.
+Start with the chapter’s gross-to-net illustration and return to it when you assess whether two analyses answer the same question. [§4, Comparing analyses of the same data](../synthesis/critical-synthesis.md#comparing-analyses-of-the-same-data) · [Finance](../wiki/concepts/finance.md) · [Identification](../wiki/concepts/identification.md) · [Claim C008](../wiki/claims/C008-finance-replication.md) · [Claim C009](../wiki/claims/C009-identification.md)
 
 ## Problem and assumptions
 
@@ -12,12 +12,12 @@ Implementation cost c is a known constant per month at the assumed scale: consid
 
 ## Tasks
 
-1. Calculate gross and net point estimates and 95% confidence intervals for both cost cases. Derive why subtracting a known constant shifts the interval without changing its standard error. Compare the gross zero-null p-value with the two net zero-null p-values.
-2. Repeat with SE = 2 bp and the same estimate/costs. Which evidence claims change? Explain why stronger gross significance can coexist with evidence of negative net alpha at a high cost.
-3. Suppose cost were estimated rather than known. Write the variance of α̂ − ĉ, including covariance, and state what information is missing. Do not add standard errors or assume independence without justification.
-4. Under the precise SE = 2 case and c = 10, introduce a model-bias sensitivity parameter b ∈ [0, 10] bp, fixed but unknown: α̂ estimates α + b. Construct the union of conditional 95% intervals for net α − c over this range. Explain why reducing sampling error alone has not removed the economic ambiguity, and distinguish this sensitivity interval from a posterior distribution over b.
-5. Write one paragraph explaining why a factor-model intercept is not automatically a causal effect of deploying the portfolio, a capacity-adjusted payoff or an investor's utility gain. Identify a plausible design or measurement issue that would remain with arbitrarily many observations.
-6. Compare the research questions and settings represented by the three finance paper notes. List what would have to match before you could treat a more optimistic replication result and a stronger discovery hurdle as direct empirical contradictions. Do not import findings from unread sections or infer an implementable trading strategy.
+1. **Translate gross to net.** Calculate the point estimates and 95% intervals for gross alpha and for net alpha at both costs. Show what subtracting a known constant does to the centre, endpoints and standard error. Compare the three p-values against zero, naming the target in each test.
+2. **Hold costs and the estimate fixed.** Set SE = 2 bp and recalculate. Which evidence claims change? Explain how stronger evidence of positive gross alpha can coexist with evidence of negative net alpha at the higher cost.
+3. **Allow cost to be estimated.** Write the variance of α̂ − ĉ and identify the information you would need about both estimates and their covariance.
+4. **Allow for a biased model.** At SE = 2 bp and c = 10 bp, let the estimate target α + b, with fixed unknown b ∈ [0, 10] bp. Construct the union of conditional 95% intervals for net α − c. Explain what the union tells the committee and what you would need to assign posterior probabilities to values of b.
+5. **Name the decision target.** Explain what would link a factor-model intercept to the causal effect of deploying a portfolio, to a payoff at a specified capacity, or to a gain in investor utility. Identify a design or measurement problem that could persist with arbitrarily many observations.
+6. **Compare the studies’ questions.** Before treating a more optimistic replication result and a stronger discovery hurdle as contradictory, check the samples, targets and definitions of success you can establish from the notes. Attribute claims at the recorded reading depths. [Harvey, Liu and Zhu](../wiki/papers/harvey-liu-zhu-2016-cross-section.md) · [McLean and Pontiff](../wiki/papers/mclean-pontiff-2016-predictability.md) · [Jensen, Kelly and Pedersen](../wiki/papers/jensen-kelly-pedersen-2023-replication.md)
 
 ```python
 from implementations.normal_model import interval, two_sided_p
@@ -32,15 +32,24 @@ for se in [15, 2]:
 **Submit:** a gross/net results table and a 500-word interpretation stating the target, factor model's role, horizon, scale, cost assumptions, uncertainty and missing decision inputs. Include an explicit sensitivity result and one evidence-based comparison of the paper notes.
 
 <details>
-<summary>Self-check and discussion guide</summary>
+<summary>Worked solution and discussion</summary>
 
-**Illustration — calculated results:** at SE = 15 bp the gross interval is [−9.40, 49.40] bp, with p ≈ .1824. At c = 10, net estimate is 10 bp, interval [−19.40, 39.40], p ≈ .5050. At c = 25, net estimate is −5 bp, interval [−34.40, 24.40], p ≈ .7389. None establishes zero net benefit or equivalence to zero.
+**Illustration.** Subtract the known cost from the gross estimate and both interval endpoints. The interval keeps the same width because the offset is constant across repeated samples. Retest against zero for the resulting target. All returns, costs, standard errors and intervals in the table are basis points per month.
 
-At SE = 2 bp the gross interval is [16.08, 23.92]; the c = 10 net interval is [6.08, 13.92]; the c = 25 interval is [−8.92, −1.08] bp. Positive gross alpha and negative net alpha can both be precisely estimated. The relevant null and decision consequences have changed.
+| SE | Target | Estimate | 95% interval | Two-sided p-value against zero |
+|---:|---|---:|---|---:|
+| 15 | Gross | 20 | [−9.40, 49.40] | 0.1824 |
+| 15 | Net, c = 10 | 10 | [−19.40, 39.40] | 0.5050 |
+| 15 | Net, c = 25 | −5 | [−34.40, 24.40] | 0.7389 |
+| 2 | Gross | 20 | [16.08, 23.92] | 1.52 × 10⁻²³ |
+| 2 | Net, c = 10 | 10 | [6.08, 13.92] | 5.73 × 10⁻⁷ |
+| 2 | Net, c = 25 | −5 | [−8.92, −1.08] | 0.0124 |
 
-For an estimated cost, Var(α̂ − ĉ) = Var(α̂) + Var(ĉ) − 2Cov(α̂, ĉ). This expression alone does not establish the joint distribution or solve estimation bias. In task 4, the conditional net interval is [6.08 − b, 13.92 − b]; its union is approximately [−3.92, 13.92] bp. The sensitivity bound is assumed, not estimated or probabilistically weighted. With the stated normal model and true b inside the allowed set, taking this union is conservative for coverage; it is not an exact 95% probability statement about the realised interval or the bias.
+At SE = 15, the net intervals leave room for gains and losses. Equivalence would require a justified margin and evidence relative to it. At SE = 2, gross alpha is precisely estimated above zero and net alpha at c = 25 is precisely estimated below it. The two results concern different targets. [§4, Gross-to-net illustration](../synthesis/critical-synthesis.md#comparing-analyses-of-the-same-data)
 
-Precision conditional on a factor model does not justify that model, recover an omitted trading cost or establish external validity at another scale. A strong discussion separates search/multiplicity, out-of-sample changes, publication-related changes, replication design and investor preferences. Use the [finance evidence trails](../wiki/concepts/finance.md) for attribution and the [synthesis](../synthesis/critical-synthesis.md) for the project's conditional interpretation.
+For an estimated cost, Var(α̂ − ĉ) = Var(α̂) + Var(ĉ) − 2Cov(α̂, ĉ). To use this, justify the covariance and determine what assumptions support inference about the difference. In task 4, subtract b from each endpoint to get [6.08 − b, 13.92 − b]. Across the allowed range, the lowest lower endpoint occurs at b = 10 and the highest upper endpoint at b = 0. The union is about [−3.92, 13.92] bp. It contains the conditional interval at the true b if that value is inside the stipulated range, giving conservative coverage under the stated model. The bound on b is a sensitivity assumption. A posterior would need a probability model for b.
+
+For the committee, name the model and what its intercept measures. Explain which design assumptions, trading costs and capacity information would support a recommendation, even with a very small sampling error. When comparing the papers, distinguish search and multiplicity from out-of-sample or publication-related changes. Then check which replication designs and targets bear on the decision you are considering. [Finance evidence trails](../wiki/concepts/finance.md) · [§6, What would change the conclusion?](../synthesis/critical-synthesis.md#6-what-would-change-the-conclusion)
 
 </details>
 
