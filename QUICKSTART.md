@@ -26,7 +26,7 @@ The initial calculations use Python 3.10 or later and its standard library. No d
 ## Get the repository and run the examples
 
 ```sh
-git clone https://github.com/quinfer/statistical-economic-significance.git
+git clone https://github.com/statistical-science-in-finance/statistical-economic-significance.git
 cd statistical-economic-significance
 python3 implementations/worked_examples.py
 python3 scripts/check_integrity.py

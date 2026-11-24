@@ -5,8 +5,8 @@ type: software
 authors:
   - family-names: Quinn
     given-names: Barry
-repository-code: "https://github.com/quinfer/statistical-economic-significance"
-url: "https://github.com/quinfer/statistical-economic-significance"
+repository-code: "https://github.com/statistical-science-in-finance/statistical-economic-significance"
+url: "https://github.com/statistical-science-in-finance/statistical-economic-significance"
 abstract: "An evolving PhD learning resource and evidence-linked research wiki on magnitude, inference and decisions in economics and finance."
 license: "CC-BY-4.0 AND MIT"
 keywords:
